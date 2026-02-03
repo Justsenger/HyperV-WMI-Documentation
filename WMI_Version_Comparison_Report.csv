@@ -1,555 +1,555 @@
-ï»¿Class,Member,Type,Category,Access,14393,19045,22621,26100,Desc
-Win32_VideoController,AcceleratorCapabilities,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,ä¸€ä¸ªæ•´æ•°æ•°ç»„ï¼Œç”¨äºæŒ‡æ˜è§†é¢‘æ§åˆ¶å™¨çš„å›¾å½¢å’Œ 3D åŠŸèƒ½ã€‚
-Win32_VideoController,AdapterCompatibility,String,Property,Property,âœ…,âœ…,âœ…,âœ…,AdapterCompatibility å±æ€§åŒ…å«æ­¤æ§åˆ¶å™¨ä½¿ç”¨çš„é€šç”¨èŠ¯ç‰‡é›†ï¼Œå®ƒç”¨äºä¸ç³»ç»Ÿæ¯”è¾ƒå…¼å®¹æ€§
-Win32_VideoController,AdapterDACType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,AdapterDACType å±æ€§åŒ…å«æ•°å­—-æ¨¡æ‹Ÿè½¬æ¢å™¨(DAC)èŠ¯ç‰‡åç§°æˆ– ID çš„å­—ç¬¦ä¸²ã€‚ å­—ç¬¦é›†: å­—æ¯æ•°å­—
-Win32_VideoController,AdapterRAM,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,AdapterRAM å±æ€§æŒ‡æ˜è§†é¢‘é€‚é…å™¨çš„å†…å­˜å¤§å°ã€‚ ä¾‹å¦‚: 64000
-Win32_VideoController,Availability,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è®¾å¤‡çš„å¯ç”¨æ€§å’ŒçŠ¶æ€ã€‚ä¾‹å¦‚: Availability å±æ€§å¯ä»¥æŒ‡æ˜è®¾å¤‡æ­£åœ¨è¿è¡Œå¹¶ä¸”ä¸ºå…¨åŠŸç‡(å€¼=3)ã€æˆ–è€…å¤„äºè­¦å‘Š(4)ã€æµ‹è¯•(5)ã€é™çº§(10)æˆ–èŠ‚èƒ½çŠ¶æ€(å€¼ä¸º 13-15 å’Œ 17)ã€‚æœ‰å…³èŠ‚èƒ½çŠ¶æ€ï¼Œå…¶å®šä¹‰å¦‚ä¸‹æ‰€ç¤º: å€¼ 13 (â€œèŠ‚èƒ½ - æœªçŸ¥â€)è¡¨ç¤ºè®¾å¤‡å¤„äºèŠ‚èƒ½æ¨¡å¼ï¼Œä½†æ˜¯å®ƒåœ¨è¯¥æ¨¡å¼ä¸­çš„å‡†ç¡®çŠ¶æ€æœªçŸ¥ï¼›14 (â€œèŠ‚èƒ½ - ä½åŠŸè€—æ¨¡å¼â€)è¡¨ç¤ºè®¾å¤‡å¤„äºèŠ‚èƒ½çŠ¶æ€ï¼Œä½†ä»ç„¶æ­£å¸¸è¿è½¬ï¼Œå¯èƒ½ä¼šå‡ºç°æ€§èƒ½ä¸‹é™ï¼›15 (â€œèŠ‚èƒ½ - å¾…æœºâ€)è¡¨ç¤ºè®¾å¤‡æ²¡æœ‰æ­£å¸¸è¿è½¬ï¼Œä½†æ˜¯å¯ä»¥â€œå¿«é€Ÿâ€è½¬å…¥å…¨åŠŸç‡å·¥ä½œçŠ¶æ€ï¼›å€¼ä¸º 17 (â€œèŠ‚èƒ½ - è­¦å‘Šâ€)æ—¶è¡¨ç¤ºè®¾å¤‡è™½ç„¶å¤„äºèŠ‚èƒ½æ¨¡å¼ï¼Œä½†å®ƒçš„çŠ¶æ€æ˜¯è­¦å‘ŠçŠ¶æ€ã€‚ [æšä¸¾å€¼: 1 - å…¶ä»–; 2 - æœªçŸ¥; 3 - æ­£åœ¨è¿è¡Œ/å…¨åŠŸè€—; 4 - è­¦å‘Š; 5 - æ­£åœ¨æµ‹è¯•; 6 - ä¸é€‚ç”¨; 7 - å…³é—­ç”µæº; 8 - è„±æœº; 9 - ä¼‘æ¯; 10 - å·²é™çº§; 11 - æœªå®‰è£…; 12 - å®‰è£…é”™è¯¯; 13 - èŠ‚èƒ½ - æœªçŸ¥; 14 - èŠ‚èƒ½ - ä½åŠŸè€—æ¨¡å¼; 15 - èŠ‚èƒ½ - å¾…æœº; 16 - ç”µæºé‡å¯; 17 - èŠ‚èƒ½ - è­¦å‘Š; 18 - å·²æš‚åœ; 19 - æœªå°±ç»ª; 20 - æœªé…ç½®; 21 - é™æ­¢]
-Win32_VideoController,CapabilityDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,ä¸€ä¸ªè‡ªç”±æ ¼å¼å­—ç¬¦ä¸²æ•°ç»„ï¼Œç”¨äºä¸ºâ€œåŠŸèƒ½â€æ•°ç»„ä¸­æŒ‡å‡ºçš„ä»»ä½•è§†é¢‘åŠ é€Ÿå™¨åŠŸèƒ½æä¾›æ›´ä¸ºè¯¦ç»†çš„è¯´æ˜ã€‚è¯·æ³¨æ„: æ­¤æ•°ç»„çš„æ¯ä¸€é¡¹éƒ½ä¸â€œåŠŸèƒ½â€æ•°ç»„ä¸­å…·æœ‰ç›¸åŒç´¢å¼•çš„é¡¹ç›®å…³è”ã€‚
-Win32_VideoController,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Win32_VideoController,ColorTableEntries,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,å½“è®¾å¤‡çš„é¢œè‰²æ·±åº¦ä¸è¶…è¿‡æ¯åƒç´  8 ä½æ—¶ï¼ŒColorTableEntries å±æ€§å¯æŒ‡æ˜ç³»ç»Ÿé¢œè‰²è¡¨çš„å¤§å°ï¼Œåœ¨å…¶ä»–æƒ…å†µä¸‹ï¼Œå…¶å€¼ä¸º NULLã€‚<P>ä¾‹å¦‚: 256
-Win32_VideoController,ConfigManagerErrorCode,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡æ˜ Win32 é…ç½®ç®¡ç†å™¨é”™è¯¯ä»£ç ã€‚å¯èƒ½è¿”å›ä¸‹åˆ—å€¼:  0     æ­¤è®¾å¤‡è¿è¡Œæ­£å¸¸ã€‚ 1     æ­¤è®¾å¤‡çš„é…ç½®ä¸æ­£ç¡®ã€‚ 2     Windows æ— æ³•ä¸ºæ­¤è®¾å¤‡åŠ è½½é©±åŠ¨ç¨‹åºã€‚ 3     æ­¤è®¾å¤‡çš„é©±åŠ¨ç¨‹åºå¯èƒ½å·²æŸåï¼Œæˆ–è€…ç³»ç»Ÿå†…å­˜æˆ–å…¶ä»–èµ„æºä¸è¶³ã€‚ 4     æ­¤è®¾å¤‡ä¸èƒ½æ­£å¸¸è¿è¡Œã€‚æŸä¸ªé©±åŠ¨ç¨‹åºæˆ–æ³¨å†Œè¡¨å¯èƒ½å·²æŸåã€‚ 5     æ­¤è®¾å¤‡çš„é©±åŠ¨ç¨‹åºéœ€è¦ä¸€ä¸ª Windows æ— æ³•ç®¡ç†çš„èµ„æºã€‚ 6     æ­¤è®¾å¤‡çš„å¼•å¯¼é…ç½®ä¸å…¶ä»–è®¾å¤‡å†²çªã€‚ 7     æ— æ³•ç­›é€‰ã€‚ 8     æ‰¾ä¸åˆ°æ­¤è®¾å¤‡çš„é©±åŠ¨ç¨‹åºåŠ è½½å™¨ã€‚ 9     ç”±äºæ§åˆ¶å›ºä»¶æ²¡æœ‰æ­£ç¡®æŠ¥å‘Šæ­¤è®¾å¤‡çš„èµ„æºï¼Œæ‰€ä»¥è¯¥è®¾å¤‡æ— æ³•æ­£å¸¸è¿è¡Œã€‚ 10     æ­¤è®¾å¤‡æ— æ³•å¯åŠ¨ã€‚ 11     æ­¤è®¾å¤‡å¤±è´¥ã€‚ 12     æ­¤è®¾å¤‡æ— æ³•æ‰¾åˆ°è¶³å¤Ÿçš„å¯ç”¨ç©ºé—²èµ„æºã€‚ 13     Windows æ— æ³•è¯†åˆ«æ­¤è®¾å¤‡çš„èµ„æºã€‚ 14     é‡æ–°å¯åŠ¨è®¡ç®—æœºä¹‹å‰ï¼Œæ­¤è®¾å¤‡æ— æ³•æ­£å¸¸è¿è¡Œã€‚ 15     ç”±äºå¯èƒ½å­˜åœ¨é‡æ–°æšä¸¾çš„é—®é¢˜ï¼Œæ‰€ä»¥æ­¤è®¾å¤‡æ— æ³•æ­£å¸¸è¿è¡Œã€‚ 16     Windows æ— æ³•è¯†åˆ«æ­¤è®¾å¤‡ä½¿ç”¨çš„æ‰€æœ‰èµ„æºã€‚ 17     æ­¤è®¾å¤‡æ­£åœ¨è¯·æ±‚æœªçŸ¥çš„èµ„æºç±»å‹ã€‚ 18     ä¸ºæ­¤è®¾å¤‡é‡æ–°å®‰è£…é©±åŠ¨ç¨‹åºã€‚ 19     ä½ çš„æ³¨å†Œè¡¨å¯èƒ½å·²æŸåã€‚ 20     ä½¿ç”¨ VxD åŠ è½½å™¨å¤±è´¥ã€‚ 21     ç³»ç»Ÿå¤±è´¥: è¯·å°è¯•æ›´æ”¹æ­¤è®¾å¤‡çš„é©±åŠ¨ç¨‹åºã€‚å¦‚æœä»ç„¶æ— æ•ˆï¼Œè¯·å‚é˜…ä½ çš„ç¡¬ä»¶æ–‡æ¡£ã€‚Windows æ­£åœ¨åˆ é™¤æ­¤è®¾å¤‡ã€‚ 22     æ­¤è®¾å¤‡å·²è¢«ç¦ç”¨ã€‚ 23     ç³»ç»Ÿå¤±è´¥: è¯·å°è¯•æ›´æ”¹æ­¤è®¾å¤‡çš„é©±åŠ¨ç¨‹åºã€‚å¦‚æœä»ç„¶æ— æ•ˆï¼Œè¯·å‚é˜…ä½ çš„ç¡¬ä»¶æ–‡æ¡£ã€‚ 24     æ­¤è®¾å¤‡ä¸å­˜åœ¨ã€æ— æ³•æ­£å¸¸è¿è¡Œæˆ–è€…æ²¡æœ‰å®‰è£…æ‰€æœ‰çš„é©±åŠ¨ç¨‹åºã€‚ 25     Windows ä»åœ¨å®‰è£…æ­¤è®¾å¤‡ã€‚ 26     Windows ä»åœ¨å®‰è£…æ­¤è®¾å¤‡ã€‚ 27     æ­¤è®¾å¤‡çš„æ—¥å¿—é…ç½®æ— æ•ˆã€‚ 28     æ²¡æœ‰å®‰è£…æ­¤è®¾å¤‡çš„é©±åŠ¨ç¨‹åºã€‚ 29     ç”±äºæ­¤è®¾å¤‡çš„å›ºä»¶æ²¡æœ‰æä¾›æ‰€éœ€èµ„æºï¼Œæ‰€ä»¥æ­¤è®¾å¤‡å·²è¢«ç¦ç”¨ã€‚ 30     æ­¤è®¾å¤‡æ­£åœ¨ä½¿ç”¨å¦ä¸€å°è®¾å¤‡ä½¿ç”¨çš„ä¸­æ–­è¯·æ±‚(IRQ)èµ„æºã€‚ 31     ç”±äº Windows æ— æ³•åŠ è½½æ­¤è®¾å¤‡æ‰€éœ€çš„é©±åŠ¨ç¨‹åºï¼Œæ‰€ä»¥æ­¤è®¾å¤‡æ— æ³•æ­£å¸¸è¿è¡Œã€‚ [æšä¸¾å€¼: 0 - è¯¥è®¾å¤‡æ­£å¸¸å·¥ä½œã€‚; 1 - æœªæ­£ç¡®é…ç½®è¯¥è®¾å¤‡ã€‚; 2 - Windows æ— æ³•ä¸ºæ­¤è®¾å¤‡åŠ è½½é©±åŠ¨ç¨‹åºã€‚; 3 - è¯¥è®¾å¤‡çš„é©±åŠ¨ç¨‹åºå¯èƒ½å·²æŸåï¼Œæˆ–è€…ç³»ç»Ÿçš„å†…å­˜æˆ–å…¶ä»–èµ„æºä¸è¶³ã€‚; 4 - è¯¥è®¾å¤‡æ— æ³•æ­£å¸¸å·¥ä½œã€‚æŸä¸ªé©±åŠ¨ç¨‹åºæˆ–æ³¨å†Œè¡¨å¯èƒ½å·²æŸåã€‚; 5 - Windows æ— æ³•ç®¡ç†è¯¥è®¾å¤‡çš„é©±åŠ¨ç¨‹åºæ‰€éœ€çš„èµ„æºã€‚; 6 - è¯¥è®¾å¤‡çš„å¼•å¯¼é…ç½®ä¸å…¶ä»–è®¾å¤‡å‘ç”Ÿå†²çªã€‚; 7 - æ— æ³•ç­›é€‰ã€‚; 8 - æ‰¾ä¸åˆ°è®¾å¤‡çš„é©±åŠ¨ç¨‹åºåŠ è½½å™¨ã€‚; 9 - ç”±äºæ§åˆ¶å›ºä»¶æ²¡æœ‰æ­£ç¡®æŠ¥å‘Šæ­¤è®¾å¤‡çš„èµ„æºï¼Œæ‰€ä»¥è¯¥è®¾å¤‡æ— æ³•æ­£å¸¸è¿è¡Œã€‚; 10 - è¯¥è®¾å¤‡æ— æ³•å¯åŠ¨ã€‚; 11 - è¯¥è®¾å¤‡å‘ç”Ÿæ•…éšœã€‚; 12 - è¯¥è®¾å¤‡æ‰¾ä¸åˆ°è¶³å¤Ÿçš„å¯ç”¨èµ„æºã€‚; 13 - Windows æ— æ³•éªŒè¯è¯¥è®¾å¤‡çš„èµ„æºã€‚; 14 - åœ¨é‡æ–°å¯åŠ¨è®¡ç®—æœºä¹‹å‰ï¼Œè¯¥è®¾å¤‡æ— æ³•æ­£å¸¸å·¥ä½œã€‚; 15 - è¯¥è®¾å¤‡æœªæ­£å¸¸å·¥ä½œï¼Œå¯èƒ½æ˜¯å› ä¸ºå‡ºç°äº†é‡æ–°æšä¸¾é—®é¢˜ã€‚; 16 - Windows æ— æ³•è¯†åˆ«è¯¥è®¾å¤‡ä½¿ç”¨çš„æ‰€æœ‰èµ„æºã€‚; 17 - è¯¥è®¾å¤‡æ­£åœ¨è¯·æ±‚æœªçŸ¥çš„èµ„æºç±»å‹ã€‚; 18 - é‡æ–°å®‰è£…è¯¥è®¾å¤‡çš„é©±åŠ¨ç¨‹åºã€‚; 19 - ä½¿ç”¨ VxD åŠ è½½å™¨å¤±è´¥ã€‚; 20 - æ³¨å†Œè¡¨å¯èƒ½å·²æŸåã€‚; 21 - ç³»ç»Ÿå¤±è´¥: è¯·å°è¯•æ›´æ”¹æ­¤è®¾å¤‡çš„é©±åŠ¨ç¨‹åºã€‚å¦‚æœä»ç„¶æ— æ•ˆï¼Œè¯·å‚é˜…ä½ çš„ç¡¬ä»¶æ–‡æ¡£ã€‚Windows æ­£åœ¨åˆ é™¤æ­¤è®¾å¤‡ã€‚; 22 - å·²ç¦ç”¨è¯¥è®¾å¤‡ã€‚; 23 - ç³»ç»Ÿæ•…éšœ: å°è¯•æ›´æ”¹è¯¥è®¾å¤‡çš„é©±åŠ¨ç¨‹åºã€‚å¦‚æœä¸èµ·ä½œç”¨ï¼Œè¯·å‚é˜…ç¡¬ä»¶æ–‡æ¡£ã€‚; 24 - è¯¥è®¾å¤‡ä¸å­˜åœ¨ã€æœªæ­£å¸¸å·¥ä½œæˆ–æ²¡æœ‰å®‰è£…å…¶æ‰€æœ‰é©±åŠ¨ç¨‹åºã€‚; 25 - Windows ä»åœ¨è®¾ç½®è¯¥è®¾å¤‡ã€‚; 26 - Windows ä»åœ¨è®¾ç½®è¯¥è®¾å¤‡ã€‚; 27 - è¯¥è®¾å¤‡æ²¡æœ‰æœ‰æ•ˆçš„æ—¥å¿—é…ç½®ã€‚; 28 - æœªå®‰è£…è¯¥è®¾å¤‡çš„é©±åŠ¨ç¨‹åºã€‚; 29 - å·²ç¦ç”¨è¯¥è®¾å¤‡ï¼Œå› ä¸ºè®¾å¤‡å›ºä»¶æ²¡æœ‰æä¾›æ‰€éœ€çš„èµ„æºã€‚; 30 - è¯¥è®¾å¤‡ä½¿ç”¨çš„ä¸­æ–­è¯·æ±‚(IRQ)èµ„æºæ­£åœ¨è¢«å¦ä¸€ä¸ªè®¾å¤‡æ‰€ä½¿ç”¨ã€‚; 31 - è¯¥è®¾å¤‡æœªæ­£å¸¸å·¥ä½œï¼Œå› ä¸º Windows æ— æ³•åŠ è½½è¯¥è®¾å¤‡æ‰€éœ€çš„é©±åŠ¨ç¨‹åºã€‚]
-Win32_VideoController,ConfigManagerUserConfig,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡æ˜è®¾å¤‡æ˜¯å¦ä½¿ç”¨ç”¨æˆ·å®šä¹‰çš„é…ç½®ã€‚
-Win32_VideoController,CreationClassName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,CreationClassName æŒ‡æ˜åˆ›å»ºå®ä¾‹æ—¶ä½¿ç”¨çš„ç±»æˆ–å­ç±»çš„åç§°ã€‚ä¸æ­¤ç±»çš„å…¶ä»–é”®å±æ€§ä¸€èµ·ä½¿ç”¨æ—¶ï¼Œæ­¤å±æ€§å¯å”¯ä¸€æ ‡è¯†æ­¤ç±»åŠå…¶å­ç±»çš„æ‰€æœ‰å®ä¾‹ã€‚
-Win32_VideoController,CurrentBitsPerPixel,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,ç”¨äºæ˜¾ç¤ºæ¯ä¸ªåƒç´ çš„ä½æ•°ã€‚
-Win32_VideoController,CurrentHorizontalResolution,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,å½“å‰çš„æ°´å¹³åƒç´ æ•°ã€‚
-Win32_VideoController,CurrentNumberOfColors,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,å½“å‰åˆ†è¾¨ç‡æ”¯æŒçš„é¢œè‰²æ•°ã€‚
-Win32_VideoController,CurrentNumberOfColumns,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,å¦‚æœä½¿ç”¨å­—ç¬¦æ¨¡å¼ï¼Œè¯·è¾“å…¥æ­¤è§†é¢‘æ§åˆ¶å™¨çš„åˆ—æ•°ï¼Œå¦åˆ™è¯·è¾“å…¥ 0ã€‚
-Win32_VideoController,CurrentNumberOfRows,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,å¦‚æœä½¿ç”¨å­—ç¬¦æ¨¡å¼ï¼Œè¯·è¾“å…¥æ­¤è§†é¢‘æ§åˆ¶å™¨çš„è¡Œæ•°ï¼Œå¦åˆ™è¯·è¾“å…¥ 0ã€‚
-Win32_VideoController,CurrentRefreshRate,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,CurrentRefreshRate å±æ€§æŒ‡å®šè§†é¢‘æ§åˆ¶å™¨åˆ·æ–°ç›‘è§†å™¨å›¾åƒçš„é¢‘ç‡ã€‚0 è¡¨ç¤ºä½¿ç”¨é»˜è®¤é¢‘ç‡ï¼Œ0xFFFFFFFF è¡¨ç¤ºä½¿ç”¨ä¼˜åŒ–é¢‘ç‡ã€‚
-Win32_VideoController,CurrentScanMode,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,å½“å‰æ‰«ææ¨¡å¼ã€‚é€šè¿‡è¿™ä¸ªå±æ€§å¯ä»¥å®šä¹‰â€œéš”è¡Œæ‰«æâ€(å€¼=3) æˆ–â€œé€è¡Œæ‰«æâ€(4)ã€‚ [æšä¸¾å€¼: 1 - å…¶ä»–; 2 - æœªçŸ¥; 3 - éš”è¡Œæ‰«æ; 4 - ééš”è¡Œæ‰«æ]
-Win32_VideoController,CurrentVerticalResolution,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,å½“å‰çš„å‚ç›´åƒç´ æ•°ã€‚
-Win32_VideoController,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Win32_VideoController,DeviceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,DeviceID å±æ€§åŒ…å«æ­¤è§†é¢‘æ§åˆ¶å™¨çš„æ ‡è¯†ç¬¦(å¯¹äºè®¡ç®—æœºç³»ç»Ÿè€Œè¨€å…·æœ‰å”¯ä¸€æ€§)ã€‚
-Win32_VideoController,DeviceSpecificPens,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,DeviceSpecificPens å±æ€§æŒ‡æ˜è®¾å¤‡ä¸“ç”¨ç¬”çš„å½“å‰æ•°é‡ã€‚å€¼ä¸º 0xffff è¡¨ç¤ºè®¾å¤‡ä¸æ”¯æŒæ­¤ç±»ç¬”ã€‚ ä¾‹å¦‚: 3
-Win32_VideoController,DitherType,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,"DitherType å±æ€§æŒ‡æ˜è§†é¢‘æ§åˆ¶å™¨çš„é€’è‰²ç±»å‹ã€‚è¯¥å±æ€§å¯ä»¥ä½¿ç”¨ä»¥ä¸‹é¢„å®šä¹‰å€¼ä¹‹ä¸€ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨ç”±é©±åŠ¨ç¨‹åºå®šä¹‰çš„å€¼(å¤§äºæˆ–ç­‰äº 256)ã€‚å€¼çš„å«ä¹‰å¦‚ä¸‹: -1	-	æ— é€’è‰²ã€‚2	-	ç”¨ç²—åˆ·é€’è‰²ã€‚3	-	ç”¨ç»†åˆ·é€’è‰²ã€‚4	-	è‰ºæœ¯çº¿æ¡é€’è‰²ï¼Œä¸€ç§ç‰¹æ®Šçš„é€’è‰²æ–¹æ³•ï¼Œ		å¯åœ¨é»‘ã€ç™½å’Œç°åº¦é—´äº§ç”Ÿæ˜ç¡®çš„è¾¹æ¡†ç•Œé™ã€‚		å®ƒä¸é€‚åˆç”¨äºåŒ…å«è¿ç»­äº®åº¦å’Œè‰²åº¦åˆ†åº¦çš„å›¾åƒï¼Œä¾‹å¦‚æ‰«æå›¾ç‰‡ã€‚5	-	è®¾å¤‡è´Ÿè´£ç°é˜¶åŒ–ã€‚ [æšä¸¾å€¼: 1 - æ— é€’è‰²; 2 - å¸¦ç²—åˆ·çš„é€’è‰²; 3 - å¸¦ç»†åˆ·çš„é€’è‰²; 4 - çº¿æ¡è‰ºæœ¯é€’è‰²; 5 - è®¾å¤‡è¿›è¡Œç°åº¦å¤„ç†]"
-Win32_VideoController,DriverDate,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,DriverDate å±æ€§æŒ‡æ˜å½“å‰å·²å®‰è£…çš„è§†é¢‘é©±åŠ¨ç¨‹åºçš„ä¸Šæ¬¡ä¿®æ”¹æ—¥æœŸå’Œæ—¶é—´ã€‚
-Win32_VideoController,DriverVersion,String,Property,Property,âœ…,âœ…,âœ…,âœ…,DriverVersion å±æ€§æŒ‡æ˜è§†é¢‘é©±åŠ¨ç¨‹åºçš„ç‰ˆæœ¬å·ã€‚
-Win32_VideoController,ErrorCleared,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,ErrorCleared æ˜¯ä¸€ä¸ªå¸ƒå°”å€¼å±æ€§ï¼ŒæŒ‡æ˜ LastErrorCode å±æ€§ä¸­æŠ¥å‘Šçš„é”™è¯¯ç°å·²æ¸…é™¤ã€‚
-Win32_VideoController,ErrorDescription,String,Property,Property,âœ…,âœ…,âœ…,âœ…,ErrorDescription æ˜¯ä¸€ä¸ªè‡ªç”±æ ¼å¼å­—ç¬¦ä¸²ï¼Œæä¾›æœ‰å…³ LastErrorCode å±æ€§ä¸­è®°å½•çš„é”™è¯¯çš„è¯¦ç»†ä¿¡æ¯ï¼Œä»¥åŠæœ‰å…³å¯ä»¥é‡‡å–çš„çº æ­£æªæ–½çš„ä¿¡æ¯ã€‚
-Win32_VideoController,ICMIntent,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,"ICMIntent (å›¾åƒé¢œè‰²åŒ¹é…æ„å‘)å±æ€§æŒ‡æ˜ä¸‰ç§å¯èƒ½çš„é¢œè‰²åŒ¹é…æ–¹æ³•(æˆ–æ„å‘)ä¹‹ä¸€çš„ç‰¹å®šå€¼ï¼Œé»˜è®¤æƒ…å†µä¸‹å°†ä½¿ç”¨æ­¤å€¼ã€‚æ­¤å±æ€§ä¸»è¦é’ˆå¯¹é ICM åº”ç”¨ç¨‹åºã€‚ICM åº”ç”¨ç¨‹åºä¼šä½¿ç”¨ ICM å‡½æ•°å»ºç«‹æ„å‘ã€‚æ­¤å±æ€§å¯ä»¥ä½¿ç”¨ä»¥ä¸‹é¢„å®šä¹‰å€¼ä¹‹ä¸€ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨ç”±é©±åŠ¨ç¨‹åºå®šä¹‰çš„å€¼(å¤§äºæˆ–ç­‰äº 256)ã€‚å€¼çš„å«ä¹‰: -1	-	é¢œè‰²åŒ¹é…åº”å¯¹è‰²å½©é¥±å’Œåº¦ä½œä¼˜åŒ–ã€‚å¯¹äºä¸éœ€è¦æŠ–åŠ¨çš„å•†ä¸šå›¾å½¢ï¼Œæ­¤å€¼æ˜¯æœ€åˆé€‚çš„é€‰æ‹©ã€‚2	-	é¢œè‰²åŒ¹é…åº”å¯¹è‰²å½©å¯¹æ¯”åº¦ä½œä¼˜åŒ–ã€‚å¯¹äºéœ€è¦æŠ–åŠ¨çš„æ‰«æå›¾åƒå’Œæ‘„åƒå›¾åƒï¼Œæ­¤å€¼æ˜¯æœ€åˆé€‚çš„é€‰æ‹©ã€‚3	-	é¢œè‰²åŒ¹é…åº”ä½œä¼˜åŒ–ï¼Œä»¥åŒ¹é…æ‰€éœ€çš„ç²¾ç¡®é¢œè‰²ã€‚å¯¹äºéœ€è¦ç²¾ç¡®é¢œè‰²åŒ¹é…çš„å•†ä¸šå¾½æ ‡æˆ–å…¶ä»–å›¾åƒï¼Œæ­¤å€¼æœ€ä¸ºåˆé€‚ã€‚ [æšä¸¾å€¼: 1 - é¥±å’Œåº¦; 2 - å¯¹æ¯”åº¦; 3 - ç²¾ç¡®é¢œè‰²]"
-Win32_VideoController,ICMMethod,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,"ICMMethod (å›¾åƒé¢œè‰²åŒ¹é…æ–¹æ³•)å±æ€§æŒ‡å®šäº† ICM çš„å¤„ç†æ–¹å¼ã€‚å¯¹äºé ICM åº”ç”¨ç¨‹åºï¼Œæ­¤å±æ€§æŒ‡ç¤ºè¯¥å¦‚ä½•å¯ç”¨ ICMã€‚å¯¹äº ICM åº”ç”¨ç¨‹åºï¼Œç³»ç»Ÿä¼šå¯¹æ­¤æˆå‘˜è¿›è¡Œæ£€æŸ¥ï¼Œä»¥ç¡®å®šå¦‚ä½•å¤„ç† ICM æ”¯æŒã€‚æ­¤å±æ€§å¯ä»¥ä½¿ç”¨ä»¥ä¸‹é¢„å®šä¹‰å€¼ä¹‹ä¸€ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨ç”±é©±åŠ¨ç¨‹åºå®šä¹‰çš„å€¼ï¼ˆå¤§äºæˆ–ç­‰äº 256ï¼‰ã€‚å€¼çš„å«ä¹‰: -1	-	æŒ‡å®šç¦ç”¨ ICMã€‚2	-	æŒ‡å®šç”± Windows è´Ÿè´£å¤„ç† ICMã€‚3	-	æŒ‡å®šç”±è®¾å¤‡é©±åŠ¨ç¨‹åºè´Ÿè´£å¤„ç† ICMã€‚4	-	æŒ‡å®šç”±ç›®æ ‡è®¾å¤‡è´Ÿè´£å¤„ç† ICMã€‚ [æšä¸¾å€¼: 1 - å·²ç¦ç”¨; 2 - Windows; 3 - è®¾å¤‡é©±åŠ¨ç¨‹åº; 4 - ç›®æ ‡è®¾å¤‡]"
-Win32_VideoController,InfFilename,String,Property,Property,âœ…,âœ…,âœ…,âœ…,InfFilename å±æ€§æŒ‡æ˜è§†é¢‘é€‚é…å™¨çš„ .INF æ–‡ä»¶çš„è·¯å¾„ã€‚ ä¾‹å¦‚: C:\WINNT\SYSTEM32\DRIVERS
-Win32_VideoController,InfSection,String,Property,Property,âœ…,âœ…,âœ…,âœ…,InfSection å±æ€§æŒ‡æ˜ Win32 è§†é¢‘ä¿¡æ¯åœ¨ .INF æ–‡ä»¶ä¸­æ‰€å¤„çš„èŠ‚ã€‚
-Win32_VideoController,InstallDate,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Win32_VideoController,InstalledDisplayDrivers,String,Property,Property,âœ…,âœ…,âœ…,âœ…,InstalledDisplayDrivers å±æ€§æŒ‡æ˜å®‰è£…çš„æ˜¾ç¤ºè®¾å¤‡é©±åŠ¨ç¨‹åºçš„åç§°ã€‚
-Win32_VideoController,LastErrorCode,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,LastErrorCode æ•è·ç”±é€»è¾‘è®¾å¤‡æŠ¥å‘Šçš„æœ€åä¸€ä¸ªé”™è¯¯ä»£ç ã€‚
-Win32_VideoController,MaxMemorySupported,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,æ”¯æŒçš„æœ€å¤§å†…å­˜å¤§å°(ä»¥å­—èŠ‚ä¸ºå•ä½)ã€‚
-Win32_VideoController,MaxNumberControlled,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,æ­¤æ§åˆ¶å™¨æ”¯æŒçš„å¯ç›´æ¥å¯»å€çš„å®ä½“çš„æœ€å¤§æ•°ç›®ã€‚å¦‚æœæ•°ç›®æœªçŸ¥æˆ–æ²¡æœ‰é™åˆ¶ï¼Œåˆ™å¯ä»¥ä½¿ç”¨å€¼ 0ã€‚
-Win32_VideoController,MaxRefreshRate,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,è§†é¢‘æ§åˆ¶å™¨çš„æœ€å¤§åˆ·æ–°é€Ÿç‡(ä»¥èµ«å…¹ä¸ºå•ä½)ã€‚
-Win32_VideoController,MinRefreshRate,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,è§†é¢‘æ§åˆ¶å™¨çš„æœ€å°åˆ·æ–°é€Ÿç‡(ä»¥èµ«å…¹ä¸ºå•ä½)ã€‚
-Win32_VideoController,Monochrome,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,Monochrome å±æ€§æŒ‡æ˜ä½¿ç”¨ç°åº¦è¿˜æ˜¯å½©è‰²æ¥æ˜¾ç¤ºå›¾åƒã€‚
-Win32_VideoController,Name,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Win32_VideoController,NumberOfColorPlanes,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,å½“å‰é¢œè‰²å¹³é¢çš„æ•°é‡ã€‚å¦‚æœè¿™ä¸ªå€¼ä¸é€‚ç”¨äºå½“å‰è§†é¢‘é…ç½®ï¼Œè¯·è¾“å…¥ 0ã€‚
-Win32_VideoController,NumberOfVideoPages,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,å½“å‰åˆ†è¾¨ç‡å’Œå¯ç”¨å†…å­˜æ”¯æŒçš„è§†é¢‘é¡µæ•°ã€‚
-Win32_VideoController,PNPDeviceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡æ˜é€»è¾‘è®¾å¤‡çš„ Win32 å³æ’å³ç”¨è®¾å¤‡ IDã€‚ä¾‹å¦‚: *PNP030b
-Win32_VideoController,PowerManagementCapabilities,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡æ˜é€»è¾‘è®¾å¤‡ä¸­ä¸ç”µæºæœ‰å…³çš„ç‰¹å®šåŠŸèƒ½ã€‚æ•°ç»„å€¼ 0=â€œæœªçŸ¥â€ï¼Œ1=â€œä¸æ”¯æŒâ€å’Œ 2=â€œå·²ç¦ç”¨â€ä»£è¡¨çš„å«ä¹‰ä¸€ç›®äº†ç„¶ã€‚å€¼ 3=â€œå·²å¯ç”¨â€è¡¨ç¤ºå½“å‰å·²å¯ç”¨ç”µæºç®¡ç†åŠŸèƒ½ï¼Œä½†æ˜¯å…·ä½“çš„åŠŸèƒ½é›†æœªçŸ¥æˆ–è€…ä¿¡æ¯æ— æ•ˆã€‚â€œè‡ªåŠ¨è¿›å…¥èŠ‚èƒ½æ¨¡å¼â€(4)è¡¨ç¤ºè®¾å¤‡å¯æ ¹æ®ç”¨é€”æˆ–å…¶ä»–æ¡ä»¶æ›´æ”¹å…¶ç”µæºçŠ¶æ€ã€‚â€œå¯è®¾ç½®ç”µæºçŠ¶æ€â€(5)è¡¨ç¤ºæ”¯æŒ SetPowerState æ–¹æ³•ã€‚â€œæ”¯æŒç”µæºé‡å¯â€(6)è¡¨ç¤ºå¯ä»¥é€šè¿‡å°† PowerState è¾“å…¥å˜é‡è®¾ç½®ä¸º 5 (â€œç”µæºé‡å¯â€)æ¥è°ƒç”¨ SetPowerState æ–¹æ³•ã€‚â€œæ”¯æŒå®šæ—¶é€šç”µâ€(7)è¡¨ç¤ºå¯ä»¥é€šè¿‡å°† PowerState è¾“å…¥å˜é‡è®¾ç½®ä¸º 5 (â€œç”µæºé‡å¯â€)ã€Time å‚æ•°è®¾ç½®ä¸ºå…·ä½“çš„é€šç”µæ—¥æœŸå’Œæ—¶é—´æˆ–é—´éš”ï¼Œè°ƒç”¨ SetPowerState æ–¹æ³•ã€‚
-Win32_VideoController,PowerManagementSupported,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,å¸ƒå°”å€¼ï¼ŒæŒ‡æ˜è®¾å¤‡æ˜¯å¦æ”¯æŒç”µæºç®¡ç†ï¼Œå³è¿›å…¥èŠ‚èƒ½çŠ¶æ€ã€‚è¯¥å¸ƒå°”å€¼å¹¶ä¸è¡¨ç¤ºå½“å‰å¯ç”¨äº†ç”µæºç®¡ç†åŠŸèƒ½ï¼›æˆ–è€…ï¼Œå¦‚æœå·²ç»å¯ç”¨äº†ç”µæºç®¡ç†åŠŸèƒ½ï¼Œè¯¥å¸ƒå°”å€¼ä¹Ÿå¹¶ä¸è¡¨ç¤ºæ”¯æŒå…·ä½“çš„åŠŸèƒ½ã€‚ç›¸å…³ä¿¡æ¯ï¼Œè¯·å‚é˜… PowerManagementCapabilities æ•°ç»„ã€‚å¦‚æœæ­¤å¸ƒå°”å€¼ä¸º Falseï¼Œé‚£ä¹ˆåœ¨ PowerManagementCapabilities æ•°ç»„ä¸­ï¼Œæ•´æ•°å€¼ä¸º 1 çš„å­—ç¬¦ä¸²â€œä¸æ”¯æŒâ€åº”æ˜¯ä»…æœ‰çš„æ¡ç›®ã€‚
-Win32_VideoController,ProtocolSupported,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æ§åˆ¶å™¨è®¿é—®â€œæ§åˆ¶çš„â€è®¾å¤‡æ—¶ä½¿ç”¨çš„åè®®ã€‚ [æšä¸¾å€¼: 1 - å…¶ä»–; 2 - æœªçŸ¥; 3 - EISA; 4 - ISA; 5 - PCI; 6 - ATA/ATAPI; 7 - è½¯ç›˜; 8 - 1496; 9 - SCSI å¹¶è¡Œæ¥å£; 10 - SCSI å…‰çº¤é€šé“åè®®; 11 - SCSI ä¸²è¡Œæ€»çº¿åè®®; 12 - SCSI ä¸²è¡Œæ€»çº¿åè®® 2 (1394); 13 - SCSI ä¸²è¡Œå­˜å‚¨ç»“æ„; 14 - VESA; 15 - PCMCIA; 16 - é€šç”¨ä¸²è¡Œæ€»çº¿; 17 - å¹¶è¡Œåè®®; 18 - ESCON; 19 - è¯Šæ–­; 20 - I2C; 21 - ç”µæº; 22 - HIPPI; 23 - MultiBus; 24 - VME; 25 - IPI; 26 - IEEE-488; 27 - RS232; 28 - IEEE 802.3 10BASE5; 29 - IEEE 802.3 10BASE2; 30 - IEEE 802.3 1BASE5; 31 - IEEE 802.3 10BROAD36; 32 - IEEE 802.3 100BASEVG; 33 - IEEE 802.5 ä»¤ç‰Œç¯; 34 - ANSI X3T9.5 FDDI; 35 - MCA; 36 - ESDI; 37 - IDE; 38 - CMD; 39 - ST506; 40 - DSSI; 41 - QIC2; 42 - å¢å¼ºå‹ ATA/IDE; 43 - AGP; 44 - TWIRP (åŒå‘çº¢å¤–çº¿); 45 - FIR (å¿«é€Ÿçº¢å¤–çº¿); 46 - SIR (ä¸²è¡Œçº¢å¤–çº¿); 47 - IrBus]
-Win32_VideoController,ReservedSystemPaletteEntries,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,ReservedSystemPaletteEntries å±æ€§æŒ‡æ˜ç³»ç»Ÿé¢œè‰²è¡¨ä¸­å·²ä¿ç•™æ¡ç›®çš„å½“å‰æ•°é‡ã€‚æ“ä½œç³»ç»Ÿå¯ä»¥ä¿ç•™ç›¸å…³æ¡ç›®ï¼Œä»¥æ”¯æŒä»»åŠ¡æ ä»¥åŠå…¶ä»–æ¡Œé¢æ˜¾ç¤ºé¡¹ç›®æ‰€éœ€çš„æ ‡å‡†é¢œè‰²ã€‚å¦‚æœç³»ç»Ÿæœªä½¿ç”¨è°ƒè‰²æ¿ï¼Œé‚£ä¹ˆ ReservedSystemPaletteEntries ä¸º NULLã€‚<P>ä¾‹å¦‚: 24
-Win32_VideoController,SpecificationVersion,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,SpecificationVersion å±æ€§æŒ‡æ˜åˆå§‹åŒ–æ•°æ®è§„èŒƒ(æ•´ä¸ªç»“æ„å³åŸºäºæ­¤è§„èŒƒ)çš„ç‰ˆæœ¬å·ã€‚
-Win32_VideoController,Status,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Win32_VideoController,StatusInfo,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,StatusInfo æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²ï¼ŒæŒ‡æ˜é€»è¾‘è®¾å¤‡æ˜¯å¤„äºå¯ç”¨(å€¼ = 3)ã€ç¦ç”¨(å€¼ = 4)ã€å…¶ä»–(1)è¿˜æ˜¯æœªçŸ¥(2)çŠ¶æ€ã€‚å¦‚æœè¿™ä¸ªå±æ€§ä¸é€‚ç”¨äºé€»è¾‘è®¾å¤‡ï¼Œåˆ™å€¼åº”è¯¥ä¸º 5 (â€œä¸é€‚ç”¨â€)ã€‚ [æšä¸¾å€¼: 1 - å…¶ä»–; 2 - æœªçŸ¥; 3 - å·²å¯ç”¨; 4 - å·²ç¦ç”¨; 5 - ä¸é€‚ç”¨]
-Win32_VideoController,SystemCreationClassName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,ä½œç”¨åŸŸç³»ç»Ÿçš„ CreationClassNameã€‚
-Win32_VideoController,SystemName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,ä½œç”¨åŸŸç³»ç»Ÿçš„åç§°ã€‚
-Win32_VideoController,SystemPaletteEntries,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,SystemPaletteEntries å±æ€§æŒ‡æ˜ç³»ç»Ÿé¢œè‰²è¡¨ä¸­çš„å½“å‰æ¡ç›®æ•°é‡ã€‚å¦‚æœç³»ç»Ÿæœªä½¿ç”¨è°ƒè‰²æ¿ï¼Œé‚£ä¹ˆ SystemPaletteEntries ä¸º NULLã€‚<P>ä¾‹å¦‚: 256
-Win32_VideoController,TimeOfLastReset,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,TimeOfLastReset å±æ€§æŒ‡æ˜ä¸Šä¸€æ¬¡é‡ç½®æ­¤æ§åˆ¶å™¨çš„æ—¥æœŸå’Œæ—¶é—´ã€‚è¿™å¯èƒ½æ„å‘³ç€æ§åˆ¶å™¨å·²æ–­ç”µæˆ–è¢«é‡æ–°åˆå§‹åŒ–ã€‚
-Win32_VideoController,VideoArchitecture,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è§†é¢‘ä½“ç³»ç»“æ„ã€‚ä¾‹å¦‚ï¼Œå¯ä»¥æŒ‡å®š VGA (å€¼=5)æˆ– PC-98 (160)ã€‚ [æšä¸¾å€¼: 1 - å…¶ä»–; 2 - æœªçŸ¥; 3 - CGA; 4 - EGA; 5 - VGA; 6 - SVGA; 7 - MDA; 8 - HGC; 9 - MCGA; 10 - 8514A; 11 - XGA; 12 - çº¿æ€§å¸§ç¼“å†²åŒº; 160 - PC-98]
-Win32_VideoController,VideoMemoryType,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,ä¸€ä¸ªæ•´æ•°æšä¸¾ï¼Œç”¨äºæŒ‡æ˜è§†é¢‘å†…å­˜çš„ç±»å‹ã€‚ [æšä¸¾å€¼: 1 - å…¶ä»–; 2 - æœªçŸ¥; 3 - VRAM; 4 - DRAM; 5 - SRAM; 6 - WRAM; 7 - EDO RAM; 8 - çªå‘åŒæ­¥ DRAM; 9 - ç®¡é“çªå‘ SRAM; 10 - CDRAM; 11 - 3DRAM; 12 - SDRAM; 13 - SGRAM]
-Win32_VideoController,VideoMode,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,å½“å‰è§†é¢‘æ¨¡å¼ã€‚
-Win32_VideoController,VideoModeDescription,String,Property,Property,âœ…,âœ…,âœ…,âœ…,VideoModeDescription å±æ€§æŒ‡æ˜è§†é¢‘æ§åˆ¶å™¨çš„å½“å‰åˆ†è¾¨ç‡ã€é¢œè‰²å’Œæ‰«ææ¨¡å¼è®¾ç½®ã€‚ ä¾‹å¦‚: 1024 x 768 x 256 è‰²
-Win32_VideoController,VideoProcessor,String,Property,Property,âœ…,âœ…,âœ…,âœ…,ä¸€ä¸ªç”¨äºæè¿°è§†é¢‘å¤„ç†å™¨/æ§åˆ¶å™¨çš„è‡ªç”±æ ¼å¼å­—ç¬¦ä¸²ã€‚
-Win32_VideoController,SetPowerState,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,SetPowerState å®šä¹‰äº†é€»è¾‘è®¾å¤‡æ‰€éœ€çš„ç”µæºçŠ¶æ€ï¼Œå¹¶ä¸”å®šä¹‰äº†åº”å½“å°†è®¾å¤‡ç½®äºæ­¤çŠ¶æ€çš„æ—¶é—´ã€‚é€šè¿‡å°† PowerState å‚æ•°è®¾ç½®ä¸ºä¸‹åˆ—æŸä¸ªæ•´æ•°å€¼ï¼Œå¯ä»¥æŒ‡å®šéœ€è¦çš„ç”µæºçŠ¶æ€: 1=â€œå…¨åŠŸç‡â€ï¼Œ2=â€œèŠ‚èƒ½ - ä½åŠŸè€—æ¨¡å¼â€ï¼Œ3=â€œèŠ‚èƒ½ - å¾…æœºâ€ï¼Œ4=â€œèŠ‚èƒ½ - å…¶ä»–â€ï¼Œ5=â€œç”µæºé‡å¯â€æˆ– 6=â€œå…³é—­ç”µæºâ€ã€‚Time å‚æ•°(é€‚ç”¨äºé™¤äº† 5â€œç”µæºé‡å¯â€ä»¥å¤–çš„å…¶ä»–æ‰€æœ‰çŠ¶æ€æ›´æ”¹)è¡¨ç¤ºä½•æ—¶åº”å°†ç”µæºçŠ¶æ€è®¾ç½®ä¸ºå¸¸è§„æ—¥æœŸ-æ—¶é—´å€¼æˆ–è®¾ç½®ä¸ºé—´éš”å€¼(å…¶ä¸­ï¼Œé—´éš”çš„èµ·å§‹æ—¶é—´ä¸ºæ”¶åˆ°æ–¹æ³•è°ƒç”¨çš„æ—¶é—´)ã€‚å½“ PowerState å‚æ•°ç­‰äº 5â€œç”µæºé‡å¯â€æ—¶ï¼ŒTime å‚æ•°è¡¨ç¤ºåº”å½“å†æ¬¡å¼€å¯è®¾å¤‡ç”µæºçš„æ—¶é—´ï¼Œå…³é—­ç”µæºæ˜¯ç«‹å³æ‰§è¡Œçš„ã€‚å¦‚æœæˆåŠŸï¼ŒSetPowerState åº”è¿”å› 0ï¼›å¦‚æœæŒ‡å®šçš„ç”µæºçŠ¶æ€å’Œæ—¶é—´è¯·æ±‚ä¸å—æ”¯æŒï¼Œåˆ™è¿”å› 1ï¼›å¦‚æœå‡ºç°å…¶ä»–é”™è¯¯ï¼Œåˆ™è¿”å›å¦å¤–çš„å€¼ã€‚åœ¨å­ç±»ä¸­ï¼Œé€šè¿‡è¯¥æ–¹æ³•ä¸Šçš„ ValueMap é™å®šç¬¦ï¼Œå¯ä»¥æŒ‡å®šå¯èƒ½çš„è¿”å›ä»£ç é›†ã€‚è¿˜å¯ä»¥å°†â€œç¿»è¯‘â€ValueMap å†…å®¹æ‰€å¾—çš„å­—ç¬¦ä¸²æŒ‡å®šä¸ºå­ç±»ä¸­çš„ Values æ•°ç»„é™å®šç¬¦ã€‚
-Win32_VideoController,Reset,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,è¯·æ±‚é‡ç½®é€»è¾‘è®¾å¤‡ã€‚å¦‚æœè¯·æ±‚è¢«æˆåŠŸæ‰§è¡Œï¼Œåˆ™è¿”å›çš„å€¼åº”å½“ä¸º 0ï¼›å¦‚æœè¯·æ±‚ä¸å—æ”¯æŒï¼Œåˆ™è¿”å› 1ï¼›å¦‚æœå‡ºç°é”™è¯¯ï¼Œåˆ™è¿”å›å…¶ä»–å€¼ã€‚
-Msvm_ComputerSystem,AvailableRequestedStates,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,CommunicationStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,CreationClassName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,Dedicated,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,DetailedStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,EnabledDefault,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,EnabledState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,EnhancedSessionModeState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºä¸»æœºæ˜¯å¦å…è®¸å¢å¼ºä¼šè¯æ¨¡å¼è¿æ¥ï¼›å¦‚æœå…è®¸ï¼Œåˆ™æŒ‡ç¤ºå®ƒä»¬å¯¹è™šæ‹Ÿæœºæ˜¯å¦å¯ç”¨ã€‚[æšä¸¾å€¼: 2 - å…è®¸å¹¶å¯ç”¨; 3 - ä¸å…è®¸; 6 - å…è®¸ä½†ä¸å¯ç”¨]
-Msvm_ComputerSystem,FailedOverReplicationType,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,ä¸ºè™šæ‹Ÿæœºæ‰§è¡Œçš„æ•…éšœè½¬ç§»ç±»å‹ã€‚[æšä¸¾å€¼: 0 - æ— ; 1 - å¸¸è§„; 2 - åº”ç”¨ç¨‹åºä¸€è‡´; 3 - è®¡åˆ’å†…]
-Msvm_ComputerSystem,HealthState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,HwThreadsPerCoreRealized,UInt32,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤ºæŠ¥å‘Šç»™å®¢ä½“æ“ä½œç³»ç»Ÿçš„æ¯ä¸ªæ ¸å¿ƒçš„ SMT çº¿ç¨‹æ•°ã€‚æ­¤æŠ¥å‘Šä¸ç¡¬ä»¶æ˜¯å¦å®é™…å­˜åœ¨ SMT æ— å…³ã€‚
-Msvm_ComputerSystem,IdentifyingDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,InstallDate,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,LastApplicationConsistentReplicationTime,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºåœ¨æ¢å¤æ—¶æ¥æ”¶åˆ°çš„ä¸Šä¸€æ¬¡åº”ç”¨ç¨‹åºä¸€è‡´æ€§å¤åˆ¶çš„æ—¶é—´ã€‚
-Msvm_ComputerSystem,LastReplicationTime,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºåœ¨æ¢å¤æ—¶æ¥æ”¶åˆ°çš„ä¸Šä¸€æ¬¡å¤åˆ¶çš„æ—¶é—´ã€‚
-Msvm_ComputerSystem,LastReplicationType,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºæ¥æ”¶åˆ°çš„ä¸Šä¸€æ¬¡å¤åˆ¶çš„ç±»å‹ã€‚[æšä¸¾å€¼: 0 - æ— ; 1 - å¸¸è§„; 2 - åº”ç”¨ç¨‹åºä¸€è‡´; 3 - è®¡åˆ’å†…]
-Msvm_ComputerSystem,LastSuccessfulBackupTime,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºä¸Šä¸€æ¬¡æˆåŠŸå¤‡ä»½å®Œæˆçš„æ—¶é—´ã€‚
-Msvm_ComputerSystem,ManagementVtlImageFileName,String,Property,Property,âŒ,âŒ,âŒ,âœ…,æä¾›è™šæ‹Ÿæœºæ­£åœ¨ä½¿ç”¨çš„ç®¡ç† VTL æ˜ åƒçš„æ–‡ä»¶ï¼ˆå¦‚æœå¯ç”¨ï¼‰ã€‚
-Msvm_ComputerSystem,ManagementVtlImageVersion,String,Property,Property,âŒ,âŒ,âŒ,âœ…,è™šæ‹Ÿæœºæ­£åœ¨ä½¿ç”¨çš„ç®¡ç† VTL æ˜ åƒçš„å››éƒ¨åˆ†ç‰ˆæœ¬å·ï¼ˆå¦‚æœå¯ç”¨ï¼‰ã€‚
-Msvm_ComputerSystem,Name,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,NameFormat,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,NumberOfNumaNodes,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è®¡ç®—æœºç³»ç»Ÿçš„éä¸€è‡´æ€§å†…å­˜è®¿é—® (NUMA) èŠ‚ç‚¹æ•°ã€‚å½“ Msvm_ComputerSystem ä»£è¡¨å®¿ä¸»è®¡ç®—æœºç³»ç»Ÿæ—¶ï¼Œæ­¤å±æ€§åŒ…å«ç‰©ç† NUMA èŠ‚ç‚¹çš„è®¡æ•°ã€‚å½“ Msvm_ComputerSystem ä»£è¡¨è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿæ—¶ï¼Œæ­¤å±æ€§åŒ…å«é€šè¿‡ ACPI ç³»ç»Ÿèµ„æºå…³è”è¡¨ (SRAT) å‘ˆç°ç»™å®¢ä½“æ“ä½œç³»ç»Ÿçš„è™šæ‹Ÿ NUMA èŠ‚ç‚¹æ•°ã€‚
-Msvm_ComputerSystem,OnTimeInMilliseconds,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,å¯¹äºè™šæ‹Ÿç³»ç»Ÿï¼Œæ­¤å±æ€§æè¿°è‡ªä¸Šæ¬¡å¼€æœºã€é‡ç½®æˆ–æ¢å¤ä»¥æ¥çš„æ€»æ­£å¸¸è¿è¡Œæ—¶é—´ï¼ˆä»¥æ¯«ç§’ä¸ºå•ä½ï¼‰ã€‚æ­¤æ—¶é—´ä¸åŒ…æ‹¬è™šæ‹Ÿç³»ç»Ÿå¤„äºæš‚åœçŠ¶æ€çš„æ—¶é—´ã€‚å¯¹äºå®¿ä¸»ç³»ç»Ÿï¼Œæ­¤å±æ€§è®¾ç½®ä¸º NULLã€‚
-Msvm_ComputerSystem,OperatingStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,OperationalStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,OtherDedicatedDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,OtherEnabledState,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,OtherIdentifyingInfo,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,PowerManagementCapabilities,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,PrimaryOwnerContact,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,PrimaryOwnerName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,PrimaryStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,ProcessID,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,æ­£åœ¨è¿è¡Œæ­¤è™šæ‹Ÿæœºçš„è¿›ç¨‹æ ‡è¯†ç¬¦ã€‚æ­¤å€¼å¯ç”¨äºå”¯ä¸€æ ‡è¯†ç³»ç»Ÿä¸Šè¿è¡Œè¯¥è™šæ‹Ÿæœºçš„ Vmwp.exe å®ä¾‹ã€‚
-Msvm_ComputerSystem,ReplicationHealth,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºçš„å¤åˆ¶è¿è¡ŒçŠ¶å†µã€‚[æšä¸¾å€¼: 0 - ä¸é€‚ç”¨; 1 - æ­£å¸¸; 2 - è­¦å‘Š; 3 - ä¸¥é‡]
-Msvm_ComputerSystem,ReplicationMode,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æ ‡è¯†è™šæ‹Ÿæœºçš„å¤åˆ¶ç±»å‹ã€‚[æšä¸¾å€¼: 0 - æ— ; 1 - ä¸»å‰¯æœ¬; 2 - å‰¯æœ¬; 3 - æµ‹è¯•å‰¯æœ¬; 4 - æ‰©å±•å‰¯æœ¬]
-Msvm_ComputerSystem,ReplicationState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºçš„å¤åˆ¶çŠ¶æ€ã€‚[æšä¸¾å€¼: 0 - å·²ç¦ç”¨; 1 - å‡†å¤‡å¥½å¤åˆ¶; 2 - ç­‰å¾…å®Œæˆåˆå§‹å¤åˆ¶; 3 - æ­£åœ¨å¤åˆ¶; 4 - å·²åŒæ­¥å¤åˆ¶å®Œæˆ; 5 - å·²æ¢å¤; 6 - å·²æäº¤; 7 - å·²æš‚åœ; 8 - ä¸¥é‡; 9 - ç­‰å¾…å¼€å§‹é‡æ–°åŒæ­¥; 10 - æ­£åœ¨é‡æ–°åŒæ­¥; 11 - é‡æ–°åŒæ­¥å·²æš‚åœ; 12 - æ­£åœ¨è¿›è¡Œæ•…éšœè½¬ç§»; 13 - æ­£åœ¨è¿›è¡Œæ•…éšœæ¢å¤; 14 - æ•…éšœæ¢å¤å®Œæˆ]
-Msvm_ComputerSystem,RequestedState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,ResetCapability,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,Roles,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,Status,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,StatusDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,TimeOfLastConfigurationChange,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,ä¸Šæ¬¡ä¿®æ”¹è™šæ‹Ÿæœºé…ç½®æ–‡ä»¶çš„æ—¥æœŸå’Œæ—¶é—´ã€‚åœ¨æŸäº›è™šæ‹Ÿæœºæ“ä½œæœŸé—´ä»¥åŠæ·»åŠ ã€ä¿®æ”¹æˆ–åˆ é™¤ä»»ä½•è™šæ‹Ÿæœºæˆ–è®¾å¤‡è®¾ç½®æ—¶ï¼Œéƒ½ä¼šä¿®æ”¹é…ç½®æ–‡ä»¶ã€‚
-Msvm_ComputerSystem,TimeOfLastStateChange,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,TransitioningToState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,RequestStateChange,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,SetPowerState,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,RequestReplicationStateChange,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,è¯·æ±‚å°†å¤åˆ¶çŠ¶æ€æ›´æ”¹ä¸º RequestedState å‚æ•°ä¸­æŒ‡å®šçš„å€¼ã€‚
-Msvm_ComputerSystem,InjectNonMaskableInterrupt,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,InjectNonMaskableInterruptEx,Method,Method,Method,âŒ,âŒ,âŒ,âœ…,[æ— æè¿°]
-Msvm_ComputerSystem,RequestReplicationStateChangeEx,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,è¯·æ±‚å°†æ‰©å±•å¤åˆ¶çš„çŠ¶æ€æ›´æ”¹ä¸º RequestedState å‚æ•°ä¸­æŒ‡å®šçš„å€¼ã€‚
-Msvm_ComputerSystem,RequestCustomRestore,Method,Method,Method,âŒ,âŒ,âŒ,âœ…,è¯·æ±‚å¯¹è™šæ‹Ÿæœºè¿›è¡Œè‡ªå®šä¹‰æ¢å¤çŠ¶æ€æ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,AdditionalRecoveryInformation,String,Property,Property,âœ…,âœ…,âœ…,âœ…,æä¾›ç»™æ¢å¤æ“ä½œçš„ä»»ä½•é™„åŠ ä¿¡æ¯ã€‚æ­¤å±æ€§çš„å«ä¹‰ç”± AutomaticRecoveryAction ä¸­çš„æ“ä½œå®šä¹‰ã€‚å¦‚æœ AutomaticRecoveryAction ä¸º 0 (â€œæ— â€) æˆ– 1 (â€œé‡å¯â€)ï¼Œåˆ™æ­¤å€¼ä¸º NULLã€‚å¦‚æœ AutomaticRecoveryAction ä¸º 2 (â€œè¿˜åŸä¸ºå¿«ç…§â€)ï¼Œåˆ™è¿™æ˜¯åœ¨è™šæ‹Ÿæœºå·¥ä½œè¿›ç¨‹å¤±è´¥æ—¶åº”åº”ç”¨çš„å¿«ç…§çš„å¯¹è±¡è·¯å¾„ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,AllowFullSCSICommandSet,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦å°†æ¥è‡ªå®¢ä½“æ“ä½œç³»ç»Ÿçš„ SCSI å‘½ä»¤ä¼ é€’ç»™ç›´é€šç£ç›˜ã€‚å¦‚æœä¸º TRUEï¼Œåˆ™ä¸ä¼šç­›é€‰å®¢ä½“æ“ä½œç³»ç»Ÿå‘å‡ºçš„åˆ°ç›´é€šç£ç›˜çš„ SCSI å‘½ä»¤ã€‚å»ºè®®åœ¨ç”Ÿäº§éƒ¨ç½²ä¸­ä¿æŒå¯ç”¨ SCSI ç­›é€‰ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚Windows Server 2008: ä¸æ”¯æŒ AllowFullSCSICommandSet å±æ€§ã€‚
-Msvm_VirtualSystemSettingData,AllowReducedFcRedundancy,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦å…è®¸å°†é…ç½®äº†è™šæ‹Ÿ FC é€‚é…å™¨çš„è™šæ‹Ÿæœºå®æ—¶è¿ç§»åˆ°ç›®æ ‡è®¡ç®—æœºï¼Œè€Œä¸æ£€æŸ¥ç›®æ ‡è®¡ç®—æœºä¸Šæ˜¯å¦å­˜åœ¨é€šå¾€å­˜å‚¨è®¾å¤‡çš„è·¯å¾„ã€‚æ­¤å±æ€§çš„é»˜è®¤å€¼ä¸º FALSEã€‚å¦‚æœè®¾ç½®ä¸º TRUEï¼Œåˆ™è™šæ‹Ÿæœºå¯ä»¥å®æ—¶è¿ç§»åˆ°ç›®æ ‡è®¡ç®—æœºï¼Œå³ä½¿è¯¥ç›®æ ‡è®¡ç®—æœºé€šå¾€ç›®æ ‡ FC è®¾å¤‡çš„è·¯å¾„ç¼ºå¤±æˆ–å‡å°‘ã€‚å®¢ä½“æ“ä½œç³»ç»Ÿå¯èƒ½ä¼šå¤±å»ä¸å­˜å‚¨çš„è¿æ¥ï¼Œå¹¶å¯èƒ½å‡ºç°ä¸å¯é¢„æµ‹çš„è¡Œä¸ºã€‚å®æ—¶è¿ç§»ååº”æ¸…é™¤æ­¤å±æ€§ã€‚
-Msvm_VirtualSystemSettingData,Architecture,String,Property,Property,âŒ,âœ…,âœ…,âœ…,æ­¤ç³»ç»Ÿçš„ä½“ç³»ç»“æ„ã€‚
-Msvm_VirtualSystemSettingData,AutomaticCriticalErrorAction,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æ ‡è¯†å½“å‘ç”Ÿå…³é”®é”™è¯¯ï¼ˆå¦‚å­˜å‚¨æ–­å¼€è¿æ¥ï¼‰æ—¶å¯¹è™šæ‹Ÿæœºé‡‡å–çš„æ“ä½œã€‚å€¼ä¸º 1 ä¼šå¯¼è‡´è™šæ‹Ÿæœºæš‚åœï¼Œå¹¶åœ¨å…³é”®é”™è¯¯æ¡ä»¶è§£å†³åè‡ªåŠ¨æ¢å¤ã€‚å¯ä»¥é€šè¿‡å°†å€¼è®¾ç½®ä¸º 0 æ¥è¦†ç›–æ­¤è¡Œä¸ºï¼Œæ­¤æ—¶é’ˆå¯¹å…³é”®é”™è¯¯æ¡ä»¶ä¸é‡‡å–ä»»ä½•ç‰¹å®šæ“ä½œã€‚[æšä¸¾å€¼: 0 - æ— ; 1 - æš‚åœæ¢å¤]
-Msvm_VirtualSystemSettingData,AutomaticCriticalErrorActionTimeout,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,æ ‡è¯†æ‰§è¡Œ AutomaticCriticalErrorAction ä»¥è§£å†³å…³é”®é”™è¯¯çš„æœ€é•¿æŒç»­æ—¶é—´ã€‚è¿™ä»…åœ¨ AutomaticCriticalErrorAction å±æ€§çš„å€¼ä¸ä¸º 0 (æ— ) æ—¶é€‚ç”¨ã€‚ä¸€æ—¦è¶…æ—¶ï¼Œè™šæ‹Ÿæœºå°†å…³æœºã€‚è¯¥å€¼å°†å‘ä¸Šèˆå…¥åˆ°æœ€æ¥è¿‘çš„åˆ†é’Ÿã€‚å€¼ä¸º 0 æ„å‘³ç€å½“é‡åˆ°å…³é”®é”™è¯¯æ¡ä»¶æ—¶ï¼Œè™šæ‹Ÿæœºåº”ç«‹å³å…³æœºã€‚
-Msvm_VirtualSystemSettingData,AutomaticRecoveryAction,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,AutomaticShutdownAction,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,AutomaticSnapshotsEnabled,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ­¤è™šæ‹Ÿæœºæ˜¯å¦åº”å¯ç”¨è‡ªåŠ¨å¿«ç…§ã€‚
-Msvm_VirtualSystemSettingData,AutomaticStartupAction,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,AutomaticStartupActionDelay,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,AutomaticStartupActionSequenceNumber,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,BaseBoardSerialNumber,String,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿè®¡ç®—æœºç³»ç»ŸåŸºæ¿çš„åºåˆ—å·ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,BIOSGUID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿ BIOS çš„å…¨å±€å”¯ä¸€æ ‡è¯†ç¬¦ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,BIOSNumLock,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,å¦‚æœ BIOS å°†æ•°å­—é”å®šé”®è®¾ç½®ä¸ºå¼€å¯ï¼Œåˆ™æ­¤å±æ€§è®¾ç½®ä¸º TRUEï¼›å¦‚æœ BIOS å°†æ•°å­—é”å®šé”®è®¾ç½®ä¸ºå…³é—­ï¼Œåˆ™è®¾ç½®ä¸º FALSEã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,BIOSSerialNumber,String,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿ BIOS çš„åºåˆ—å·ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,BootOrder,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,"è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿ BIOS ä¸­è®¾ç½®çš„å¼•å¯¼é¡ºåºã€‚æ­¤å±æ€§æ˜¯ä¸€ä¸ªå€¼æ•°ç»„ï¼Œæœ€å¤§é•¿åº¦ä¸º 4ï¼Œå…¶ä¸­æ¯ä¸ªå€¼æŒ‡ç¤ºè¦ä»ä¸­å¼•å¯¼çš„è®¾å¤‡ã€‚è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿå°†é¦–å…ˆå°è¯•ä»æ•°ç»„ä¸­ç¬¬ä¸€ä¸ªå€¼æŒ‡ç¤ºçš„è®¾å¤‡å¼•å¯¼ã€‚å¦‚æœè¯¥è®¾å¤‡ä¸åŒ…å«å¼•å¯¼æ‰‡åŒºï¼Œåˆ™è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿå°†å°è¯•ä» BootOrder å±æ€§æŒ‡å®šçš„ä¸‹ä¸€ä¸ªè®¾å¤‡å¼•å¯¼ï¼Œä¾æ­¤ç±»æ¨ã€‚å¦‚æœ BootOrder ä¸­æŒ‡å®šçš„è®¾å¤‡éƒ½ä¸åŒ…å«å¼•å¯¼æ‰‡åŒºï¼Œåˆ™è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿå°†æ— æ³•å¼•å¯¼ã€‚è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿçš„é»˜è®¤å€¼ä¸º [0, 1, 2, 3, 4]ã€‚å€¼å®šä¹‰: 0 (è½¯ç›˜): è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿå°†å°è¯•ä»è½¯ç›˜é©±åŠ¨å™¨ä¸­çš„è½¯ç›˜å¼•å¯¼ã€‚ 1 (CD-ROM): è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿå°†å°è¯•ä»æ‰¾åˆ°çš„ç¬¬ä¸€ä¸ªå¸¦æœ‰å¼•å¯¼æ‰‡åŒºçš„ CD æˆ– DVD ç›˜å¼•å¯¼ã€‚ 2 (IDE ç¡¬ç›˜): è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿå°†å°è¯•ä»æ‰¾åˆ°çš„ç¬¬ä¸€ä¸ªè¿æ¥åˆ° IDE æ§åˆ¶å™¨ä¸”å¸¦æœ‰å¼•å¯¼æ‰‡åŒºçš„ç¡¬ç›˜å¼•å¯¼ã€‚ 3 (PXE å¼•å¯¼): è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿå°†å°è¯•ä»ç½‘ç»œè¿›è¡Œ PXE å¼•å¯¼ã€‚ 4 (SCSI ç¡¬ç›˜): è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿå°†å°è¯•ä»æ‰¾åˆ°çš„ç¬¬ä¸€ä¸ªè¿æ¥åˆ° SCSI æ§åˆ¶å™¨ä¸”å¸¦æœ‰å¼•å¯¼æ‰‡åŒºçš„ç¡¬ç›˜å¼•å¯¼ã€‚ 5-65535: ä¿ç•™ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚[æšä¸¾å€¼: 0 - è½¯ç›˜; 1 - CD-ROM; 2 - IDE ç¡¬ç›˜; 3 - PXE å¼•å¯¼; 4 - SCSI ç¡¬ç›˜; 5..65535 - ä¿ç•™]"
-Msvm_VirtualSystemSettingData,BootPciExpress,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,å¦‚æœè®¾ç½®ä¸º trueï¼Œä¸”æœªæ‰¾åˆ°æˆåŠŸçš„å¼•å¯¼æºæ¡ç›®ï¼Œè™šæ‹Ÿç³»ç»Ÿå°†å°è¯•ä»è™šæ‹Ÿ PCI Express è®¾å¤‡å¼•å¯¼ã€‚
-Msvm_VirtualSystemSettingData,BootPciExpressInstanceFilter,String,Property,Property,âŒ,âœ…,âœ…,âœ…,å¦‚æœå·²è®¾ç½®ï¼Œåˆ™ä¸ºè¦ä»ä¸­å¼•å¯¼è®¾å¤‡çš„æ ¹è™šæ‹Ÿ PCI Express æ§åˆ¶å™¨çš„è®¾å¤‡å®ä¾‹ GUIDã€‚
-Msvm_VirtualSystemSettingData,BootSourceOrder,String,Property,Property,âœ…,âœ…,âœ…,âœ…,åŒ…å«å¯¹æ­¤è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿçš„å¼•å¯¼æºæ¡ç›®çš„å¼•ç”¨ã€‚æ­¤å±æ€§æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²æ•°ç»„ï¼Œå…¶ä¸­æ¯ä¸ªå­—ç¬¦ä¸²éƒ½æ˜¯æŒ‡å‘ Msvm_BootSourceSettingData å®ä¾‹çš„å®Œæ•´è·¯å¾„ï¼ŒæŒ‡ç¤ºè¦ä»ä¸­å¼•å¯¼çš„è®¾å¤‡ã€æ–‡ä»¶æˆ–å…¶ä»–å¼•å¯¼æºã€‚
-Msvm_VirtualSystemSettingData,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,ChassisAssetTag,String,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿæœºç®±çš„èµ„äº§æ ‡ç­¾ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,ChassisSerialNumber,String,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿæœºç®±çš„åºåˆ—å·ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,ClusterWideNodeCapabilitiesValidationMode,UInt16,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦éœ€è¦è¦†ç›–æ£€æŸ¥ç¾¤é›†èŒƒå›´å†…æ˜¯å¦æ”¯æŒæŸåŠŸèƒ½çš„éªŒè¯é€»è¾‘ã€‚[æšä¸¾å€¼: 0 - é»˜è®¤; 1 - è¦†ç›–]
-Msvm_VirtualSystemSettingData,ConfigurationDataRoot,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,ConfigurationFile,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,ConfigurationID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,ConsoleMode,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æ ‡è¯†è™šæ‹Ÿæœºçš„æ§åˆ¶å°æ¨¡å¼ [æšä¸¾å€¼: 0 - é»˜è®¤; 1 - COM1; 2 - COM2; 3 - æ— ]
-Msvm_VirtualSystemSettingData,CreationTime,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,DebugChannelId,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,ä½¿ç”¨ VUD ç»Ÿä¸€è°ƒè¯•å™¨è°ƒè¯•è™šæ‹Ÿç³»ç»Ÿæ—¶ä½¿ç”¨çš„é€šé“æ ‡è¯†ç¬¦ã€‚
-Msvm_VirtualSystemSettingData,DebugPort,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,ä½¿ç”¨åˆæˆè°ƒè¯•è°ƒè¯•è™šæ‹Ÿç³»ç»Ÿæ—¶ä½¿ç”¨çš„ tcpip ç«¯å£ã€‚
-Msvm_VirtualSystemSettingData,DebugPortEnabled,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿæ˜¯å¦æ­£åœ¨ä½¿ç”¨åˆæˆè°ƒè¯•ã€‚[æšä¸¾å€¼: 0 - å…³é—­; 1 - å¼€å¯; 2 - è‡ªåŠ¨åˆ†é…å¼€å¯]
-Msvm_VirtualSystemSettingData,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,EnableHibernation,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,å¦‚æœ BIOS å¯ç”¨äº†ä¼‘çœ  (S4)ï¼Œåˆ™æ­¤å±æ€§è®¾ç½®ä¸º TRUEï¼›å¦‚æœç¦ç”¨ä¼‘çœ ï¼Œåˆ™è®¾ç½®ä¸º FALSEã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,EnhancedSessionTransportType,UInt16,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤ºè¿æ¥åˆ°å¢å¼ºä¼šè¯æ—¶ä½¿ç”¨çš„ä¼ è¾“ç±»å‹ã€‚[æšä¸¾å€¼: 0 - VMBus ç®¡é“; 1 - Hyper-V å¥—æ¥å­—]
-Msvm_VirtualSystemSettingData,FirmwareFile,String,Property,Property,âŒ,âŒ,âŒ,âœ…,å›ºä»¶æ–‡ä»¶ã€‚
-Msvm_VirtualSystemSettingData,FirmwareParameters,UInt8,Property,Property,âŒ,âŒ,âŒ,âœ…,æä¾›ç»™å›ºä»¶æ–‡ä»¶çš„å‚æ•°ã€‚
-Msvm_VirtualSystemSettingData,GuestControlledCacheTypes,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºå®¢ä½“æ˜¯å¦å¯ä»¥æ§åˆ¶ç¼“å­˜ç±»å‹ã€‚
-Msvm_VirtualSystemSettingData,GuestFeatureSet,UInt64,Property,Property,âŒ,âŒ,âŒ,âœ…,ç”¨äºä¿®æ”¹å®¢ä½“å¯è§è¡Œä¸ºçš„æ ‡å¿—ã€‚
-Msvm_VirtualSystemSettingData,GuestStateDataRoot,String,Property,Property,âŒ,âœ…,âœ…,âœ…,å­˜å‚¨å®¢ä½“è¿è¡Œæ—¶çŠ¶æ€ä¿¡æ¯çš„ç›®å½•çš„æ–‡ä»¶è·¯å¾„ã€‚
-Msvm_VirtualSystemSettingData,GuestStateFile,String,Property,Property,âŒ,âœ…,âœ…,âœ…,å­˜å‚¨å®¢ä½“è¿è¡Œæ—¶çŠ¶æ€ä¿¡æ¯çš„æ–‡ä»¶çš„æ–‡ä»¶è·¯å¾„ã€‚ç›¸å¯¹è·¯å¾„ä¼šè¿½åŠ åˆ° GuestStateDataRoot å±æ€§çš„å€¼ä¹‹åã€‚
-Msvm_VirtualSystemSettingData,GuestStateIsolationEnabled,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿç³»ç»Ÿæ˜¯å¦åº”å¯ç”¨å®¢ä½“çŠ¶æ€éš”ç¦»ã€‚
-Msvm_VirtualSystemSettingData,GuestStateIsolationMode,UInt16,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºè™šæ‹Ÿç³»ç»Ÿçš„éš”ç¦»æ¨¡å¼ã€‚[æšä¸¾å€¼: 0 - é»˜è®¤; 1 - æ— æŒä¹…æœºå¯†; 2 - æ— ç®¡ç† VTL]
-Msvm_VirtualSystemSettingData,GuestStateIsolationType,UInt16,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿç³»ç»Ÿçš„éš”ç¦»ç±»å‹ã€‚[æšä¸¾å€¼: 0 - å¯ä¿¡å¯åŠ¨; 1 - ä¿ç•™; 2 - SEV-SNP; 3 - ä¿ç•™; 16 - ä¿ç•™; 18 - ä¿ç•™; 19 - ä¿ç•™]
-Msvm_VirtualSystemSettingData,HighMmioGapBase,UInt64,Property,Property,âŒ,âœ…,âœ…,âœ…,é«˜ä½ (4GB ä»¥ä¸Š) å†…å­˜æ˜ å°„ IO é—´éš™çš„åŸºå€ (MB)ã€‚
-Msvm_VirtualSystemSettingData,HighMmioGapSize,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,é«˜ä½ (4GB ä»¥ä¸Š) å†…å­˜æ˜ å°„ IO é—´éš™çš„å¤§å° (MB)ã€‚
-Msvm_VirtualSystemSettingData,IncrementalBackupEnabled,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V VSS å†™å…¥ç¨‹åºæ˜¯å¦æ”¯æŒå¯¹æ­¤è™šæ‹Ÿæœºè¿›è¡Œå¢é‡å¤‡ä»½ã€‚è¿™æ˜¯ä¸€ä¸ªè¯»å†™å±æ€§ã€‚
-Msvm_VirtualSystemSettingData,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,IsAutomaticSnapshot,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤ºè¿™æ˜¯å¦æ˜¯ä¸ºç”¨æˆ·è‡ªåŠ¨åˆ›å»ºçš„å¿«ç…§ã€‚
-Msvm_VirtualSystemSettingData,IsSaved,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,å¦‚æœé…ç½®å¼•ç”¨äº†å·²ä¿å­˜çš„çŠ¶æ€æ–‡ä»¶ï¼Œåˆ™æ­¤å±æ€§è®¾ç½®ä¸º TRUEï¼Œå¦åˆ™è®¾ç½®ä¸º FALSEã€‚è¯·æ³¨æ„ï¼Œè¿™å¹¶ä¸è¡¨ç¤ºå­˜åœ¨æ­¤ç±»æ–‡ä»¶ï¼Œä»…è¡¨ç¤ºé…ç½®æŒ‡å®šäº†ä¸€ä¸ªæ–‡ä»¶ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œæ— æ³•æ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,LockOnDisconnect,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,ä» vmconnect æ–­å¼€è¿æ¥æ—¶é”å®šæ§åˆ¶å°ã€‚
-Msvm_VirtualSystemSettingData,LogDataRoot,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,LowMmioGapSize,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,ä½ä½ (4GB ä»¥ä¸‹) å†…å­˜æ˜ å°„ IO é—´éš™çš„å¤§å° (MB)ã€‚
-Msvm_VirtualSystemSettingData,ManagementVtlUpdatePolicy,UInt16,Property,Property,âŒ,âŒ,âŒ,âœ…,æ‰§è¡Œæ­¤è™šæ‹Ÿæœºç®¡ç† VTL æ›´æ–°çš„ç­–ç•¥ã€‚OfflineOnly: è¿è¡Œæ—¶ä¸é‡æ–°åŠ è½½ç®¡ç† VTLã€‚æ›´æ–°å°†åœ¨ä¸‹æ¬¡é‡æ–°å¯åŠ¨æ—¶åº”ç”¨ã€‚[æšä¸¾å€¼: 0 - é»˜è®¤; 1 - ä»…è„±æœº; 2..65535 - ä¿ç•™]
-Msvm_VirtualSystemSettingData,MemoryHostingJobObjectName,String,Property,Property,âŒ,âŒ,âŒ,âœ…,ç”¨äºå¯åŠ¨ VM å†…å­˜è¿›ç¨‹çš„ä½œä¸šå¯¹è±¡çš„åç§°ã€‚
-Msvm_VirtualSystemSettingData,NetworkBootPreferredProtocol,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æ ‡è¯†ç”¨äºç½‘ç»œå¼•å¯¼çš„ IP åè®®ã€‚[æšä¸¾å€¼: 4096 - IPv4; 4097 - IPv6]
-Msvm_VirtualSystemSettingData,Notes,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,NumaNodeTopologyArray,String,Property,Property,âŒ,âœ…,âœ…,âœ…,ä¸€ä¸ªåµŒå…¥å¼ Msvm_NumaNodeTopology å®ä¾‹æ•°ç»„ï¼Œå…¶ä¸­åŒ…å«æ¯ä¸ª NUMA èŠ‚ç‚¹çš„ NUMA èŠ‚ç‚¹æ‹“æ‰‘ã€‚
-Msvm_VirtualSystemSettingData,Parent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,æ­¤å¯¹è±¡æ‰€åŸºäºçš„å¿«ç…§ Msvm_VirtualSystemSettingData çš„å¯¹è±¡è·¯å¾„ã€‚å¦‚æœæ­¤å¯¹è±¡ä¸æ˜¯åŸºäºå¿«ç…§ï¼Œåˆ™æ­¤å±æ€§å°†ä¸º NULLã€‚
-Msvm_VirtualSystemSettingData,PauseAfterBootFailure,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºçš„å¼•å¯¼å¤±è´¥åæš‚åœè®¾ç½®ã€‚
-Msvm_VirtualSystemSettingData,RecoveryFile,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,SecureBootEnabled,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºçš„å®‰å…¨å¼•å¯¼å¯ç”¨è®¾ç½®ã€‚
-Msvm_VirtualSystemSettingData,SecureBootTemplateId,String,Property,Property,âœ…,âœ…,âœ…,âœ…,UEFI å®‰å…¨å¼•å¯¼ç›¸å…³å˜é‡åˆå§‹å€¼æ¨¡æ¿çš„å…¨å±€å”¯ä¸€æ ‡è¯†ç¬¦ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ Msvm_VirtualSystemManagementService ç±»çš„ ModifyVirtualSystem æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_VirtualSystemSettingData,SnapshotDataRoot,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,SourceGuestStateFile,String,Property,Property,âŒ,âŒ,âŒ,âœ…,å°†è¢«å¤åˆ¶å¹¶ç”¨ä½œå®¢ä½“è¿è¡Œæ—¶çŠ¶æ€çš„æºæ–‡ä»¶çš„æ–‡ä»¶è·¯å¾„ã€‚
-Msvm_VirtualSystemSettingData,SuspendDataRoot,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,SwapFileDataRoot,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,TurnOffOnGuestRestart,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,å¦‚æœå®¢ä½“æ“ä½œç³»ç»Ÿå‘èµ·é‡å¯ï¼Œåˆ™å…³é—­è™šæ‹Ÿæœºè€Œä¸æ˜¯é‡å¯è™šæ‹Ÿæœºã€‚
-Msvm_VirtualSystemSettingData,UserSnapshotType,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºç”¨æˆ·å®šä¹‰çš„å¿«ç…§ç±»å‹ã€‚Disable: ç¦ç”¨ä»»ä½•å¿«ç…§çš„åˆ›å»ºã€‚ProductionFallbackToTest: ç”¨äºç”Ÿäº§ç¯å¢ƒçš„æ•°æ®ä¸€è‡´æ€§å¿«ç…§ã€‚å½“æ— æ³•åˆ›å»ºæ•°æ®ä¸€è‡´æ€§å¿«ç…§æ—¶ï¼Œæ‰§è¡ŒåŒ…å«åº”ç”¨ç¨‹åºçŠ¶æ€çš„å¿«ç…§ã€‚ProductionNoFallback: ç”¨äºç”Ÿäº§ç¯å¢ƒçš„æ•°æ®ä¸€è‡´æ€§å¿«ç…§ã€‚å¦‚æœæ— æ³•åˆ›å»ºæ•°æ®ä¸€è‡´æ€§å¿«ç…§ï¼Œåˆ™ä¸åˆ›å»ºåŒ…å«åº”ç”¨ç¨‹åºçŠ¶æ€çš„å¿«ç…§ã€‚Test: åŒ…å«ç”¨äºæµ‹è¯•å’Œå¼€å‘ç›®çš„çš„å†…å­˜å’Œè®¾å¤‡ä¿¡æ¯çš„å¿«ç…§ã€‚[æšä¸¾å€¼: 2 - ç¦ç”¨; 3 - ç”Ÿäº§ (å›é€€åˆ°æµ‹è¯•); 4 - ç”Ÿäº§ (ä¸å›é€€); 5 - æµ‹è¯•]
-Msvm_VirtualSystemSettingData,Version,String,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿçš„ç‰ˆæœ¬ï¼Œæ ¼å¼ä¸ºâ€œä¸»ç‰ˆæœ¬.æ¬¡ç‰ˆæœ¬â€ï¼Œä¾‹å¦‚â€œ2.0â€ã€‚Windows Server 2008: ä¸æ”¯æŒ Version å±æ€§ã€‚
-Msvm_VirtualSystemSettingData,VirtualNumaEnabled,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦å°†è™šæ‹Ÿéä¸€è‡´æ€§å†…å­˜è®¿é—® (NUMA) èŠ‚ç‚¹æŠ•å½±åˆ°è™šæ‹Ÿæœºä¸­ã€‚å¦‚æœä¸º FALSEï¼Œåˆ™è™šæ‹Ÿæœºå°†åªæœ‰ä¸€ä¸ªèŠ‚ç‚¹ã€‚å¦‚æœä¸º TRUEï¼Œåˆ™æŠ•å½±åˆ°è™šæ‹Ÿæœºä¸­çš„è™šæ‹Ÿ NUMA èŠ‚ç‚¹æ•°ç”± Msvm_ProcessorSettingData.MaxProcessorsPerNumaNode å’Œ Msvm_MemorySettingData.MaxMemoryBlocksPerNumaNode å±æ€§çš„å€¼ç¡®å®šã€‚
-Msvm_VirtualSystemSettingData,VirtualSlitType,UInt16,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿç³»ç»Ÿæ˜¯å¦åº”å¯ç”¨è™šæ‹Ÿ SLIT ä»¥åŠç”¨äºç”Ÿæˆè™šæ‹Ÿ SLIT çš„æµ‹é‡ç±»å‹ã€‚[æšä¸¾å€¼: 0 - æ— ; 1 - å›ºä»¶; 2 - æµ‹é‡; 3 - å›ºä»¶å›é€€æµ‹é‡]
-Msvm_VirtualSystemSettingData,VirtualSystemIdentifier,String,Property,Property,âœ…,âœ…,âœ…,âœ…,æ­¤è®¾ç½®æ•°æ®æ‰€å±çš„ CIM_ComputerSystem çš„åç§°ã€‚
-Msvm_VirtualSystemSettingData,VirtualSystemSubType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿçš„å­ç±»å‹ã€‚
-Msvm_VirtualSystemSettingData,VirtualSystemType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemSettingData,VMBusMessageRedirection,UInt16,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºæ˜¯å¦é‡å®šå‘ VMBus æ§åˆ¶å¹³é¢æ¶ˆæ¯ã€‚[æšä¸¾å€¼: 0 - æ— ; 1 - é‡å®šå‘åˆ° Vtl2]
-Msvm_VirtualSystemSettingData,Vtl2AddressRangeBase,UInt64,Property,Property,âŒ,âŒ,âŒ,âœ…,VTL2 åœ°å€ç©ºé—´èŒƒå›´çš„åŸºå€ (MB)ã€‚
-Msvm_VirtualSystemSettingData,Vtl2AddressRangeSize,UInt64,Property,Property,âŒ,âŒ,âŒ,âœ…,VTL2 åœ°å€ç©ºé—´èŒƒå›´çš„å¤§å° (MB)ã€‚
-Msvm_VirtualSystemSettingData,Vtl2AddressSpaceConfigurationMode,UInt16,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤º VTL2 åœ°å€ç©ºé—´é…ç½®æ¨¡å¼ã€‚[æšä¸¾å€¼: 0 - é»˜è®¤; 1 - å¯é…ç½®å¤§å°æ”¾ç½®; 2 - æ˜¾å¼æ”¾ç½®]
-Msvm_VirtualSystemSettingData,Vtl2MmioAddressRangeSize,UInt64,Property,Property,âŒ,âŒ,âŒ,âœ…,VTL2 å†…å­˜æ˜ å°„ IO åœ°å€ç©ºé—´èŒƒå›´çš„å¤§å° (MB)ã€‚
-Msvm_VirtualSystemSettingData,WatchdogEnabled,Boolean,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºè™šæ‹Ÿç³»ç»Ÿæ˜¯å¦åº”å…¬å¼€æ¨¡æ‹Ÿçš„ç¡¬ä»¶çœ‹é—¨ç‹—ã€‚
-Msvm_VirtualSystemSettingData,WorkerJobObjectName,String,Property,Property,âŒ,âŒ,âŒ,âœ…,ç”¨äºå¯åŠ¨ VM å·¥ä½œè¿›ç¨‹çš„ä½œä¸šå¯¹è±¡çš„åç§°ã€‚
-Msvm_ProcessorSettingData,Address,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,AddressOnParent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,AllocationUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,AllowACountMCount,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”å…è®¸è™šæ‹Ÿæœºè®¿é—®ç”¨äº CPU æ€§èƒ½ç›‘æ§çš„ ACOUNT/MCOUNT MSRã€‚
-Msvm_ProcessorSettingData,ApicMode,UInt8,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºçš„ APIC æ¨¡å¼ [æšä¸¾å€¼: 0 - é»˜è®¤; 1 - ä¼ ç»Ÿ; 2 - x2Apic; 3 - Apic]
-Msvm_ProcessorSettingData,AutomaticAllocation,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,AutomaticDeallocation,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,Connection,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,ConsumerVisibility,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,CpuBrandString,String,Property,Property,âŒ,âŒ,âœ…,âœ…,æä¾›è¦å‘è™šæ‹Ÿæœºå…¬å¼€çš„è‡ªå®šä¹‰ CPU å“ç‰Œå­—ç¬¦ä¸²ã€‚å¦‚æœæœªè®¾ç½®æ­¤å­—æ®µï¼Œè™šæ‹Ÿæœºå°†åœ¨å¼•å¯¼æ—¶çœ‹åˆ°åŸå§‹ç¡¬ä»¶å€¼ã€‚
-Msvm_ProcessorSettingData,CpuGroupId,String,Property,Property,âœ…,âœ…,âœ…,âœ…,æ­¤è™šæ‹Ÿæœºç»‘å®šçš„ CPU ç»„ IDã€‚å½“å€¼ä¸º 0 æ—¶ï¼Œè¡¨ç¤ºæœªç»‘å®šåˆ°ç‰¹å®šçš„ CPU ç»„ã€‚
-Msvm_ProcessorSettingData,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,DisableSpeculationControls,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦åº”ä¸ºè™šæ‹Ÿå¤„ç†å™¨ç¦ç”¨é’ˆå¯¹æ¨æµ‹æ‰§è¡Œçš„ä¿æŠ¤ã€‚
-Msvm_ProcessorSettingData,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,EnableHierarchicalVirtualization,Boolean,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”ä¸ºè™šæ‹Ÿæœºå¯ç”¨åˆ†å±‚è™šæ‹ŸåŒ–ã€‚
-Msvm_ProcessorSettingData,EnableHostResourceProtection,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºæ˜¯å¦åº”å¯ç”¨å¢å¼ºä¸»æœºèµ„æºä¿æŠ¤çš„åŠŸèƒ½ï¼Œä»¥é˜²æ­¢è™šæ‹Ÿæœºä¸­è¿è¡Œçš„å·¥ä½œè´Ÿè½½å½±å“ä¸»æœºã€‚
-Msvm_ProcessorSettingData,EnableLegacyApicMode,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,å·²å¼ƒç”¨ã€‚
-Msvm_ProcessorSettingData,EnablePageShattering,UInt8,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”ä¸ºè™šæ‹Ÿæœºå¯ç”¨é¡µé¢ç²‰ç¢ [æšä¸¾å€¼: 0 - é»˜è®¤; 1 - å§‹ç»ˆå¯ç”¨; 2 - å§‹ç»ˆç¦ç”¨]
-Msvm_ProcessorSettingData,EnablePerfmonArchPmu,Boolean,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”å‘è™šæ‹Ÿæœºå…¬å¼€è™šæ‹ŸåŒ–çš„æ¶æ„ PMU (æ€§èƒ½ç›‘æ§å•å…ƒ) è®¾æ–½ã€‚
-Msvm_ProcessorSettingData,EnablePerfmonIpt,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”å‘è™šæ‹Ÿæœºå…¬å¼€è™šæ‹ŸåŒ–çš„ IPT (Intel å¤„ç†å™¨è·Ÿè¸ª) è®¾æ–½ã€‚
-Msvm_ProcessorSettingData,EnablePerfmonLbr,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”å‘è™šæ‹Ÿæœºå…¬å¼€è™šæ‹ŸåŒ–çš„ LBR (æœ€ååˆ†æ”¯è®°å½•) è®¾æ–½ã€‚
-Msvm_ProcessorSettingData,EnablePerfmonPebs,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”å‘è™šæ‹Ÿæœºå…¬å¼€è™šæ‹ŸåŒ–çš„ PEBS (åŸºäºå¤„ç†å™¨äº‹ä»¶çš„é‡‡æ ·) è®¾æ–½ã€‚
-Msvm_ProcessorSettingData,EnablePerfmonPmu,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”å‘è™šæ‹Ÿæœºå…¬å¼€è™šæ‹ŸåŒ–çš„ PMU (æ€§èƒ½ç›‘æ§å•å…ƒ) è®¾æ–½ã€‚
-Msvm_ProcessorSettingData,EnableSocketTopology,Boolean,Property,Property,âŒ,âŒ,âœ…,âœ…,åœ¨ä¸»æœºä¸Šæ”¾ç½®è™šæ‹Ÿæœºæ—¶å¯ç”¨æ’æ§½æ‹“æ‰‘æ˜ å°„ã€‚
-Msvm_ProcessorSettingData,EnlightenmentSet,String,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤ºå‘æ“ä½œç³»ç»Ÿå…¬å¼€çš„å¯å‘å¼é›†åˆã€‚
-Msvm_ProcessorSettingData,ExposeVirtualizationExtensions,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”å‘è™šæ‹Ÿæœºå…¬å¼€è™šæ‹ŸåŒ–çš„ç¡¬ä»¶è™šæ‹ŸåŒ–æ‰©å±•ã€‚
-Msvm_ProcessorSettingData,ExtendedVirtualizationExtensions,UInt32,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡å®šåº”å‘è™šæ‹Ÿæœºå…¬å¼€çš„ä¸€ç»„é™„åŠ è™šæ‹ŸåŒ–æ‰©å±•ã€‚[æšä¸¾å€¼: 1 - ç¡¬ä»¶éš”ç¦»]
-Msvm_ProcessorSettingData,HideHypervisorPresent,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤º Hyper-V æ˜¯å¦åº”å‘åµŒå¥—å®¢ä½“æŠ¥å‘Šå­˜åœ¨è™šæ‹Ÿæœºç›‘æ§ç¨‹åºã€‚
-Msvm_ProcessorSettingData,HostResource,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,HwThreadsPerCore,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºå‘å®¢ä½“æŠ¥å‘Šçš„æ¯ä¸ªæ ¸å¿ƒçš„ SMT çº¿ç¨‹æ•°ã€‚æ­¤æŠ¥å‘Šä¸ç¡¬ä»¶æ˜¯å¦å®é™…å­˜åœ¨ SMT æ— å…³ã€‚
-Msvm_ProcessorSettingData,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,L3CacheWays,UInt32,Property,Property,âŒ,âŒ,âœ…,âœ…,æä¾›è¦ä¸ºè™šæ‹ŸæœºæŠ¥å‘Šçš„ L3 ç¼“å­˜è·¯æ•°ã€‚æ­¤å­—æ®µåœ¨è™šæ‹Ÿæœºå¯åŠ¨åæ— æ³•è°ƒæ•´ï¼Œå¹¶ä¸”å¯èƒ½å› ä¸»æœºåŠŸèƒ½è€Œä¸è¢«éµå®ˆã€‚
-Msvm_ProcessorSettingData,L3ProcessorDistributionPolicy,UInt8,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤º Hyper-V å¦‚ä½•åœ¨ L3 çº§åˆ«åˆ†å‘å¤„ç†å™¨ã€‚æ­¤å­—æ®µåœ¨è™šæ‹Ÿæœºå¯åŠ¨åæ— æ³•è°ƒæ•´ã€‚[æšä¸¾å€¼: 0 - å°åˆ°å¤§ (é»˜è®¤); 1 - å¤§åˆ°å°; 2 - å‡åŒ€å°åˆ°å¤§; 3 - å‡åŒ€å¤§åˆ°å°]
-Msvm_ProcessorSettingData,Limit,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,LimitCPUID,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºæ˜¯å¦åº”é™ä½ CPU æ ‡è¯†ç¬¦ã€‚æŸäº›è¾ƒæ—§çš„æ“ä½œç³»ç»Ÿå¯èƒ½è¦æ±‚ä»¥è¿™ç§æ–¹å¼é™åˆ¶å¤„ç†å™¨åŠŸèƒ½æ‰èƒ½è¿è¡Œã€‚
-Msvm_ProcessorSettingData,LimitProcessorFeatures,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºæ˜¯å¦åº”é™åˆ¶å‘æ“ä½œç³»ç»Ÿå…¬å¼€çš„ CPU åŠŸèƒ½ã€‚é™åˆ¶å¤„ç†å™¨åŠŸèƒ½ä½¿è™šæ‹Ÿæœºèƒ½å¤Ÿè¿ç§»åˆ°å…·æœ‰ä¸åŒå¤„ç†å™¨çš„ä¸åŒä¸»æœºè®¡ç®—æœºç³»ç»Ÿã€‚ä¸æ”¯æŒåœ¨å…·æœ‰ä¸åŒä¾›åº”å•†å¤„ç†å™¨çš„è®¡ç®—æœºä¹‹é—´è¿ç§»è™šæ‹Ÿæœºã€‚
-Msvm_ProcessorSettingData,LimitProcessorFeaturesMode,UInt8,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤ºå¯ç”¨ LimitProcessorFeatures æ—¶åº”ç”¨çš„ CPU åŠŸèƒ½é›†ç±»å‹ã€‚DefaultMinimumFeatures å°†å›ºå®šçš„æœ€å°åŠŸèƒ½é›†åº”ç”¨äºè™šæ‹Ÿæœºï¼ŒClusterNodeCommonFeatures æ ¹æ®æ•…éšœè½¬ç§»ç¾¤é›†ä¸­èŠ‚ç‚¹çš„åŠŸèƒ½åº”ç”¨åŠ¨æ€è®¡ç®—çš„åŠŸèƒ½é›†ã€‚[æšä¸¾å€¼: 0 - DefaultMinimumFeatures; 1 - ClusterNodeCommonFeatures]
-Msvm_ProcessorSettingData,MappingBehavior,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,MaxClusterCountPerSocket,UInt32,Property,Property,âŒ,âŒ,âœ…,âœ…,ä¸€ä¸ªæ’æ§½ä¸­çš„æœ€å¤§ç¾¤é›†æ•°ã€‚æ­¤å­—æ®µåœ¨è™šæ‹Ÿæœºå¯åŠ¨åæ— æ³•è°ƒæ•´ã€‚
-Msvm_ProcessorSettingData,MaxHierarchicalPartitions,UInt32,Property,Property,âŒ,âŒ,âŒ,âœ…,åˆ†å±‚è™šæ‹ŸåŒ–åˆ†åŒºå¯ä»¥åˆ›å»ºçš„æœ€å¤§å­åˆ†åŒºæ•°ã€‚
-Msvm_ProcessorSettingData,MaxHierarchicalVps,UInt32,Property,Property,âŒ,âŒ,âŒ,âœ…,åˆ†å±‚è™šæ‹ŸåŒ–åˆ†åŒºå¯ä»¥åˆ›å»ºçš„æœ€å¤§å­ VPS æ•°ã€‚
-Msvm_ProcessorSettingData,MaxHwIsolatedGuests,UInt32,Property,Property,âŒ,âŒ,âœ…,âœ…,è™šæ‹Ÿæœºå¯ä»¥åŒæ—¶è¿è¡Œçš„æœ€å¤§ç¡¬ä»¶éš”ç¦»å®¢ä½“æ•°ã€‚
-Msvm_ProcessorSettingData,MaxNumaNodesPerSocket,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,åœ¨è™šæ‹Ÿæœºå†…å¯è¢«è§‚å¯Ÿä¸ºå±äºå•ä¸ªå¤„ç†å™¨æ’æ§½çš„æœ€å¤§ NUMA èŠ‚ç‚¹æ•°ã€‚
-Msvm_ProcessorSettingData,MaxProcessorCountPerL3,UInt32,Property,Property,âŒ,âŒ,âœ…,âœ…,å…±äº« L3 ç¼“å­˜çš„æœ€å¤§å¤„ç†å™¨æ•°ã€‚æ­¤å­—æ®µåœ¨è™šæ‹Ÿæœºå¯åŠ¨åæ— æ³•è°ƒæ•´ã€‚
-Msvm_ProcessorSettingData,MaxProcessorsPerNumaNode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,åœ¨è™šæ‹Ÿæœºå†…å¯è¢«è§‚å¯Ÿä¸ºå±äºå•ä¸ªè™šæ‹Ÿ NUMA èŠ‚ç‚¹çš„æœ€å¤§è™šæ‹Ÿå¤„ç†å™¨æ•°ã€‚
-Msvm_ProcessorSettingData,OtherResourceType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,Parent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,PartitionDiagnosticBufferCount,UInt32,Property,Property,âŒ,âŒ,âŒ,âœ…,åˆ†å±‚è™šæ‹ŸåŒ–åˆ†åŒºä½¿ç”¨çš„è™šæ‹Ÿæœºç›‘æ§ç¨‹åºè·Ÿè¸ªç¼“å†²åŒºçš„æ•°é‡ã€‚
-Msvm_ProcessorSettingData,PartitionDiagnosticBufferSizeInPages,UInt32,Property,Property,âŒ,âŒ,âŒ,âœ…,åˆ†å±‚è™šæ‹ŸåŒ–åˆ†åŒºä½¿ç”¨çš„æ¯ä¸ªè™šæ‹Ÿæœºç›‘æ§ç¨‹åºè·Ÿè¸ªç¼“å†²åŒºçš„å¤§å°ï¼ˆä»¥é¡µä¸ºå•ä½ï¼‰ã€‚
-Msvm_ProcessorSettingData,PerfCpuFreqCapMhz,UInt32,Property,Property,âŒ,âŒ,âœ…,âœ…,æä¾›è™šæ‹Ÿæœºçš„ç›®æ ‡æœ€å¤§ CPU é¢‘ç‡ã€‚æ­¤å­—æ®µåœ¨è™šæ‹Ÿæœºå¯åŠ¨åæ— æ³•è°ƒæ•´ï¼Œå¹¶ä¸”å¯èƒ½å› ä¸»æœºåŠŸèƒ½è€Œä¸è¢«éµå®ˆã€‚
-Msvm_ProcessorSettingData,PhysicalAddressWidth,UInt32,Property,Property,âŒ,âŒ,âŒ,âœ…,è™šæ‹Ÿæœºçš„ç‰©ç†åœ°å€å®½åº¦ã€‚
-Msvm_ProcessorSettingData,PoolID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,ProcessorFeatureSet,String,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤ºå‘æ“ä½œç³»ç»Ÿå…¬å¼€çš„ CPU åŠŸèƒ½é›†ã€‚
-Msvm_ProcessorSettingData,Reservation,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,ResourceSubType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,ResourceType,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,VirtualQuantity,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,VirtualQuantityUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_ProcessorSettingData,Weight,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,Address,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,AddressOnParent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,AllocationUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,AutomaticAllocation,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,AutomaticDeallocation,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,BackingPageSize,UInt8,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºçš„å†…å­˜æ”¯æŒå¤§å°ã€‚å–ä»£ HugePagesEnabledã€‚[æšä¸¾å€¼: 0 - å°; 1 - å¤§; 2 - å·¨å‹]
-Msvm_MemorySettingData,BackingType,UInt8,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºçš„å†…å­˜æ”¯æŒç±»å‹ã€‚[æšä¸¾å€¼: 0 - ç‰©ç†; 1 - è™šæ‹Ÿ; 2 - æ··åˆ]
-Msvm_MemorySettingData,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,Connection,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,ConsumerVisibility,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,DynamicMemoryEnabled,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦å¯ç”¨äº†åŠ¨æ€å†…å­˜ã€‚
-Msvm_MemorySettingData,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,EnableColdHint,Boolean,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºæ˜¯å¦å¯ç”¨äº†å†·æç¤ºã€‚
-Msvm_MemorySettingData,EnableEpf,Boolean,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºæ˜¯å¦å¯ç”¨äº†å¯å‘å¼é¡µé¢é”™è¯¯ã€‚
-Msvm_MemorySettingData,EnableHotHint,Boolean,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºæ˜¯å¦å¯ç”¨äº†çƒ­æç¤ºã€‚
-Msvm_MemorySettingData,EnablePrivateCompressionStore,Boolean,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºæ˜¯å¦åº”å…·æœ‰ç§æœ‰å‹ç¼©å­˜å‚¨ã€‚
-Msvm_MemorySettingData,HostResource,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,HugePagesEnabled,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦å¯ç”¨äº†å·¨å‹é¡µã€‚
-Msvm_MemorySettingData,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,IsVirtualized,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ­¤è®¾å¤‡æ˜¯è™šæ‹ŸåŒ–è¿˜æ˜¯ç›´é€šï¼ˆå¯èƒ½ä½¿ç”¨åˆ†åŒºï¼‰ã€‚å½“è®¾ç½®ä¸º False æ—¶ï¼Œä½¿ç”¨åº•å±‚æˆ–ä¸»æœºèµ„æºã€‚DeviceID å±æ€§ä¸­è‡³å°‘åº”å­˜åœ¨ä¸€é¡¹ã€‚å½“è®¾ç½®ä¸º True æ—¶ï¼Œèµ„æºè¢«è™šæ‹ŸåŒ–ï¼Œå¯èƒ½ä¸ç›´æ¥æ˜ å°„åˆ°åº•å±‚/ä¸»æœºèµ„æºã€‚æŸäº›å®ç°å¯èƒ½æ”¯æŒè™šæ‹ŸåŒ–èµ„æºçš„ç‰¹å®šåˆ†é…ï¼Œåœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œä¸»æœºèµ„æºä½¿ç”¨ DeviceID å±æ€§å…¬å¼€ã€‚æ­¤å±æ€§å§‹ç»ˆè®¾ç½®ä¸º Trueã€‚
-Msvm_MemorySettingData,Limit,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,MappingBehavior,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,MaxMemoryBlocksPerNumaNode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,åœ¨è™šæ‹Ÿæœºå†…å¯è¢«è§‚å¯Ÿä¸ºå±äºå•ä¸ª NUMA èŠ‚ç‚¹çš„æœ€å¤§å†…å­˜é‡ã€‚
-Msvm_MemorySettingData,MemoryAccessTrackingPolicy,UInt8,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºå†…å­˜è®¿é—®è·Ÿè¸ªç­–ç•¥ [æšä¸¾å€¼: 0 - æœ€ä½³ç²’åº¦; 1 - 4KB ç²’åº¦; 2 - 2MB ç²’åº¦; 3 - 1GB ç²’åº¦]
-Msvm_MemorySettingData,MemoryAccessTrackingState,UInt8,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºæ˜¯å¦åº”å¯ç”¨å†…å­˜è®¿é—®è·Ÿè¸ªã€‚[æšä¸¾å€¼: 0 - è·Ÿè¸ªå·²ç¦ç”¨; 1 - è·Ÿè¸ªå·²å¯ç”¨; 2 - ä½¿ç”¨æ¯ä¸ª NUMA é…ç½®]
-Msvm_MemorySettingData,MemoryEncryptionPolicy,UInt8,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡ç¤ºå†…å­˜åŠ å¯†ç­–ç•¥ [æšä¸¾å€¼: 0 - å·²ç¦ç”¨; 1 - å¦‚æœæ”¯æŒåˆ™å¯ç”¨; 2 - å§‹ç»ˆå¯ç”¨]
-Msvm_MemorySettingData,OtherResourceType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,Parent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,PoolID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,Reservation,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,ResourceSubType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,ResourceType,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,SgxEnabled,Boolean,Property,Property,âŒ,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦å¯ç”¨äº† SGXã€‚
-Msvm_MemorySettingData,SgxLaunchControlDefault,String,Property,Property,âŒ,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºçš„é»˜è®¤ SGX å¯åŠ¨æ§åˆ¶ MSR å€¼ã€‚
-Msvm_MemorySettingData,SgxLaunchControlMode,UInt32,Property,Property,âŒ,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºçš„ SGX å¯åŠ¨æ§åˆ¶æ¨¡å¼ã€‚[æšä¸¾å€¼: 0 - æ— è®¿é—®æƒé™; 1 - åªè¯»; 2 - è¯»å†™]
-Msvm_MemorySettingData,SgxSize,UInt64,Property,Property,âŒ,âœ…,âœ…,âœ…,ä¸ºè™šæ‹Ÿæœºåˆ†é…çš„ SGX å†…å­˜é‡ (MB)ã€‚
-Msvm_MemorySettingData,SwapFilesInUse,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ™ºèƒ½åˆ†é¡µæ˜¯å¦å¤„äºæ´»åŠ¨çŠ¶æ€ã€‚
-Msvm_MemorySettingData,TargetMemoryBuffer,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºå¯ç”¨çš„ç›®æ ‡å†…å­˜ã€‚
-Msvm_MemorySettingData,VirtualQuantity,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,VirtualQuantityUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_MemorySettingData,Weight,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,Access,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,Address,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,AddressOnParent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,AllocationUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,AutomaticAllocation,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,AutomaticDeallocation,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,CachingMode,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ˜¯å¦ä»¥åŠå¦‚ä½•ä¸ºæ­¤ VHD ä½¿ç”¨å†…å­˜ä¸­æ–‡ä»¶ç¼“å­˜ã€‚é»˜è®¤ç­–ç•¥åœ¨ Msvm_VirtualSystemManagementServiceSettingData ç±»çš„ DefaultVirtualHardDiskCachingMode å­—æ®µä¸­è®¾ç½®ã€‚æ­¤å±æ€§ä¿ç•™ä¾›ç³»ç»Ÿä½¿ç”¨ã€‚[æšä¸¾å€¼: 0 - æœªçŸ¥; 2 - é»˜è®¤; 3 - æ— ç¼“å­˜; 4 - ç¼“å­˜å¯å…±äº«çˆ¶çº§]
-Msvm_StorageAllocationSettingData,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,Connection,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,ConsumerVisibility,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,HostExtentName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,HostExtentNameFormat,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,HostExtentNameNamespace,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,HostExtentStartingAddress,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,HostResource,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,HostResourceBlockSize,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,IgnoreFlushes,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡å®šæ˜¯å¦éµå®ˆæ¥è‡ªè™šæ‹Ÿæœºçš„åˆ·æ–°æˆ–ç›´å†™ç¼“å­˜çš„è¯·æ±‚ã€‚å¦‚æœä¸º trueï¼Œåˆ™ä¸»æœºå°†å¿½ç•¥æ‰€æœ‰åˆ·æ–°æˆ–ç›´å†™è¯·æ±‚ã€‚
-Msvm_StorageAllocationSettingData,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,IOPSAllocationUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡å®š IOPSLimit å’Œ IOPSReservation å±æ€§ä½¿ç”¨çš„åˆ†é…å•ä½ã€‚
-Msvm_StorageAllocationSettingData,IOPSLimit,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,å°†ä¸ºæ­¤è™šæ‹Ÿå­˜å‚¨æ‰©å±•æä¾›æœåŠ¡çš„æ¯ç§’æœ€å¤§ I/O æ“ä½œæ•°ã€‚å¦‚æœæœªå®šä¹‰è¯¥å€¼æˆ–ä¸º 0ï¼Œåˆ™è®¾å¤‡å¯ä»¥å‘å‡ºçš„ IOPS æ•°æ²¡æœ‰é™åˆ¶ã€‚æ­¤å±æ€§ä»¥æ ‡å‡†åŒ–æ¯ç§’ I/O æ•°è¡¨ç¤ºã€‚å¦‚æœè¯·æ±‚å¤§å°å°äºæˆ–ç­‰äºé¢„å®šä¹‰çš„åŸºå‡†å¤§å° (8KB)ï¼Œåˆ™æ¯ä¸ª I/O è¯·æ±‚è®¡ä¸º 1 ä¸ªæ ‡å‡†åŒ– I/Oã€‚å¤§äºåŸºå‡†å¤§å°çš„è¯·æ±‚è®¡ä¸º N ä¸ª I/Oï¼Œå…¶ä¸­ N æ˜¯è¯·æ±‚å¤§å°é™¤ä»¥åŸºå‡†å¤§å°åçš„å‘ä¸Šå–æ•´å€¼ï¼ˆä¾‹å¦‚ï¼Œå¦‚æœåŸºå‡†å¤§å°ä¸º 8KBï¼Œåˆ™ 32KB è¯·æ±‚è®¡ä¸º 4 ä¸ªæ ‡å‡†åŒ– I/Oï¼Œ60KB è¯·æ±‚è®¡ä¸º 8 ä¸ªæ ‡å‡†åŒ– I/Oï¼Œä¾æ­¤ç±»æ¨ï¼‰ã€‚
-Msvm_StorageAllocationSettingData,IOPSReservation,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,å°†ä¸ºæ­¤è™šæ‹Ÿå­˜å‚¨æ‰©å±•æä¾›æœåŠ¡çš„æ¯ç§’æœ€å° I/O æ“ä½œæ•°ã€‚å¦‚æœåŒæ—¶å®šä¹‰äº† IOPSLimit å’Œ IOPSReservationï¼Œåˆ™ IOPSLimit çš„å€¼å¿…é¡»å¤§äºæˆ–ç­‰äº IOPSReservationã€‚æ­¤å±æ€§ä»¥æ ‡å‡†åŒ–æ¯ç§’ I/O æ•°è¡¨ç¤ºã€‚å¦‚æœè¯·æ±‚å¤§å°å°äºæˆ–ç­‰äºé¢„å®šä¹‰çš„åŸºå‡†å¤§å° (8KB)ï¼Œåˆ™æ¯ä¸ª I/O è¯·æ±‚è®¡ä¸º 1 ä¸ªæ ‡å‡†åŒ– I/Oã€‚å¤§äºåŸºå‡†å¤§å°çš„è¯·æ±‚è®¡ä¸º N ä¸ª I/Oï¼Œå…¶ä¸­ N æ˜¯è¯·æ±‚å¤§å°é™¤ä»¥åŸºå‡†å¤§å°åçš„å‘ä¸Šå–æ•´å€¼ï¼ˆä¾‹å¦‚ï¼Œå¦‚æœåŸºå‡†å¤§å°ä¸º 8KBï¼Œåˆ™ 32KB è¯·æ±‚è®¡ä¸º 4 ä¸ªæ ‡å‡†åŒ– I/Oï¼Œ64KB è¯·æ±‚è®¡ä¸º 8 ä¸ªæ ‡å‡†åŒ– I/Oï¼Œä¾æ­¤ç±»æ¨ï¼‰ã€‚
-Msvm_StorageAllocationSettingData,Limit,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,MappingBehavior,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,OtherHostExtentNameFormat,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,OtherHostExtentNameNamespace,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,OtherResourceType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,Parent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,PersistentReservationsSupported,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿç¡¬ç›˜æ˜¯å¦æ”¯æŒ SCSI-3 æŒä¹…é¢„ç•™ã€‚
-Msvm_StorageAllocationSettingData,PoolID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,Reservation,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,ResourceSubType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,ResourceType,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,SnapshotId,String,Property,Property,âœ…,âœ…,âœ…,âœ…,ä¸€ä¸ª GUIDï¼Œè¡¨ç¤ºè¦é™„åŠ  VHD Set æ–‡ä»¶ä¸­çš„å“ªä¸ªå¿«ç…§ã€‚
-Msvm_StorageAllocationSettingData,StorageQoSPolicyID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡å®šè¦åº”ç”¨äºæ­¤è™šæ‹Ÿå­˜å‚¨æ‰©å±•çš„å­˜å‚¨ QoS ç­–ç•¥çš„å”¯ä¸€æ ‡è¯†ç¬¦ã€‚
-Msvm_StorageAllocationSettingData,VirtualQuantity,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,VirtualQuantityUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,VirtualResourceBlockSize,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,Weight,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_StorageAllocationSettingData,WriteHardeningMethod,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºç£ç›˜æ”¯æŒçš„å†™å…¥å¼ºåŒ–æ–¹æ³•ã€‚[æšä¸¾å€¼: 0 - é»˜è®¤; 1 - å¯ç”¨å†™ç¼“å­˜; 2 - å¯ç”¨å†™ç¼“å­˜å’Œ FUA; 3 - ç¦ç”¨å†™ç¼“å­˜]
-Msvm_SummaryInformation,AllocatedGPU,String,Property,Property,âœ…,âœ…,âœ…,âœ…,åˆ†é…ç»™æ­¤è™šæ‹Ÿæœº (VM) çš„ç‰©ç†å›¾å½¢å¤„ç†å•å…ƒ (GPU) çš„æ ‡è¯†ç¬¦ã€‚æ­¤å±æ€§ä»…é€‚ç”¨äºä½¿ç”¨ RemoteFX çš„è™šæ‹Ÿæœºã€‚
-Msvm_SummaryInformation,ApplicationHealth,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿçš„å½“å‰åº”ç”¨ç¨‹åºè¿è¡ŒçŠ¶å†µã€‚æ­¤å±æ€§å¯ä»¥æ˜¯ä»¥ä¸‹å€¼ä¹‹ä¸€ï¼šâ€œæ­£å¸¸â€ï¼›â€œåº”ç”¨ç¨‹åºä¸¥é‡â€ï¼›â€œå·²ç¦ç”¨â€ã€‚æœ‰å…³æ›´å¤šä¿¡æ¯ï¼Œè¯·å‚é˜… Msvm_HeartbeatComponent ç±»çš„ StatusDescriptions å±æ€§æ–‡æ¡£ã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚[æšä¸¾å€¼: 2 - æ­£å¸¸; 32782 - åº”ç”¨ç¨‹åºä¸¥é‡; 32896 - å·²ç¦ç”¨]
-Msvm_SummaryInformation,AsynchronousTasks,Object,Property,Property,âœ…,âœ…,âœ…,âœ…,Msvm_ConcreteJob å®ä¾‹æ•°ç»„ï¼Œè¡¨ç¤ºå½“å‰æ­£åœ¨æ‰§è¡Œçš„ä¸è™šæ‹Ÿç³»ç»Ÿç›¸å…³çš„ä»»ä½•å¼‚æ­¥æ“ä½œã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚
-Msvm_SummaryInformation,AvailableMemoryBuffer,SInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿä¸­çš„å¯ç”¨å†…å­˜ç¼“å†²åŒºç™¾åˆ†æ¯”ã€‚
-Msvm_SummaryInformation,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,CreationTime,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,EnabledState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,EnhancedSessionModeState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,GuestOperatingSystem,String,Property,Property,âœ…,âœ…,âœ…,âœ…,å®¢ä½“æ“ä½œç³»ç»Ÿçš„åç§°ï¼ˆå¦‚æœå¯ç”¨ï¼‰ã€‚å¦‚æœæ­¤ä¿¡æ¯ä¸å¯ç”¨ï¼Œåˆ™æ­¤å±æ€§çš„å€¼ä¸º NULLã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚
-Msvm_SummaryInformation,HealthState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,Heartbeat,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿçš„å½“å‰æ£€æµ‹ä¿¡å·çŠ¶æ€ã€‚æ­¤å±æ€§å¯ä»¥æ˜¯ä»¥ä¸‹å€¼ä¹‹ä¸€ï¼šâ€œæ­£å¸¸â€ï¼›â€œé”™è¯¯â€ï¼›â€œæ— è”ç³»â€ï¼›æˆ–â€œé€šè®¯ä¸¢å¤±â€ã€‚æœ‰å…³æ›´å¤šä¿¡æ¯ï¼Œè¯·å‚é˜… Msvm_HeartbeatComponent ç±»çš„ StatusDescriptions å±æ€§æ–‡æ¡£ã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚
-Msvm_SummaryInformation,HostComputerSystemName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,HypervisorPartitionId,UInt64,Property,Property,âŒ,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿä½¿ç”¨çš„è™šæ‹Ÿæœºç›‘æ§ç¨‹åºåˆ†åŒºçš„å”¯ä¸€æ ‡è¯†ç¬¦ã€‚
-Msvm_SummaryInformation,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,IntegrationServicesVersionState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,å®‰è£…åœ¨è™šæ‹Ÿæœºä¸­çš„é›†æˆæœåŠ¡æ˜¯å¦ä¸ºæœ€æ–° [æšä¸¾å€¼: 0 - æœªçŸ¥; 1 - æœ€æ–°; 2 - ä¸åŒ¹é…]
-Msvm_SummaryInformation,MemoryAvailable,SInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿä¸­çš„å¯ç”¨å†…å­˜ç™¾åˆ†æ¯”ã€‚
-Msvm_SummaryInformation,MemorySpansPhysicalNumaNodes,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºçš„ä¸€ä¸ªæˆ–å¤šä¸ªè™šæ‹Ÿéä¸€è‡´æ€§å†…å­˜è®¿é—® (NUMA) èŠ‚ç‚¹çš„å†…å­˜æ˜¯å¦è·¨è¶Šå®¿ä¸»è®¡ç®—æœºç³»ç»Ÿçš„å¤šä¸ªç‰©ç† NUMA èŠ‚ç‚¹ã€‚
-Msvm_SummaryInformation,MemoryUsage,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿçš„å½“å‰å†…å­˜ä½¿ç”¨æƒ…å†µã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚
-Msvm_SummaryInformation,Name,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,Notes,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,NumberOfProcessors,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,OperationalStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,OtherEnabledState,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,ProcessorLoad,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿçš„å½“å‰å¤„ç†å™¨ä½¿ç”¨ç‡ã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚
-Msvm_SummaryInformation,ProcessorLoadHistory,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿç³»ç»Ÿå¤„ç†å™¨ä½¿ç”¨ç‡çš„å‰ 100 ä¸ªæ ·æœ¬çš„æ•°ç»„ã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚
-Msvm_SummaryInformation,ReplicationHealth,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºçš„å¤åˆ¶è¿è¡ŒçŠ¶å†µã€‚[æšä¸¾å€¼: 0 - ä¸é€‚ç”¨; 1 - æ­£å¸¸; 2 - è­¦å‘Š; 3 - ä¸¥é‡]
-Msvm_SummaryInformation,ReplicationHealthEx,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºå„ç§å¤åˆ¶å…³ç³»çš„å¤åˆ¶è¿è¡ŒçŠ¶å†µå€¼æ•°ç»„ã€‚[æšä¸¾å€¼: 0 - ä¸é€‚ç”¨; 1 - æ­£å¸¸; 2 - è­¦å‘Š; 3 - ä¸¥é‡]
-Msvm_SummaryInformation,ReplicationMode,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,æ ‡è¯†è™šæ‹Ÿæœºçš„å¤åˆ¶ç±»å‹ã€‚[æšä¸¾å€¼: 0 - æ— ; 1 - ä¸»å‰¯æœ¬; 2 - å‰¯æœ¬; 3 - æµ‹è¯•å‰¯æœ¬; 4 - æ‰©å±•å‰¯æœ¬]
-Msvm_SummaryInformation,ReplicationProviderId,String,Property,Property,âœ…,âœ…,âœ…,âœ…,æ ‡è¯†ç«¯ç‚¹æä¾›ç¨‹åºçš„æä¾›ç¨‹åºçš„å…¨å±€å”¯ä¸€æ ‡è¯†ç¬¦ã€‚å¯¹äº Hyper-V ä¸»æœºåˆ°å¦ä¸€ä¸ª Hyper-V ä¸»æœºï¼Œæä¾›ç¨‹åº ID å›ºå®šä¸º 22391CDC-272C-4DDF-BA88-9BEFB1A0975Cã€‚å¯¹äºå¤–éƒ¨æä¾›ç¨‹åºï¼Œè¿™æ˜¯æä¾›ç¨‹åº COM ç±»å¯¹è±¡çš„ CLSIDã€‚
-Msvm_SummaryInformation,ReplicationState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºçš„å¤åˆ¶çŠ¶æ€ã€‚[æšä¸¾å€¼: 0 - å·²ç¦ç”¨; 1 - å‡†å¤‡å¥½å¤åˆ¶; 2 - ç­‰å¾…å®Œæˆåˆå§‹å¤åˆ¶; 3 - æ­£åœ¨å¤åˆ¶; 4 - å·²åŒæ­¥å¤åˆ¶å®Œæˆ; 5 - å·²æ¢å¤; 6 - å·²æäº¤; 7 - å·²æš‚åœ; 8 - ä¸¥é‡; 9 - ç­‰å¾…å¼€å§‹é‡æ–°åŒæ­¥; 10 - æ­£åœ¨é‡æ–°åŒæ­¥; 11 - é‡æ–°åŒæ­¥å·²æš‚åœ; 12 - æ­£åœ¨è¿›è¡Œæ•…éšœè½¬ç§»]
-Msvm_SummaryInformation,ReplicationStateEx,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,è™šæ‹Ÿæœºå„ç§å¤åˆ¶å…³ç³»çš„å¤åˆ¶çŠ¶æ€å€¼æ•°ç»„ã€‚[æšä¸¾å€¼: 0 - å·²ç¦ç”¨; 1 - å‡†å¤‡å¥½å¤åˆ¶; 2 - ç­‰å¾…å®Œæˆåˆå§‹å¤åˆ¶; 3 - æ­£åœ¨å¤åˆ¶; 4 - å·²åŒæ­¥å¤åˆ¶å®Œæˆ; 5 - å·²æ¢å¤; 6 - å·²æäº¤; 7 - å·²æš‚åœ; 8 - ä¸¥é‡; 9 - ç­‰å¾…å¼€å§‹é‡æ–°åŒæ­¥; 10 - æ­£åœ¨é‡æ–°åŒæ­¥; 11 - é‡æ–°åŒæ­¥å·²æš‚åœ; 12 - æ­£åœ¨è¿›è¡Œæ•…éšœè½¬ç§»; 13 - æ­£åœ¨è¿›è¡Œæ•…éšœæ¢å¤; 14 - æ•…éšœæ¢å¤å®Œæˆ; 15 - æ­£åœ¨è¿›è¡Œç£ç›˜æ›´æ–°; 16 - ç£ç›˜æ›´æ–°ä¸¥é‡; 17 - æœªçŸ¥; 18 - æ­£åœ¨è¿›è¡Œè°ƒæ•´ç”¨é€”å¤åˆ¶; 19 - å·²å‡†å¤‡å¥½åŒæ­¥å¤åˆ¶; 20 - å·²å‡†å¤‡å¥½ç»„åå‘å¤åˆ¶; 21 - æ­£åœ¨è¿›è¡Œæ¼”ç»ƒ]
-Msvm_SummaryInformation,Shielded,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºè™šæ‹Ÿæœºæ˜¯å¦é…ç½®äº†å±è”½ã€‚
-Msvm_SummaryInformation,Snapshots,Object,Property,Property,âœ…,âœ…,âœ…,âœ…,ä»£è¡¨è™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_VirtualSystemSettingData å®ä¾‹æ•°ç»„ã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚
-Msvm_SummaryInformation,StatusDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,SwapFilesInUse,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,æŒ‡ç¤ºæ™ºèƒ½åˆ†é¡µæ˜¯å¦å¤„äºæ´»åŠ¨çŠ¶æ€ã€‚
-Msvm_SummaryInformation,TestReplicaSystem,Reference,Property,Property,âœ…,âœ…,âœ…,âœ…,å¯¹ä»£è¡¨è™šæ‹Ÿæœºæµ‹è¯•å‰¯æœ¬è™šæ‹Ÿç³»ç»Ÿçš„ CIM_ComputerSystem å®ä¾‹çš„å¼•ç”¨ã€‚å¯¹äºè¡¨ç¤ºè™šæ‹Ÿç³»ç»Ÿå¿«ç…§çš„ Msvm_SummaryInformation å®ä¾‹ï¼Œæ­¤å±æ€§æ— æ•ˆã€‚
-Msvm_SummaryInformation,ThumbnailImage,UInt8,Property,Property,âœ…,âœ…,âœ…,âœ…,åŒ…å«è™šæ‹Ÿç³»ç»Ÿæˆ–å¿«ç…§æ¡Œé¢çš„ RGB565 æ ¼å¼çš„å°ç¼©ç•¥å›¾å›¾åƒçš„æ•°ç»„ã€‚
-Msvm_SummaryInformation,ThumbnailImageHeight,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,ThumbnailImage å±æ€§ä¸­å›¾åƒçš„åƒç´ é«˜åº¦ã€‚
-Msvm_SummaryInformation,ThumbnailImageWidth,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,ThumbnailImage å±æ€§ä¸­å›¾åƒçš„åƒç´ å®½åº¦ã€‚
-Msvm_SummaryInformation,UpTime,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,Version,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,VirtualSwitchNames,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_SummaryInformation,VirtualSystemSubType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,Address,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,AddressOnParent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,AllocationUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,AutomaticAllocation,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,AutomaticDeallocation,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,Connection,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,ConsumerVisibility,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,HostResource,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,Limit,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,MappingBehavior,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,MaxPartitionCompute,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å¤§è®¡ç®—å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,MaxPartitionDecode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å¤§è§£ç å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,MaxPartitionEncode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å¤§ç¼–ç å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,MaxPartitionVRAM,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å¤§æ˜¾å­˜ (VRAM) é‡ã€‚
-Msvm_GpuPartitionSettingData,MinPartitionCompute,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å°è®¡ç®—å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,MinPartitionDecode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å°è§£ç å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,MinPartitionEncode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å°ç¼–ç å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,MinPartitionVRAM,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å°æ˜¾å­˜ (VRAM) é‡ã€‚
-Msvm_GpuPartitionSettingData,NumaAwarePlacement,Boolean,Property,Property,âŒ,âŒ,âœ…,âœ…,æŒ‡å®šè®¾å¤‡æ˜¯å¦ä»¥æ„ŸçŸ¥ NUMA çš„æ–¹å¼é…ç½®ã€‚
-Msvm_GpuPartitionSettingData,OptimalPartitionCompute,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€ä½³è®¡ç®—å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,OptimalPartitionDecode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€ä½³è§£ç å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,OptimalPartitionEncode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€ä½³ç¼–ç å¼•æ“é‡ã€‚
-Msvm_GpuPartitionSettingData,OptimalPartitionVRAM,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€ä½³æ˜¾å­˜ (VRAM) é‡ã€‚
-Msvm_GpuPartitionSettingData,OtherResourceType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,Parent,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,PoolID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,Reservation,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,ResourceSubType,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,ResourceType,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,VirtualQuantity,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,VirtualQuantityUnits,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_GpuPartitionSettingData,VirtualSystemIdentifiers,String,Property,Property,âŒ,âœ…,âœ…,âœ…,æä¾›ç»™è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿæ“ä½œç³»ç»Ÿçš„æ­¤èµ„æºçš„è‡ªç”±æ ¼å¼å­—ç¬¦ä¸²æ ‡è¯†ç¬¦æ•°ç»„ã€‚æ¯ä¸ªç´¢å¼•çš„å€¼æ˜¯æ ¹æ®æ¯ä¸ªèµ„æºå®šä¹‰çš„ï¼ˆå³é’ˆå¯¹æ¯ä¸ªæšä¸¾çš„ ResourceType å€¼ï¼‰ã€‚æ­¤å±æ€§è®¾ç½®ä¸º â€œGUIDâ€ã€‚è¿™æ˜¯ä¸€ä¸ªåªè¯»å±æ€§ï¼Œä½†å¯ä»¥ä½¿ç”¨ ModifyVirtualSystemResources æ–¹æ³•è¿›è¡Œæ›´æ”¹ã€‚
-Msvm_GpuPartitionSettingData,Weight,UInt32,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,AvailableCompute,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„å¯ç”¨è®¡ç®—å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,AvailableDecode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„å¯ç”¨è§£ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,AvailableEncode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„å¯ç”¨ç¼–ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,AvailableRequestedStates,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,AvailableVRAM,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„å¯ç”¨æ˜¾å­˜ (VRAM) é‡ã€‚
-Msvm_PartitionableGpu,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,CommunicationStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,CreationClassName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,Dedicated,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,DetailedStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,EnabledDefault,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,EnabledState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,HealthState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,IdentifyingDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,InstallDate,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,MaxPartitionCompute,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å¤§è®¡ç®—å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,MaxPartitionDecode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å¤§è§£ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,MaxPartitionEncode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å¤§ç¼–ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,MaxPartitionVRAM,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å¤§æ˜¾å­˜ (VRAM) é‡ã€‚
-Msvm_PartitionableGpu,MinPartitionCompute,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å°è®¡ç®—å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,MinPartitionDecode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å°è§£ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,MinPartitionEncode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å°ç¼–ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,MinPartitionVRAM,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€å°æ˜¾å­˜ (VRAM) é‡ã€‚
-Msvm_PartitionableGpu,Name,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,NameFormat,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,OperatingStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,OperationalStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,OptimalPartitionCompute,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€ä½³è®¡ç®—å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,OptimalPartitionDecode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€ä½³è§£ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,OptimalPartitionEncode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€ä½³ç¼–ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,OptimalPartitionVRAM,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æœ€ä½³æ˜¾å­˜ (VRAM) é‡ã€‚
-Msvm_PartitionableGpu,OtherDedicatedDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,OtherEnabledState,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,OtherIdentifyingInfo,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,PartitionCount,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,ç‰©ç† GPU è¢«åˆ‡åˆ†æˆçš„ GPU åˆ†åŒºæ•°é‡ã€‚
-Msvm_PartitionableGpu,PowerManagementCapabilities,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,PrimaryOwnerContact,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,PrimaryOwnerName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,PrimaryStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,RequestedState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,ResetCapability,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,Roles,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,Status,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,StatusDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,SupportsIncomingLiveMigration,Boolean,Property,Property,âŒ,âŒ,âŒ,âœ…,æŒ‡ç¤ºå¯åˆ†åŒº GPU æ˜¯å¦æ”¯æŒä»å…¼å®¹ GPU è¿å…¥ GPU åˆ†åŒºçš„è™šæ‹Ÿæœºå®æ—¶è¿ç§»ã€‚
-Msvm_PartitionableGpu,TimeOfLastStateChange,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,TotalCompute,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æ€»è®¡ç®—å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,TotalDecode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æ€»è§£ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,TotalEncode,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æ€»ç¼–ç å¼•æ“é‡ã€‚
-Msvm_PartitionableGpu,TotalVRAM,UInt64,Property,Property,âœ…,âœ…,âœ…,âœ…,GPU åˆ†åŒºä¸­æ˜¾ç¤ºçš„æ€»æ˜¾å­˜ (VRAM) é‡ã€‚
-Msvm_PartitionableGpu,TransitioningToState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,ValidPartitionCounts,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,ç‰©ç† GPU å¯ä»¥åˆ‡åˆ†æˆçš„æœ‰æ•ˆ GPU åˆ†åŒºé€‰é¡¹æ•°ç»„ã€‚
-Msvm_PartitionableGpu,RequestStateChange,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_PartitionableGpu,SetPowerState,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,AvailableRequestedStates,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,Caption,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,CommunicationStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,CreationClassName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,Description,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,DetailedStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,ElementName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,EnabledDefault,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,EnabledState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,HealthState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,InstallDate,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,InstanceID,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,Name,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,OperatingStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,OperationalStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,OtherEnabledState,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,PrimaryOwnerContact,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,PrimaryOwnerName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,PrimaryStatus,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,RequestedState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,Started,Boolean,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,StartMode,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,Status,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,StatusDescriptions,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,SystemCreationClassName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,SystemName,String,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,TimeOfLastStateChange,DateTime,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,TransitioningToState,UInt16,Property,Property,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,RequestStateChange,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,StartService,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,StopService,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,AddResourceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å‘è™šæ‹Ÿç³»ç»Ÿé…ç½®æ·»åŠ èµ„æºã€‚å½“åº”ç”¨äºâ€œçŠ¶æ€â€è™šæ‹Ÿç³»ç»Ÿé…ç½®æ—¶ï¼Œä½œä¸ºå‰¯ä½œç”¨ï¼Œèµ„æºå°†æ·»åŠ åˆ°æ´»åŠ¨è™šæ‹Ÿç³»ç»Ÿã€‚
-Msvm_VirtualSystemManagementService,DefineSystem,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å®šä¹‰è™šæ‹Ÿç³»ç»Ÿã€‚æœªå®Œå…¨æŒ‡å®šçš„è¾“å…¥å¯ä»¥ç”¨é»˜è®¤å€¼å¡«å……ã€‚
-Msvm_VirtualSystemManagementService,DestroySystem,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,é”€æ¯è™šæ‹Ÿç³»ç»Ÿã€‚å¼•ç”¨çš„è™šæ‹Ÿç³»ç»ŸåŠå…¶èŒƒå›´å†…çš„ä»»ä½•å…ƒç´ éƒ½å°†è¢«é”€æ¯ã€‚è™šæ‹Ÿèµ„æºå°†è¿”å›åˆ°å…¶èµ„æºæ± ï¼Œè¿™å¯èƒ½æ„å‘³ç€é”€æ¯è¿™äº›èµ„æºï¼ˆå–å†³äºå®ç°ï¼‰ã€‚å¦‚æœè°ƒç”¨æ“ä½œæ—¶è™šæ‹Ÿç³»ç»Ÿå¤„äºæ´»åŠ¨çŠ¶æ€ï¼Œåˆ™é¦–å…ˆå°†å…¶åœç”¨ï¼Œç„¶åé”€æ¯ã€‚å¦‚æœæ˜¯ä»è™šæ‹Ÿç³»ç»Ÿåˆ›å»ºçš„å¿«ç…§ï¼Œè¿™äº›å¿«ç…§ä¹Ÿå°†è¢«é”€æ¯ã€‚
-Msvm_VirtualSystemManagementService,ModifyResourceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä¿®æ”¹è™šæ‹Ÿèµ„æºè®¾ç½®ã€‚å½“åº”ç”¨äºâ€œå½“å‰â€è™šæ‹Ÿç³»ç»Ÿé…ç½®çš„éƒ¨åˆ†æ—¶ï¼Œä½œä¸ºå‰¯ä½œç”¨ï¼Œå¯èƒ½ä¼šä¿®æ”¹æ´»åŠ¨è™šæ‹Ÿç³»ç»Ÿçš„èµ„æºã€‚
-Msvm_VirtualSystemManagementService,ModifySystemSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä¿®æ”¹è™šæ‹Ÿç³»ç»Ÿè®¾ç½®ã€‚å½“åº”ç”¨äºâ€œå½“å‰â€è™šæ‹Ÿç³»ç»Ÿé…ç½®çš„ç³»ç»Ÿè®¾ç½®æ—¶ï¼Œä½œä¸ºå‰¯ä½œç”¨ï¼Œå¯èƒ½ä¼šä¿®æ”¹è™šæ‹Ÿç³»ç»Ÿå®ä¾‹ã€‚
-Msvm_VirtualSystemManagementService,RemoveResourceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä»è™šæ‹Ÿç³»ç»Ÿé…ç½®ä¸­ç§»é™¤è™šæ‹Ÿèµ„æºè®¾ç½®ã€‚å½“åº”ç”¨äºâ€œå½“å‰â€è™šæ‹Ÿç³»ç»Ÿé…ç½®çš„éƒ¨åˆ†æ—¶ï¼Œä½œä¸ºå‰¯ä½œç”¨ï¼Œå¯èƒ½ä¼šç§»é™¤æ´»åŠ¨è™šæ‹Ÿç³»ç»Ÿçš„èµ„æºã€‚
-Msvm_VirtualSystemManagementService,DefinePlannedSystem,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å®šä¹‰è®¡åˆ’çš„è™šæ‹Ÿç³»ç»Ÿã€‚æœªå®Œå…¨æŒ‡å®šçš„è¾“å…¥å¯ä»¥ç”¨é»˜è®¤å€¼å¡«å……ã€‚
-Msvm_VirtualSystemManagementService,ValidatePlannedSystem,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,[æ— æè¿°]
-Msvm_VirtualSystemManagementService,UpgradeSystemVersion,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å‡çº§è™šæ‹Ÿç³»ç»Ÿã€‚å½“åº”ç”¨äºâ€œå½“å‰â€è™šæ‹Ÿç³»ç»Ÿé…ç½®çš„ç³»ç»Ÿè®¾ç½®æ—¶ã€‚
-Msvm_VirtualSystemManagementService,ImportSystemDefinition,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,åŸºäºæŒ‡å®šçš„è™šæ‹Ÿç³»ç»Ÿå®šä¹‰åˆ›å»ºæ–°çš„è®¡åˆ’è®¡ç®—æœºç³»ç»Ÿã€‚æŒ‡å®šçš„å®šä¹‰æ–‡ä»¶ä¸å¾—å·²è¢«å®¿ä¸»ç³»ç»Ÿæˆ–è™šæ‹ŸåŒ–å¹³å°ä½¿ç”¨ã€‚å°†åœ¨ SnapshotFolder æ–‡ä»¶å¤¹ä¸­æœç´¢ä»¥å®šä½è™šæ‹Ÿç³»ç»Ÿå®šä¹‰å¼•ç”¨çš„ä»»ä½•å¿«ç…§ã€‚å¿…é¡»åœ¨å®ç°è®¡åˆ’è®¡ç®—æœºç³»ç»Ÿä¹‹å‰ï¼Œä½¿ç”¨ RemoveVirtualSystemSnapshot æ–¹æ³•åˆ é™¤æ­¤ä½ç½®æœªæ‰¾åˆ°çš„ä»»ä½•å¼•ç”¨å¿«ç…§ï¼Œæˆ–ä½¿ç”¨ ImportSnapshotDefinitions æ–¹æ³•å¯¼å…¥è¿™äº›å¿«ç…§ã€‚
-Msvm_VirtualSystemManagementService,ImportSnapshotDefinitions,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,åœ¨ SnapshotFolder æ–‡ä»¶å¤¹ä¸­æœç´¢ä¸æŒ‡å®šè®¡åˆ’è®¡ç®—æœºç³»ç»Ÿå…³è”çš„ä»»ä½•å¿«ç…§å®šä¹‰æ–‡ä»¶ã€‚å°†ä¸ºæ­¤ä½ç½®çš„æ¯ä¸ªå…³è”å®šä¹‰æ–‡ä»¶åœ¨è®¡åˆ’è®¡ç®—æœºç³»ç»Ÿä¸Šåˆ›å»ºä¸€ä¸ªæ–°å¿«ç…§ã€‚
-Msvm_VirtualSystemManagementService,RealizePlannedSystem,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,éªŒè¯è®¡åˆ’è™šæ‹Ÿç³»ç»Ÿçš„é…ç½®å¹¶å°†å…¶è½¬æ¢ä¸ºå·²å®ç°çš„è™šæ‹Ÿç³»ç»Ÿã€‚å¦‚æœé€‚ç”¨ï¼Œä¸è™šæ‹Ÿç³»ç»Ÿå…³è”çš„ä»»ä½•è¿è¡Œæ—¶æˆ–ä¿å­˜çŠ¶æ€æ–‡ä»¶å°†ä»å¯¼å…¥ç›®å½•å¤åˆ¶åˆ°è™šæ‹Ÿç³»ç»Ÿçš„æ•°æ®æ ¹ç›®å½•ã€‚
-Msvm_VirtualSystemManagementService,ExportSystemDefinition,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å°†å¤„äºâ€œå…³æœºâ€æˆ–â€œå·²ä¿å­˜â€çŠ¶æ€çš„è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿï¼ˆæˆ–è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿçš„å¿«ç…§ï¼‰å¯¼å‡ºåˆ°æ–‡ä»¶ã€‚è™šæ‹Ÿè®¡ç®—æœºç³»ç»Ÿã€å…¶å…³è”çš„é…ç½®è®¾ç½®åŠå…¶å…³è”çš„èµ„æºè®¾ç½®å°†ä¿ç•™åœ¨ç»“æœæ–‡ä»¶ä¸­ã€‚è¿”å›å€¼ï¼šå¦‚æœæ­¤æ–¹æ³•åŒæ­¥æ‰§è¡Œï¼Œåˆ™æˆåŠŸè¿”å› 0ã€‚å¦‚æœæ­¤æ–¹æ³•å¼‚æ­¥æ‰§è¡Œï¼Œåˆ™è¿”å› 4096ï¼Œå¯ä»¥ä½¿ç”¨ Job è¾“å‡ºå‚æ•°è·Ÿè¸ªå¼‚æ­¥æ“ä½œçš„è¿›åº¦ã€‚ä»»ä½•å…¶ä»–è¿”å›å€¼è¡¨ç¤ºé”™è¯¯ã€‚
-Msvm_VirtualSystemManagementService,AddFeatureSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å‘è™šæ‹Ÿæœºä»¥å¤ªç½‘è¿æ¥çš„é…ç½®æ·»åŠ ä»¥å¤ªç½‘åŠŸèƒ½è®¾ç½®ã€‚
-Msvm_VirtualSystemManagementService,ModifyFeatureSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä¿®æ”¹è™šæ‹Ÿæœºä»¥å¤ªç½‘è¿æ¥çš„å½“å‰åŠŸèƒ½è®¾ç½®ã€‚
-Msvm_VirtualSystemManagementService,RemoveFeatureSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä»è™šæ‹Ÿæœºä»¥å¤ªç½‘è¿æ¥ä¸­ç§»é™¤åŠŸèƒ½è®¾ç½®ã€‚
-Msvm_VirtualSystemManagementService,AddBootSourceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å½“åº”ç”¨äºâ€œçŠ¶æ€â€è™šæ‹Ÿç³»ç»Ÿé…ç½®æ—¶ï¼Œå‘è™šæ‹Ÿç³»ç»Ÿé…ç½®æ·»åŠ å¼•å¯¼æºã€‚
-Msvm_VirtualSystemManagementService,AddGuestServiceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å‘è™šæ‹Ÿç³»ç»Ÿé…ç½®æ·»åŠ å®¢ä½“æœåŠ¡è®¾ç½®ã€‚å½“åº”ç”¨äºâ€œå½“å‰â€è™šæ‹Ÿç³»ç»Ÿé…ç½®çš„éƒ¨åˆ†æ—¶ï¼Œä½œä¸ºå‰¯ä½œç”¨ï¼Œå¯èƒ½ä¼šä¿®æ”¹æ´»åŠ¨è™šæ‹Ÿç³»ç»Ÿçš„å®¢ä½“æœåŠ¡ã€‚
-Msvm_VirtualSystemManagementService,ModifyGuestServiceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä¿®æ”¹å®¢ä½“æœåŠ¡è®¾ç½®ã€‚å½“åº”ç”¨äºâ€œå½“å‰â€è™šæ‹Ÿç³»ç»Ÿé…ç½®çš„éƒ¨åˆ†æ—¶ï¼Œä½œä¸ºå‰¯ä½œç”¨ï¼Œå¯èƒ½ä¼šä¿®æ”¹æ´»åŠ¨è™šæ‹Ÿç³»ç»Ÿçš„å®¢ä½“æœåŠ¡ã€‚
-Msvm_VirtualSystemManagementService,RemoveBootSourceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä»è™šæ‹Ÿç³»ç»Ÿé…ç½®ä¸­ç§»é™¤å¼•å¯¼æºè®¾ç½®ã€‚å½“åº”ç”¨äºâ€œå½“å‰â€è™šæ‹Ÿç³»ç»Ÿé…ç½®çš„éƒ¨åˆ†æ—¶ï¼Œä½œä¸ºå‰¯ä½œç”¨ï¼Œå¯èƒ½ä¼šç§»é™¤æ´»åŠ¨è™šæ‹Ÿç³»ç»Ÿçš„èµ„æºã€‚
-Msvm_VirtualSystemManagementService,RemoveGuestServiceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä»è™šæ‹Ÿç³»ç»Ÿé…ç½®ä¸­ç§»é™¤å®¢ä½“æœåŠ¡è®¾ç½®ã€‚å½“åº”ç”¨äºâ€œå½“å‰â€è™šæ‹Ÿç³»ç»Ÿé…ç½®çš„éƒ¨åˆ†æ—¶ï¼Œä½œä¸ºå‰¯ä½œç”¨ï¼Œå¯èƒ½ä¼šä¿®æ”¹æ´»åŠ¨è™šæ‹Ÿç³»ç»Ÿçš„å®¢ä½“æœåŠ¡ã€‚
-Msvm_VirtualSystemManagementService,GetVirtualSystemThumbnailImage,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,æ£€ç´¢ç°æœ‰è™šæ‹Ÿç³»ç»Ÿçš„ç¼©ç•¥å›¾å›¾åƒã€‚è¿”å›å€¼ï¼šæ­¤æ–¹æ³•è¿”å›åŸå§‹ RGB 565 æ ¼å¼çš„å€¼ã€‚
-Msvm_VirtualSystemManagementService,ModifyServiceSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä¿®æ”¹æœåŠ¡çš„è®¾ç½®æ•°æ®ã€‚
-Msvm_VirtualSystemManagementService,GetSummaryInformation,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,è¿”å›è™šæ‹Ÿç³»ç»Ÿæ‘˜è¦ä¿¡æ¯ã€‚
-Msvm_VirtualSystemManagementService,GetDefinitionFileSummaryInformation,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,è¿”å›æŒ‡å®šè™šæ‹Ÿæœºå®šä¹‰æ–‡ä»¶çš„è™šæ‹Ÿç³»ç»Ÿæ‘˜è¦ä¿¡æ¯ã€‚
-Msvm_VirtualSystemManagementService,AddKvpItems,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å‘è™šæ‹Ÿç³»ç»Ÿæ·»åŠ é”®å€¼å¯¹ã€‚
-Msvm_VirtualSystemManagementService,ModifyKvpItems,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä¿®æ”¹è™šæ‹Ÿç³»ç»Ÿä¸Šçš„ç°æœ‰é”®å€¼å¯¹ã€‚
-Msvm_VirtualSystemManagementService,RemoveKvpItems,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä»è™šæ‹Ÿç³»ç»Ÿä¸­ç§»é™¤ç°æœ‰é”®å€¼å¯¹ã€‚
-Msvm_VirtualSystemManagementService,FormatError,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,è¿”å›æŒ‡å®šåµŒå…¥å¼ Msvm_Error å®ä¾‹æ•°ç»„çš„æ ¼å¼åŒ–é”™è¯¯æ¶ˆæ¯å­—ç¬¦ä¸²ã€‚
-Msvm_VirtualSystemManagementService,ModifyDiskMergeSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä¿®æ”¹ç£ç›˜åˆå¹¶è®¾ç½®æ•°æ®ã€‚
-Msvm_VirtualSystemManagementService,GenerateWwpn,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,æ­¤ API åœ¨ç”± Msvm_VirtualSystemManagementSettingData ç±»çš„ MinimumWwpnAddress å’Œ MaximumWwpnAddress å±æ€§å®šä¹‰çš„é¢„é…ç½®èŒƒå›´å†…ç”Ÿæˆè¯·æ±‚æ•°é‡çš„ WorldWidePortNamesã€‚æ¯æ¬¡è°ƒç”¨è¯·æ±‚çš„ NumberOfWwpns ä¸å¾—å°äº 1 æˆ–å¤§äº 1024ã€‚å¦‚æœå¯ä»¥ç”Ÿæˆçš„æœ‰æ•ˆ WWPN æ•°é‡å°äºè¯·æ±‚çš„æ•°é‡ï¼Œåˆ™ GeneratedWwpn æ•°ç»„ä¸­çš„å‰©ä½™æ¡ç›®å°†å…·æœ‰æ— æ•ˆæ¡ç›®â€œ0000000000000000â€ï¼Œå¹¶ä¸”è¿”å›å€¼å°†æŒ‡ç¤ºæˆåŠŸ (0)ã€‚
-Msvm_VirtualSystemManagementService,AddFibreChannelChap,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,æ­¤ API å‘ VM ä¸­çš„åˆæˆå…‰çº¤é€šé“ç«¯å£æ·»åŠ  DH-CHAP å‚æ•°ã€‚å¦‚æœ VM æ­£åœ¨è¿è¡Œï¼Œæ­¤æ“ä½œå°†å¤±è´¥ã€‚
-Msvm_VirtualSystemManagementService,RemoveFibreChannelChap,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,æ­¤ API ä» VM ä¸­çš„åˆæˆå…‰çº¤é€šé“ç«¯å£ç§»é™¤ DH-CHAP å‚æ•°ã€‚å¦‚æœ VM æ­£åœ¨è¿è¡Œï¼Œæ­¤æ“ä½œå°†å¤±è´¥ã€‚
-Msvm_VirtualSystemManagementService,SetGuestNetworkAdapterConfiguration,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,é…ç½®å®¢ä½“æ“ä½œç³»ç»Ÿå†…çš„ç½‘ç»œé€‚é…å™¨ã€‚è¿™äº›é…ç½®å‚æ•°åœ¨ä¸å®¢ä½“æ“ä½œç³»ç»Ÿå†…è¿è¡Œçš„ KVP äº¤æ¢é›†æˆç»„ä»¶å»ºç«‹é€šä¿¡åç«‹å³åº”ç”¨ã€‚
-Msvm_VirtualSystemManagementService,GetSizeOfSystemFiles,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,æ£€ç´¢ç³»ç»Ÿæ–‡ä»¶çš„æ€»å¤§å°ã€‚è¿™äº›æ–‡ä»¶åŒ…æ‹¬é…ç½®å’Œä¿å­˜çš„çŠ¶æ€æ–‡ä»¶ã€‚
-Msvm_VirtualSystemManagementService,GetCurrentWwpnFromGenerator,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,æ­¤ API æä¾›æŸ¥çœ‹ç”± Msvm_VirtualSystemManagementSettingData ç±»çš„ MinimumWwpnAddress å’Œ MaximumWwpnAddress å±æ€§å®šä¹‰çš„é¢„é…ç½®èŒƒå›´å†…çš„å½“å‰ WorldWidePortName çš„åŠŸèƒ½ã€‚å¦‚æœè¿™äº›å±æ€§å®šä¹‰çš„èŒƒå›´å·²è€—å°½ï¼Œåˆ™ CurrentWwpn è¾“å‡ºå‚æ•°å°†å…·æœ‰æ— æ•ˆæ¡ç›®â€œ0000000000000000â€ï¼Œå¹¶ä¸”è¿”å›å€¼å°†æŒ‡ç¤ºæˆåŠŸ (0)ã€‚
-Msvm_VirtualSystemManagementService,TestNetworkConnection,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,æµ‹è¯• Windows ç½‘ç»œè™šæ‹ŸåŒ–ç¯å¢ƒä¸­ VM çš„ç½‘ç»œè¿æ¥æ€§ã€‚
-Msvm_VirtualSystemManagementService,DiagnoseNetworkConnection,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,è¯Šæ–­ Windows ç½‘ç»œè™šæ‹ŸåŒ–ç¯å¢ƒä¸­ VM çš„ç½‘ç»œè¿æ¥æ€§ã€‚
-Msvm_VirtualSystemManagementService,SetInitialMachineConfigurationData,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,è®¾ç½® VM çš„åˆå§‹è®¡ç®—æœºé…ç½®æ•°æ®ã€‚
-Msvm_VirtualSystemManagementService,AddSystemComponentSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,å‘è™šæ‹Ÿç³»ç»Ÿé…ç½®æ·»åŠ é€šç”¨è®¾ç½®ã€‚
-Msvm_VirtualSystemManagementService,ModifySystemComponentSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä¿®æ”¹é€šç”¨ç³»ç»Ÿç»„ä»¶è®¾ç½®ã€‚
-Msvm_VirtualSystemManagementService,RemoveSystemComponentSettings,Method,Method,Method,âœ…,âœ…,âœ…,âœ…,ä»è™šæ‹Ÿç³»ç»Ÿé…ç½®ä¸­ç§»é™¤é€šç”¨ç»„ä»¶è®¾ç½®ã€‚
+Class,Member,26100,22621,20348,19045,14393,Desc,Desc_EN
+Win32_VideoController,AcceleratorCapabilities,?,?,?,?,?,Ò»¸öÕûÊıÊı×é£¬ÓÃÓÚÖ¸Ã÷ÊÓÆµ¿ØÖÆÆ÷µÄÍ¼ĞÎºÍ 3D ¹¦ÄÜ¡£,Ò»¸öÕûÊıÊı×é£¬ÓÃÓÚÖ¸Ã÷ÊÓÆµ¿ØÖÆÆ÷µÄÍ¼ĞÎºÍ 3D ¹¦ÄÜ¡£
+Win32_VideoController,AdapterCompatibility,?,?,?,?,?,AdapterCompatibility ÊôĞÔ°üº¬´Ë¿ØÖÆÆ÷Ê¹ÓÃµÄÍ¨ÓÃĞ¾Æ¬¼¯£¬ËüÓÃÓÚÓëÏµÍ³±È½Ï¼æÈİĞÔ,AdapterCompatibility ÊôĞÔ°üº¬´Ë¿ØÖÆÆ÷Ê¹ÓÃµÄÍ¨ÓÃĞ¾Æ¬¼¯£¬ËüÓÃÓÚÓëÏµÍ³±È½Ï¼æÈİĞÔ
+Win32_VideoController,AdapterDACType,?,?,?,?,?,AdapterDACType ÊôĞÔ°üº¬Êı×Ö-Ä£Äâ×ª»»Æ÷(DAC)Ğ¾Æ¬Ãû³Æ»ò ID µÄ×Ö·û´®¡£ ×Ö·û¼¯: ×ÖÄ¸Êı×Ö,AdapterDACType ÊôĞÔ°üº¬Êı×Ö-Ä£Äâ×ª»»Æ÷(DAC)Ğ¾Æ¬Ãû³Æ»ò ID µÄ×Ö·û´®¡£ ×Ö·û¼¯: ×ÖÄ¸Êı×Ö
+Win32_VideoController,AdapterRAM,?,?,?,?,?,AdapterRAM ÊôĞÔÖ¸Ã÷ÊÓÆµÊÊÅäÆ÷µÄÄÚ´æ´óĞ¡¡£ ÀıÈç: 64000,AdapterRAM ÊôĞÔÖ¸Ã÷ÊÓÆµÊÊÅäÆ÷µÄÄÚ´æ´óĞ¡¡£ ÀıÈç: 64000
+Win32_VideoController,Availability,?,?,?,?,?,Éè±¸µÄ¿ÉÓÃĞÔºÍ×´Ì¬¡£ÀıÈç: Availability ÊôĞÔ¿ÉÒÔÖ¸Ã÷Éè±¸ÕıÔÚÔËĞĞ²¢ÇÒÎªÈ«¹¦ÂÊ(Öµ=3)¡¢»òÕß´¦ÓÚ¾¯¸æ(4)¡¢²âÊÔ(5)¡¢½µ¼¶(10)»ò½ÚÄÜ×´Ì¬(ÖµÎª 13-15 ºÍ 17)¡£ÓĞ¹Ø½ÚÄÜ×´Ì¬£¬Æä¶¨ÒåÈçÏÂËùÊ¾: Öµ 13 (¡°½ÚÄÜ - Î´Öª¡±)±íÊ¾Éè±¸´¦ÓÚ½ÚÄÜÄ£Ê½£¬µ«ÊÇËüÔÚ¸ÃÄ£Ê½ÖĞµÄ×¼È·×´Ì¬Î´Öª£»14 (¡°½ÚÄÜ - µÍ¹¦ºÄÄ£Ê½¡±)±íÊ¾Éè±¸´¦ÓÚ½ÚÄÜ×´Ì¬£¬µ«ÈÔÈ»Õı³£ÔË×ª£¬¿ÉÄÜ»á³öÏÖĞÔÄÜÏÂ½µ£»15 (¡°½ÚÄÜ - ´ı»ú¡±)±íÊ¾Éè±¸Ã»ÓĞÕı³£ÔË×ª£¬µ«ÊÇ¿ÉÒÔ¡°¿ìËÙ¡±×ªÈëÈ«¹¦ÂÊ¹¤×÷×´Ì¬£»ÖµÎª 17 (¡°½ÚÄÜ - ¾¯¸æ¡±)Ê±±íÊ¾Éè±¸ËäÈ»´¦ÓÚ½ÚÄÜÄ£Ê½£¬µ«ËüµÄ×´Ì¬ÊÇ¾¯¸æ×´Ì¬¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - ÕıÔÚÔËĞĞ/È«¹¦ºÄ; 4 - ¾¯¸æ; 5 - ÕıÔÚ²âÊÔ; 6 - ²»ÊÊÓÃ; 7 - ¹Ø±ÕµçÔ´; 8 - ÍÑ»ú; 9 - ĞİÏ¢; 10 - ÒÑ½µ¼¶; 11 - Î´°²×°; 12 - °²×°´íÎó; 13 - ½ÚÄÜ - Î´Öª; 14 - ½ÚÄÜ - µÍ¹¦ºÄÄ£Ê½; 15 - ½ÚÄÜ - ´ı»ú; 16 - µçÔ´ÖØÆô; 17 - ½ÚÄÜ - ¾¯¸æ; 18 - ÒÑÔİÍ£; 19 - Î´¾ÍĞ÷; 20 - Î´ÅäÖÃ; 21 - ¾²Ö¹],Éè±¸µÄ¿ÉÓÃĞÔºÍ×´Ì¬¡£ÀıÈç: Availability ÊôĞÔ¿ÉÒÔÖ¸Ã÷Éè±¸ÕıÔÚÔËĞĞ²¢ÇÒÎªÈ«¹¦ÂÊ(Öµ=3)¡¢»òÕß´¦ÓÚ¾¯¸æ(4)¡¢²âÊÔ(5)¡¢½µ¼¶(10)»ò½ÚÄÜ×´Ì¬(ÖµÎª 13-15 ºÍ 17)¡£ÓĞ¹Ø½ÚÄÜ×´Ì¬£¬Æä¶¨ÒåÈçÏÂËùÊ¾: Öµ 13 (¡°½ÚÄÜ - Î´Öª¡±)±íÊ¾Éè±¸´¦ÓÚ½ÚÄÜÄ£Ê½£¬µ«ÊÇËüÔÚ¸ÃÄ£Ê½ÖĞµÄ×¼È·×´Ì¬Î´Öª£»14 (¡°½ÚÄÜ - µÍ¹¦ºÄÄ£Ê½¡±)±íÊ¾Éè±¸´¦ÓÚ½ÚÄÜ×´Ì¬£¬µ«ÈÔÈ»Õı³£ÔË×ª£¬¿ÉÄÜ»á³öÏÖĞÔÄÜÏÂ½µ£»15 (¡°½ÚÄÜ - ´ı»ú¡±)±íÊ¾Éè±¸Ã»ÓĞÕı³£ÔË×ª£¬µ«ÊÇ¿ÉÒÔ¡°¿ìËÙ¡±×ªÈëÈ«¹¦ÂÊ¹¤×÷×´Ì¬£»ÖµÎª 17 (¡°½ÚÄÜ - ¾¯¸æ¡±)Ê±±íÊ¾Éè±¸ËäÈ»´¦ÓÚ½ÚÄÜÄ£Ê½£¬µ«ËüµÄ×´Ì¬ÊÇ¾¯¸æ×´Ì¬¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - ÕıÔÚÔËĞĞ/È«¹¦ºÄ; 4 - ¾¯¸æ; 5 - ÕıÔÚ²âÊÔ; 6 - ²»ÊÊÓÃ; 7 - ¹Ø±ÕµçÔ´; 8 - ÍÑ»ú; 9 - ĞİÏ¢; 10 - ÒÑ½µ¼¶; 11 - Î´°²×°; 12 - °²×°´íÎó; 13 - ½ÚÄÜ - Î´Öª; 14 - ½ÚÄÜ - µÍ¹¦ºÄÄ£Ê½; 15 - ½ÚÄÜ - ´ı»ú; 16 - µçÔ´ÖØÆô; 17 - ½ÚÄÜ - ¾¯¸æ; 18 - ÒÑÔİÍ£; 19 - Î´¾ÍĞ÷; 20 - Î´ÅäÖÃ; 21 - ¾²Ö¹]
+Win32_VideoController,CapabilityDescriptions,?,?,?,?,?,Ò»¸ö×ÔÓÉ¸ñÊ½×Ö·û´®Êı×é£¬ÓÃÓÚÎª¡°¹¦ÄÜ¡±Êı×éÖĞÖ¸³öµÄÈÎºÎÊÓÆµ¼ÓËÙÆ÷¹¦ÄÜÌá¹©¸üÎªÏêÏ¸µÄËµÃ÷¡£Çë×¢Òâ: ´ËÊı×éµÄÃ¿Ò»Ïî¶¼Óë¡°¹¦ÄÜ¡±Êı×éÖĞ¾ßÓĞÏàÍ¬Ë÷ÒıµÄÏîÄ¿¹ØÁª¡£,Ò»¸ö×ÔÓÉ¸ñÊ½×Ö·û´®Êı×é£¬ÓÃÓÚÎª¡°¹¦ÄÜ¡±Êı×éÖĞÖ¸³öµÄÈÎºÎÊÓÆµ¼ÓËÙÆ÷¹¦ÄÜÌá¹©¸üÎªÏêÏ¸µÄËµÃ÷¡£Çë×¢Òâ: ´ËÊı×éµÄÃ¿Ò»Ïî¶¼Óë¡°¹¦ÄÜ¡±Êı×éÖĞ¾ßÓĞÏàÍ¬Ë÷ÒıµÄÏîÄ¿¹ØÁª¡£
+Win32_VideoController,Caption,?,?,?,?,?,¡¾AI¡¿±íÊ¾ÊÓÆµ¿ØÖÆÆ÷¶ÔÏóµÄ¼ò¶ÌÃèÊö»ò±êÌâ¡£,[ÎŞÃèÊö]
+Win32_VideoController,ColorTableEntries,?,?,?,?,?,µ±Éè±¸µÄÑÕÉ«Éî¶È²»³¬¹ıÃ¿ÏñËØ 8 Î»Ê±£¬ColorTableEntries ÊôĞÔ¿ÉÖ¸Ã÷ÏµÍ³ÑÕÉ«±íµÄ´óĞ¡£¬ÔÚÆäËûÇé¿öÏÂ£¬ÆäÖµÎª NULL¡£<P>ÀıÈç: 256,µ±Éè±¸µÄÑÕÉ«Éî¶È²»³¬¹ıÃ¿ÏñËØ 8 Î»Ê±£¬ColorTableEntries ÊôĞÔ¿ÉÖ¸Ã÷ÏµÍ³ÑÕÉ«±íµÄ´óĞ¡£¬ÔÚÆäËûÇé¿öÏÂ£¬ÆäÖµÎª NULL¡£<P>ÀıÈç: 256
+Win32_VideoController,ConfigManagerErrorCode,?,?,?,?,?,Ö¸Ã÷ Win32 ÅäÖÃ¹ÜÀíÆ÷´íÎó´úÂë¡£¿ÉÄÜ·µ»ØÏÂÁĞÖµ:  0     ´ËÉè±¸ÔËĞĞÕı³£¡£ 1     ´ËÉè±¸µÄÅäÖÃ²»ÕıÈ·¡£ 2     Windows ÎŞ·¨Îª´ËÉè±¸¼ÓÔØÇı¶¯³ÌĞò¡£ 3     ´ËÉè±¸µÄÇı¶¯³ÌĞò¿ÉÄÜÒÑËğ»µ£¬»òÕßÏµÍ³ÄÚ´æ»òÆäËû×ÊÔ´²»×ã¡£ 4     ´ËÉè±¸²»ÄÜÕı³£ÔËĞĞ¡£Ä³¸öÇı¶¯³ÌĞò»ò×¢²á±í¿ÉÄÜÒÑËğ»µ¡£ 5     ´ËÉè±¸µÄÇı¶¯³ÌĞòĞèÒªÒ»¸ö Windows ÎŞ·¨¹ÜÀíµÄ×ÊÔ´¡£ 6     ´ËÉè±¸µÄÒıµ¼ÅäÖÃÓëÆäËûÉè±¸³åÍ»¡£ 7     ÎŞ·¨É¸Ñ¡¡£ 8     ÕÒ²»µ½´ËÉè±¸µÄÇı¶¯³ÌĞò¼ÓÔØÆ÷¡£ 9     ÓÉÓÚ¿ØÖÆ¹Ì¼şÃ»ÓĞÕıÈ·±¨¸æ´ËÉè±¸µÄ×ÊÔ´£¬ËùÒÔ¸ÃÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£ 10     ´ËÉè±¸ÎŞ·¨Æô¶¯¡£ 11     ´ËÉè±¸Ê§°Ü¡£ 12     ´ËÉè±¸ÎŞ·¨ÕÒµ½×ã¹»µÄ¿ÉÓÃ¿ÕÏĞ×ÊÔ´¡£ 13     Windows ÎŞ·¨Ê¶±ğ´ËÉè±¸µÄ×ÊÔ´¡£ 14     ÖØĞÂÆô¶¯¼ÆËã»úÖ®Ç°£¬´ËÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£ 15     ÓÉÓÚ¿ÉÄÜ´æÔÚÖØĞÂÃ¶¾ÙµÄÎÊÌâ£¬ËùÒÔ´ËÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£ 16     Windows ÎŞ·¨Ê¶±ğ´ËÉè±¸Ê¹ÓÃµÄËùÓĞ×ÊÔ´¡£ 17     ´ËÉè±¸ÕıÔÚÇëÇóÎ´ÖªµÄ×ÊÔ´ÀàĞÍ¡£ 18     Îª´ËÉè±¸ÖØĞÂ°²×°Çı¶¯³ÌĞò¡£ 19     ÄãµÄ×¢²á±í¿ÉÄÜÒÑËğ»µ¡£ 20     Ê¹ÓÃ VxD ¼ÓÔØÆ÷Ê§°Ü¡£ 21     ÏµÍ³Ê§°Ü: Çë³¢ÊÔ¸ü¸Ä´ËÉè±¸µÄÇı¶¯³ÌĞò¡£Èç¹ûÈÔÈ»ÎŞĞ§£¬Çë²ÎÔÄÄãµÄÓ²¼şÎÄµµ¡£Windows ÕıÔÚÉ¾³ı´ËÉè±¸¡£ 22     ´ËÉè±¸ÒÑ±»½ûÓÃ¡£ 23     ÏµÍ³Ê§°Ü: Çë³¢ÊÔ¸ü¸Ä´ËÉè±¸µÄÇı¶¯³ÌĞò¡£Èç¹ûÈÔÈ»ÎŞĞ§£¬Çë²ÎÔÄÄãµÄÓ²¼şÎÄµµ¡£ 24     ´ËÉè±¸²»´æÔÚ¡¢ÎŞ·¨Õı³£ÔËĞĞ»òÕßÃ»ÓĞ°²×°ËùÓĞµÄÇı¶¯³ÌĞò¡£ 25     Windows ÈÔÔÚ°²×°´ËÉè±¸¡£ 26     Windows ÈÔÔÚ°²×°´ËÉè±¸¡£ 27     ´ËÉè±¸µÄÈÕÖ¾ÅäÖÃÎŞĞ§¡£ 28     Ã»ÓĞ°²×°´ËÉè±¸µÄÇı¶¯³ÌĞò¡£ 29     ÓÉÓÚ´ËÉè±¸µÄ¹Ì¼şÃ»ÓĞÌá¹©ËùĞè×ÊÔ´£¬ËùÒÔ´ËÉè±¸ÒÑ±»½ûÓÃ¡£ 30     ´ËÉè±¸ÕıÔÚÊ¹ÓÃÁíÒ»Ì¨Éè±¸Ê¹ÓÃµÄÖĞ¶ÏÇëÇó(IRQ)×ÊÔ´¡£ 31     ÓÉÓÚ Windows ÎŞ·¨¼ÓÔØ´ËÉè±¸ËùĞèµÄÇı¶¯³ÌĞò£¬ËùÒÔ´ËÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£ [Ã¶¾ÙÖµ: 0 - ¸ÃÉè±¸Õı³£¹¤×÷¡£; 1 - Î´ÕıÈ·ÅäÖÃ¸ÃÉè±¸¡£; 2 - Windows ÎŞ·¨Îª´ËÉè±¸¼ÓÔØÇı¶¯³ÌĞò¡£; 3 - ¸ÃÉè±¸µÄÇı¶¯³ÌĞò¿ÉÄÜÒÑËğ»µ£¬»òÕßÏµÍ³µÄÄÚ´æ»òÆäËû×ÊÔ´²»×ã¡£; 4 - ¸ÃÉè±¸ÎŞ·¨Õı³£¹¤×÷¡£Ä³¸öÇı¶¯³ÌĞò»ò×¢²á±í¿ÉÄÜÒÑËğ»µ¡£; 5 - Windows ÎŞ·¨¹ÜÀí¸ÃÉè±¸µÄÇı¶¯³ÌĞòËùĞèµÄ×ÊÔ´¡£; 6 - ¸ÃÉè±¸µÄÒıµ¼ÅäÖÃÓëÆäËûÉè±¸·¢Éú³åÍ»¡£; 7 - ÎŞ·¨É¸Ñ¡¡£; 8 - ÕÒ²»µ½Éè±¸µÄÇı¶¯³ÌĞò¼ÓÔØÆ÷¡£; 9 - ÓÉÓÚ¿ØÖÆ¹Ì¼şÃ»ÓĞÕıÈ·±¨¸æ´ËÉè±¸µÄ×ÊÔ´£¬ËùÒÔ¸ÃÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£; 10 - ¸ÃÉè±¸ÎŞ·¨Æô¶¯¡£; 11 - ¸ÃÉè±¸·¢Éú¹ÊÕÏ¡£; 12 - ¸ÃÉè±¸ÕÒ²»µ½×ã¹»µÄ¿ÉÓÃ×ÊÔ´¡£; 13 - Windows ÎŞ·¨ÑéÖ¤¸ÃÉè±¸µÄ×ÊÔ´¡£; 14 - ÔÚÖØĞÂÆô¶¯¼ÆËã»úÖ®Ç°£¬¸ÃÉè±¸ÎŞ·¨Õı³£¹¤×÷¡£; 15 - ¸ÃÉè±¸Î´Õı³£¹¤×÷£¬¿ÉÄÜÊÇÒòÎª³öÏÖÁËÖØĞÂÃ¶¾ÙÎÊÌâ¡£; 16 - Windows ÎŞ·¨Ê¶±ğ¸ÃÉè±¸Ê¹ÓÃµÄËùÓĞ×ÊÔ´¡£; 17 - ¸ÃÉè±¸ÕıÔÚÇëÇóÎ´ÖªµÄ×ÊÔ´ÀàĞÍ¡£; 18 - ÖØĞÂ°²×°¸ÃÉè±¸µÄÇı¶¯³ÌĞò¡£; 19 - Ê¹ÓÃ VxD ¼ÓÔØÆ÷Ê§°Ü¡£; 20 - ×¢²á±í¿ÉÄÜÒÑËğ»µ¡£; 21 - ÏµÍ³Ê§°Ü: Çë³¢ÊÔ¸ü¸Ä´ËÉè±¸µÄÇı¶¯³ÌĞò¡£Èç¹ûÈÔÈ»ÎŞĞ§£¬Çë²ÎÔÄÄãµÄÓ²¼şÎÄµµ¡£Windows ÕıÔÚÉ¾³ı´ËÉè±¸¡£; 22 - ÒÑ½ûÓÃ¸ÃÉè±¸¡£; 23 - ÏµÍ³¹ÊÕÏ: ³¢ÊÔ¸ü¸Ä¸ÃÉè±¸µÄÇı¶¯³ÌĞò¡£Èç¹û²»Æğ×÷ÓÃ£¬Çë²ÎÔÄÓ²¼şÎÄµµ¡£; 24 - ¸ÃÉè±¸²»´æÔÚ¡¢Î´Õı³£¹¤×÷»òÃ»ÓĞ°²×°ÆäËùÓĞÇı¶¯³ÌĞò¡£; 25 - Windows ÈÔÔÚÉèÖÃ¸ÃÉè±¸¡£; 26 - Windows ÈÔÔÚÉèÖÃ¸ÃÉè±¸¡£; 27 - ¸ÃÉè±¸Ã»ÓĞÓĞĞ§µÄÈÕÖ¾ÅäÖÃ¡£; 28 - Î´°²×°¸ÃÉè±¸µÄÇı¶¯³ÌĞò¡£; 29 - ÒÑ½ûÓÃ¸ÃÉè±¸£¬ÒòÎªÉè±¸¹Ì¼şÃ»ÓĞÌá¹©ËùĞèµÄ×ÊÔ´¡£; 30 - ¸ÃÉè±¸Ê¹ÓÃµÄÖĞ¶ÏÇëÇó(IRQ)×ÊÔ´ÕıÔÚ±»ÁíÒ»¸öÉè±¸ËùÊ¹ÓÃ¡£; 31 - ¸ÃÉè±¸Î´Õı³£¹¤×÷£¬ÒòÎª Windows ÎŞ·¨¼ÓÔØ¸ÃÉè±¸ËùĞèµÄÇı¶¯³ÌĞò¡£],Ö¸Ã÷ Win32 ÅäÖÃ¹ÜÀíÆ÷´íÎó´úÂë¡£¿ÉÄÜ·µ»ØÏÂÁĞÖµ:  0     ´ËÉè±¸ÔËĞĞÕı³£¡£ 1     ´ËÉè±¸µÄÅäÖÃ²»ÕıÈ·¡£ 2     Windows ÎŞ·¨Îª´ËÉè±¸¼ÓÔØÇı¶¯³ÌĞò¡£ 3     ´ËÉè±¸µÄÇı¶¯³ÌĞò¿ÉÄÜÒÑËğ»µ£¬»òÕßÏµÍ³ÄÚ´æ»òÆäËû×ÊÔ´²»×ã¡£ 4     ´ËÉè±¸²»ÄÜÕı³£ÔËĞĞ¡£Ä³¸öÇı¶¯³ÌĞò»ò×¢²á±í¿ÉÄÜÒÑËğ»µ¡£ 5     ´ËÉè±¸µÄÇı¶¯³ÌĞòĞèÒªÒ»¸ö Windows ÎŞ·¨¹ÜÀíµÄ×ÊÔ´¡£ 6     ´ËÉè±¸µÄÒıµ¼ÅäÖÃÓëÆäËûÉè±¸³åÍ»¡£ 7     ÎŞ·¨É¸Ñ¡¡£ 8     ÕÒ²»µ½´ËÉè±¸µÄÇı¶¯³ÌĞò¼ÓÔØÆ÷¡£ 9     ÓÉÓÚ¿ØÖÆ¹Ì¼şÃ»ÓĞÕıÈ·±¨¸æ´ËÉè±¸µÄ×ÊÔ´£¬ËùÒÔ¸ÃÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£ 10     ´ËÉè±¸ÎŞ·¨Æô¶¯¡£ 11     ´ËÉè±¸Ê§°Ü¡£ 12     ´ËÉè±¸ÎŞ·¨ÕÒµ½×ã¹»µÄ¿ÉÓÃ¿ÕÏĞ×ÊÔ´¡£ 13     Windows ÎŞ·¨Ê¶±ğ´ËÉè±¸µÄ×ÊÔ´¡£ 14     ÖØĞÂÆô¶¯¼ÆËã»úÖ®Ç°£¬´ËÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£ 15     ÓÉÓÚ¿ÉÄÜ´æÔÚÖØĞÂÃ¶¾ÙµÄÎÊÌâ£¬ËùÒÔ´ËÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£ 16     Windows ÎŞ·¨Ê¶±ğ´ËÉè±¸Ê¹ÓÃµÄËùÓĞ×ÊÔ´¡£ 17     ´ËÉè±¸ÕıÔÚÇëÇóÎ´ÖªµÄ×ÊÔ´ÀàĞÍ¡£ 18     Îª´ËÉè±¸ÖØĞÂ°²×°Çı¶¯³ÌĞò¡£ 19     ÄãµÄ×¢²á±í¿ÉÄÜÒÑËğ»µ¡£ 20     Ê¹ÓÃ VxD ¼ÓÔØÆ÷Ê§°Ü¡£ 21     ÏµÍ³Ê§°Ü: Çë³¢ÊÔ¸ü¸Ä´ËÉè±¸µÄÇı¶¯³ÌĞò¡£Èç¹ûÈÔÈ»ÎŞĞ§£¬Çë²ÎÔÄÄãµÄÓ²¼şÎÄµµ¡£Windows ÕıÔÚÉ¾³ı´ËÉè±¸¡£ 22     ´ËÉè±¸ÒÑ±»½ûÓÃ¡£ 23     ÏµÍ³Ê§°Ü: Çë³¢ÊÔ¸ü¸Ä´ËÉè±¸µÄÇı¶¯³ÌĞò¡£Èç¹ûÈÔÈ»ÎŞĞ§£¬Çë²ÎÔÄÄãµÄÓ²¼şÎÄµµ¡£ 24     ´ËÉè±¸²»´æÔÚ¡¢ÎŞ·¨Õı³£ÔËĞĞ»òÕßÃ»ÓĞ°²×°ËùÓĞµÄÇı¶¯³ÌĞò¡£ 25     Windows ÈÔÔÚ°²×°´ËÉè±¸¡£ 26     Windows ÈÔÔÚ°²×°´ËÉè±¸¡£ 27     ´ËÉè±¸µÄÈÕÖ¾ÅäÖÃÎŞĞ§¡£ 28     Ã»ÓĞ°²×°´ËÉè±¸µÄÇı¶¯³ÌĞò¡£ 29     ÓÉÓÚ´ËÉè±¸µÄ¹Ì¼şÃ»ÓĞÌá¹©ËùĞè×ÊÔ´£¬ËùÒÔ´ËÉè±¸ÒÑ±»½ûÓÃ¡£ 30     ´ËÉè±¸ÕıÔÚÊ¹ÓÃÁíÒ»Ì¨Éè±¸Ê¹ÓÃµÄÖĞ¶ÏÇëÇó(IRQ)×ÊÔ´¡£ 31     ÓÉÓÚ Windows ÎŞ·¨¼ÓÔØ´ËÉè±¸ËùĞèµÄÇı¶¯³ÌĞò£¬ËùÒÔ´ËÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£ [Ã¶¾ÙÖµ: 0 - ¸ÃÉè±¸Õı³£¹¤×÷¡£; 1 - Î´ÕıÈ·ÅäÖÃ¸ÃÉè±¸¡£; 2 - Windows ÎŞ·¨Îª´ËÉè±¸¼ÓÔØÇı¶¯³ÌĞò¡£; 3 - ¸ÃÉè±¸µÄÇı¶¯³ÌĞò¿ÉÄÜÒÑËğ»µ£¬»òÕßÏµÍ³µÄÄÚ´æ»òÆäËû×ÊÔ´²»×ã¡£; 4 - ¸ÃÉè±¸ÎŞ·¨Õı³£¹¤×÷¡£Ä³¸öÇı¶¯³ÌĞò»ò×¢²á±í¿ÉÄÜÒÑËğ»µ¡£; 5 - Windows ÎŞ·¨¹ÜÀí¸ÃÉè±¸µÄÇı¶¯³ÌĞòËùĞèµÄ×ÊÔ´¡£; 6 - ¸ÃÉè±¸µÄÒıµ¼ÅäÖÃÓëÆäËûÉè±¸·¢Éú³åÍ»¡£; 7 - ÎŞ·¨É¸Ñ¡¡£; 8 - ÕÒ²»µ½Éè±¸µÄÇı¶¯³ÌĞò¼ÓÔØÆ÷¡£; 9 - ÓÉÓÚ¿ØÖÆ¹Ì¼şÃ»ÓĞÕıÈ·±¨¸æ´ËÉè±¸µÄ×ÊÔ´£¬ËùÒÔ¸ÃÉè±¸ÎŞ·¨Õı³£ÔËĞĞ¡£; 10 - ¸ÃÉè±¸ÎŞ·¨Æô¶¯¡£; 11 - ¸ÃÉè±¸·¢Éú¹ÊÕÏ¡£; 12 - ¸ÃÉè±¸ÕÒ²»µ½×ã¹»µÄ¿ÉÓÃ×ÊÔ´¡£; 13 - Windows ÎŞ·¨ÑéÖ¤¸ÃÉè±¸µÄ×ÊÔ´¡£; 14 - ÔÚÖØĞÂÆô¶¯¼ÆËã»úÖ®Ç°£¬¸ÃÉè±¸ÎŞ·¨Õı³£¹¤×÷¡£; 15 - ¸ÃÉè±¸Î´Õı³£¹¤×÷£¬¿ÉÄÜÊÇÒòÎª³öÏÖÁËÖØĞÂÃ¶¾ÙÎÊÌâ¡£; 16 - Windows ÎŞ·¨Ê¶±ğ¸ÃÉè±¸Ê¹ÓÃµÄËùÓĞ×ÊÔ´¡£; 17 - ¸ÃÉè±¸ÕıÔÚÇëÇóÎ´ÖªµÄ×ÊÔ´ÀàĞÍ¡£; 18 - ÖØĞÂ°²×°¸ÃÉè±¸µÄÇı¶¯³ÌĞò¡£; 19 - Ê¹ÓÃ VxD ¼ÓÔØÆ÷Ê§°Ü¡£; 20 - ×¢²á±í¿ÉÄÜÒÑËğ»µ¡£; 21 - ÏµÍ³Ê§°Ü: Çë³¢ÊÔ¸ü¸Ä´ËÉè±¸µÄÇı¶¯³ÌĞò¡£Èç¹ûÈÔÈ»ÎŞĞ§£¬Çë²ÎÔÄÄãµÄÓ²¼şÎÄµµ¡£Windows ÕıÔÚÉ¾³ı´ËÉè±¸¡£; 22 - ÒÑ½ûÓÃ¸ÃÉè±¸¡£; 23 - ÏµÍ³¹ÊÕÏ: ³¢ÊÔ¸ü¸Ä¸ÃÉè±¸µÄÇı¶¯³ÌĞò¡£Èç¹û²»Æğ×÷ÓÃ£¬Çë²ÎÔÄÓ²¼şÎÄµµ¡£; 24 - ¸ÃÉè±¸²»´æÔÚ¡¢Î´Õı³£¹¤×÷»òÃ»ÓĞ°²×°ÆäËùÓĞÇı¶¯³ÌĞò¡£; 25 - Windows ÈÔÔÚÉèÖÃ¸ÃÉè±¸¡£; 26 - Windows ÈÔÔÚÉèÖÃ¸ÃÉè±¸¡£; 27 - ¸ÃÉè±¸Ã»ÓĞÓĞĞ§µÄÈÕÖ¾ÅäÖÃ¡£; 28 - Î´°²×°¸ÃÉè±¸µÄÇı¶¯³ÌĞò¡£; 29 - ÒÑ½ûÓÃ¸ÃÉè±¸£¬ÒòÎªÉè±¸¹Ì¼şÃ»ÓĞÌá¹©ËùĞèµÄ×ÊÔ´¡£; 30 - ¸ÃÉè±¸Ê¹ÓÃµÄÖĞ¶ÏÇëÇó(IRQ)×ÊÔ´ÕıÔÚ±»ÁíÒ»¸öÉè±¸ËùÊ¹ÓÃ¡£; 31 - ¸ÃÉè±¸Î´Õı³£¹¤×÷£¬ÒòÎª Windows ÎŞ·¨¼ÓÔØ¸ÃÉè±¸ËùĞèµÄÇı¶¯³ÌĞò¡£]
+Win32_VideoController,ConfigManagerUserConfig,?,?,?,?,?,Ö¸Ã÷Éè±¸ÊÇ·ñÊ¹ÓÃÓÃ»§¶¨ÒåµÄÅäÖÃ¡£,Ö¸Ã÷Éè±¸ÊÇ·ñÊ¹ÓÃÓÃ»§¶¨ÒåµÄÅäÖÃ¡£
+Win32_VideoController,CreationClassName,?,?,?,?,?,CreationClassName Ö¸Ã÷´´½¨ÊµÀıÊ±Ê¹ÓÃµÄÀà»ò×ÓÀàµÄÃû³Æ¡£Óë´ËÀàµÄÆäËû¼üÊôĞÔÒ»ÆğÊ¹ÓÃÊ±£¬´ËÊôĞÔ¿ÉÎ¨Ò»±êÊ¶´ËÀà¼°Æä×ÓÀàµÄËùÓĞÊµÀı¡£,CreationClassName Ö¸Ã÷´´½¨ÊµÀıÊ±Ê¹ÓÃµÄÀà»ò×ÓÀàµÄÃû³Æ¡£Óë´ËÀàµÄÆäËû¼üÊôĞÔÒ»ÆğÊ¹ÓÃÊ±£¬´ËÊôĞÔ¿ÉÎ¨Ò»±êÊ¶´ËÀà¼°Æä×ÓÀàµÄËùÓĞÊµÀı¡£
+Win32_VideoController,CurrentBitsPerPixel,?,?,?,?,?,ÓÃÓÚÏÔÊ¾Ã¿¸öÏñËØµÄÎ»Êı¡£,ÓÃÓÚÏÔÊ¾Ã¿¸öÏñËØµÄÎ»Êı¡£
+Win32_VideoController,CurrentHorizontalResolution,?,?,?,?,?,µ±Ç°µÄË®Æ½ÏñËØÊı¡£,µ±Ç°µÄË®Æ½ÏñËØÊı¡£
+Win32_VideoController,CurrentNumberOfColors,?,?,?,?,?,µ±Ç°·Ö±æÂÊÖ§³ÖµÄÑÕÉ«Êı¡£,µ±Ç°·Ö±æÂÊÖ§³ÖµÄÑÕÉ«Êı¡£
+Win32_VideoController,CurrentNumberOfColumns,?,?,?,?,?,Èç¹ûÊ¹ÓÃ×Ö·ûÄ£Ê½£¬ÇëÊäÈë´ËÊÓÆµ¿ØÖÆÆ÷µÄÁĞÊı£¬·ñÔòÇëÊäÈë 0¡£,Èç¹ûÊ¹ÓÃ×Ö·ûÄ£Ê½£¬ÇëÊäÈë´ËÊÓÆµ¿ØÖÆÆ÷µÄÁĞÊı£¬·ñÔòÇëÊäÈë 0¡£
+Win32_VideoController,CurrentNumberOfRows,?,?,?,?,?,Èç¹ûÊ¹ÓÃ×Ö·ûÄ£Ê½£¬ÇëÊäÈë´ËÊÓÆµ¿ØÖÆÆ÷µÄĞĞÊı£¬·ñÔòÇëÊäÈë 0¡£,Èç¹ûÊ¹ÓÃ×Ö·ûÄ£Ê½£¬ÇëÊäÈë´ËÊÓÆµ¿ØÖÆÆ÷µÄĞĞÊı£¬·ñÔòÇëÊäÈë 0¡£
+Win32_VideoController,CurrentRefreshRate,?,?,?,?,?,CurrentRefreshRate ÊôĞÔÖ¸¶¨ÊÓÆµ¿ØÖÆÆ÷Ë¢ĞÂ¼àÊÓÆ÷Í¼ÏñµÄÆµÂÊ¡£0 ±íÊ¾Ê¹ÓÃÄ¬ÈÏÆµÂÊ£¬0xFFFFFFFF ±íÊ¾Ê¹ÓÃÓÅ»¯ÆµÂÊ¡£,CurrentRefreshRate ÊôĞÔÖ¸¶¨ÊÓÆµ¿ØÖÆÆ÷Ë¢ĞÂ¼àÊÓÆ÷Í¼ÏñµÄÆµÂÊ¡£0 ±íÊ¾Ê¹ÓÃÄ¬ÈÏÆµÂÊ£¬0xFFFFFFFF ±íÊ¾Ê¹ÓÃÓÅ»¯ÆµÂÊ¡£
+Win32_VideoController,CurrentScanMode,?,?,?,?,?,µ±Ç°É¨ÃèÄ£Ê½¡£Í¨¹ıÕâ¸öÊôĞÔ¿ÉÒÔ¶¨Òå¡°¸ôĞĞÉ¨Ãè¡±(Öµ=3) »ò¡°ÖğĞĞÉ¨Ãè¡±(4)¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - ¸ôĞĞÉ¨Ãè; 4 - ·Ç¸ôĞĞÉ¨Ãè],µ±Ç°É¨ÃèÄ£Ê½¡£Í¨¹ıÕâ¸öÊôĞÔ¿ÉÒÔ¶¨Òå¡°¸ôĞĞÉ¨Ãè¡±(Öµ=3) »ò¡°ÖğĞĞÉ¨Ãè¡±(4)¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - ¸ôĞĞÉ¨Ãè; 4 - ·Ç¸ôĞĞÉ¨Ãè]
+Win32_VideoController,CurrentVerticalResolution,?,?,?,?,?,µ±Ç°µÄ´¹Ö±ÏñËØÊı¡£,µ±Ç°µÄ´¹Ö±ÏñËØÊı¡£
+Win32_VideoController,Description,?,?,?,?,?,¡¾AI¡¿ÊÓÆµ¿ØÖÆÆ÷µÄÃèÊö£¬±ÈCaptionÊôĞÔ¸üÏêÏ¸¡£,[ÎŞÃèÊö]
+Win32_VideoController,DeviceID,?,?,?,?,?,DeviceID ÊôĞÔ°üº¬´ËÊÓÆµ¿ØÖÆÆ÷µÄ±êÊ¶·û(¶ÔÓÚ¼ÆËã»úÏµÍ³¶øÑÔ¾ßÓĞÎ¨Ò»ĞÔ)¡£,DeviceID ÊôĞÔ°üº¬´ËÊÓÆµ¿ØÖÆÆ÷µÄ±êÊ¶·û(¶ÔÓÚ¼ÆËã»úÏµÍ³¶øÑÔ¾ßÓĞÎ¨Ò»ĞÔ)¡£
+Win32_VideoController,DeviceSpecificPens,?,?,?,?,?,DeviceSpecificPens ÊôĞÔÖ¸Ã÷Éè±¸×¨ÓÃ±ÊµÄµ±Ç°ÊıÁ¿¡£ÖµÎª 0xffff ±íÊ¾Éè±¸²»Ö§³Ö´ËÀà±Ê¡£ ÀıÈç: 3,DeviceSpecificPens ÊôĞÔÖ¸Ã÷Éè±¸×¨ÓÃ±ÊµÄµ±Ç°ÊıÁ¿¡£ÖµÎª 0xffff ±íÊ¾Éè±¸²»Ö§³Ö´ËÀà±Ê¡£ ÀıÈç: 3
+Win32_VideoController,DitherType,?,?,?,?,?,"""DitherType ÊôĞÔÖ¸Ã÷ÊÓÆµ¿ØÖÆÆ÷µÄµİÉ«ÀàĞÍ¡£¸ÃÊôĞÔ¿ÉÒÔÊ¹ÓÃÒÔÏÂÔ¤¶¨ÒåÖµÖ®Ò»£¬Ò²¿ÉÒÔÊ¹ÓÃÓÉÇı¶¯³ÌĞò¶¨ÒåµÄÖµ(´óÓÚ»òµÈÓÚ 256)¡£ÖµµÄº¬ÒåÈçÏÂ: -1	-	ÎŞµİÉ«¡£2	-	ÓÃ´ÖË¢µİÉ«¡£3	-	ÓÃÏ¸Ë¢µİÉ«¡£4	-	ÒÕÊõÏßÌõµİÉ«£¬Ò»ÖÖÌØÊâµÄµİÉ«·½·¨£¬		¿ÉÔÚºÚ¡¢°×ºÍ»Ò¶È¼ä²úÉúÃ÷È·µÄ±ß¿ò½çÏŞ¡£		Ëü²»ÊÊºÏÓÃÓÚ°üº¬Á¬ĞøÁÁ¶ÈºÍÉ«¶È·Ö¶ÈµÄÍ¼Ïñ£¬ÀıÈçÉ¨ÃèÍ¼Æ¬¡£5	-	Éè±¸¸ºÔğ»Ò½×»¯¡£ [Ã¶¾ÙÖµ: 1 - ÎŞµİÉ«; 2 - ´ø´ÖË¢µÄµİÉ«; 3 - ´øÏ¸Ë¢µÄµİÉ«; 4 - ÏßÌõÒÕÊõµİÉ«; 5 - Éè±¸½øĞĞ»Ò¶È´¦Àí]""","DitherType ÊôĞÔÖ¸Ã÷ÊÓÆµ¿ØÖÆÆ÷µÄµİÉ«ÀàĞÍ¡£¸ÃÊôĞÔ¿ÉÒÔÊ¹ÓÃÒÔÏÂÔ¤¶¨ÒåÖµÖ®Ò»£¬Ò²¿ÉÒÔÊ¹ÓÃÓÉÇı¶¯³ÌĞò¶¨ÒåµÄÖµ(´óÓÚ»òµÈÓÚ 256)¡£ÖµµÄº¬ÒåÈçÏÂ: -1	-	ÎŞµİÉ«¡£2	-	ÓÃ´ÖË¢µİÉ«¡£3	-	ÓÃÏ¸Ë¢µİÉ«¡£4	-	ÒÕÊõÏßÌõµİÉ«£¬Ò»ÖÖÌØÊâµÄµİÉ«·½·¨£¬		¿ÉÔÚºÚ¡¢°×ºÍ»Ò¶È¼ä²úÉúÃ÷È·µÄ±ß¿ò½çÏŞ¡£		Ëü²»ÊÊºÏÓÃÓÚ°üº¬Á¬ĞøÁÁ¶ÈºÍÉ«¶È·Ö¶ÈµÄÍ¼Ïñ£¬ÀıÈçÉ¨ÃèÍ¼Æ¬¡£5	-	Éè±¸¸ºÔğ»Ò½×»¯¡£ [Ã¶¾ÙÖµ: 1 - ÎŞµİÉ«; 2 - ´ø´ÖË¢µÄµİÉ«; 3 - ´øÏ¸Ë¢µÄµİÉ«; 4 - ÏßÌõÒÕÊõµİÉ«; 5 - Éè±¸½øĞĞ»Ò¶È´¦Àí]"
+Win32_VideoController,DriverDate,?,?,?,?,?,DriverDate ÊôĞÔÖ¸Ã÷µ±Ç°ÒÑ°²×°µÄÊÓÆµÇı¶¯³ÌĞòµÄÉÏ´ÎĞŞ¸ÄÈÕÆÚºÍÊ±¼ä¡£,DriverDate ÊôĞÔÖ¸Ã÷µ±Ç°ÒÑ°²×°µÄÊÓÆµÇı¶¯³ÌĞòµÄÉÏ´ÎĞŞ¸ÄÈÕÆÚºÍÊ±¼ä¡£
+Win32_VideoController,DriverVersion,?,?,?,?,?,DriverVersion ÊôĞÔÖ¸Ã÷ÊÓÆµÇı¶¯³ÌĞòµÄ°æ±¾ºÅ¡£,DriverVersion ÊôĞÔÖ¸Ã÷ÊÓÆµÇı¶¯³ÌĞòµÄ°æ±¾ºÅ¡£
+Win32_VideoController,ErrorCleared,?,?,?,?,?,ErrorCleared ÊÇÒ»¸ö²¼¶ûÖµÊôĞÔ£¬Ö¸Ã÷ LastErrorCode ÊôĞÔÖĞ±¨¸æµÄ´íÎóÏÖÒÑÇå³ı¡£,ErrorCleared ÊÇÒ»¸ö²¼¶ûÖµÊôĞÔ£¬Ö¸Ã÷ LastErrorCode ÊôĞÔÖĞ±¨¸æµÄ´íÎóÏÖÒÑÇå³ı¡£
+Win32_VideoController,ErrorDescription,?,?,?,?,?,ErrorDescription ÊÇÒ»¸ö×ÔÓÉ¸ñÊ½×Ö·û´®£¬Ìá¹©ÓĞ¹Ø LastErrorCode ÊôĞÔÖĞ¼ÇÂ¼µÄ´íÎóµÄÏêÏ¸ĞÅÏ¢£¬ÒÔ¼°ÓĞ¹Ø¿ÉÒÔ²ÉÈ¡µÄ¾ÀÕı´ëÊ©µÄĞÅÏ¢¡£,ErrorDescription ÊÇÒ»¸ö×ÔÓÉ¸ñÊ½×Ö·û´®£¬Ìá¹©ÓĞ¹Ø LastErrorCode ÊôĞÔÖĞ¼ÇÂ¼µÄ´íÎóµÄÏêÏ¸ĞÅÏ¢£¬ÒÔ¼°ÓĞ¹Ø¿ÉÒÔ²ÉÈ¡µÄ¾ÀÕı´ëÊ©µÄĞÅÏ¢¡£
+Win32_VideoController,ICMIntent,?,?,?,?,?,"""ICMIntent (Í¼ÏñÑÕÉ«Æ¥ÅäÒâÏò)ÊôĞÔÖ¸Ã÷ÈıÖÖ¿ÉÄÜµÄÑÕÉ«Æ¥Åä·½·¨(»òÒâÏò)Ö®Ò»µÄÌØ¶¨Öµ£¬Ä¬ÈÏÇé¿öÏÂ½«Ê¹ÓÃ´ËÖµ¡£´ËÊôĞÔÖ÷ÒªÕë¶Ô·Ç ICM Ó¦ÓÃ³ÌĞò¡£ICM Ó¦ÓÃ³ÌĞò»áÊ¹ÓÃ ICM º¯Êı½¨Á¢ÒâÏò¡£´ËÊôĞÔ¿ÉÒÔÊ¹ÓÃÒÔÏÂÔ¤¶¨ÒåÖµÖ®Ò»£¬Ò²¿ÉÒÔÊ¹ÓÃÓÉÇı¶¯³ÌĞò¶¨ÒåµÄÖµ(´óÓÚ»òµÈÓÚ 256)¡£ÖµµÄº¬Òå: -1	-	ÑÕÉ«Æ¥ÅäÓ¦¶ÔÉ«²Ê±¥ºÍ¶È×÷ÓÅ»¯¡£¶ÔÓÚ²»ĞèÒª¶¶¶¯µÄÉÌÒµÍ¼ĞÎ£¬´ËÖµÊÇ×îºÏÊÊµÄÑ¡Ôñ¡£2	-	ÑÕÉ«Æ¥ÅäÓ¦¶ÔÉ«²Ê¶Ô±È¶È×÷ÓÅ»¯¡£¶ÔÓÚĞèÒª¶¶¶¯µÄÉ¨ÃèÍ¼ÏñºÍÉãÏñÍ¼Ïñ£¬´ËÖµÊÇ×îºÏÊÊµÄÑ¡Ôñ¡£3	-	ÑÕÉ«Æ¥ÅäÓ¦×÷ÓÅ»¯£¬ÒÔÆ¥ÅäËùĞèµÄ¾«È·ÑÕÉ«¡£¶ÔÓÚĞèÒª¾«È·ÑÕÉ«Æ¥ÅäµÄÉÌÒµ»Õ±ê»òÆäËûÍ¼Ïñ£¬´ËÖµ×îÎªºÏÊÊ¡£ [Ã¶¾ÙÖµ: 1 - ±¥ºÍ¶È; 2 - ¶Ô±È¶È; 3 - ¾«È·ÑÕÉ«]""","ICMIntent (Í¼ÏñÑÕÉ«Æ¥ÅäÒâÏò)ÊôĞÔÖ¸Ã÷ÈıÖÖ¿ÉÄÜµÄÑÕÉ«Æ¥Åä·½·¨(»òÒâÏò)Ö®Ò»µÄÌØ¶¨Öµ£¬Ä¬ÈÏÇé¿öÏÂ½«Ê¹ÓÃ´ËÖµ¡£´ËÊôĞÔÖ÷ÒªÕë¶Ô·Ç ICM Ó¦ÓÃ³ÌĞò¡£ICM Ó¦ÓÃ³ÌĞò»áÊ¹ÓÃ ICM º¯Êı½¨Á¢ÒâÏò¡£´ËÊôĞÔ¿ÉÒÔÊ¹ÓÃÒÔÏÂÔ¤¶¨ÒåÖµÖ®Ò»£¬Ò²¿ÉÒÔÊ¹ÓÃÓÉÇı¶¯³ÌĞò¶¨ÒåµÄÖµ(´óÓÚ»òµÈÓÚ 256)¡£ÖµµÄº¬Òå: -1	-	ÑÕÉ«Æ¥ÅäÓ¦¶ÔÉ«²Ê±¥ºÍ¶È×÷ÓÅ»¯¡£¶ÔÓÚ²»ĞèÒª¶¶¶¯µÄÉÌÒµÍ¼ĞÎ£¬´ËÖµÊÇ×îºÏÊÊµÄÑ¡Ôñ¡£2	-	ÑÕÉ«Æ¥ÅäÓ¦¶ÔÉ«²Ê¶Ô±È¶È×÷ÓÅ»¯¡£¶ÔÓÚĞèÒª¶¶¶¯µÄÉ¨ÃèÍ¼ÏñºÍÉãÏñÍ¼Ïñ£¬´ËÖµÊÇ×îºÏÊÊµÄÑ¡Ôñ¡£3	-	ÑÕÉ«Æ¥ÅäÓ¦×÷ÓÅ»¯£¬ÒÔÆ¥ÅäËùĞèµÄ¾«È·ÑÕÉ«¡£¶ÔÓÚĞèÒª¾«È·ÑÕÉ«Æ¥ÅäµÄÉÌÒµ»Õ±ê»òÆäËûÍ¼Ïñ£¬´ËÖµ×îÎªºÏÊÊ¡£ [Ã¶¾ÙÖµ: 1 - ±¥ºÍ¶È; 2 - ¶Ô±È¶È; 3 - ¾«È·ÑÕÉ«]"
+Win32_VideoController,ICMMethod,?,?,?,?,?,"""ICMMethod (Í¼ÏñÑÕÉ«Æ¥Åä·½·¨)ÊôĞÔÖ¸¶¨ÁË ICM µÄ´¦Àí·½Ê½¡£¶ÔÓÚ·Ç ICM Ó¦ÓÃ³ÌĞò£¬´ËÊôĞÔÖ¸Ê¾¸ÃÈçºÎÆôÓÃ ICM¡£¶ÔÓÚ ICM Ó¦ÓÃ³ÌĞò£¬ÏµÍ³»á¶Ô´Ë³ÉÔ±½øĞĞ¼ì²é£¬ÒÔÈ·¶¨ÈçºÎ´¦Àí ICM Ö§³Ö¡£´ËÊôĞÔ¿ÉÒÔÊ¹ÓÃÒÔÏÂÔ¤¶¨ÒåÖµÖ®Ò»£¬Ò²¿ÉÒÔÊ¹ÓÃÓÉÇı¶¯³ÌĞò¶¨ÒåµÄÖµ£¨´óÓÚ»òµÈÓÚ 256£©¡£ÖµµÄº¬Òå: -1	-	Ö¸¶¨½ûÓÃ ICM¡£2	-	Ö¸¶¨ÓÉ Windows ¸ºÔğ´¦Àí ICM¡£3	-	Ö¸¶¨ÓÉÉè±¸Çı¶¯³ÌĞò¸ºÔğ´¦Àí ICM¡£4	-	Ö¸¶¨ÓÉÄ¿±êÉè±¸¸ºÔğ´¦Àí ICM¡£ [Ã¶¾ÙÖµ: 1 - ÒÑ½ûÓÃ; 2 - Windows; 3 - Éè±¸Çı¶¯³ÌĞò; 4 - Ä¿±êÉè±¸]""","ICMMethod (Í¼ÏñÑÕÉ«Æ¥Åä·½·¨)ÊôĞÔÖ¸¶¨ÁË ICM µÄ´¦Àí·½Ê½¡£¶ÔÓÚ·Ç ICM Ó¦ÓÃ³ÌĞò£¬´ËÊôĞÔÖ¸Ê¾¸ÃÈçºÎÆôÓÃ ICM¡£¶ÔÓÚ ICM Ó¦ÓÃ³ÌĞò£¬ÏµÍ³»á¶Ô´Ë³ÉÔ±½øĞĞ¼ì²é£¬ÒÔÈ·¶¨ÈçºÎ´¦Àí ICM Ö§³Ö¡£´ËÊôĞÔ¿ÉÒÔÊ¹ÓÃÒÔÏÂÔ¤¶¨ÒåÖµÖ®Ò»£¬Ò²¿ÉÒÔÊ¹ÓÃÓÉÇı¶¯³ÌĞò¶¨ÒåµÄÖµ£¨´óÓÚ»òµÈÓÚ 256£©¡£ÖµµÄº¬Òå: -1	-	Ö¸¶¨½ûÓÃ ICM¡£2	-	Ö¸¶¨ÓÉ Windows ¸ºÔğ´¦Àí ICM¡£3	-	Ö¸¶¨ÓÉÉè±¸Çı¶¯³ÌĞò¸ºÔğ´¦Àí ICM¡£4	-	Ö¸¶¨ÓÉÄ¿±êÉè±¸¸ºÔğ´¦Àí ICM¡£ [Ã¶¾ÙÖµ: 1 - ÒÑ½ûÓÃ; 2 - Windows; 3 - Éè±¸Çı¶¯³ÌĞò; 4 - Ä¿±êÉè±¸]"
+Win32_VideoController,InfFilename,?,?,?,?,?,InfFilename ÊôĞÔÖ¸Ã÷ÊÓÆµÊÊÅäÆ÷µÄ .INF ÎÄ¼şµÄÂ·¾¶¡£ ÀıÈç: C:\WINNT\SYSTEM32\DRIVERS,InfFilename ÊôĞÔÖ¸Ã÷ÊÓÆµÊÊÅäÆ÷µÄ .INF ÎÄ¼şµÄÂ·¾¶¡£ ÀıÈç: C:\WINNT\SYSTEM32\DRIVERS
+Win32_VideoController,InfSection,?,?,?,?,?,InfSection ÊôĞÔÖ¸Ã÷ Win32 ÊÓÆµĞÅÏ¢ÔÚ .INF ÎÄ¼şÖĞËù´¦µÄ½Ú¡£,InfSection ÊôĞÔÖ¸Ã÷ Win32 ÊÓÆµĞÅÏ¢ÔÚ .INF ÎÄ¼şÖĞËù´¦µÄ½Ú¡£
+Win32_VideoController,InstallDate,?,?,?,?,?,¡¾AI¡¿ÊÓÆµ¿ØÖÆÆ÷Çı¶¯³ÌĞòµÄ°²×°ÈÕÆÚ¡£,[ÎŞÃèÊö]
+Win32_VideoController,InstalledDisplayDrivers,?,?,?,?,?,InstalledDisplayDrivers ÊôĞÔÖ¸Ã÷°²×°µÄÏÔÊ¾Éè±¸Çı¶¯³ÌĞòµÄÃû³Æ¡£,InstalledDisplayDrivers ÊôĞÔÖ¸Ã÷°²×°µÄÏÔÊ¾Éè±¸Çı¶¯³ÌĞòµÄÃû³Æ¡£
+Win32_VideoController,LastErrorCode,?,?,?,?,?,LastErrorCode ²¶»ñÓÉÂß¼­Éè±¸±¨¸æµÄ×îºóÒ»¸ö´íÎó´úÂë¡£,LastErrorCode ²¶»ñÓÉÂß¼­Éè±¸±¨¸æµÄ×îºóÒ»¸ö´íÎó´úÂë¡£
+Win32_VideoController,MaxMemorySupported,?,?,?,?,?,Ö§³ÖµÄ×î´óÄÚ´æ´óĞ¡(ÒÔ×Ö½ÚÎªµ¥Î»)¡£,Ö§³ÖµÄ×î´óÄÚ´æ´óĞ¡(ÒÔ×Ö½ÚÎªµ¥Î»)¡£
+Win32_VideoController,MaxNumberControlled,?,?,?,?,?,´Ë¿ØÖÆÆ÷Ö§³ÖµÄ¿ÉÖ±½ÓÑ°Ö·µÄÊµÌåµÄ×î´óÊıÄ¿¡£Èç¹ûÊıÄ¿Î´Öª»òÃ»ÓĞÏŞÖÆ£¬Ôò¿ÉÒÔÊ¹ÓÃÖµ 0¡£,´Ë¿ØÖÆÆ÷Ö§³ÖµÄ¿ÉÖ±½ÓÑ°Ö·µÄÊµÌåµÄ×î´óÊıÄ¿¡£Èç¹ûÊıÄ¿Î´Öª»òÃ»ÓĞÏŞÖÆ£¬Ôò¿ÉÒÔÊ¹ÓÃÖµ 0¡£
+Win32_VideoController,MaxRefreshRate,?,?,?,?,?,ÊÓÆµ¿ØÖÆÆ÷µÄ×î´óË¢ĞÂËÙÂÊ(ÒÔºÕ×ÈÎªµ¥Î»)¡£,ÊÓÆµ¿ØÖÆÆ÷µÄ×î´óË¢ĞÂËÙÂÊ(ÒÔºÕ×ÈÎªµ¥Î»)¡£
+Win32_VideoController,MinRefreshRate,?,?,?,?,?,ÊÓÆµ¿ØÖÆÆ÷µÄ×îĞ¡Ë¢ĞÂËÙÂÊ(ÒÔºÕ×ÈÎªµ¥Î»)¡£,ÊÓÆµ¿ØÖÆÆ÷µÄ×îĞ¡Ë¢ĞÂËÙÂÊ(ÒÔºÕ×ÈÎªµ¥Î»)¡£
+Win32_VideoController,Monochrome,?,?,?,?,?,Monochrome ÊôĞÔÖ¸Ã÷Ê¹ÓÃ»Ò¶È»¹ÊÇ²ÊÉ«À´ÏÔÊ¾Í¼Ïñ¡£,Monochrome ÊôĞÔÖ¸Ã÷Ê¹ÓÃ»Ò¶È»¹ÊÇ²ÊÉ«À´ÏÔÊ¾Í¼Ïñ¡£
+Win32_VideoController,Name,?,?,?,?,?,¡¾AI¡¿ÊÓÆµ¿ØÖÆÆ÷µÄÃû³Æ£¬Í¨³£ÊÇÆä²úÆ·Ãû³Æ¡£,[ÎŞÃèÊö]
+Win32_VideoController,NumberOfColorPlanes,?,?,?,?,?,µ±Ç°ÑÕÉ«Æ½ÃæµÄÊıÁ¿¡£Èç¹ûÕâ¸öÖµ²»ÊÊÓÃÓÚµ±Ç°ÊÓÆµÅäÖÃ£¬ÇëÊäÈë 0¡£,µ±Ç°ÑÕÉ«Æ½ÃæµÄÊıÁ¿¡£Èç¹ûÕâ¸öÖµ²»ÊÊÓÃÓÚµ±Ç°ÊÓÆµÅäÖÃ£¬ÇëÊäÈë 0¡£
+Win32_VideoController,NumberOfVideoPages,?,?,?,?,?,µ±Ç°·Ö±æÂÊºÍ¿ÉÓÃÄÚ´æÖ§³ÖµÄÊÓÆµÒ³Êı¡£,µ±Ç°·Ö±æÂÊºÍ¿ÉÓÃÄÚ´æÖ§³ÖµÄÊÓÆµÒ³Êı¡£
+Win32_VideoController,PNPDeviceID,?,?,?,?,?,Ö¸Ã÷Âß¼­Éè±¸µÄ Win32 ¼´²å¼´ÓÃÉè±¸ ID¡£ÀıÈç: *PNP030b,Ö¸Ã÷Âß¼­Éè±¸µÄ Win32 ¼´²å¼´ÓÃÉè±¸ ID¡£ÀıÈç: *PNP030b
+Win32_VideoController,PowerManagementCapabilities,?,?,?,?,?,Ö¸Ã÷Âß¼­Éè±¸ÖĞÓëµçÔ´ÓĞ¹ØµÄÌØ¶¨¹¦ÄÜ¡£Êı×éÖµ 0=¡°Î´Öª¡±£¬1=¡°²»Ö§³Ö¡±ºÍ 2=¡°ÒÑ½ûÓÃ¡±´ú±íµÄº¬ÒåÒ»Ä¿ÁËÈ»¡£Öµ 3=¡°ÒÑÆôÓÃ¡±±íÊ¾µ±Ç°ÒÑÆôÓÃµçÔ´¹ÜÀí¹¦ÄÜ£¬µ«ÊÇ¾ßÌåµÄ¹¦ÄÜ¼¯Î´Öª»òÕßĞÅÏ¢ÎŞĞ§¡£¡°×Ô¶¯½øÈë½ÚÄÜÄ£Ê½¡±(4)±íÊ¾Éè±¸¿É¸ù¾İÓÃÍ¾»òÆäËûÌõ¼ş¸ü¸ÄÆäµçÔ´×´Ì¬¡£¡°¿ÉÉèÖÃµçÔ´×´Ì¬¡±(5)±íÊ¾Ö§³Ö SetPowerState ·½·¨¡£¡°Ö§³ÖµçÔ´ÖØÆô¡±(6)±íÊ¾¿ÉÒÔÍ¨¹ı½« PowerState ÊäÈë±äÁ¿ÉèÖÃÎª 5 (¡°µçÔ´ÖØÆô¡±)À´µ÷ÓÃ SetPowerState ·½·¨¡£¡°Ö§³Ö¶¨Ê±Í¨µç¡±(7)±íÊ¾¿ÉÒÔÍ¨¹ı½« PowerState ÊäÈë±äÁ¿ÉèÖÃÎª 5 (¡°µçÔ´ÖØÆô¡±)¡¢Time ²ÎÊıÉèÖÃÎª¾ßÌåµÄÍ¨µçÈÕÆÚºÍÊ±¼ä»ò¼ä¸ô£¬µ÷ÓÃ SetPowerState ·½·¨¡£,Ö¸Ã÷Âß¼­Éè±¸ÖĞÓëµçÔ´ÓĞ¹ØµÄÌØ¶¨¹¦ÄÜ¡£Êı×éÖµ 0=¡°Î´Öª¡±£¬1=¡°²»Ö§³Ö¡±ºÍ 2=¡°ÒÑ½ûÓÃ¡±´ú±íµÄº¬ÒåÒ»Ä¿ÁËÈ»¡£Öµ 3=¡°ÒÑÆôÓÃ¡±±íÊ¾µ±Ç°ÒÑÆôÓÃµçÔ´¹ÜÀí¹¦ÄÜ£¬µ«ÊÇ¾ßÌåµÄ¹¦ÄÜ¼¯Î´Öª»òÕßĞÅÏ¢ÎŞĞ§¡£¡°×Ô¶¯½øÈë½ÚÄÜÄ£Ê½¡±(4)±íÊ¾Éè±¸¿É¸ù¾İÓÃÍ¾»òÆäËûÌõ¼ş¸ü¸ÄÆäµçÔ´×´Ì¬¡£¡°¿ÉÉèÖÃµçÔ´×´Ì¬¡±(5)±íÊ¾Ö§³Ö SetPowerState ·½·¨¡£¡°Ö§³ÖµçÔ´ÖØÆô¡±(6)±íÊ¾¿ÉÒÔÍ¨¹ı½« PowerState ÊäÈë±äÁ¿ÉèÖÃÎª 5 (¡°µçÔ´ÖØÆô¡±)À´µ÷ÓÃ SetPowerState ·½·¨¡£¡°Ö§³Ö¶¨Ê±Í¨µç¡±(7)±íÊ¾¿ÉÒÔÍ¨¹ı½« PowerState ÊäÈë±äÁ¿ÉèÖÃÎª 5 (¡°µçÔ´ÖØÆô¡±)¡¢Time ²ÎÊıÉèÖÃÎª¾ßÌåµÄÍ¨µçÈÕÆÚºÍÊ±¼ä»ò¼ä¸ô£¬µ÷ÓÃ SetPowerState ·½·¨¡£
+Win32_VideoController,PowerManagementSupported,?,?,?,?,?,²¼¶ûÖµ£¬Ö¸Ã÷Éè±¸ÊÇ·ñÖ§³ÖµçÔ´¹ÜÀí£¬¼´½øÈë½ÚÄÜ×´Ì¬¡£¸Ã²¼¶ûÖµ²¢²»±íÊ¾µ±Ç°ÆôÓÃÁËµçÔ´¹ÜÀí¹¦ÄÜ£»»òÕß£¬Èç¹ûÒÑ¾­ÆôÓÃÁËµçÔ´¹ÜÀí¹¦ÄÜ£¬¸Ã²¼¶ûÖµÒ²²¢²»±íÊ¾Ö§³Ö¾ßÌåµÄ¹¦ÄÜ¡£Ïà¹ØĞÅÏ¢£¬Çë²ÎÔÄ PowerManagementCapabilities Êı×é¡£Èç¹û´Ë²¼¶ûÖµÎª False£¬ÄÇÃ´ÔÚ PowerManagementCapabilities Êı×éÖĞ£¬ÕûÊıÖµÎª 1 µÄ×Ö·û´®¡°²»Ö§³Ö¡±Ó¦ÊÇ½öÓĞµÄÌõÄ¿¡£,²¼¶ûÖµ£¬Ö¸Ã÷Éè±¸ÊÇ·ñÖ§³ÖµçÔ´¹ÜÀí£¬¼´½øÈë½ÚÄÜ×´Ì¬¡£¸Ã²¼¶ûÖµ²¢²»±íÊ¾µ±Ç°ÆôÓÃÁËµçÔ´¹ÜÀí¹¦ÄÜ£»»òÕß£¬Èç¹ûÒÑ¾­ÆôÓÃÁËµçÔ´¹ÜÀí¹¦ÄÜ£¬¸Ã²¼¶ûÖµÒ²²¢²»±íÊ¾Ö§³Ö¾ßÌåµÄ¹¦ÄÜ¡£Ïà¹ØĞÅÏ¢£¬Çë²ÎÔÄ PowerManagementCapabilities Êı×é¡£Èç¹û´Ë²¼¶ûÖµÎª False£¬ÄÇÃ´ÔÚ PowerManagementCapabilities Êı×éÖĞ£¬ÕûÊıÖµÎª 1 µÄ×Ö·û´®¡°²»Ö§³Ö¡±Ó¦ÊÇ½öÓĞµÄÌõÄ¿¡£
+Win32_VideoController,ProtocolSupported,?,?,?,?,?,¿ØÖÆÆ÷·ÃÎÊ¡°¿ØÖÆµÄ¡±Éè±¸Ê±Ê¹ÓÃµÄĞ­Òé¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - EISA; 4 - ISA; 5 - PCI; 6 - ATA/ATAPI; 7 - ÈíÅÌ; 8 - 1496; 9 - SCSI ²¢ĞĞ½Ó¿Ú; 10 - SCSI ¹âÏËÍ¨µÀĞ­Òé; 11 - SCSI ´®ĞĞ×ÜÏßĞ­Òé; 12 - SCSI ´®ĞĞ×ÜÏßĞ­Òé 2 (1394); 13 - SCSI ´®ĞĞ´æ´¢½á¹¹; 14 - VESA; 15 - PCMCIA; 16 - Í¨ÓÃ´®ĞĞ×ÜÏß; 17 - ²¢ĞĞĞ­Òé; 18 - ESCON; 19 - Õï¶Ï; 20 - I2C; 21 - µçÔ´; 22 - HIPPI; 23 - MultiBus; 24 - VME; 25 - IPI; 26 - IEEE-488; 27 - RS232; 28 - IEEE 802.3 10BASE5; 29 - IEEE 802.3 10BASE2; 30 - IEEE 802.3 1BASE5; 31 - IEEE 802.3 10BROAD36; 32 - IEEE 802.3 100BASEVG; 33 - IEEE 802.5 ÁîÅÆ»·; 34 - ANSI X3T9.5 FDDI; 35 - MCA; 36 - ESDI; 37 - IDE; 38 - CMD; 39 - ST506; 40 - DSSI; 41 - QIC2; 42 - ÔöÇ¿ĞÍ ATA/IDE; 43 - AGP; 44 - TWIRP (Ë«ÏòºìÍâÏß); 45 - FIR (¿ìËÙºìÍâÏß); 46 - SIR (´®ĞĞºìÍâÏß); 47 - IrBus],¿ØÖÆÆ÷·ÃÎÊ¡°¿ØÖÆµÄ¡±Éè±¸Ê±Ê¹ÓÃµÄĞ­Òé¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - EISA; 4 - ISA; 5 - PCI; 6 - ATA/ATAPI; 7 - ÈíÅÌ; 8 - 1496; 9 - SCSI ²¢ĞĞ½Ó¿Ú; 10 - SCSI ¹âÏËÍ¨µÀĞ­Òé; 11 - SCSI ´®ĞĞ×ÜÏßĞ­Òé; 12 - SCSI ´®ĞĞ×ÜÏßĞ­Òé 2 (1394); 13 - SCSI ´®ĞĞ´æ´¢½á¹¹; 14 - VESA; 15 - PCMCIA; 16 - Í¨ÓÃ´®ĞĞ×ÜÏß; 17 - ²¢ĞĞĞ­Òé; 18 - ESCON; 19 - Õï¶Ï; 20 - I2C; 21 - µçÔ´; 22 - HIPPI; 23 - MultiBus; 24 - VME; 25 - IPI; 26 - IEEE-488; 27 - RS232; 28 - IEEE 802.3 10BASE5; 29 - IEEE 802.3 10BASE2; 30 - IEEE 802.3 1BASE5; 31 - IEEE 802.3 10BROAD36; 32 - IEEE 802.3 100BASEVG; 33 - IEEE 802.5 ÁîÅÆ»·; 34 - ANSI X3T9.5 FDDI; 35 - MCA; 36 - ESDI; 37 - IDE; 38 - CMD; 39 - ST506; 40 - DSSI; 41 - QIC2; 42 - ÔöÇ¿ĞÍ ATA/IDE; 43 - AGP; 44 - TWIRP (Ë«ÏòºìÍâÏß); 45 - FIR (¿ìËÙºìÍâÏß); 46 - SIR (´®ĞĞºìÍâÏß); 47 - IrBus]
+Win32_VideoController,ReservedSystemPaletteEntries,?,?,?,?,?,ReservedSystemPaletteEntries ÊôĞÔÖ¸Ã÷ÏµÍ³ÑÕÉ«±íÖĞÒÑ±£ÁôÌõÄ¿µÄµ±Ç°ÊıÁ¿¡£²Ù×÷ÏµÍ³¿ÉÒÔ±£ÁôÏà¹ØÌõÄ¿£¬ÒÔÖ§³ÖÈÎÎñÀ¸ÒÔ¼°ÆäËû×ÀÃæÏÔÊ¾ÏîÄ¿ËùĞèµÄ±ê×¼ÑÕÉ«¡£Èç¹ûÏµÍ³Î´Ê¹ÓÃµ÷É«°å£¬ÄÇÃ´ ReservedSystemPaletteEntries Îª NULL¡£<P>ÀıÈç: 24,ReservedSystemPaletteEntries ÊôĞÔÖ¸Ã÷ÏµÍ³ÑÕÉ«±íÖĞÒÑ±£ÁôÌõÄ¿µÄµ±Ç°ÊıÁ¿¡£²Ù×÷ÏµÍ³¿ÉÒÔ±£ÁôÏà¹ØÌõÄ¿£¬ÒÔÖ§³ÖÈÎÎñÀ¸ÒÔ¼°ÆäËû×ÀÃæÏÔÊ¾ÏîÄ¿ËùĞèµÄ±ê×¼ÑÕÉ«¡£Èç¹ûÏµÍ³Î´Ê¹ÓÃµ÷É«°å£¬ÄÇÃ´ ReservedSystemPaletteEntries Îª NULL¡£<P>ÀıÈç: 24
+Win32_VideoController,SpecificationVersion,?,?,?,?,?,SpecificationVersion ÊôĞÔÖ¸Ã÷³õÊ¼»¯Êı¾İ¹æ·¶(Õû¸ö½á¹¹¼´»ùÓÚ´Ë¹æ·¶)µÄ°æ±¾ºÅ¡£,SpecificationVersion ÊôĞÔÖ¸Ã÷³õÊ¼»¯Êı¾İ¹æ·¶(Õû¸ö½á¹¹¼´»ùÓÚ´Ë¹æ·¶)µÄ°æ±¾ºÅ¡£
+Win32_VideoController,Status,?,?,?,?,?,"¡¾AI¡¿ÊÓÆµ¿ØÖÆÆ÷µÄµ±Ç°×´Ì¬£¬ÀıÈç ""OK""¡¢""Error"" »ò ""Unknown""¡£",[ÎŞÃèÊö]
+Win32_VideoController,StatusInfo,?,?,?,?,?,StatusInfo ÊÇÒ»¸ö×Ö·û´®£¬Ö¸Ã÷Âß¼­Éè±¸ÊÇ´¦ÓÚÆôÓÃ(Öµ = 3)¡¢½ûÓÃ(Öµ = 4)¡¢ÆäËû(1)»¹ÊÇÎ´Öª(2)×´Ì¬¡£Èç¹ûÕâ¸öÊôĞÔ²»ÊÊÓÃÓÚÂß¼­Éè±¸£¬ÔòÖµÓ¦¸ÃÎª 5 (¡°²»ÊÊÓÃ¡±)¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - ÒÑÆôÓÃ; 4 - ÒÑ½ûÓÃ; 5 - ²»ÊÊÓÃ],StatusInfo ÊÇÒ»¸ö×Ö·û´®£¬Ö¸Ã÷Âß¼­Éè±¸ÊÇ´¦ÓÚÆôÓÃ(Öµ = 3)¡¢½ûÓÃ(Öµ = 4)¡¢ÆäËû(1)»¹ÊÇÎ´Öª(2)×´Ì¬¡£Èç¹ûÕâ¸öÊôĞÔ²»ÊÊÓÃÓÚÂß¼­Éè±¸£¬ÔòÖµÓ¦¸ÃÎª 5 (¡°²»ÊÊÓÃ¡±)¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - ÒÑÆôÓÃ; 4 - ÒÑ½ûÓÃ; 5 - ²»ÊÊÓÃ]
+Win32_VideoController,SystemCreationClassName,?,?,?,?,?,×÷ÓÃÓòÏµÍ³µÄ CreationClassName¡£,×÷ÓÃÓòÏµÍ³µÄ CreationClassName¡£
+Win32_VideoController,SystemName,?,?,?,?,?,×÷ÓÃÓòÏµÍ³µÄÃû³Æ¡£,×÷ÓÃÓòÏµÍ³µÄÃû³Æ¡£
+Win32_VideoController,SystemPaletteEntries,?,?,?,?,?,SystemPaletteEntries ÊôĞÔÖ¸Ã÷ÏµÍ³ÑÕÉ«±íÖĞµÄµ±Ç°ÌõÄ¿ÊıÁ¿¡£Èç¹ûÏµÍ³Î´Ê¹ÓÃµ÷É«°å£¬ÄÇÃ´ SystemPaletteEntries Îª NULL¡£<P>ÀıÈç: 256,SystemPaletteEntries ÊôĞÔÖ¸Ã÷ÏµÍ³ÑÕÉ«±íÖĞµÄµ±Ç°ÌõÄ¿ÊıÁ¿¡£Èç¹ûÏµÍ³Î´Ê¹ÓÃµ÷É«°å£¬ÄÇÃ´ SystemPaletteEntries Îª NULL¡£<P>ÀıÈç: 256
+Win32_VideoController,TimeOfLastReset,?,?,?,?,?,TimeOfLastReset ÊôĞÔÖ¸Ã÷ÉÏÒ»´ÎÖØÖÃ´Ë¿ØÖÆÆ÷µÄÈÕÆÚºÍÊ±¼ä¡£Õâ¿ÉÄÜÒâÎ¶×Å¿ØÖÆÆ÷ÒÑ¶Ïµç»ò±»ÖØĞÂ³õÊ¼»¯¡£,TimeOfLastReset ÊôĞÔÖ¸Ã÷ÉÏÒ»´ÎÖØÖÃ´Ë¿ØÖÆÆ÷µÄÈÕÆÚºÍÊ±¼ä¡£Õâ¿ÉÄÜÒâÎ¶×Å¿ØÖÆÆ÷ÒÑ¶Ïµç»ò±»ÖØĞÂ³õÊ¼»¯¡£
+Win32_VideoController,VideoArchitecture,?,?,?,?,?,ÊÓÆµÌåÏµ½á¹¹¡£ÀıÈç£¬¿ÉÒÔÖ¸¶¨ VGA (Öµ=5)»ò PC-98 (160)¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - CGA; 4 - EGA; 5 - VGA; 6 - SVGA; 7 - MDA; 8 - HGC; 9 - MCGA; 10 - 8514A; 11 - XGA; 12 - ÏßĞÔÖ¡»º³åÇø; 160 - PC-98],ÊÓÆµÌåÏµ½á¹¹¡£ÀıÈç£¬¿ÉÒÔÖ¸¶¨ VGA (Öµ=5)»ò PC-98 (160)¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - CGA; 4 - EGA; 5 - VGA; 6 - SVGA; 7 - MDA; 8 - HGC; 9 - MCGA; 10 - 8514A; 11 - XGA; 12 - ÏßĞÔÖ¡»º³åÇø; 160 - PC-98]
+Win32_VideoController,VideoMemoryType,?,?,?,?,?,Ò»¸öÕûÊıÃ¶¾Ù£¬ÓÃÓÚÖ¸Ã÷ÊÓÆµÄÚ´æµÄÀàĞÍ¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - VRAM; 4 - DRAM; 5 - SRAM; 6 - WRAM; 7 - EDO RAM; 8 - Í»·¢Í¬²½ DRAM; 9 - ¹ÜµÀÍ»·¢ SRAM; 10 - CDRAM; 11 - 3DRAM; 12 - SDRAM; 13 - SGRAM],Ò»¸öÕûÊıÃ¶¾Ù£¬ÓÃÓÚÖ¸Ã÷ÊÓÆµÄÚ´æµÄÀàĞÍ¡£ [Ã¶¾ÙÖµ: 1 - ÆäËû; 2 - Î´Öª; 3 - VRAM; 4 - DRAM; 5 - SRAM; 6 - WRAM; 7 - EDO RAM; 8 - Í»·¢Í¬²½ DRAM; 9 - ¹ÜµÀÍ»·¢ SRAM; 10 - CDRAM; 11 - 3DRAM; 12 - SDRAM; 13 - SGRAM]
+Win32_VideoController,VideoMode,?,?,?,?,?,µ±Ç°ÊÓÆµÄ£Ê½¡£,µ±Ç°ÊÓÆµÄ£Ê½¡£
+Win32_VideoController,VideoModeDescription,?,?,?,?,?,VideoModeDescription ÊôĞÔÖ¸Ã÷ÊÓÆµ¿ØÖÆÆ÷µÄµ±Ç°·Ö±æÂÊ¡¢ÑÕÉ«ºÍÉ¨ÃèÄ£Ê½ÉèÖÃ¡£ ÀıÈç: 1024 x 768 x 256 É«,VideoModeDescription ÊôĞÔÖ¸Ã÷ÊÓÆµ¿ØÖÆÆ÷µÄµ±Ç°·Ö±æÂÊ¡¢ÑÕÉ«ºÍÉ¨ÃèÄ£Ê½ÉèÖÃ¡£ ÀıÈç: 1024 x 768 x 256 É«
+Win32_VideoController,VideoProcessor,?,?,?,?,?,Ò»¸öÓÃÓÚÃèÊöÊÓÆµ´¦ÀíÆ÷/¿ØÖÆÆ÷µÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,Ò»¸öÓÃÓÚÃèÊöÊÓÆµ´¦ÀíÆ÷/¿ØÖÆÆ÷µÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£
+Win32_VideoController,SetPowerState,?,?,?,?,?,SetPowerState ¶¨ÒåÁËÂß¼­Éè±¸ËùĞèµÄµçÔ´×´Ì¬£¬²¢ÇÒ¶¨ÒåÁËÓ¦µ±½«Éè±¸ÖÃÓÚ´Ë×´Ì¬µÄÊ±¼ä¡£Í¨¹ı½« PowerState ²ÎÊıÉèÖÃÎªÏÂÁĞÄ³¸öÕûÊıÖµ£¬¿ÉÒÔÖ¸¶¨ĞèÒªµÄµçÔ´×´Ì¬: 1=¡°È«¹¦ÂÊ¡±£¬2=¡°½ÚÄÜ - µÍ¹¦ºÄÄ£Ê½¡±£¬3=¡°½ÚÄÜ - ´ı»ú¡±£¬4=¡°½ÚÄÜ - ÆäËû¡±£¬5=¡°µçÔ´ÖØÆô¡±»ò 6=¡°¹Ø±ÕµçÔ´¡±¡£Time ²ÎÊı(ÊÊÓÃÓÚ³ıÁË 5¡°µçÔ´ÖØÆô¡±ÒÔÍâµÄÆäËûËùÓĞ×´Ì¬¸ü¸Ä)±íÊ¾ºÎÊ±Ó¦½«µçÔ´×´Ì¬ÉèÖÃÎª³£¹æÈÕÆÚ-Ê±¼äÖµ»òÉèÖÃÎª¼ä¸ôÖµ(ÆäÖĞ£¬¼ä¸ôµÄÆğÊ¼Ê±¼äÎªÊÕµ½·½·¨µ÷ÓÃµÄÊ±¼ä)¡£µ± PowerState ²ÎÊıµÈÓÚ 5¡°µçÔ´ÖØÆô¡±Ê±£¬Time ²ÎÊı±íÊ¾Ó¦µ±ÔÙ´Î¿ªÆôÉè±¸µçÔ´µÄÊ±¼ä£¬¹Ø±ÕµçÔ´ÊÇÁ¢¼´Ö´ĞĞµÄ¡£Èç¹û³É¹¦£¬SetPowerState Ó¦·µ»Ø 0£»Èç¹ûÖ¸¶¨µÄµçÔ´×´Ì¬ºÍÊ±¼äÇëÇó²»ÊÜÖ§³Ö£¬Ôò·µ»Ø 1£»Èç¹û³öÏÖÆäËû´íÎó£¬Ôò·µ»ØÁíÍâµÄÖµ¡£ÔÚ×ÓÀàÖĞ£¬Í¨¹ı¸Ã·½·¨ÉÏµÄ ValueMap ÏŞ¶¨·û£¬¿ÉÒÔÖ¸¶¨¿ÉÄÜµÄ·µ»Ø´úÂë¼¯¡£»¹¿ÉÒÔ½«¡°·­Òë¡±ValueMap ÄÚÈİËùµÃµÄ×Ö·û´®Ö¸¶¨Îª×ÓÀàÖĞµÄ Values Êı×éÏŞ¶¨·û¡£,SetPowerState ¶¨ÒåÁËÂß¼­Éè±¸ËùĞèµÄµçÔ´×´Ì¬£¬²¢ÇÒ¶¨ÒåÁËÓ¦µ±½«Éè±¸ÖÃÓÚ´Ë×´Ì¬µÄÊ±¼ä¡£Í¨¹ı½« PowerState ²ÎÊıÉèÖÃÎªÏÂÁĞÄ³¸öÕûÊıÖµ£¬¿ÉÒÔÖ¸¶¨ĞèÒªµÄµçÔ´×´Ì¬: 1=¡°È«¹¦ÂÊ¡±£¬2=¡°½ÚÄÜ - µÍ¹¦ºÄÄ£Ê½¡±£¬3=¡°½ÚÄÜ - ´ı»ú¡±£¬4=¡°½ÚÄÜ - ÆäËû¡±£¬5=¡°µçÔ´ÖØÆô¡±»ò 6=¡°¹Ø±ÕµçÔ´¡±¡£Time ²ÎÊı(ÊÊÓÃÓÚ³ıÁË 5¡°µçÔ´ÖØÆô¡±ÒÔÍâµÄÆäËûËùÓĞ×´Ì¬¸ü¸Ä)±íÊ¾ºÎÊ±Ó¦½«µçÔ´×´Ì¬ÉèÖÃÎª³£¹æÈÕÆÚ-Ê±¼äÖµ»òÉèÖÃÎª¼ä¸ôÖµ(ÆäÖĞ£¬¼ä¸ôµÄÆğÊ¼Ê±¼äÎªÊÕµ½·½·¨µ÷ÓÃµÄÊ±¼ä)¡£µ± PowerState ²ÎÊıµÈÓÚ 5¡°µçÔ´ÖØÆô¡±Ê±£¬Time ²ÎÊı±íÊ¾Ó¦µ±ÔÙ´Î¿ªÆôÉè±¸µçÔ´µÄÊ±¼ä£¬¹Ø±ÕµçÔ´ÊÇÁ¢¼´Ö´ĞĞµÄ¡£Èç¹û³É¹¦£¬SetPowerState Ó¦·µ»Ø 0£»Èç¹ûÖ¸¶¨µÄµçÔ´×´Ì¬ºÍÊ±¼äÇëÇó²»ÊÜÖ§³Ö£¬Ôò·µ»Ø 1£»Èç¹û³öÏÖÆäËû´íÎó£¬Ôò·µ»ØÁíÍâµÄÖµ¡£ÔÚ×ÓÀàÖĞ£¬Í¨¹ı¸Ã·½·¨ÉÏµÄ ValueMap ÏŞ¶¨·û£¬¿ÉÒÔÖ¸¶¨¿ÉÄÜµÄ·µ»Ø´úÂë¼¯¡£»¹¿ÉÒÔ½«¡°·­Òë¡±ValueMap ÄÚÈİËùµÃµÄ×Ö·û´®Ö¸¶¨Îª×ÓÀàÖĞµÄ Values Êı×éÏŞ¶¨·û¡£
+Win32_VideoController,Reset,?,?,?,?,?,ÇëÇóÖØÖÃÂß¼­Éè±¸¡£Èç¹ûÇëÇó±»³É¹¦Ö´ĞĞ£¬Ôò·µ»ØµÄÖµÓ¦µ±Îª 0£»Èç¹ûÇëÇó²»ÊÜÖ§³Ö£¬Ôò·µ»Ø 1£»Èç¹û³öÏÖ´íÎó£¬Ôò·µ»ØÆäËûÖµ¡£,ÇëÇóÖØÖÃÂß¼­Éè±¸¡£Èç¹ûÇëÇó±»³É¹¦Ö´ĞĞ£¬Ôò·µ»ØµÄÖµÓ¦µ±Îª 0£»Èç¹ûÇëÇó²»ÊÜÖ§³Ö£¬Ôò·µ»Ø 1£»Èç¹û³öÏÖ´íÎó£¬Ôò·µ»ØÆäËûÖµ¡£
+Msvm_ComputerSystem,AvailableRequestedStates,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¿ÉÓÃÓÚ´Ë¼ÆËã»úÏµÍ³µÄÇëÇó×´Ì¬×ª»»µÄ¿ÉÓÃ×´Ì¬Êı×é¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,Caption,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³µÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,CommunicationStatus,?,?,?,?,?,¡¾AI¡¿±íÊ¾¹ÜÀí»ù´¡ÉèÊ©Óë¼ÆËã»úÏµÍ³Ö®¼äµÄÍ¨ĞÅ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,CreationClassName,?,?,?,?,?,¡¾AI¡¿´´½¨´Ë¼ÆËã»úÏµÍ³ÊµÀıËùÓÃµÄÀàµÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,Dedicated,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¼ÆËã»úÏµÍ³ÊÇ·ñ×¨ÓÃÓÚÌØ¶¨Ä¿µÄ¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,Description,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³µÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,DetailedStatus,?,?,?,?,?,¡¾AI¡¿Ìá¹©ÓĞ¹Ø¼ÆËã»úÏµÍ³µ±Ç°×´Ì¬µÄÏêÏ¸ĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,ElementName,?,?,?,?,?,¡¾AI¡¿´Ë¼ÆËã»úÏµÍ³µÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,EnabledDefault,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³ÔÚÊ×´ÎÆôÓÃÊ±µÄÄ¬ÈÏÆôÓÃ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,EnabledState,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³µÄµ±Ç°ÆôÓÃ/½ûÓÃ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,EnhancedSessionModeState,?,?,?,?,?,Ö¸Ê¾Ö÷»úÊÇ·ñÔÊĞíÔöÇ¿»á»°Ä£Ê½Á¬½Ó£»Èç¹ûÔÊĞí£¬ÔòÖ¸Ê¾ËüÃÇ¶ÔĞéÄâ»úÊÇ·ñ¿ÉÓÃ¡£[Ã¶¾ÙÖµ: 2 - ÔÊĞí²¢¿ÉÓÃ; 3 - ²»ÔÊĞí; 6 - ÔÊĞíµ«²»¿ÉÓÃ],"Indicates whether or not enhanced mode connections are allowed by the host and if allowed, whether or not they are available to the virtual machine. [Ã¶¾ÙÖµ: 2 - Allowed and available; 3 - Not allowed; 6 - Allowed but not available]"
+Msvm_ComputerSystem,FailedOverReplicationType,?,?,?,?,?,ÎªĞéÄâ»úÖ´ĞĞµÄ¹ÊÕÏ×ªÒÆÀàĞÍ¡£[Ã¶¾ÙÖµ: 0 - ÎŞ; 1 - ³£¹æ; 2 - Ó¦ÓÃ³ÌĞòÒ»ÖÂ; 3 - ¼Æ»®ÄÚ],Type of failover that was performed for the virtual machine. [Ã¶¾ÙÖµ: 0 - None; 1 - Regular; 2 - Application consistent; 3 - Planned]
+Msvm_ComputerSystem,HealthState,?,?,?,?,?,¡¾AI¡¿±íÊ¾¼ÆËã»úÏµÍ³µÄµ±Ç°½¡¿µ×´¿ö¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,HwThreadsPerCoreRealized,?,?,?,?,?,Ö¸Ê¾±¨¸æ¸ø¿ÍÌå²Ù×÷ÏµÍ³µÄÃ¿¸öºËĞÄµÄ SMT Ïß³ÌÊı¡£´Ë±¨¸æÓëÓ²¼şÊÇ·ñÊµ¼Ê´æÔÚ SMT ÎŞ¹Ø¡£,Indicates the number of SMT threads per core reported to the guest.  This reporting is independent of whether the hardware for SMT is present.
+Msvm_ComputerSystem,IdentifyingDescriptions,?,?,?,?,?,¡¾AI¡¿Ìá¹©ÓĞ¹Ø¼ÆËã»úÏµÍ³µÄÆäËûÊ¶±ğÃèÊöµÄÊı×é¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,InstallDate,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³µÄ°²×°ÈÕÆÚ¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´Ë¼ÆËã»úÏµÍ³ÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,LastApplicationConsistentReplicationTime,?,?,?,?,?,ĞéÄâ»úÔÚ»Ö¸´Ê±½ÓÊÕµ½µÄÉÏÒ»´ÎÓ¦ÓÃ³ÌĞòÒ»ÖÂĞÔ¸´ÖÆµÄÊ±¼ä¡£,The time at which the last application consistent replication is received on recovery for the virtual machine.
+Msvm_ComputerSystem,LastReplicationTime,?,?,?,?,?,ĞéÄâ»úÔÚ»Ö¸´Ê±½ÓÊÕµ½µÄÉÏÒ»´Î¸´ÖÆµÄÊ±¼ä¡£,The time at which the last replication is received on recovery for the virtual machine.
+Msvm_ComputerSystem,LastReplicationType,?,?,?,?,?,ĞéÄâ»ú½ÓÊÕµ½µÄÉÏÒ»´Î¸´ÖÆµÄÀàĞÍ¡£[Ã¶¾ÙÖµ: 0 - ÎŞ; 1 - ³£¹æ; 2 - Ó¦ÓÃ³ÌĞòÒ»ÖÂ; 3 - ¼Æ»®ÄÚ],Type of the last replication that was received for the virtual machine. [Ã¶¾ÙÖµ: 0 - None; 1 - Regular; 2 - Application consistent; 3 - Planned]
+Msvm_ComputerSystem,LastSuccessfulBackupTime,?,?,?,?,?,ĞéÄâ»úÉÏÒ»´Î³É¹¦±¸·İÍê³ÉµÄÊ±¼ä¡£,The time at which the last successful backup has completed for the virtual machine.
+Msvm_ComputerSystem,ManagementVtlImageFileName,?,?,?,?,?,Ìá¹©ĞéÄâ»úÕıÔÚÊ¹ÓÃµÄ¹ÜÀí VTL Ó³ÏñµÄÎÄ¼ş£¨Èç¹û¿ÉÓÃ£©¡£,"The file that provides the management VTL image in use by the virtual machine, if available."
+Msvm_ComputerSystem,ManagementVtlImageVersion,?,?,?,?,?,ĞéÄâ»úÕıÔÚÊ¹ÓÃµÄ¹ÜÀí VTL Ó³ÏñµÄËÄ²¿·Ö°æ±¾ºÅ£¨Èç¹û¿ÉÓÃ£©¡£,"The four-part version of the management VTL image in use by the virtual machine, if available."
+Msvm_ComputerSystem,Name,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³µÄÃû³Æ£¬Í¨³£ÊÇÆäÎ¨Ò»±êÊ¶·û¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,NameFormat,?,?,?,?,?,¡¾AI¡¿ÃèÊöNameÊôĞÔ¸ñÊ½µÄ×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,NumberOfNumaNodes,?,?,?,?,?,¼ÆËã»úÏµÍ³µÄ·ÇÒ»ÖÂĞÔÄÚ´æ·ÃÎÊ (NUMA) ½ÚµãÊı¡£µ± Msvm_ComputerSystem ´ú±íËŞÖ÷¼ÆËã»úÏµÍ³Ê±£¬´ËÊôĞÔ°üº¬ÎïÀí NUMA ½ÚµãµÄ¼ÆÊı¡£µ± Msvm_ComputerSystem ´ú±íĞéÄâ¼ÆËã»úÏµÍ³Ê±£¬´ËÊôĞÔ°üº¬Í¨¹ı ACPI ÏµÍ³×ÊÔ´¹ØÁª±í (SRAT) ³ÊÏÖ¸ø¿ÍÌå²Ù×÷ÏµÍ³µÄĞéÄâ NUMA ½ÚµãÊı¡£,"The number of non-uniform memory access (NUMA) nodes of the computer system. When Msvm_ComputerSystem represents the hosting computer system, this property contains the count of physical NUMA nodes. When Msvm_ComputerSystem represents a virtual computer system, this property contains the number of virtual NUMA nodes that are presented to the guest OS through the ACPI System Resource Affinity Table (SRAT)."
+Msvm_ComputerSystem,OnTimeInMilliseconds,?,?,?,?,?,¶ÔÓÚĞéÄâÏµÍ³£¬´ËÊôĞÔÃèÊö×ÔÉÏ´Î¿ª»ú¡¢ÖØÖÃ»ò»Ö¸´ÒÔÀ´µÄ×ÜÕı³£ÔËĞĞÊ±¼ä£¨ÒÔºÁÃëÎªµ¥Î»£©¡£´ËÊ±¼ä²»°üÀ¨ĞéÄâÏµÍ³´¦ÓÚÔİÍ£×´Ì¬µÄÊ±¼ä¡£¶ÔÓÚËŞÖ÷ÏµÍ³£¬´ËÊôĞÔÉèÖÃÎª NULL¡£,"For the virtual system, this property describes the total up time, in milliseconds, since the machine was last turned on, reset, or restored. This time excludes the time the virtual system was in the paused state. For the host system, this property is set to NULL."
+Msvm_ComputerSystem,OperatingStatus,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³µÄµ±Ç°²Ù×÷×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,OperationalStatus,?,?,?,?,?,¡¾AI¡¿Ò»¸öÊı×é£¬Ìá¹©ÓĞ¹Ø¼ÆËã»úÏµÍ³²Ù×÷×´Ì¬µÄÏêÏ¸ĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,OtherDedicatedDescriptions,?,?,?,?,?,¡¾AI¡¿µ±DedicatedÊôĞÔÎª¡°ÆäËû¡±Ê±£¬Ìá¹©×¨ÓÃÄ¿µÄµÄÏêÏ¸ÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,OtherEnabledState,?,?,?,?,?,¡¾AI¡¿µ±EnabledStateÊôĞÔÎª¡°ÆäËû¡±Ê±£¬Ìá¹©ÓĞ¹ØÆôÓÃ×´Ì¬µÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,OtherIdentifyingInfo,?,?,?,?,?,¡¾AI¡¿Ìá¹©ÓĞ¹Ø¼ÆËã»úÏµÍ³µÄÆäËûÊ¶±ğĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,PowerManagementCapabilities,?,?,?,?,?,¡¾AI¡¿ÃèÊö¼ÆËã»úÏµÍ³µçÔ´¹ÜÀí¹¦ÄÜµÄÊı×é¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,PrimaryOwnerContact,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³Ö÷ÒªËùÓĞÕßµÄÁªÏµĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,PrimaryOwnerName,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³Ö÷ÒªËùÓĞÕßµÄĞÕÃû¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,PrimaryStatus,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³µÄÖ÷Òª×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,ProcessID,?,?,?,?,?,ÕıÔÚÔËĞĞ´ËĞéÄâ»úµÄ½ø³Ì±êÊ¶·û¡£´ËÖµ¿ÉÓÃÓÚÎ¨Ò»±êÊ¶ÏµÍ³ÉÏÔËĞĞ¸ÃĞéÄâ»úµÄ Vmwp.exe ÊµÀı¡£,The identifier of the process under which this virtual machine is running. This value can be used to uniquely identify the instance of Vmwp.exe on the system that is running the virtual machine.
+Msvm_ComputerSystem,ReplicationHealth,?,?,?,?,?,ĞéÄâ»úµÄ¸´ÖÆÔËĞĞ×´¿ö¡£[Ã¶¾ÙÖµ: 0 - ²»ÊÊÓÃ; 1 - Õı³£; 2 - ¾¯¸æ; 3 - ÑÏÖØ],Replication health for the virtual machine. [Ã¶¾ÙÖµ: 0 - Not applicable; 1 - Ok; 2 - Warning; 3 - Critical]
+Msvm_ComputerSystem,ReplicationMode,?,?,?,?,?,±êÊ¶ĞéÄâ»úµÄ¸´ÖÆÀàĞÍ¡£[Ã¶¾ÙÖµ: 0 - ÎŞ; 1 - Ö÷¸±±¾; 2 - ¸±±¾; 3 - ²âÊÔ¸±±¾; 4 - À©Õ¹¸±±¾],Identifies replication type for the virtual machine. [Ã¶¾ÙÖµ: 0 - None; 1 - Primary; 2 - Replica; 3 - Test Replica; 4 - Extended Replica]
+Msvm_ComputerSystem,ReplicationState,?,?,?,?,?,ĞéÄâ»úµÄ¸´ÖÆ×´Ì¬¡£[Ã¶¾ÙÖµ: 0 - ÒÑ½ûÓÃ; 1 - ×¼±¸ºÃ¸´ÖÆ; 2 - µÈ´ıÍê³É³õÊ¼¸´ÖÆ; 3 - ÕıÔÚ¸´ÖÆ; 4 - ÒÑÍ¬²½¸´ÖÆÍê³É; 5 - ÒÑ»Ö¸´; 6 - ÒÑÌá½»; 7 - ÒÑÔİÍ£; 8 - ÑÏÖØ; 9 - µÈ´ı¿ªÊ¼ÖØĞÂÍ¬²½; 10 - ÕıÔÚÖØĞÂÍ¬²½; 11 - ÖØĞÂÍ¬²½ÒÑÔİÍ£; 12 - ÕıÔÚ½øĞĞ¹ÊÕÏ×ªÒÆ; 13 - ÕıÔÚ½øĞĞ¹ÊÕÏ»Ö¸´; 14 - ¹ÊÕÏ»Ö¸´Íê³É],Replication state for the virtual machine. [Ã¶¾ÙÖµ: 0 - Disabled; 1 - Ready for replication; 2 - Waiting to complete initial replication; 3 - Replicating; 4 - Synced replication complete; 5 - Recovered; 6 - Committed; 7 - Suspended; 8 - Critical; 9 - Waiting to start resynchronization; 10 - Resynchronizing; 11 - Resynchronization suspended; 12 - Failover in progress; 13 - Failback in progress; 14 - Failback complete]
+Msvm_ComputerSystem,RequestedState,?,?,?,?,?,¡¾AI¡¿Îª¼ÆËã»úÏµÍ³ÇëÇóµÄÆÚÍû×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,ResetCapability,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¼ÆËã»úÏµÍ³µÄÖØÖÃÄÜÁ¦£¨ÀıÈç£¬ÊÇ·ñÖ§³ÖÓ²ÖØÖÃ»òÈíÖØÖÃ£©¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,Roles,?,?,?,?,?,¡¾AI¡¿Ò»¸ö×Ö·û´®Êı×é£¬ÃèÊö´Ë¼ÆËã»úÏµÍ³°çÑİµÄ½ÇÉ«¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,Status,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³µÄµ±Ç°×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,StatusDescriptions,?,?,?,?,?,¡¾AI¡¿Ò»¸ö×Ö·û´®Êı×é£¬Ìá¹©ÓĞ¹ØOperationalStatusÊôĞÔÖĞÃ¿¸öÖµµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,TimeOfLastConfigurationChange,?,?,?,?,?,ÉÏ´ÎĞŞ¸ÄĞéÄâ»úÅäÖÃÎÄ¼şµÄÈÕÆÚºÍÊ±¼ä¡£ÔÚÄ³Ğ©ĞéÄâ»ú²Ù×÷ÆÚ¼äÒÔ¼°Ìí¼Ó¡¢ĞŞ¸Ä»òÉ¾³ıÈÎºÎĞéÄâ»ú»òÉè±¸ÉèÖÃÊ±£¬¶¼»áĞŞ¸ÄÅäÖÃÎÄ¼ş¡£,"The date and time when the virtual machine configuration file was last modified. The configuration file is modified during certain virtual machine operations, as well as when any of the virtual machine or device settings are added, modified, or removed."
+Msvm_ComputerSystem,TimeOfLastStateChange,?,?,?,?,?,¡¾AI¡¿¼ÆËã»úÏµÍ³×îºóÒ»´Î×´Ì¬¸ü¸ÄµÄÊ±¼ä¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,TransitioningToState,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¼ÆËã»úÏµÍ³µ±Ç°ÕıÔÚ×ª»»µ½µÄ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,RequestStateChange,?,?,?,?,?,¡¾AI¡¿Ò»¸ö·½·¨£¬ÓÃÓÚÇëÇó¸ü¸Ä¼ÆËã»úÏµÍ³µÄ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,SetPowerState,?,?,?,?,?,¡¾AI¡¿Ò»¸ö·½·¨£¬ÓÃÓÚÉèÖÃ¼ÆËã»úÏµÍ³µÄµçÔ´×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,RequestReplicationStateChange,?,?,?,?,?,ÇëÇó½«¸´ÖÆ×´Ì¬¸ü¸ÄÎª RequestedState ²ÎÊıÖĞÖ¸¶¨µÄÖµ¡£,Requests that the state of the replication be changed to the value specified in the RequestedState parameter.
+Msvm_ComputerSystem,InjectNonMaskableInterrupt,?,?,?,?,?,¡¾AI¡¿ÏòĞéÄâ»ú×¢Èë²»¿ÉÆÁ±ÎÖĞ¶Ï£¨NMI£©¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,InjectNonMaskableInterruptEx,?,?,?,?,?,¡¾AI¡¿ÏòĞéÄâ»ú×¢Èë²»¿ÉÆÁ±ÎÖĞ¶Ï£¨NMI£©µÄÀ©Õ¹·½·¨¡£,[ÎŞÃèÊö]
+Msvm_ComputerSystem,RequestReplicationStateChangeEx,?,?,?,?,?,ÇëÇó½«À©Õ¹¸´ÖÆµÄ×´Ì¬¸ü¸ÄÎª RequestedState ²ÎÊıÖĞÖ¸¶¨µÄÖµ¡£,Requests that the state of the extended replication be changed to the value specified in the RequestedState parameter.
+Msvm_ComputerSystem,RequestCustomRestore,?,?,?,?,?,¡¾AI¡¿ÇëÇó¶ÔĞéÄâ»ú½øĞĞ×Ô¶¨Òå»¹Ô­×´Ì¬¸ü¸Ä¡£,Requests customized restore state change on the VM.
+Msvm_VirtualSystemSettingData,AdditionalRecoveryInformation,?,?,?,?,?,Ìá¹©¸ø»Ö¸´²Ù×÷µÄÈÎºÎ¸½¼ÓĞÅÏ¢¡£´ËÊôĞÔµÄº¬ÒåÓÉ AutomaticRecoveryAction ÖĞµÄ²Ù×÷¶¨Òå¡£Èç¹û AutomaticRecoveryAction Îª 0 (¡°ÎŞ¡±) »ò 1 (¡°ÖØÆô¡±)£¬Ôò´ËÖµÎª NULL¡£Èç¹û AutomaticRecoveryAction Îª 2 (¡°»¹Ô­Îª¿ìÕÕ¡±)£¬ÔòÕâÊÇÔÚĞéÄâ»ú¹¤×÷½ø³ÌÊ§°ÜÊ±Ó¦Ó¦ÓÃµÄ¿ìÕÕµÄ¶ÔÏóÂ·¾¶¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"Any additional information provided to the recovery action. The meaning of this property is defined by the action in AutomaticRecoveryAction. If AutomaticRecoveryAction is 0 (""None"") or 1 (""Restart""), this value is NULL. If AutomaticRecoveryAction is 2 (""Revert to Snapshot""), this is the object path to a snapshot that should be applied on failure of the virtual machine worker process. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,AllowFullSCSICommandSet,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñ½«À´×Ô¿ÍÌå²Ù×÷ÏµÍ³µÄ SCSI ÃüÁî´«µİ¸øÖ±Í¨´ÅÅÌ¡£Èç¹ûÎª TRUE£¬Ôò²»»áÉ¸Ñ¡¿ÍÌå²Ù×÷ÏµÍ³·¢³öµÄµ½Ö±Í¨´ÅÅÌµÄ SCSI ÃüÁî¡£½¨ÒéÔÚÉú²ú²¿ÊğÖĞ±£³ÖÆôÓÃ SCSI É¸Ñ¡¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£Windows Server 2008: ²»Ö§³Ö AllowFullSCSICommandSet ÊôĞÔ¡£,"Indicates whether SCSI commands from the guest operating system are passed to pass-through disks. If TRUE, SCSI commands emitted by the guest operating system to pass-through disks are not filtered.It is recommended that SCSI filtering remains enabled for production deployments. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class. Windows Server 2008:  The AllowFullSCSICommandSet property is not supported."
+Msvm_VirtualSystemSettingData,AllowReducedFcRedundancy,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÔÊĞí½«ÅäÖÃÁËĞéÄâ FC ÊÊÅäÆ÷µÄĞéÄâ»úÊµÊ±Ç¨ÒÆµ½Ä¿±ê¼ÆËã»ú£¬¶ø²»¼ì²éÄ¿±ê¼ÆËã»úÉÏÊÇ·ñ´æÔÚÍ¨Íù´æ´¢Éè±¸µÄÂ·¾¶¡£´ËÊôĞÔµÄÄ¬ÈÏÖµÎª FALSE¡£Èç¹ûÉèÖÃÎª TRUE£¬ÔòĞéÄâ»ú¿ÉÒÔÊµÊ±Ç¨ÒÆµ½Ä¿±ê¼ÆËã»ú£¬¼´Ê¹¸ÃÄ¿±ê¼ÆËã»úÍ¨ÍùÄ¿±ê FC Éè±¸µÄÂ·¾¶È±Ê§»ò¼õÉÙ¡£¿ÍÌå²Ù×÷ÏµÍ³¿ÉÄÜ»áÊ§È¥Óë´æ´¢µÄÁ¬½Ó£¬²¢¿ÉÄÜ³öÏÖ²»¿ÉÔ¤²âµÄĞĞÎª¡£ÊµÊ±Ç¨ÒÆºóÓ¦Çå³ı´ËÊôĞÔ¡£,"Indicates whether live migration of a virtual machine that is configured with a virtual FC adapter is allowed to a destination machine, without doing any checks for the existence of paths to the storage devices on the destination  The default value of this property is FALSE. If set to TRUE, the VM can be live migrated to a target machine which may have no or reduced paths to the target FC devices. The guest operating system may lose connectivity to storage and may behave in an unpredictable manner.   This property should be cleared after a live migration"
+Msvm_VirtualSystemSettingData,Architecture,?,?,?,?,?,´ËÏµÍ³µÄÌåÏµ½á¹¹¡£,The architecture of this system.
+Msvm_VirtualSystemSettingData,AutomaticCriticalErrorAction,?,?,?,?,?,±êÊ¶µ±·¢Éú¹Ø¼ü´íÎó£¨Èç´æ´¢¶Ï¿ªÁ¬½Ó£©Ê±¶ÔĞéÄâ»ú²ÉÈ¡µÄ²Ù×÷¡£ÖµÎª 1 »áµ¼ÖÂĞéÄâ»úÔİÍ££¬²¢ÔÚ¹Ø¼ü´íÎóÌõ¼ş½â¾öºó×Ô¶¯»Ö¸´¡£¿ÉÒÔÍ¨¹ı½«ÖµÉèÖÃÎª 0 À´¸²¸Ç´ËĞĞÎª£¬´ËÊ±Õë¶Ô¹Ø¼ü´íÎóÌõ¼ş²»²ÉÈ¡ÈÎºÎÌØ¶¨²Ù×÷¡£[Ã¶¾ÙÖµ: 0 - ÎŞ; 1 - ÔİÍ£»Ö¸´],"Identifies the action to be taken on VM, when a critical error happens, like storage disconnect.The value of 1, causes the VM to be paused and automatically resumed when the critical error condition is resolved. This behavior can be overridden by setting the value to 0 upon which no specific action will be taken for critical error conditions. [Ã¶¾ÙÖµ: 0 - None; 1 - Pause Resume]"
+Msvm_VirtualSystemSettingData,AutomaticCriticalErrorActionTimeout,?,?,?,?,?,±êÊ¶Ö´ĞĞ AutomaticCriticalErrorAction ÒÔ½â¾ö¹Ø¼ü´íÎóµÄ×î³¤³ÖĞøÊ±¼ä¡£Õâ½öÔÚ AutomaticCriticalErrorAction ÊôĞÔµÄÖµ²»Îª 0 (ÎŞ) Ê±ÊÊÓÃ¡£Ò»µ©³¬Ê±£¬ĞéÄâ»ú½«¹Ø»ú¡£¸ÃÖµ½«ÏòÉÏÉáÈëµ½×î½Ó½üµÄ·ÖÖÓ¡£ÖµÎª 0 ÒâÎ¶×Åµ±Óöµ½¹Ø¼ü´íÎóÌõ¼şÊ±£¬ĞéÄâ»úÓ¦Á¢¼´¹Ø»ú¡£,"Identifies the maximum duration for which the AutomaticCriticalErrorAction will be performed to resolve the critical error. This is applicable only when the value of the AutomaticCriticalErrorAction property is not 0 (None). Once the timeout expires, the VM will be powered off.The value will be rounded up to the nearest minute. A value of 0 implies that the VM should be powered off immediately when it encounters a critical error condition."
+Msvm_VirtualSystemSettingData,AutomaticRecoveryAction,?,?,?,?,?,¡¾AI¡¿Ö¸¶¨ÔÚĞéÄâ»ú·¢Éú¹ÊÕÏºóÓ¦²ÉÈ¡µÄ×Ô¶¯»Ö¸´²Ù×÷¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,AutomaticShutdownAction,?,?,?,?,?,¡¾AI¡¿Ö¸¶¨µ±ÎïÀíÖ÷»ú¹Ø±ÕÊ±£¬Ó¦ÔÚĞéÄâ»úÉÏÖ´ĞĞµÄ×Ô¶¯¹Ø»ú²Ù×÷¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,AutomaticSnapshotsEnabled,?,?,?,?,?,Ö¸Ê¾´ËĞéÄâ»úÊÇ·ñÓ¦ÆôÓÃ×Ô¶¯¿ìÕÕ¡£,Indicates whether this virtual machine should have automatic snapshots enabled.
+Msvm_VirtualSystemSettingData,AutomaticStartupAction,?,?,?,?,?,¡¾AI¡¿Ö¸¶¨µ±ÎïÀíÖ÷»úÆô¶¯Ê±£¬Ó¦ÔÚĞéÄâ»úÉÏÖ´ĞĞµÄ×Ô¶¯Æô¶¯²Ù×÷¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,AutomaticStartupActionDelay,?,?,?,?,?,¡¾AI¡¿Ö¸¶¨ÔÚÖ´ĞĞ×Ô¶¯Æô¶¯²Ù×÷Ö®Ç°Ó¦ÑÓ³ÙµÄÊ±¼ä¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,AutomaticStartupActionSequenceNumber,?,?,?,?,?,¡¾AI¡¿Ö¸¶¨ÔÚÒ»×éĞéÄâ»úÖĞ£¬´ËĞéÄâ»úµÄ×Ô¶¯Æô¶¯Ë³Ğò±àºÅ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,BaseBoardSerialNumber,?,?,?,?,?,ĞéÄâ¼ÆËã»úÏµÍ³»ù°åµÄĞòÁĞºÅ¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"The serial number of the base board for the virtual computer system. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,BIOSGUID,?,?,?,?,?,ĞéÄâ¼ÆËã»úÏµÍ³ BIOS µÄÈ«¾ÖÎ¨Ò»±êÊ¶·û¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"The globally-unique identifier for the BIOS of the virtual computer system. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,BIOSNumLock,?,?,?,?,?,Èç¹û BIOS ½«Êı×ÖËø¶¨¼üÉèÖÃÎª¿ªÆô£¬Ôò´ËÊôĞÔÉèÖÃÎª TRUE£»Èç¹û BIOS ½«Êı×ÖËø¶¨¼üÉèÖÃÎª¹Ø±Õ£¬ÔòÉèÖÃÎª FALSE¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"This property is set to TRUE if the num lock key is set to on by the BIOS, FALSE if the num lock key is set to off by the BIOS. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,BIOSSerialNumber,?,?,?,?,?,ĞéÄâ¼ÆËã»úÏµÍ³ BIOS µÄĞòÁĞºÅ¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"The serial number of the BIOS for the virtual computer system. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,BootOrder,?,?,?,?,?,"""ĞéÄâ¼ÆËã»úÏµÍ³ BIOS ÖĞÉèÖÃµÄÒıµ¼Ë³Ğò¡£´ËÊôĞÔÊÇÒ»¸öÖµÊı×é£¬×î´ó³¤¶ÈÎª 4£¬ÆäÖĞÃ¿¸öÖµÖ¸Ê¾Òª´ÓÖĞÒıµ¼µÄÉè±¸¡£ĞéÄâ¼ÆËã»úÏµÍ³½«Ê×ÏÈ³¢ÊÔ´ÓÊı×éÖĞµÚÒ»¸öÖµÖ¸Ê¾µÄÉè±¸Òıµ¼¡£Èç¹û¸ÃÉè±¸²»°üº¬Òıµ¼ÉÈÇø£¬ÔòĞéÄâ¼ÆËã»úÏµÍ³½«³¢ÊÔ´Ó BootOrder ÊôĞÔÖ¸¶¨µÄÏÂÒ»¸öÉè±¸Òıµ¼£¬ÒÀ´ËÀàÍÆ¡£Èç¹û BootOrder ÖĞÖ¸¶¨µÄÉè±¸¶¼²»°üº¬Òıµ¼ÉÈÇø£¬ÔòĞéÄâ¼ÆËã»úÏµÍ³½«ÎŞ·¨Òıµ¼¡£ĞéÄâ¼ÆËã»úÏµÍ³µÄÄ¬ÈÏÖµÎª [0, 1, 2, 3, 4]¡£Öµ¶¨Òå: 0 (ÈíÅÌ): ĞéÄâ¼ÆËã»úÏµÍ³½«³¢ÊÔ´ÓÈíÅÌÇı¶¯Æ÷ÖĞµÄÈíÅÌÒıµ¼¡£ 1 (CD-ROM): ĞéÄâ¼ÆËã»úÏµÍ³½«³¢ÊÔ´ÓÕÒµ½µÄµÚÒ»¸ö´øÓĞÒıµ¼ÉÈÇøµÄ CD »ò DVD ÅÌÒıµ¼¡£ 2 (IDE Ó²ÅÌ): ĞéÄâ¼ÆËã»úÏµÍ³½«³¢ÊÔ´ÓÕÒµ½µÄµÚÒ»¸öÁ¬½Óµ½ IDE ¿ØÖÆÆ÷ÇÒ´øÓĞÒıµ¼ÉÈÇøµÄÓ²ÅÌÒıµ¼¡£ 3 (PXE Òıµ¼): ĞéÄâ¼ÆËã»úÏµÍ³½«³¢ÊÔ´ÓÍøÂç½øĞĞ PXE Òıµ¼¡£ 4 (SCSI Ó²ÅÌ): ĞéÄâ¼ÆËã»úÏµÍ³½«³¢ÊÔ´ÓÕÒµ½µÄµÚÒ»¸öÁ¬½Óµ½ SCSI ¿ØÖÆÆ÷ÇÒ´øÓĞÒıµ¼ÉÈÇøµÄÓ²ÅÌÒıµ¼¡£ 5-65535: ±£Áô¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£[Ã¶¾ÙÖµ: 0 - ÈíÅÌ; 1 - CD-ROM; 2 - IDE Ó²ÅÌ; 3 - PXE Òıµ¼; 4 - SCSI Ó²ÅÌ; 5..65535 - ±£Áô]""","The boot order set within the BIOS of the virtual computer system. This property is an array of values, max length 4, where each value indicates a device to boot from. The virtual computer system will first attempt to boot from the device indicated by the first value within the array. If that device does not contain a boot sector, the virtual computer system will attempt to boot from the next device specified by the BootOrder property and so on. If no device specified within the BootOrder contains a boot sector the virtual computer system will fail to boot. The default value for a virtual computer system is [0, 1, 2, 3, 4]. Value definitions: 0 (Floppy): The virtual computer system will attempt to boot from the floppy disk within the floppy drive. 1 (CD-ROM): The virtual computer system will attempt to boot from the first CD or DVD disk found with a boot sector. 2 (IDE Hard Drive): The virtual computer system will attempt to boot from the first hard drive found attached to an IDE controller with a boot sector. 3 (PXE Boot): The virtual computer system will attempt to PXE boot from the network. 4 (SCSI Hard Drive): The virtual computer system will attempt to boot from the first hard drive found attached to a SCSI controller with a boot sector. 5-65535: Reserved This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class. [Ã¶¾ÙÖµ: 0 - Floppy; 1 - CD-ROM; 2 - IDE Hard Drive; 3 - PXE Boot; 4 - SCSI Hard Drive; 5..65535 - Reserved]"
+Msvm_VirtualSystemSettingData,BootPciExpress,?,?,?,?,?,Èç¹ûÉèÖÃÎª true£¬ÇÒÎ´ÕÒµ½³É¹¦µÄÒıµ¼Ô´ÌõÄ¿£¬ĞéÄâÏµÍ³½«³¢ÊÔ´ÓĞéÄâ PCI Express Éè±¸Òıµ¼¡£,"If set to true, the virtual system will attempt to boot from virtual PCI Express devices if no successful boot source entry is found."
+Msvm_VirtualSystemSettingData,BootPciExpressInstanceFilter,?,?,?,?,?,Èç¹ûÒÑÉèÖÃ£¬ÔòÎªÒª´ÓÖĞÒıµ¼Éè±¸µÄ¸ùĞéÄâ PCI Express ¿ØÖÆÆ÷µÄÉè±¸ÊµÀı GUID¡£,"If set, the device instance GUID of the root virtual PCI Express controller to boot devices from."
+Msvm_VirtualSystemSettingData,BootSourceOrder,?,?,?,?,?,°üº¬¶Ô´ËĞéÄâ¼ÆËã»úÏµÍ³µÄÒıµ¼Ô´ÌõÄ¿µÄÒıÓÃ¡£´ËÊôĞÔÊÇÒ»¸ö×Ö·û´®Êı×é£¬ÆäÖĞÃ¿¸ö×Ö·û´®¶¼ÊÇÖ¸Ïò Msvm_BootSourceSettingData ÊµÀıµÄÍêÕûÂ·¾¶£¬Ö¸Ê¾Òª´ÓÖĞÒıµ¼µÄÉè±¸¡¢ÎÄ¼ş»òÆäËûÒıµ¼Ô´¡£,"Contains references to the boot source entries of this virtual computer system. This property is an array of strings, where each string is a full path to a Msvm_BootSourceSettingData instance indicating a device, file, or other boot source to boot from."
+Msvm_VirtualSystemSettingData,Caption,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³ÉèÖÃÊı¾İµÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,ChassisAssetTag,?,?,?,?,?,ĞéÄâ¼ÆËã»úÏµÍ³»úÏäµÄ×Ê²ú±êÇ©¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"The asset tag of the chassis for the virtual computer system. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,ChassisSerialNumber,?,?,?,?,?,ĞéÄâ¼ÆËã»úÏµÍ³»úÏäµÄĞòÁĞºÅ¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"The serial number of the chassis for the virtual computer system. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,ClusterWideNodeCapabilitiesValidationMode,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñĞèÒª¸²¸Ç¼ì²éÈº¼¯·¶Î§ÄÚÊÇ·ñÖ§³ÖÄ³¹¦ÄÜµÄÑéÖ¤Âß¼­¡£[Ã¶¾ÙÖµ: 0 - Ä¬ÈÏ; 1 - ¸²¸Ç],Indicates if the validation logic to check if features are supported cluster wide needs to be overridden or not. [Ã¶¾ÙÖµ: 0 - Default; 1 - Override]
+Msvm_VirtualSystemSettingData,ConfigurationDataRoot,?,?,?,?,?,¡¾AI¡¿´æ´¢ĞéÄâ»úÅäÖÃÎÄ¼şµÄ¸ùÄ¿Â¼Â·¾¶¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,ConfigurationFile,?,?,?,?,?,¡¾AI¡¿ĞéÄâ»úÅäÖÃÎÄ¼şµÄÂ·¾¶¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,ConfigurationID,?,?,?,?,?,¡¾AI¡¿ĞéÄâ»úÅäÖÃµÄÎ¨Ò»±êÊ¶·û¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,ConsoleMode,?,?,?,?,?,±êÊ¶ĞéÄâ»úµÄ¿ØÖÆÌ¨Ä£Ê½ [Ã¶¾ÙÖµ: 0 - Ä¬ÈÏ; 1 - COM1; 2 - COM2; 3 - ÎŞ],Identifies the Console Mode for the VM [Ã¶¾ÙÖµ: 0 - Default; 1 - COM1; 2 - COM2; 3 - None]
+Msvm_VirtualSystemSettingData,CreationTime,?,?,?,?,?,¡¾AI¡¿´ËĞéÄâÏµÍ³ÉèÖÃÊı¾İµÄ´´½¨Ê±¼ä¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,DebugChannelId,?,?,?,?,?,Ê¹ÓÃ VUD Í³Ò»µ÷ÊÔÆ÷µ÷ÊÔĞéÄâÏµÍ³Ê±Ê¹ÓÃµÄÍ¨µÀ±êÊ¶·û¡£,The channel identifier used to debug the virtual system using the VUD unified debugger.
+Msvm_VirtualSystemSettingData,DebugPort,?,?,?,?,?,Ê¹ÓÃºÏ³Éµ÷ÊÔµ÷ÊÔĞéÄâÏµÍ³Ê±Ê¹ÓÃµÄ tcpip ¶Ë¿Ú¡£,The tcpip port used to debug the virtual system using synthetic debugging.
+Msvm_VirtualSystemSettingData,DebugPortEnabled,?,?,?,?,?,ĞéÄâÏµÍ³ÊÇ·ñÕıÔÚÊ¹ÓÃºÏ³Éµ÷ÊÔ¡£[Ã¶¾ÙÖµ: 0 - ¹Ø±Õ; 1 - ¿ªÆô; 2 - ×Ô¶¯·ÖÅä¿ªÆô],Whether the virtual system is using synthetic debugging. [Ã¶¾ÙÖµ: 0 -  Off; 1 - On; 2 - OnAutoAssigned]
+Msvm_VirtualSystemSettingData,Description,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³ÉèÖÃÊı¾İµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,ElementName,?,?,?,?,?,¡¾AI¡¿´ËĞéÄâÏµÍ³ÉèÖÃÊı¾İµÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,EnableHibernation,?,?,?,?,?,Èç¹û BIOS ÆôÓÃÁËĞİÃß (S4)£¬Ôò´ËÊôĞÔÉèÖÃÎª TRUE£»Èç¹û½ûÓÃĞİÃß£¬ÔòÉèÖÃÎª FALSE¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"This property is set to TRUE if hibernate (S4) is enabled by the BIOS, FALSE if hibernate is disabled. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,EnhancedSessionTransportType,?,?,?,?,?,Ö¸Ê¾Á¬½Óµ½ÔöÇ¿»á»°Ê±Ê¹ÓÃµÄ´«ÊäÀàĞÍ¡£[Ã¶¾ÙÖµ: 0 - VMBus ¹ÜµÀ; 1 - Hyper-V Ì×½Ó×Ö],Indicates the transport type to use when connecting to an enhanced session. [Ã¶¾ÙÖµ: 0 - VMBus Pipe; 1 - Hyper-V Socket]
+Msvm_VirtualSystemSettingData,FirmwareFile,?,?,?,?,?,¹Ì¼şÎÄ¼ş¡£,Firmware file.
+Msvm_VirtualSystemSettingData,FirmwareParameters,?,?,?,?,?,Ìá¹©¸ø¹Ì¼şÎÄ¼şµÄ²ÎÊı¡£,Parameters provided to the firmware file.
+Msvm_VirtualSystemSettingData,GuestControlledCacheTypes,?,?,?,?,?,Ö¸Ê¾¿ÍÌåÊÇ·ñ¿ÉÒÔ¿ØÖÆ»º´æÀàĞÍ¡£,Indicates whether the guest can control cache types.
+Msvm_VirtualSystemSettingData,GuestFeatureSet,?,?,?,?,?,ÓÃÓÚĞŞ¸Ä¿ÍÌå¿É¼ûĞĞÎªµÄ±êÖ¾¡£,Flags to modify guest-visible behaviors
+Msvm_VirtualSystemSettingData,GuestStateDataRoot,?,?,?,?,?,´æ´¢¿ÍÌåÔËĞĞÊ±×´Ì¬ĞÅÏ¢µÄÄ¿Â¼µÄÎÄ¼şÂ·¾¶¡£,Filepath of a directory where information about the guest runtime state is stored.
+Msvm_VirtualSystemSettingData,GuestStateFile,?,?,?,?,?,´æ´¢¿ÍÌåÔËĞĞÊ±×´Ì¬ĞÅÏ¢µÄÎÄ¼şµÄÎÄ¼şÂ·¾¶¡£Ïà¶ÔÂ·¾¶»á×·¼Óµ½ GuestStateDataRoot ÊôĞÔµÄÖµÖ®ºó¡£,Filepath of a file where information about the guest runtime state is stored. A relative path appends to the value of the GuestStateDataRoot property.
+Msvm_VirtualSystemSettingData,GuestStateIsolationEnabled,?,?,?,?,?,Ö¸Ê¾ĞéÄâÏµÍ³ÊÇ·ñÓ¦ÆôÓÃ¿ÍÌå×´Ì¬¸ôÀë¡£,Indicates whether the virtual system should have guest state isolation enabled.
+Msvm_VirtualSystemSettingData,GuestStateIsolationMode,?,?,?,?,?,Ö¸Ê¾ĞéÄâÏµÍ³µÄ¸ôÀëÄ£Ê½¡£[Ã¶¾ÙÖµ: 0 - Ä¬ÈÏ; 1 - ÎŞ³Ö¾Ã»úÃÜ; 2 - ÎŞ¹ÜÀí VTL],Indicates the isolation mode of the virtual system. [Ã¶¾ÙÖµ: 0 - Default; 1 - NoPersistentSecrets; 2 - NoManagementVtl]
+Msvm_VirtualSystemSettingData,GuestStateIsolationType,?,?,?,?,?,Ö¸Ê¾ĞéÄâÏµÍ³µÄ¸ôÀëÀàĞÍ¡£[Ã¶¾ÙÖµ: 0 - ¿ÉĞÅÆô¶¯; 1 - ±£Áô; 2 - SEV-SNP; 3 - ±£Áô; 16 - ±£Áô; 18 - ±£Áô; 19 - ±£Áô],Indicates the isolation type of the virtual system. [Ã¶¾ÙÖµ: 0 - Trusted Launch; 1 - Reserved; 2 - SEV-SNP; 3 - Reserved; 16 - Reserved; 18 - Reserved; 19 - Reserved]
+Msvm_VirtualSystemSettingData,HighMmioGapBase,?,?,?,?,?,¸ßÎ» (4GB ÒÔÉÏ) ÄÚ´æÓ³Éä IO ¼äÏ¶µÄ»ùÖ· (MB)¡£,The base address of the High (above 4GB) Memory-Mapped IO Gap in MB
+Msvm_VirtualSystemSettingData,HighMmioGapSize,?,?,?,?,?,¸ßÎ» (4GB ÒÔÉÏ) ÄÚ´æÓ³Éä IO ¼äÏ¶µÄ´óĞ¡ (MB)¡£,The size of the High (above 4GB) Memory-Mapped IO Gap in MB
+Msvm_VirtualSystemSettingData,IncrementalBackupEnabled,?,?,?,?,?,Ö¸Ê¾ Hyper-V VSS Ğ´Èë³ÌĞòÊÇ·ñÖ§³Ö¶Ô´ËĞéÄâ»ú½øĞĞÔöÁ¿±¸·İ¡£ÕâÊÇÒ»¸ö¶ÁĞ´ÊôĞÔ¡£,Indicates whether the Hyper-V VSS writer supports taking incremental backup of this Virtual machine. This is a read-write property.
+Msvm_VirtualSystemSettingData,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´ËĞéÄâÏµÍ³ÉèÖÃÊı¾İÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,IsAutomaticSnapshot,?,?,?,?,?,Ö¸Ê¾ÕâÊÇ·ñÊÇÎªÓÃ»§×Ô¶¯´´½¨µÄ¿ìÕÕ¡£,Indicates whether this is a snapshot created automatically for the user.
+Msvm_VirtualSystemSettingData,IsSaved,?,?,?,?,?,Èç¹ûÅäÖÃÒıÓÃÁËÒÑ±£´æµÄ×´Ì¬ÎÄ¼ş£¬Ôò´ËÊôĞÔÉèÖÃÎª TRUE£¬·ñÔòÉèÖÃÎª FALSE¡£Çë×¢Òâ£¬Õâ²¢²»±íÊ¾´æÔÚ´ËÀàÎÄ¼ş£¬½ö±íÊ¾ÅäÖÃÖ¸¶¨ÁËÒ»¸öÎÄ¼ş¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬ÎŞ·¨¸ü¸Ä¡£,"This property is set to TRUE if the configuration has a reference to a saved state file, FALSE if not. Note that this does not indicate the presence of such a file, only that the configuration specifies one. This is a read-only property, it cannot be changed."
+Msvm_VirtualSystemSettingData,LockOnDisconnect,?,?,?,?,?,´Ó vmconnect ¶Ï¿ªÁ¬½ÓÊ±Ëø¶¨¿ØÖÆÌ¨¡£,Lock the console when disconnecting from vmconnect.
+Msvm_VirtualSystemSettingData,LogDataRoot,?,?,?,?,?,¡¾AI¡¿´æ´¢ĞéÄâ»úÈÕÖ¾ÎÄ¼şµÄ¸ùÄ¿Â¼Â·¾¶¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,LowMmioGapSize,?,?,?,?,?,µÍÎ» (4GB ÒÔÏÂ) ÄÚ´æÓ³Éä IO ¼äÏ¶µÄ´óĞ¡ (MB)¡£,The size of the Low (below 4GB) Memory-Mapped IO Gap in MB
+Msvm_VirtualSystemSettingData,ManagementVtlUpdatePolicy,?,?,?,?,?,Ö´ĞĞ´ËĞéÄâ»ú¹ÜÀí VTL ¸üĞÂµÄ²ßÂÔ¡£OfflineOnly: ÔËĞĞÊ±²»ÖØĞÂ¼ÓÔØ¹ÜÀí VTL¡£¸üĞÂ½«ÔÚÏÂ´ÎÖØĞÂÆô¶¯Ê±Ó¦ÓÃ¡£[Ã¶¾ÙÖµ: 0 - Ä¬ÈÏ; 1 - ½öÍÑ»ú; 2..65535 - ±£Áô],The policy for performing updates of the management VTL of this virtual machine.  OfflineOnly: Do not reload the management VTL while running. Updates will be applied on next restart. [Ã¶¾ÙÖµ: 0 - Default; 1 - OfflineOnly; 2..65535 - Reserved]
+Msvm_VirtualSystemSettingData,MemoryHostingJobObjectName,?,?,?,?,?,ÓÃÓÚÆô¶¯ VM ÄÚ´æ½ø³ÌµÄ×÷Òµ¶ÔÏóµÄÃû³Æ¡£,Name of the job object to start the VM memory process in.
+Msvm_VirtualSystemSettingData,NetworkBootPreferredProtocol,?,?,?,?,?,±êÊ¶ÓÃÓÚÍøÂçÒıµ¼µÄ IP Ğ­Òé¡£[Ã¶¾ÙÖµ: 4096 - IPv4; 4097 - IPv6],Identifies the IP protocol used for network boot. [Ã¶¾ÙÖµ: 4096 - IPv4; 4097 - IPv6]
+Msvm_VirtualSystemSettingData,Notes,?,?,?,?,?,¡¾AI¡¿ÓëĞéÄâ»úÏà¹ØµÄÓÃ»§×¢ÊÍ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,NumaNodeTopologyArray,?,?,?,?,?,Ò»¸öÇ¶ÈëÊ½ Msvm_NumaNodeTopology ÊµÀıÊı×é£¬ÆäÖĞ°üº¬Ã¿¸ö NUMA ½ÚµãµÄ NUMA ½ÚµãÍØÆË¡£,An array of embedded Msvm_NumaNodeTopology instances which contains NUMA node topology for each NUMA node.
+Msvm_VirtualSystemSettingData,Parent,?,?,?,?,?,´Ë¶ÔÏóËù»ùÓÚµÄ¿ìÕÕ Msvm_VirtualSystemSettingData µÄ¶ÔÏóÂ·¾¶¡£Èç¹û´Ë¶ÔÏó²»ÊÇ»ùÓÚ¿ìÕÕ£¬Ôò´ËÊôĞÔ½«Îª NULL¡£,The object path for the snapshot Msvm_VirtualSystemSettingData from which this object is based. This property will be NULL if this object is not based off a snapshot.
+Msvm_VirtualSystemSettingData,PauseAfterBootFailure,?,?,?,?,?,ĞéÄâ»úµÄÒıµ¼Ê§°ÜºóÔİÍ£ÉèÖÃ¡£,Pause after boot failure setting for the VM
+Msvm_VirtualSystemSettingData,RecoveryFile,?,?,?,?,?,¡¾AI¡¿ĞéÄâ»ú»Ö¸´ÎÄ¼şµÄÂ·¾¶¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,SecureBootEnabled,?,?,?,?,?,ĞéÄâ»úµÄ°²È«Òıµ¼ÆôÓÃÉèÖÃ¡£,Secure boot enabled setting for the VM
+Msvm_VirtualSystemSettingData,SecureBootTemplateId,?,?,?,?,?,UEFI °²È«Òıµ¼Ïà¹Ø±äÁ¿³õÊ¼ÖµÄ£°åµÄÈ«¾ÖÎ¨Ò»±êÊ¶·û¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ Msvm_VirtualSystemManagementService ÀàµÄ ModifyVirtualSystem ·½·¨½øĞĞ¸ü¸Ä¡£,"The globally-unique identifier of the template of intial values of UEFI Secure Boot related variables. This is a read-only property, but it can be changed using the ModifyVirtualSystem method of the Msvm_VirtualSystemManagementService class."
+Msvm_VirtualSystemSettingData,SnapshotDataRoot,?,?,?,?,?,¡¾AI¡¿´æ´¢ĞéÄâ»ú¿ìÕÕÎÄ¼şµÄ¸ùÄ¿Â¼Â·¾¶¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,SourceGuestStateFile,?,?,?,?,?,½«±»¸´ÖÆ²¢ÓÃ×÷¿ÍÌåÔËĞĞÊ±×´Ì¬µÄÔ´ÎÄ¼şµÄÎÄ¼şÂ·¾¶¡£,Filepath to a source file that will be copied and used as the guest runtime state.
+Msvm_VirtualSystemSettingData,SuspendDataRoot,?,?,?,?,?,¡¾AI¡¿´æ´¢ĞéÄâ»ú¹ÒÆğ×´Ì¬ÎÄ¼şµÄ¸ùÄ¿Â¼Â·¾¶¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,SwapFileDataRoot,?,?,?,?,?,¡¾AI¡¿´æ´¢ĞéÄâ»ú½»»»ÎÄ¼ş£¨ÖÇÄÜ·ÖÒ³ÎÄ¼ş£©µÄ¸ùÄ¿Â¼Â·¾¶¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,TurnOffOnGuestRestart,?,?,?,?,?,Èç¹û¿ÍÌå²Ù×÷ÏµÍ³·¢ÆğÖØÆô£¬Ôò¹Ø±ÕĞéÄâ»ú¶ø²»ÊÇÖØÆôĞéÄâ»ú¡£,Turn off the VM instead of restarting the VM if the guest operating system initiated a restart.
+Msvm_VirtualSystemSettingData,UserSnapshotType,?,?,?,?,?,Ö¸Ê¾ÓÃ»§¶¨ÒåµÄ¿ìÕÕÀàĞÍ¡£Disable: ½ûÓÃÈÎºÎ¿ìÕÕµÄ´´½¨¡£ProductionFallbackToTest: ÓÃÓÚÉú²ú»·¾³µÄÊı¾İÒ»ÖÂĞÔ¿ìÕÕ¡£µ±ÎŞ·¨´´½¨Êı¾İÒ»ÖÂĞÔ¿ìÕÕÊ±£¬Ö´ĞĞ°üº¬Ó¦ÓÃ³ÌĞò×´Ì¬µÄ¿ìÕÕ¡£ProductionNoFallback: ÓÃÓÚÉú²ú»·¾³µÄÊı¾İÒ»ÖÂĞÔ¿ìÕÕ¡£Èç¹ûÎŞ·¨´´½¨Êı¾İÒ»ÖÂĞÔ¿ìÕÕ£¬Ôò²»´´½¨°üº¬Ó¦ÓÃ³ÌĞò×´Ì¬µÄ¿ìÕÕ¡£Test: °üº¬ÓÃÓÚ²âÊÔºÍ¿ª·¢Ä¿µÄµÄÄÚ´æºÍÉè±¸ĞÅÏ¢µÄ¿ìÕÕ¡£[Ã¶¾ÙÖµ: 2 - ½ûÓÃ; 3 - Éú²ú (»ØÍËµ½²âÊÔ); 4 - Éú²ú (²»»ØÍË); 5 - ²âÊÔ],Indicates the user-defined snapshot type.  Disable: Disable the creation of any snapshot.  ProductionFallbackToTest: Data-consistent snapshot for use in the production environment.Performs a snapshot with application state when the ability to create data consistent snapshot is not available.  ProductionNoFallback: Data-consistent snapshot for use in the production environment.Does not create a snapshot with application state if it is not possible to create a data consistent snapshot.  Test: Snapshot that contains memory and device information for test and development purpose. [Ã¶¾ÙÖµ: 2 - Disable; 3 - ProductionFallbackToTest; 4 - ProductionNoFallback; 5 - Test]
+Msvm_VirtualSystemSettingData,Version,?,?,?,?,?,ĞéÄâÏµÍ³µÄ°æ±¾£¬¸ñÊ½Îª¡°Ö÷°æ±¾.´Î°æ±¾¡±£¬ÀıÈç¡°2.0¡±¡£Windows Server 2008: ²»Ö§³Ö Version ÊôĞÔ¡£,"The version of the virtual system in a format of ""major.minor"", for example ""2.0"". Windows Server 2008:  The Version property is not supported."
+Msvm_VirtualSystemSettingData,VirtualNumaEnabled,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñ½«ĞéÄâ·ÇÒ»ÖÂĞÔÄÚ´æ·ÃÎÊ (NUMA) ½ÚµãÍ¶Ó°µ½ĞéÄâ»úÖĞ¡£Èç¹ûÎª FALSE£¬ÔòĞéÄâ»ú½«Ö»ÓĞÒ»¸ö½Úµã¡£Èç¹ûÎª TRUE£¬ÔòÍ¶Ó°µ½ĞéÄâ»úÖĞµÄĞéÄâ NUMA ½ÚµãÊıÓÉ Msvm_ProcessorSettingData.MaxProcessorsPerNumaNode ºÍ Msvm_MemorySettingData.MaxMemoryBlocksPerNumaNode ÊôĞÔµÄÖµÈ·¶¨¡£,"Indicates whether virtual non-uniform memory access (NUMA) nodes are projected into the virtual machine. If FALSE, the virtual machine will have a single node. If TRUE, the number of virtual NUMA nodes projected into the virtual machine is determined from the values of the Msvm_ProcessorSettingData.MaxProcessorsPerNumaNode and Msvm_MemorySettingData.MaxMemoryBlocksPerNumaNode properties."
+Msvm_VirtualSystemSettingData,VirtualSlitType,?,?,?,?,?,Ö¸Ê¾ĞéÄâÏµÍ³ÊÇ·ñÓ¦ÆôÓÃĞéÄâ SLIT ÒÔ¼°ÓÃÓÚÉú³ÉĞéÄâ SLIT µÄ²âÁ¿ÀàĞÍ¡£[Ã¶¾ÙÖµ: 0 - ÎŞ; 1 - ¹Ì¼ş; 2 - ²âÁ¿; 3 - ¹Ì¼ş»ØÍË²âÁ¿],Indicates whether the virtual system should have virtual SLIT enabled and the type of measurements used to generate the virtual SLIT. [Ã¶¾ÙÖµ: 0 - None; 1 - Firmware; 2 - Measured; 3 - FirmwareFallbackMeasured]
+Msvm_VirtualSystemSettingData,VirtualSystemIdentifier,?,?,?,?,?,´ËÉèÖÃÊı¾İËùÊôµÄ CIM_ComputerSystem µÄÃû³Æ¡£,The name of the CIM_ComputerSystem to which this setting data belongs
+Msvm_VirtualSystemSettingData,VirtualSystemSubType,?,?,?,?,?,ĞéÄâÏµÍ³µÄ×ÓÀàĞÍ¡£,The subtype of the virtual system.
+Msvm_VirtualSystemSettingData,VirtualSystemType,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³µÄÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemSettingData,VMBusMessageRedirection,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÖØ¶¨Ïò VMBus ¿ØÖÆÆ½ÃæÏûÏ¢¡£[Ã¶¾ÙÖµ: 0 - ÎŞ; 1 - ÖØ¶¨Ïòµ½ Vtl2],Indicates whether to redirect VMBus control plane messages. [Ã¶¾ÙÖµ: 0 - None; 1 - RedirectToVtl2]
+Msvm_VirtualSystemSettingData,Vtl2AddressRangeBase,?,?,?,?,?,VTL2 µØÖ·¿Õ¼ä·¶Î§µÄ»ùÖ· (MB)¡£,The base address of the VTL2 address space range in MB
+Msvm_VirtualSystemSettingData,Vtl2AddressRangeSize,?,?,?,?,?,VTL2 µØÖ·¿Õ¼ä·¶Î§µÄ´óĞ¡ (MB)¡£,The size of the VTL2 address space range in MB
+Msvm_VirtualSystemSettingData,Vtl2AddressSpaceConfigurationMode,?,?,?,?,?,Ö¸Ê¾ VTL2 µØÖ·¿Õ¼äÅäÖÃÄ£Ê½¡£[Ã¶¾ÙÖµ: 0 - Ä¬ÈÏ; 1 - ¿ÉÅäÖÃ´óĞ¡·ÅÖÃ; 2 - ÏÔÊ½·ÅÖÃ],Indicates VTL2 address space configuration mode. [Ã¶¾ÙÖµ: 0 - Default; 1 - ConfigurableSizePlacement; 2 - ExplicitPlacement]
+Msvm_VirtualSystemSettingData,Vtl2MmioAddressRangeSize,?,?,?,?,?,VTL2 ÄÚ´æÓ³Éä IO µØÖ·¿Õ¼ä·¶Î§µÄ´óĞ¡ (MB)¡£,The size of the VTL2 Memory-Mapped IO address  space range in MB
+Msvm_VirtualSystemSettingData,WatchdogEnabled,?,?,?,?,?,Ö¸Ê¾ĞéÄâÏµÍ³ÊÇ·ñÓ¦¹«¿ªÄ£ÄâµÄÓ²¼ş¿´ÃÅ¹·¡£,Indicates if the virtual system should expose an emulated hardware watchdog.
+Msvm_VirtualSystemSettingData,WorkerJobObjectName,?,?,?,?,?,ÓÃÓÚÆô¶¯ VM ¹¤×÷½ø³ÌµÄ×÷Òµ¶ÔÏóµÄÃû³Æ¡£,Name of the job object to start the VM worker process in.
+Msvm_ProcessorSettingData,Address,?,?,?,?,?,¡¾AI¡¿×ÊÔ´ÔÚÆäËùÊôÉè±¸ÉÏµÄµØÖ·¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,AddressOnParent,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ÔÚÆä¸¸Éè±¸ÉÏµÄµØÖ·¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,AllocationUnits,?,?,?,?,?,¡¾AI¡¿ÓÃÓÚ¶¨ÒåÔ¤Áô¡¢ÏŞÖÆºÍÈ¨ÖØµÄ·ÖÅäµ¥Î»¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,AllowACountMCount,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÔÊĞíĞéÄâ»ú·ÃÎÊÓÃÓÚ CPU ĞÔÄÜ¼à¿ØµÄ ACOUNT/MCOUNT MSR¡£,Indicates whether Hyper-V should allow the VM to access ACOUNT/MCOUNT MSRs for CPU performance monitoring.
+Msvm_ProcessorSettingData,ApicMode,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úµÄ APIC Ä£Ê½ [Ã¶¾ÙÖµ: 0 - Ä¬ÈÏ; 1 - ´«Í³; 2 - x2Apic; 3 - Apic],Indicates the APIC mode for the VM [Ã¶¾ÙÖµ: 0 - Default; 1 - Legacy; 2 - x2Apic; 3 - Apic]
+Msvm_ProcessorSettingData,AutomaticAllocation,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾×ÊÔ´ÊÇ·ñ¿ÉÒÔÓÉĞéÄâ»¯Æ½Ì¨×Ô¶¯·ÖÅä¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,AutomaticDeallocation,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾×ÊÔ´ÊÇ·ñ¿ÉÒÔÓÉĞéÄâ»¯Æ½Ì¨×Ô¶¯½â³ı·ÖÅä¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,Caption,?,?,?,?,?,¡¾AI¡¿´¦ÀíÆ÷ÉèÖÃÊı¾İµÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,Connection,?,?,?,?,?,¡¾AI¡¿Á¬½Óµ½´Ë×ÊÔ´µÄÉè±¸¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,ConsumerVisibility,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ»úÖĞµÄ²Ù×÷ÏµÍ³ÊÇ·ñ¿ÉÒÔ¿´µ½´Ë×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,CpuBrandString,?,?,?,?,?,Ìá¹©ÒªÏòĞéÄâ»ú¹«¿ªµÄ×Ô¶¨Òå CPU Æ·ÅÆ×Ö·û´®¡£Èç¹ûÎ´ÉèÖÃ´Ë×Ö¶Î£¬ĞéÄâ»ú½«ÔÚÒıµ¼Ê±¿´µ½Ô­Ê¼Ó²¼şÖµ¡£,"Provides a custom CPU brand string to expose to the VM. If this field is notset, the VM will see the original hardware value at boot."
+Msvm_ProcessorSettingData,CpuGroupId,?,?,?,?,?,´ËĞéÄâ»ú°ó¶¨µÄ CPU ×é ID¡£µ±ÖµÎª 0 Ê±£¬±íÊ¾Î´°ó¶¨µ½ÌØ¶¨µÄ CPU ×é¡£,The Cpu Group Id this VM is bound to. When value is 0 it means is not bound to a specificcpu group.
+Msvm_ProcessorSettingData,Description,?,?,?,?,?,¡¾AI¡¿´¦ÀíÆ÷ÉèÖÃÊı¾İµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,DisableSpeculationControls,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÓ¦ÎªĞéÄâ´¦ÀíÆ÷½ûÓÃÕë¶ÔÍÆ²âÖ´ĞĞµÄ±£»¤¡£,Indicates whether the protections for speculative execution should be disabled for the virtual processors.
+Msvm_ProcessorSettingData,ElementName,?,?,?,?,?,¡¾AI¡¿´Ë´¦ÀíÆ÷ÉèÖÃÊı¾İµÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,EnableHierarchicalVirtualization,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÎªĞéÄâ»úÆôÓÃ·Ö²ãĞéÄâ»¯¡£,Indicates whether Hyper-V should enable hierarchical virtualization for the VM.
+Msvm_ProcessorSettingData,EnableHostResourceProtection,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úÊÇ·ñÓ¦ÆôÓÃÔöÇ¿Ö÷»ú×ÊÔ´±£»¤µÄ¹¦ÄÜ£¬ÒÔ·ÀÖ¹ĞéÄâ»úÖĞÔËĞĞµÄ¹¤×÷¸ºÔØÓ°ÏìÖ÷»ú¡£,Indicates whether the VM should enable features that increase the protection of host  resources from workload running in the VM.
+Msvm_ProcessorSettingData,EnableLegacyApicMode,?,?,?,?,?,ÒÑÆúÓÃ¡£,Deprecated.
+Msvm_ProcessorSettingData,EnablePageShattering,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÎªĞéÄâ»úÆôÓÃÒ³Ãæ·ÛËé [Ã¶¾ÙÖµ: 0 - Ä¬ÈÏ; 1 - Ê¼ÖÕÆôÓÃ; 2 - Ê¼ÖÕ½ûÓÃ],Indicates whether Hyper-V should enable page shattering for the VM [Ã¶¾ÙÖµ: 0 - Default; 1 - AlwaysEnabled; 2 - AlwaysDisabled]
+Msvm_ProcessorSettingData,EnablePerfmonArchPmu,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÏòĞéÄâ»ú¹«¿ªĞéÄâ»¯µÄ¼Ü¹¹ PMU (ĞÔÄÜ¼à¿Øµ¥Ôª) ÉèÊ©¡£,Indicates whether Hyper-V should expose virtualized architectural PMU (Performance Monitoring Unit) facilities to the VM.
+Msvm_ProcessorSettingData,EnablePerfmonIpt,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÏòĞéÄâ»ú¹«¿ªĞéÄâ»¯µÄ IPT (Intel ´¦ÀíÆ÷¸ú×Ù) ÉèÊ©¡£,Indicates whether Hyper-V should expose virtualized IPT (Intel Processor Trace) facilities to the VM.
+Msvm_ProcessorSettingData,EnablePerfmonLbr,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÏòĞéÄâ»ú¹«¿ªĞéÄâ»¯µÄ LBR (×îºó·ÖÖ§¼ÇÂ¼) ÉèÊ©¡£,Indicates whether Hyper-V should expose virtualized LBR (Last Branch Record) facilities to the VM.
+Msvm_ProcessorSettingData,EnablePerfmonPebs,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÏòĞéÄâ»ú¹«¿ªĞéÄâ»¯µÄ PEBS (»ùÓÚ´¦ÀíÆ÷ÊÂ¼şµÄ²ÉÑù) ÉèÊ©¡£,Indicates whether Hyper-V should expose virtualized PEBS (Processor Event-Based Sampling) facilities to the VM.
+Msvm_ProcessorSettingData,EnablePerfmonPmu,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÏòĞéÄâ»ú¹«¿ªĞéÄâ»¯µÄ PMU (ĞÔÄÜ¼à¿Øµ¥Ôª) ÉèÊ©¡£,Indicates whether Hyper-V should expose virtualized PMU (Performance Monitoring Unit) facilities to the VM.
+Msvm_ProcessorSettingData,EnableSocketTopology,?,?,?,?,?,ÔÚÖ÷»úÉÏ·ÅÖÃĞéÄâ»úÊ±ÆôÓÃ²å²ÛÍØÆËÓ³Éä¡£,Enable socket topology mapping when placing a VM on the host.
+Msvm_ProcessorSettingData,EnlightenmentSet,?,?,?,?,?,Ö¸Ê¾Ïò²Ù×÷ÏµÍ³¹«¿ªµÄÆô·¢Ê½¼¯ºÏ¡£,Indicates the Enlightenment set exposed to the operating system.
+Msvm_ProcessorSettingData,ExposeVirtualizationExtensions,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÏòĞéÄâ»ú¹«¿ªĞéÄâ»¯µÄÓ²¼şĞéÄâ»¯À©Õ¹¡£,Indicates whether Hyper-V should expose virtualized hardware virtualization extensionsto the VM.
+Msvm_ProcessorSettingData,ExtendedVirtualizationExtensions,?,?,?,?,?,Ö¸¶¨Ó¦ÏòĞéÄâ»ú¹«¿ªµÄÒ»×é¸½¼ÓĞéÄâ»¯À©Õ¹¡£[Ã¶¾ÙÖµ: 1 - Ó²¼ş¸ôÀë],Specifies the set of additional virtualization extensions that should be exposed to the VM. [Ã¶¾ÙÖµ: 1 - HardwareIsolation]
+Msvm_ProcessorSettingData,HideHypervisorPresent,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÊÇ·ñÓ¦ÏòÇ¶Ì×¿ÍÌå±¨¸æ´æÔÚĞéÄâ»ú¼à¿Ø³ÌĞò¡£,Indicates whether Hyper-V should report that a hypervisor is present to the nested guest
+Msvm_ProcessorSettingData,HostResource,?,?,?,?,?,¡¾AI¡¿´ËĞéÄâ×ÊÔ´Ëù»ùÓÚµÄÖ÷»ú×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,HwThreadsPerCore,?,?,?,?,?,Ö¸Ê¾Ïò¿ÍÌå±¨¸æµÄÃ¿¸öºËĞÄµÄ SMT Ïß³ÌÊı¡£´Ë±¨¸æÓëÓ²¼şÊÇ·ñÊµ¼Ê´æÔÚ SMT ÎŞ¹Ø¡£,Indicates the number of SMT threads per core reported to the guest.  This reporting is independent of whether the hardware for SMT is present.
+Msvm_ProcessorSettingData,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´Ë´¦ÀíÆ÷ÉèÖÃÊı¾İÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,L3CacheWays,?,?,?,?,?,Ìá¹©ÒªÎªĞéÄâ»ú±¨¸æµÄ L3 »º´æÂ·Êı¡£´Ë×Ö¶ÎÔÚĞéÄâ»úÆô¶¯ºóÎŞ·¨µ÷Õû£¬²¢ÇÒ¿ÉÄÜÒòÖ÷»ú¹¦ÄÜ¶ø²»±»×ñÊØ¡£,"Provides the number of L3 cache ways to report for a VM. This field cannot be adjusted after VM start, and may not be obeyed depending on host capabilities."
+Msvm_ProcessorSettingData,L3ProcessorDistributionPolicy,?,?,?,?,?,Ö¸Ê¾ Hyper-V ÈçºÎÔÚ L3 ¼¶±ğ·Ö·¢´¦ÀíÆ÷¡£´Ë×Ö¶ÎÔÚĞéÄâ»úÆô¶¯ºóÎŞ·¨µ÷Õû¡£[Ã¶¾ÙÖµ: 0 - Ğ¡µ½´ó (Ä¬ÈÏ); 1 - ´óµ½Ğ¡; 2 - ¾ùÔÈĞ¡µ½´ó; 3 - ¾ùÔÈ´óµ½Ğ¡],Indicate how Hyper-V distributes processors at the L3 level.This field cannot be adjusted after VM start. [Ã¶¾ÙÖµ: 0 - SmallToLarge (Default); 1 - LargeToSmall; 2 - EvenSmallToLarge; 3 - EvenLargeToSmall]
+Msvm_ProcessorSettingData,Limit,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸øĞéÄâ»úµÄ´¦ÀíÆ÷×ÊÔ´ÉÏÏŞ¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,LimitCPUID,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úÊÇ·ñÓ¦½µµÍ CPU ±êÊ¶·û¡£Ä³Ğ©½Ï¾ÉµÄ²Ù×÷ÏµÍ³¿ÉÄÜÒªÇóÒÔÕâÖÖ·½Ê½ÏŞÖÆ´¦ÀíÆ÷¹¦ÄÜ²ÅÄÜÔËĞĞ¡£,Indicates whether the virtual machine should lower the CPU identifier. Some older operating systems may require you to limit processor functionality in this way in order to run.
+Msvm_ProcessorSettingData,LimitProcessorFeatures,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úÊÇ·ñÓ¦ÏŞÖÆÏò²Ù×÷ÏµÍ³¹«¿ªµÄ CPU ¹¦ÄÜ¡£ÏŞÖÆ´¦ÀíÆ÷¹¦ÄÜÊ¹ĞéÄâ»úÄÜ¹»Ç¨ÒÆµ½¾ßÓĞ²»Í¬´¦ÀíÆ÷µÄ²»Í¬Ö÷»ú¼ÆËã»úÏµÍ³¡£²»Ö§³ÖÔÚ¾ßÓĞ²»Í¬¹©Ó¦ÉÌ´¦ÀíÆ÷µÄ¼ÆËã»úÖ®¼äÇ¨ÒÆĞéÄâ»ú¡£,Indicates whether the VM should limit the CPU features exposed to the operating system. Limiting the processor features enables the VM to be migrated to different host computer systems with different processors. Migrating VMs between computers with processors from different vendors is not supported.
+Msvm_ProcessorSettingData,LimitProcessorFeaturesMode,?,?,?,?,?,Ö¸Ê¾ÆôÓÃ LimitProcessorFeatures Ê±Ó¦ÓÃµÄ CPU ¹¦ÄÜ¼¯ÀàĞÍ¡£DefaultMinimumFeatures ½«¹Ì¶¨µÄ×îĞ¡¹¦ÄÜ¼¯Ó¦ÓÃÓÚĞéÄâ»ú£¬ClusterNodeCommonFeatures ¸ù¾İ¹ÊÕÏ×ªÒÆÈº¼¯ÖĞ½ÚµãµÄ¹¦ÄÜÓ¦ÓÃ¶¯Ì¬¼ÆËãµÄ¹¦ÄÜ¼¯¡£[Ã¶¾ÙÖµ: 0 - DefaultMinimumFeatures; 1 - ClusterNodeCommonFeatures],"Indicates the type of the CPU feature set that is applied when LimitProcessorFeaturesis enabled. DefaultMinimumFeatures applies a fixed minimum feature set to the VM,ClusterNodeCommonFeatures applies a dynamically calculated feature set based on thecapabilities of the nodes in a Failover Cluster. [Ã¶¾ÙÖµ: 0 - DefaultMinimumFeatures; 1 - ClusterNodeCommonFeatures]"
+Msvm_ProcessorSettingData,MappingBehavior,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ×ÊÔ´ÈçºÎÓ³Éäµ½Ö÷»ú×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,MaxClusterCountPerSocket,?,?,?,?,?,Ò»¸ö²å²ÛÖĞµÄ×î´óÈº¼¯Êı¡£´Ë×Ö¶ÎÔÚĞéÄâ»úÆô¶¯ºóÎŞ·¨µ÷Õû¡£,Maximum number of clusters in a socket. This field cannot be adjusted after VM start.
+Msvm_ProcessorSettingData,MaxHierarchicalPartitions,?,?,?,?,?,·Ö²ãĞéÄâ»¯·ÖÇø¿ÉÒÔ´´½¨µÄ×î´ó×Ó·ÖÇøÊı¡£,Maximum number of child partitions that a hierarchical virtualization partition can create.
+Msvm_ProcessorSettingData,MaxHierarchicalVps,?,?,?,?,?,·Ö²ãĞéÄâ»¯·ÖÇø¿ÉÒÔ´´½¨µÄ×î´ó×Ó VPS Êı¡£,Maximum number of child vps that a hierarchical virtualization partition can create.
+Msvm_ProcessorSettingData,MaxHwIsolatedGuests,?,?,?,?,?,ĞéÄâ»ú¿ÉÒÔÍ¬Ê±ÔËĞĞµÄ×î´óÓ²¼ş¸ôÀë¿ÍÌåÊı¡£,Maximum number of hardware isolated guests that the VM may run simulatenously.
+Msvm_ProcessorSettingData,MaxNumaNodesPerSocket,?,?,?,?,?,ÔÚĞéÄâ»úÄÚ¿É±»¹Û²ìÎªÊôÓÚµ¥¸ö´¦ÀíÆ÷²å²ÛµÄ×î´ó NUMA ½ÚµãÊı¡£,The maximum number of NUMA nodes that can be observed within the VM as belonging to a single processor socket.
+Msvm_ProcessorSettingData,MaxProcessorCountPerL3,?,?,?,?,?,¹²Ïí L3 »º´æµÄ×î´ó´¦ÀíÆ÷Êı¡£´Ë×Ö¶ÎÔÚĞéÄâ»úÆô¶¯ºóÎŞ·¨µ÷Õû¡£,Maximum number of processors sharing L3 cache. This field cannot be adjusted after VM start.
+Msvm_ProcessorSettingData,MaxProcessorsPerNumaNode,?,?,?,?,?,ÔÚĞéÄâ»úÄÚ¿É±»¹Û²ìÎªÊôÓÚµ¥¸öĞéÄâ NUMA ½ÚµãµÄ×î´óĞéÄâ´¦ÀíÆ÷Êı¡£,The maximum number of virtual processors that can be observed within the VM as belonging to a single virtual NUMA node.
+Msvm_ProcessorSettingData,OtherResourceType,?,?,?,?,?,¡¾AI¡¿µ±ResourceTypeÎª¡°ÆäËû¡±Ê±£¬Ìá¹©×ÊÔ´ÀàĞÍµÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,Parent,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ÉèÖÃÊı¾İµÄ¸¸×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,PartitionDiagnosticBufferCount,?,?,?,?,?,·Ö²ãĞéÄâ»¯·ÖÇøÊ¹ÓÃµÄĞéÄâ»ú¼à¿Ø³ÌĞò¸ú×Ù»º³åÇøµÄÊıÁ¿¡£,The number of hypervisor tracing buffers that a hierarchical virtualization partition uses.
+Msvm_ProcessorSettingData,PartitionDiagnosticBufferSizeInPages,?,?,?,?,?,·Ö²ãĞéÄâ»¯·ÖÇøÊ¹ÓÃµÄÃ¿¸öĞéÄâ»ú¼à¿Ø³ÌĞò¸ú×Ù»º³åÇøµÄ´óĞ¡£¨ÒÔÒ³Îªµ¥Î»£©¡£,"The size, in pages, of each hypervisor tracing buffer that a hierarchical virtualization partition uses."
+Msvm_ProcessorSettingData,PerfCpuFreqCapMhz,?,?,?,?,?,Ìá¹©ĞéÄâ»úµÄÄ¿±ê×î´ó CPU ÆµÂÊ¡£´Ë×Ö¶ÎÔÚĞéÄâ»úÆô¶¯ºóÎŞ·¨µ÷Õû£¬²¢ÇÒ¿ÉÄÜÒòÖ÷»ú¹¦ÄÜ¶ø²»±»×ñÊØ¡£,"Provides the target maximum CPU frequency for a VM. This field cannot be adjusted after VM start, and may not be obeyed depending on host capabilities."
+Msvm_ProcessorSettingData,PhysicalAddressWidth,?,?,?,?,?,ĞéÄâ»úµÄÎïÀíµØÖ·¿í¶È¡£,The physical address width for the VM.
+Msvm_ProcessorSettingData,PoolID,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ËùÊôµÄ×ÊÔ´³ØµÄID¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,ProcessorFeatureSet,?,?,?,?,?,Ö¸Ê¾Ïò²Ù×÷ÏµÍ³¹«¿ªµÄ CPU ¹¦ÄÜ¼¯¡£,Indicates the CPU feature set exposed to the operating system.
+Msvm_ProcessorSettingData,Reservation,?,?,?,?,?,¡¾AI¡¿ÎªĞéÄâ»úÔ¤ÁôµÄ´¦ÀíÆ÷×ÊÔ´Á¿¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,ResourceSubType,?,?,?,?,?,¡¾AI¡¿×ÊÔ´µÄ×ÓÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,ResourceType,?,?,?,?,?,¡¾AI¡¿×ÊÔ´µÄÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,VirtualQuantity,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸øĞéÄâ»úµÄĞéÄâ´¦ÀíÆ÷ÊıÁ¿¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,VirtualQuantityUnits,?,?,?,?,?,¡¾AI¡¿VirtualQuantityÊôĞÔµÄµ¥Î»¡£,[ÎŞÃèÊö]
+Msvm_ProcessorSettingData,Weight,?,?,?,?,?,¡¾AI¡¿ÔÚ×ÊÔ´ÕùÓÃÆÚ¼ä£¬·ÖÅä¸øĞéÄâ»úµÄ´¦ÀíÆ÷×ÊÔ´µÄÏà¶ÔÈ¨ÖØ¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,Address,?,?,?,?,?,¡¾AI¡¿×ÊÔ´ÔÚÆäËùÊôÉè±¸ÉÏµÄµØÖ·¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,AddressOnParent,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ÔÚÆä¸¸Éè±¸ÉÏµÄµØÖ·¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,AllocationUnits,?,?,?,?,?,¡¾AI¡¿ÓÃÓÚ¶¨ÒåÔ¤Áô¡¢ÏŞÖÆºÍÈ¨ÖØµÄ·ÖÅäµ¥Î»£¬Í¨³£ÊÇÕ××Ö½Ú£¨MB£©¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,AutomaticAllocation,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾×ÊÔ´ÊÇ·ñ¿ÉÒÔÓÉĞéÄâ»¯Æ½Ì¨×Ô¶¯·ÖÅä¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,AutomaticDeallocation,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾×ÊÔ´ÊÇ·ñ¿ÉÒÔÓÉĞéÄâ»¯Æ½Ì¨×Ô¶¯½â³ı·ÖÅä¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,BackingPageSize,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úµÄÄÚ´æÖ§³Ö´óĞ¡¡£È¡´ú HugePagesEnabled¡£[Ã¶¾ÙÖµ: 0 - Ğ¡; 1 - ´ó; 2 - ¾ŞĞÍ],Indicates the memory backing size for the VM. Supersedes HugePagesEnabled. [Ã¶¾ÙÖµ: 0 - Small; 1 - Large; 2 - Huge]
+Msvm_MemorySettingData,BackingType,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úµÄÄÚ´æÖ§³ÖÀàĞÍ¡£[Ã¶¾ÙÖµ: 0 - ÎïÀí; 1 - ĞéÄâ; 2 - »ìºÏ],Indicates the memory backing type for the VM. [Ã¶¾ÙÖµ: 0 - Physical; 1 - Virtual; 2 - Hybrid]
+Msvm_MemorySettingData,Caption,?,?,?,?,?,¡¾AI¡¿ÄÚ´æÉèÖÃÊı¾İµÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,Connection,?,?,?,?,?,¡¾AI¡¿Á¬½Óµ½´Ë×ÊÔ´µÄÉè±¸¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,ConsumerVisibility,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ»úÖĞµÄ²Ù×÷ÏµÍ³ÊÇ·ñ¿ÉÒÔ¿´µ½´Ë×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,Description,?,?,?,?,?,¡¾AI¡¿ÄÚ´æÉèÖÃÊı¾İµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,DynamicMemoryEnabled,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÆôÓÃÁË¶¯Ì¬ÄÚ´æ¡£,Indicates if dynamic memory is enabled.
+Msvm_MemorySettingData,ElementName,?,?,?,?,?,¡¾AI¡¿´ËÄÚ´æÉèÖÃÊı¾İµÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,EnableColdHint,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÆôÓÃÁËÀäÌáÊ¾¡£,Indicates if cold hints are enabled.
+Msvm_MemorySettingData,EnableEpf,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÆôÓÃÁËÆô·¢Ê½Ò³Ãæ´íÎó¡£,Indicates if enlightened page faults are enabled.
+Msvm_MemorySettingData,EnableHotHint,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÆôÓÃÁËÈÈÌáÊ¾¡£,Indicates if hot hints are enabled.
+Msvm_MemorySettingData,EnablePrivateCompressionStore,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úÊÇ·ñÓ¦¾ßÓĞË½ÓĞÑ¹Ëõ´æ´¢¡£,Indicates if the VM should have a private compression store.
+Msvm_MemorySettingData,HostResource,?,?,?,?,?,¡¾AI¡¿´ËĞéÄâ×ÊÔ´Ëù»ùÓÚµÄÖ÷»ú×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,HugePagesEnabled,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÆôÓÃÁË¾ŞĞÍÒ³¡£,Indicates if huge pages are enabled.
+Msvm_MemorySettingData,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´ËÄÚ´æÉèÖÃÊı¾İÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,IsVirtualized,?,?,?,?,?,Ö¸Ê¾´ËÉè±¸ÊÇĞéÄâ»¯»¹ÊÇÖ±Í¨£¨¿ÉÄÜÊ¹ÓÃ·ÖÇø£©¡£µ±ÉèÖÃÎª False Ê±£¬Ê¹ÓÃµ×²ã»òÖ÷»ú×ÊÔ´¡£DeviceID ÊôĞÔÖĞÖÁÉÙÓ¦´æÔÚÒ»Ïî¡£µ±ÉèÖÃÎª True Ê±£¬×ÊÔ´±»ĞéÄâ»¯£¬¿ÉÄÜ²»Ö±½ÓÓ³Éäµ½µ×²ã/Ö÷»ú×ÊÔ´¡£Ä³Ğ©ÊµÏÖ¿ÉÄÜÖ§³ÖĞéÄâ»¯×ÊÔ´µÄÌØ¶¨·ÖÅä£¬ÔÚÕâÖÖÇé¿öÏÂ£¬Ö÷»ú×ÊÔ´Ê¹ÓÃ DeviceID ÊôĞÔ¹«¿ª¡£´ËÊôĞÔÊ¼ÖÕÉèÖÃÎª True¡£,"Indicates whether this device is virtualized or passed through, possibly using partitioning. When set to False, the underlying or host resource is utilized. At least one item shall be present in the DeviceID property. When set to True, the resource is virtualized and may not map directly to an underlying/host resource. Some implementations may support specific assignment for virtualized resources, in which case the host resource(s) are exposed using the DeviceID property. This property is always set to True."
+Msvm_MemorySettingData,Limit,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸øĞéÄâ»úµÄÄÚ´æ×ÊÔ´ÉÏÏŞ£¨ÒÔMBÎªµ¥Î»£©¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,MappingBehavior,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ×ÊÔ´ÈçºÎÓ³Éäµ½Ö÷»ú×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,MaxMemoryBlocksPerNumaNode,?,?,?,?,?,ÔÚĞéÄâ»úÄÚ¿É±»¹Û²ìÎªÊôÓÚµ¥¸ö NUMA ½ÚµãµÄ×î´óÄÚ´æÁ¿¡£,The maximum amount of memory that can be observed within the VM as belonging to a single NUMA node.
+Msvm_MemorySettingData,MemoryAccessTrackingPolicy,?,?,?,?,?,Ö¸Ê¾ÄÚ´æ·ÃÎÊ¸ú×Ù²ßÂÔ [Ã¶¾ÙÖµ: 0 - ×î¼ÑÁ£¶È; 1 - 4KB Á£¶È; 2 - 2MB Á£¶È; 3 - 1GB Á£¶È],Indicates the memory encryption policy [Ã¶¾ÙÖµ: 0 - GranularityBest; 1 - Granularity4KB; 2 - Granularity2MB; 3 - Granularity1GB]
+Msvm_MemorySettingData,MemoryAccessTrackingState,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÓ¦ÆôÓÃÄÚ´æ·ÃÎÊ¸ú×Ù¡£[Ã¶¾ÙÖµ: 0 - ¸ú×ÙÒÑ½ûÓÃ; 1 - ¸ú×ÙÒÑÆôÓÃ; 2 - Ê¹ÓÃÃ¿¸ö NUMA ÅäÖÃ],Indicates if memory access tracking should be enabled. [Ã¶¾ÙÖµ: 0 - TrackingDisabled; 1 - TrackingEnabled; 2 - UsePerNUMAConfiguration]
+Msvm_MemorySettingData,MemoryEncryptionPolicy,?,?,?,?,?,Ö¸Ê¾ÄÚ´æ¼ÓÃÜ²ßÂÔ [Ã¶¾ÙÖµ: 0 - ÒÑ½ûÓÃ; 1 - Èç¹ûÖ§³ÖÔòÆôÓÃ; 2 - Ê¼ÖÕÆôÓÃ],Indicates the memory encryption policy [Ã¶¾ÙÖµ: 0 - Disabled; 1 - EnabledIfSupported; 2 - AlwaysEnabled]
+Msvm_MemorySettingData,OtherResourceType,?,?,?,?,?,¡¾AI¡¿µ±ResourceTypeÎª¡°ÆäËû¡±Ê±£¬Ìá¹©×ÊÔ´ÀàĞÍµÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,Parent,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ÉèÖÃÊı¾İµÄ¸¸×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,PoolID,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ËùÊôµÄ×ÊÔ´³ØµÄID¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,Reservation,?,?,?,?,?,¡¾AI¡¿ÎªĞéÄâ»úÔ¤ÁôµÄÄÚ´æ×ÊÔ´Á¿£¨ÒÔMBÎªµ¥Î»£©£¬¼´Æô¶¯ÄÚ´æ¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,ResourceSubType,?,?,?,?,?,¡¾AI¡¿×ÊÔ´µÄ×ÓÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,ResourceType,?,?,?,?,?,¡¾AI¡¿×ÊÔ´µÄÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,SgxEnabled,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÆôÓÃÁË SGX¡£,Indicates if SGX is enabled.
+Msvm_MemorySettingData,SgxLaunchControlDefault,?,?,?,?,?,ĞéÄâ»úµÄÄ¬ÈÏ SGX Æô¶¯¿ØÖÆ MSR Öµ¡£,The default SGX launch control MSR values for the VM.
+Msvm_MemorySettingData,SgxLaunchControlMode,?,?,?,?,?,ĞéÄâ»úµÄ SGX Æô¶¯¿ØÖÆÄ£Ê½¡£[Ã¶¾ÙÖµ: 0 - ÎŞ·ÃÎÊÈ¨ÏŞ; 1 - Ö»¶Á; 2 - ¶ÁĞ´],The SGX launch control mode for the VM. [Ã¶¾ÙÖµ: 0 - No access; 1 - Read-only; 2 - Read-write]
+Msvm_MemorySettingData,SgxSize,?,?,?,?,?,ÎªĞéÄâ»ú·ÖÅäµÄ SGX ÄÚ´æÁ¿ (MB)¡£,"The amount of SGX memory to allocate for the VM, in MB."
+Msvm_MemorySettingData,SwapFilesInUse,?,?,?,?,?,Ö¸Ê¾ÖÇÄÜ·ÖÒ³ÊÇ·ñ´¦ÓÚ»î¶¯×´Ì¬¡£,Indicates if Smart Paging is active.
+Msvm_MemorySettingData,TargetMemoryBuffer,?,?,?,?,?,Ö¸Ê¾¿ÉÓÃµÄÄ¿±êÄÚ´æ¡£,Indicates the available target memory.
+Msvm_MemorySettingData,VirtualQuantity,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸øĞéÄâ»úµÄÄÚ´æ´óĞ¡£¨ÒÔMBÎªµ¥Î»£©¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,VirtualQuantityUnits,?,?,?,?,?,¡¾AI¡¿VirtualQuantityÊôĞÔµÄµ¥Î»¡£,[ÎŞÃèÊö]
+Msvm_MemorySettingData,Weight,?,?,?,?,?,¡¾AI¡¿ÔÚ×ÊÔ´ÕùÓÃÆÚ¼ä£¬·ÖÅä¸øĞéÄâ»úµÄÄÚ´æ×ÊÔ´µÄÏà¶ÔÈ¨ÖØ¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,Access,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¶Ô´æ´¢ÇøÓòµÄ·ÃÎÊÈ¨ÏŞ£¨ÀıÈç£¬¶Á/Ğ´¡¢Ö»¶Á£©¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,Address,?,?,?,?,?,¡¾AI¡¿×ÊÔ´ÔÚÆäËùÊôÉè±¸ÉÏµÄµØÖ·¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,AddressOnParent,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ÔÚÆä¸¸Éè±¸ÉÏµÄµØÖ·¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,AllocationUnits,?,?,?,?,?,¡¾AI¡¿ÓÃÓÚ¶¨ÒåVirtualQuantityÊôĞÔµÄµ¥Î»£¬ÀıÈç¡°×Ö½Ú¡±¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,AutomaticAllocation,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾×ÊÔ´ÊÇ·ñ¿ÉÒÔÓÉĞéÄâ»¯Æ½Ì¨×Ô¶¯·ÖÅä¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,AutomaticDeallocation,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾×ÊÔ´ÊÇ·ñ¿ÉÒÔÓÉĞéÄâ»¯Æ½Ì¨×Ô¶¯½â³ı·ÖÅä¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,CachingMode,?,?,?,?,?,Ö¸Ê¾ÊÇ·ñÒÔ¼°ÈçºÎÎª´Ë VHD Ê¹ÓÃÄÚ´æÖĞÎÄ¼ş»º´æ¡£Ä¬ÈÏ²ßÂÔÔÚ Msvm_VirtualSystemManagementServiceSettingData ÀàµÄ DefaultVirtualHardDiskCachingMode ×Ö¶ÎÖĞÉèÖÃ¡£´ËÊôĞÔ±£Áô¹©ÏµÍ³Ê¹ÓÃ¡£[Ã¶¾ÙÖµ: 0 - Î´Öª; 2 - Ä¬ÈÏ; 3 - ÎŞ»º´æ; 4 - »º´æ¿É¹²Ïí¸¸¼¶],Indicates whether and how in-memory file caching should be used for this VHD. The default policy is set in the DefaultVirtualHardDiskCachingMode field of the Msvm_VirtualSystemManagementServiceSettingData class. This property is reserved for system use. [Ã¶¾ÙÖµ: 0 - Unknown; 2 - Default; 3 - No Caching; 4 - Cache Sharable Parents]
+Msvm_StorageAllocationSettingData,Caption,?,?,?,?,?,¡¾AI¡¿´æ´¢·ÖÅäÉèÖÃÊı¾İµÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,Connection,?,?,?,?,?,¡¾AI¡¿Á¬½Óµ½´Ë×ÊÔ´µÄÉè±¸¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,ConsumerVisibility,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ»úÖĞµÄ²Ù×÷ÏµÍ³ÊÇ·ñ¿ÉÒÔ¿´µ½´Ë×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,Description,?,?,?,?,?,¡¾AI¡¿´æ´¢·ÖÅäÉèÖÃÊı¾İµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,ElementName,?,?,?,?,?,¡¾AI¡¿´Ë´æ´¢·ÖÅäÉèÖÃÊı¾İµÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,HostExtentName,?,?,?,?,?,¡¾AI¡¿Ö÷»úÉÏ´æ´¢ÇøÓòµÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,HostExtentNameFormat,?,?,?,?,?,¡¾AI¡¿HostExtentNameÊôĞÔµÄ¸ñÊ½¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,HostExtentNameNamespace,?,?,?,?,?,¡¾AI¡¿HostExtentNameÊôĞÔµÄÃüÃû¿Õ¼ä¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,HostExtentStartingAddress,?,?,?,?,?,¡¾AI¡¿Ö÷»úÉÏ´æ´¢ÇøÓòµÄÆğÊ¼µØÖ·¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,HostResource,?,?,?,?,?,¡¾AI¡¿´ËĞéÄâ×ÊÔ´Ëù»ùÓÚµÄÖ÷»ú×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,HostResourceBlockSize,?,?,?,?,?,¡¾AI¡¿Ö÷»ú×ÊÔ´µÄ¿é´óĞ¡¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,IgnoreFlushes,?,?,?,?,?,Ö¸¶¨ÊÇ·ñ×ñÊØÀ´×ÔĞéÄâ»úµÄË¢ĞÂ»òÖ±Ğ´»º´æµÄÇëÇó¡£Èç¹ûÎª true£¬ÔòÖ÷»ú½«ºöÂÔËùÓĞË¢ĞÂ»òÖ±Ğ´ÇëÇó¡£,"Specifies whether requests from the VM to flush or write through the cache are respected. If true, then the host ignores all flush or write through requests."
+Msvm_StorageAllocationSettingData,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´Ë´æ´¢·ÖÅäÉèÖÃÊı¾İÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,IOPSAllocationUnits,?,?,?,?,?,Ö¸¶¨ IOPSLimit ºÍ IOPSReservation ÊôĞÔÊ¹ÓÃµÄ·ÖÅäµ¥Î»¡£,Specifies the allocation units used by the IOPSLimit and IOPSReservation properties.
+Msvm_StorageAllocationSettingData,IOPSLimit,?,?,?,?,?,½«Îª´ËĞéÄâ´æ´¢À©Õ¹Ìá¹©·şÎñµÄÃ¿Ãë×î´ó I/O ²Ù×÷Êı¡£Èç¹ûÎ´¶¨Òå¸ÃÖµ»òÎª 0£¬ÔòÉè±¸¿ÉÒÔ·¢³öµÄ IOPS ÊıÃ»ÓĞÏŞÖÆ¡£´ËÊôĞÔÒÔ±ê×¼»¯Ã¿Ãë I/O Êı±íÊ¾¡£Èç¹ûÇëÇó´óĞ¡Ğ¡ÓÚ»òµÈÓÚÔ¤¶¨ÒåµÄ»ù×¼´óĞ¡ (8KB)£¬ÔòÃ¿¸ö I/O ÇëÇó¼ÆÎª 1 ¸ö±ê×¼»¯ I/O¡£´óÓÚ»ù×¼´óĞ¡µÄÇëÇó¼ÆÎª N ¸ö I/O£¬ÆäÖĞ N ÊÇÇëÇó´óĞ¡³ıÒÔ»ù×¼´óĞ¡ºóµÄÏòÉÏÈ¡ÕûÖµ£¨ÀıÈç£¬Èç¹û»ù×¼´óĞ¡Îª 8KB£¬Ôò 32KB ÇëÇó¼ÆÎª 4 ¸ö±ê×¼»¯ I/O£¬60KB ÇëÇó¼ÆÎª 8 ¸ö±ê×¼»¯ I/O£¬ÒÀ´ËÀàÍÆ£©¡£,"The maximum number of I/O operations per second which will be serviced for this virtual storage extent. If the value is not defined or 0 there is no limit to the number of IOPS that the device can issue.This property is expressed in normalized I/Os per second. Each I/O request is accounted for as 1 normalized I/O if the size of the request is less than or equal to a predefined base size (8KB). Requests that are larger than the base size are accounted for as N I/Os, where N is the rounded-up value of the request size divided by the base size (for example, if the base size is 8KB, a 32KB requests is counted as 4 normalized I/Os, a 60KB request as 8 normalized I/Os, etc...)."
+Msvm_StorageAllocationSettingData,IOPSReservation,?,?,?,?,?,½«Îª´ËĞéÄâ´æ´¢À©Õ¹Ìá¹©·şÎñµÄÃ¿Ãë×îĞ¡ I/O ²Ù×÷Êı¡£Èç¹ûÍ¬Ê±¶¨ÒåÁË IOPSLimit ºÍ IOPSReservation£¬Ôò IOPSLimit µÄÖµ±ØĞë´óÓÚ»òµÈÓÚ IOPSReservation¡£´ËÊôĞÔÒÔ±ê×¼»¯Ã¿Ãë I/O Êı±íÊ¾¡£Èç¹ûÇëÇó´óĞ¡Ğ¡ÓÚ»òµÈÓÚÔ¤¶¨ÒåµÄ»ù×¼´óĞ¡ (8KB)£¬ÔòÃ¿¸ö I/O ÇëÇó¼ÆÎª 1 ¸ö±ê×¼»¯ I/O¡£´óÓÚ»ù×¼´óĞ¡µÄÇëÇó¼ÆÎª N ¸ö I/O£¬ÆäÖĞ N ÊÇÇëÇó´óĞ¡³ıÒÔ»ù×¼´óĞ¡ºóµÄÏòÉÏÈ¡ÕûÖµ£¨ÀıÈç£¬Èç¹û»ù×¼´óĞ¡Îª 8KB£¬Ôò 32KB ÇëÇó¼ÆÎª 4 ¸ö±ê×¼»¯ I/O£¬64KB ÇëÇó¼ÆÎª 8 ¸ö±ê×¼»¯ I/O£¬ÒÀ´ËÀàÍÆ£©¡£,"The minimum number of I/O operations per second which will be serviced for this virtual storage extent. If both IOPSLimit and IOPSReservation are defined, the value of IOPSLimit must be greater or equal to IOPSReservation. This property is expressed in normalized I/Os per second. Each I/O request is accounted for as 1 normalized I/O if the size of the request is less than or equal to a predefined base size (8KB). Requests that are larger than the base size are accounted for as N I/Os, where N is the rounded-up value of the request size divided by the base size (for example, if the base size is 8KB, a 32KB requests is counted as 4 normalized I/Os, a 64KB request as 8 normalized I/Os, etc...)."
+Msvm_StorageAllocationSettingData,Limit,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸ø´Ë´æ´¢ÇøÓòµÄ×ÊÔ´ÉÏÏŞ¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,MappingBehavior,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ×ÊÔ´ÈçºÎÓ³Éäµ½Ö÷»ú×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,OtherHostExtentNameFormat,?,?,?,?,?,¡¾AI¡¿µ±HostExtentNameFormatÎª¡°ÆäËû¡±Ê±£¬Ìá¹©¸ñÊ½µÄÏêÏ¸ÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,OtherHostExtentNameNamespace,?,?,?,?,?,¡¾AI¡¿µ±HostExtentNameNamespaceÎª¡°ÆäËû¡±Ê±£¬Ìá¹©ÃüÃû¿Õ¼äµÄÏêÏ¸ÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,OtherResourceType,?,?,?,?,?,¡¾AI¡¿µ±ResourceTypeÎª¡°ÆäËû¡±Ê±£¬Ìá¹©×ÊÔ´ÀàĞÍµÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,Parent,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ÉèÖÃÊı¾İµÄ¸¸×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,PersistentReservationsSupported,?,?,?,?,?,Ö¸Ê¾ĞéÄâÓ²ÅÌÊÇ·ñÖ§³Ö SCSI-3 ³Ö¾ÃÔ¤Áô¡£,Indicates whether the virtual hard disk supports SCSI-3 persistent reservations
+Msvm_StorageAllocationSettingData,PoolID,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ËùÊôµÄ×ÊÔ´³ØµÄID¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,Reservation,?,?,?,?,?,¡¾AI¡¿Îª´Ë´æ´¢ÇøÓòÔ¤ÁôµÄ×ÊÔ´Á¿¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,ResourceSubType,?,?,?,?,?,¡¾AI¡¿×ÊÔ´µÄ×ÓÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,ResourceType,?,?,?,?,?,¡¾AI¡¿×ÊÔ´µÄÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,SnapshotId,?,?,?,?,?,Ò»¸ö GUID£¬±íÊ¾Òª¸½¼Ó VHD Set ÎÄ¼şÖĞµÄÄÄ¸ö¿ìÕÕ¡£,A GUID representing which snapshot within the VHD Set file is to be attached.
+Msvm_StorageAllocationSettingData,StorageQoSPolicyID,?,?,?,?,?,Ö¸¶¨ÒªÓ¦ÓÃÓÚ´ËĞéÄâ´æ´¢À©Õ¹µÄ´æ´¢ QoS ²ßÂÔµÄÎ¨Ò»±êÊ¶·û¡£,Specifies the unique identifier of the Storage QoS Policy to be applied to this virtual storage extent.
+Msvm_StorageAllocationSettingData,VirtualQuantity,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸ø´ËĞéÄâ´æ´¢ÇøÓòµÄ´óĞ¡¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,VirtualQuantityUnits,?,?,?,?,?,¡¾AI¡¿VirtualQuantityÊôĞÔµÄµ¥Î»¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,VirtualResourceBlockSize,?,?,?,?,?,¡¾AI¡¿ĞéÄâ×ÊÔ´µÄ¿é´óĞ¡¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,Weight,?,?,?,?,?,¡¾AI¡¿ÔÚ×ÊÔ´ÕùÓÃÆÚ¼ä£¬·ÖÅä¸ø´Ë´æ´¢ÇøÓòµÄÏà¶ÔÈ¨ÖØ¡£,[ÎŞÃèÊö]
+Msvm_StorageAllocationSettingData,WriteHardeningMethod,?,?,?,?,?,Ö¸Ê¾´ÅÅÌÖ§³ÖµÄĞ´ÈëÇ¿»¯·½·¨¡£[Ã¶¾ÙÖµ: 0 - Ä¬ÈÏ; 1 - ÆôÓÃĞ´»º´æ; 2 - ÆôÓÃĞ´»º´æºÍ FUA; 3 - ½ûÓÃĞ´»º´æ],Indicates what write hardening method is supported by the disk. [Ã¶¾ÙÖµ: 0 - Default; 1 - WriteCacheEnabled; 2 - WriteCacheandFUAEnabled; 3 - WriteCacheDisabled]
+Msvm_SummaryInformation,AllocatedGPU,?,?,?,?,?,·ÖÅä¸ø´ËĞéÄâ»ú (VM) µÄÎïÀíÍ¼ĞÎ´¦Àíµ¥Ôª (GPU) µÄ±êÊ¶·û¡£´ËÊôĞÔ½öÊÊÓÃÓÚÊ¹ÓÃ RemoteFX µÄĞéÄâ»ú¡£,The identifier of the physical graphics processing unit (GPU) allocated to this virtual machine (VM). This property only applies to VMs that use RemoteFX.
+Msvm_SummaryInformation,ApplicationHealth,?,?,?,?,?,ĞéÄâÏµÍ³µÄµ±Ç°Ó¦ÓÃ³ÌĞòÔËĞĞ×´¿ö¡£´ËÊôĞÔ¿ÉÒÔÊÇÒÔÏÂÖµÖ®Ò»£º¡°Õı³£¡±£»¡°Ó¦ÓÃ³ÌĞòÑÏÖØ¡±£»¡°ÒÑ½ûÓÃ¡±¡£ÓĞ¹Ø¸ü¶àĞÅÏ¢£¬Çë²ÎÔÄ Msvm_HeartbeatComponent ÀàµÄ StatusDescriptions ÊôĞÔÎÄµµ¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£[Ã¶¾ÙÖµ: 2 - Õı³£; 32782 - Ó¦ÓÃ³ÌĞòÑÏÖØ; 32896 - ÒÑ½ûÓÃ],"The current application health status for the virtual system. This property may be one of the following values: ""OK""; ""Application Critical""; ""Disabled"".For more information, see the documentation for the StatusDescriptions property of the Msvm_HeartbeatComponent class. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot. [Ã¶¾ÙÖµ: 2 - OK; 32782 - Application Critical; 32896 - Disabled]"
+Msvm_SummaryInformation,AsynchronousTasks,?,?,?,?,?,Msvm_ConcreteJob ÊµÀıÊı×é£¬±íÊ¾µ±Ç°ÕıÔÚÖ´ĞĞµÄÓëĞéÄâÏµÍ³Ïà¹ØµÄÈÎºÎÒì²½²Ù×÷¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£,An array of Msvm_ConcreteJob instances representing any asynchronous operations related to the virtual system which are currently executing. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot.
+Msvm_SummaryInformation,AvailableMemoryBuffer,?,?,?,?,?,ĞéÄâÏµÍ³ÖĞµÄ¿ÉÓÃÄÚ´æ»º³åÇø°Ù·Ö±È¡£,The available memory buffer percentage in the virtual system.
+Msvm_SummaryInformation,Caption,?,?,?,?,?,¡¾AI¡¿ÕªÒªĞÅÏ¢µÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,CreationTime,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³µÄ´´½¨Ê±¼ä¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,Description,?,?,?,?,?,¡¾AI¡¿ÕªÒªĞÅÏ¢µÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,ElementName,?,?,?,?,?,¡¾AI¡¿´ËÕªÒªĞÅÏ¢ËùÊôµÄĞéÄâÏµÍ³µÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,EnabledState,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³µÄµ±Ç°ÆôÓÃ/½ûÓÃ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,EnhancedSessionModeState,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ»úµÄÔöÇ¿»á»°Ä£Ê½×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,GuestOperatingSystem,?,?,?,?,?,¿ÍÌå²Ù×÷ÏµÍ³µÄÃû³Æ£¨Èç¹û¿ÉÓÃ£©¡£Èç¹û´ËĞÅÏ¢²»¿ÉÓÃ£¬Ôò´ËÊôĞÔµÄÖµÎª NULL¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£,"The name of the guest operating system, if available. If this information is not available, the value of this property is NULL. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot."
+Msvm_SummaryInformation,HealthState,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³µÄµ±Ç°½¡¿µ×´¿ö¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,Heartbeat,?,?,?,?,?,ĞéÄâÏµÍ³µÄµ±Ç°¼ì²âĞÅºÅ×´Ì¬¡£´ËÊôĞÔ¿ÉÒÔÊÇÒÔÏÂÖµÖ®Ò»£º¡°Õı³£¡±£»¡°´íÎó¡±£»¡°ÎŞÁªÏµ¡±£»»ò¡°Í¨Ñ¶¶ªÊ§¡±¡£ÓĞ¹Ø¸ü¶àĞÅÏ¢£¬Çë²ÎÔÄ Msvm_HeartbeatComponent ÀàµÄ StatusDescriptions ÊôĞÔÎÄµµ¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£,"The current heartbeat status for the virtual system. This property may be one of the following values: ""OK""; ""Error""; ""No Contact""; or ""Lost Communication"". For more information, see the documentation for the StatusDescriptions property of the Msvm_HeartbeatComponent class. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot."
+Msvm_SummaryInformation,HostComputerSystemName,?,?,?,?,?,¡¾AI¡¿ÍĞ¹Ü´ËĞéÄâ»úµÄ¼ÆËã»úÏµÍ³µÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,HypervisorPartitionId,?,?,?,?,?,ĞéÄâÏµÍ³Ê¹ÓÃµÄĞéÄâ»ú¼à¿Ø³ÌĞò·ÖÇøµÄÎ¨Ò»±êÊ¶·û¡£,The unique identifier of the hypervisor partition used by the virtual system.
+Msvm_SummaryInformation,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´ËÕªÒªĞÅÏ¢ÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,IntegrationServicesVersionState,?,?,?,?,?,°²×°ÔÚĞéÄâ»úÖĞµÄ¼¯³É·şÎñÊÇ·ñÎª×îĞÂ [Ã¶¾ÙÖµ: 0 - Î´Öª; 1 - ×îĞÂ; 2 - ²»Æ¥Åä],Whether or not the integration services installed in the virtual machine are up to date [Ã¶¾ÙÖµ: 0 - Unknown; 1 - UpToDate; 2 - Mismatch]
+Msvm_SummaryInformation,MemoryAvailable,?,?,?,?,?,ĞéÄâÏµÍ³ÖĞµÄ¿ÉÓÃÄÚ´æ°Ù·Ö±È¡£,The memory available percentage in the virtual system.
+Msvm_SummaryInformation,MemorySpansPhysicalNumaNodes,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úµÄÒ»¸ö»ò¶à¸öĞéÄâ·ÇÒ»ÖÂĞÔÄÚ´æ·ÃÎÊ (NUMA) ½ÚµãµÄÄÚ´æÊÇ·ñ¿çÔ½ËŞÖ÷¼ÆËã»úÏµÍ³µÄ¶à¸öÎïÀí NUMA ½Úµã¡£,Indicates whether or not the memory of the one or more of the virtual non-uniform memory access (NUMA) nodes of the virtual machine spans multiple physical NUMA nodes of the hosting computer system.
+Msvm_SummaryInformation,MemoryUsage,?,?,?,?,?,ĞéÄâÏµÍ³µÄµ±Ç°ÄÚ´æÊ¹ÓÃÇé¿ö¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£,The current memory usage of the virtual system. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot.
+Msvm_SummaryInformation,Name,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³µÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,Notes,?,?,?,?,?,¡¾AI¡¿ÓëĞéÄâ»úÏà¹ØµÄÓÃ»§×¢ÊÍ¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,NumberOfProcessors,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸øĞéÄâ»úµÄ´¦ÀíÆ÷ÊıÁ¿¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,OperationalStatus,?,?,?,?,?,¡¾AI¡¿Ò»¸öÊı×é£¬Ìá¹©ÓĞ¹ØĞéÄâÏµÍ³²Ù×÷×´Ì¬µÄÏêÏ¸ĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,OtherEnabledState,?,?,?,?,?,¡¾AI¡¿µ±EnabledStateÊôĞÔÎª¡°ÆäËû¡±Ê±£¬Ìá¹©ÓĞ¹ØÆôÓÃ×´Ì¬µÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,ProcessorLoad,?,?,?,?,?,ĞéÄâÏµÍ³µÄµ±Ç°´¦ÀíÆ÷Ê¹ÓÃÂÊ¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£,The current processor usage of the virtual system. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot.
+Msvm_SummaryInformation,ProcessorLoadHistory,?,?,?,?,?,ĞéÄâÏµÍ³´¦ÀíÆ÷Ê¹ÓÃÂÊµÄÇ° 100 ¸öÑù±¾µÄÊı×é¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£,An array of the previous 100 samples of the processor usage for the virtual system. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot.
+Msvm_SummaryInformation,ReplicationHealth,?,?,?,?,?,ĞéÄâ»úµÄ¸´ÖÆÔËĞĞ×´¿ö¡£[Ã¶¾ÙÖµ: 0 - ²»ÊÊÓÃ; 1 - Õı³£; 2 - ¾¯¸æ; 3 - ÑÏÖØ],Replication health for the virtual machine. [Ã¶¾ÙÖµ: 0 - Not applicable; 1 - Ok; 2 - Warning; 3 - Critical]
+Msvm_SummaryInformation,ReplicationHealthEx,?,?,?,?,?,ĞéÄâ»ú¸÷ÖÖ¸´ÖÆ¹ØÏµµÄ¸´ÖÆÔËĞĞ×´¿öÖµÊı×é¡£[Ã¶¾ÙÖµ: 0 - ²»ÊÊÓÃ; 1 - Õı³£; 2 - ¾¯¸æ; 3 - ÑÏÖØ],The array of Replication health values for the various replication relationships of the virtual machine. [Ã¶¾ÙÖµ: 0 - Not applicable; 1 - Ok; 2 - Warning; 3 - Critical]
+Msvm_SummaryInformation,ReplicationMode,?,?,?,?,?,±êÊ¶ĞéÄâ»úµÄ¸´ÖÆÀàĞÍ¡£[Ã¶¾ÙÖµ: 0 - ÎŞ; 1 - Ö÷¸±±¾; 2 - ¸±±¾; 3 - ²âÊÔ¸±±¾; 4 - À©Õ¹¸±±¾],Identifies replication type for the virtual machine. [Ã¶¾ÙÖµ: 0 - None; 1 - Primary; 2 - Replica; 3 - Test Replica; 4 - Extended Replica]
+Msvm_SummaryInformation,ReplicationProviderId,?,?,?,?,?,±êÊ¶¶ËµãÌá¹©³ÌĞòµÄÌá¹©³ÌĞòµÄÈ«¾ÖÎ¨Ò»±êÊ¶·û¡£¶ÔÓÚ Hyper-V Ö÷»úµ½ÁíÒ»¸ö Hyper-V Ö÷»ú£¬Ìá¹©³ÌĞò ID ¹Ì¶¨Îª 22391CDC-272C-4DDF-BA88-9BEFB1A0975C¡£¶ÔÓÚÍâ²¿Ìá¹©³ÌĞò£¬ÕâÊÇÌá¹©³ÌĞò COM Àà¶ÔÏóµÄ CLSID¡£,"Globally unique identifier of provider that identifies the endpoint provider. For Hyper-V host to another Hyper-V host, provider id is fixed as 22391CDC-272C-4DDF-BA88-9BEFB1A0975C. In case of external provider this is CLSID of provider COM class object."
+Msvm_SummaryInformation,ReplicationState,?,?,?,?,?,ĞéÄâ»úµÄ¸´ÖÆ×´Ì¬¡£[Ã¶¾ÙÖµ: 0 - ÒÑ½ûÓÃ; 1 - ×¼±¸ºÃ¸´ÖÆ; 2 - µÈ´ıÍê³É³õÊ¼¸´ÖÆ; 3 - ÕıÔÚ¸´ÖÆ; 4 - ÒÑÍ¬²½¸´ÖÆÍê³É; 5 - ÒÑ»Ö¸´; 6 - ÒÑÌá½»; 7 - ÒÑÔİÍ£; 8 - ÑÏÖØ; 9 - µÈ´ı¿ªÊ¼ÖØĞÂÍ¬²½; 10 - ÕıÔÚÖØĞÂÍ¬²½; 11 - ÖØĞÂÍ¬²½ÒÑÔİÍ£; 12 - ÕıÔÚ½øĞĞ¹ÊÕÏ×ªÒÆ],Replication state for the virtual machine. [Ã¶¾ÙÖµ: 0 - Disabled; 1 - Ready for replication; 2 - Waiting to complete initial replication; 3 - Replicating; 4 - Synced replication complete; 5 - Recovered; 6 - Committed; 7 - Suspended; 8 - Critical; 9 - Waiting to start resynchronization; 10 - Resynchronizing; 11 - Resynchronization suspended; 12 - Failover in progress]
+Msvm_SummaryInformation,ReplicationStateEx,?,?,?,?,?,ĞéÄâ»ú¸÷ÖÖ¸´ÖÆ¹ØÏµµÄ¸´ÖÆ×´Ì¬ÖµÊı×é¡£[Ã¶¾ÙÖµ: 0 - ÒÑ½ûÓÃ; 1 - ×¼±¸ºÃ¸´ÖÆ; 2 - µÈ´ıÍê³É³õÊ¼¸´ÖÆ; 3 - ÕıÔÚ¸´ÖÆ; 4 - ÒÑÍ¬²½¸´ÖÆÍê³É; 5 - ÒÑ»Ö¸´; 6 - ÒÑÌá½»; 7 - ÒÑÔİÍ£; 8 - ÑÏÖØ; 9 - µÈ´ı¿ªÊ¼ÖØĞÂÍ¬²½; 10 - ÕıÔÚÖØĞÂÍ¬²½; 11 - ÖØĞÂÍ¬²½ÒÑÔİÍ£; 12 - ÕıÔÚ½øĞĞ¹ÊÕÏ×ªÒÆ; 13 - ÕıÔÚ½øĞĞ¹ÊÕÏ»Ö¸´; 14 - ¹ÊÕÏ»Ö¸´Íê³É; 15 - ÕıÔÚ½øĞĞ´ÅÅÌ¸üĞÂ; 16 - ´ÅÅÌ¸üĞÂÑÏÖØ; 17 - Î´Öª; 18 - ÕıÔÚ½øĞĞµ÷ÕûÓÃÍ¾¸´ÖÆ; 19 - ÒÑ×¼±¸ºÃÍ¬²½¸´ÖÆ; 20 - ÒÑ×¼±¸ºÃ×é·´Ïò¸´ÖÆ; 21 - ÕıÔÚ½øĞĞÑİÁ·],The array of Replication state values for the various replication relationships of the virtual machine. [Ã¶¾ÙÖµ: 0 - Disabled; 1 - Ready for replication; 2 - Waiting to complete initial replication; 3 - Replicating; 4 - Synced replication complete; 5 - Recovered; 6 - Committed; 7 - Suspended; 8 - Critical; 9 - Waiting to start resynchronization; 10 - Resynchronizing; 11 - Resynchronization suspended; 12 - Failover in progress; 13 - Failback in progress; 14 - Failback complete; 15 - Disk update in progress; 16 - Disk update critical; 17 - Unknown; 18 - Repurpose replication in progress; 19 - Prepared for sync replication; 20 - Prepared for group reverse replication; 21 - Firedrill in progress]
+Msvm_SummaryInformation,Shielded,?,?,?,?,?,Ö¸Ê¾ĞéÄâ»úÊÇ·ñÅäÖÃÁËÆÁ±Î¡£,Indicates whether or not shielding is configured for the virtual machine.
+Msvm_SummaryInformation,Snapshots,?,?,?,?,?,´ú±íĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_VirtualSystemSettingData ÊµÀıÊı×é¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£,An array of Msvm_VirtualSystemSettingData instances representing the snapshots for the virtual system. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot.
+Msvm_SummaryInformation,StatusDescriptions,?,?,?,?,?,¡¾AI¡¿Ò»¸ö×Ö·û´®Êı×é£¬Ìá¹©ÓĞ¹Ø²Ù×÷×´Ì¬µÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,SwapFilesInUse,?,?,?,?,?,Ö¸Ê¾ÖÇÄÜ·ÖÒ³ÊÇ·ñ´¦ÓÚ»î¶¯×´Ì¬¡£,Indicates if Smart Paging is active.
+Msvm_SummaryInformation,TestReplicaSystem,?,?,?,?,?,¶Ô´ú±íĞéÄâ»ú²âÊÔ¸±±¾ĞéÄâÏµÍ³µÄ CIM_ComputerSystem ÊµÀıµÄÒıÓÃ¡£¶ÔÓÚ±íÊ¾ĞéÄâÏµÍ³¿ìÕÕµÄ Msvm_SummaryInformation ÊµÀı£¬´ËÊôĞÔÎŞĞ§¡£,Reference to the CIM_ComputerSystem instance representing the test replica virtual system for the virtual machine. This property is not valid for instances of Msvm_SummaryInformation representing a virtual system snapshot.
+Msvm_SummaryInformation,ThumbnailImage,?,?,?,?,?,°üº¬ĞéÄâÏµÍ³»ò¿ìÕÕ×ÀÃæµÄ RGB565 ¸ñÊ½µÄĞ¡ËõÂÔÍ¼Í¼ÏñµÄÊı×é¡£,"An array containing a small, thumbnail-sized image of the desktop for the virtual system or snapshot in RGB565 format."
+Msvm_SummaryInformation,ThumbnailImageHeight,?,?,?,?,?,ThumbnailImage ÊôĞÔÖĞÍ¼ÏñµÄÏñËØ¸ß¶È¡£,The height in pixels of the image in the ThumbnailImage property.
+Msvm_SummaryInformation,ThumbnailImageWidth,?,?,?,?,?,ThumbnailImage ÊôĞÔÖĞÍ¼ÏñµÄÏñËØ¿í¶È¡£,The width in pixels of the image in the ThumbnailImage property.
+Msvm_SummaryInformation,UpTime,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³µÄÕı³£ÔËĞĞÊ±¼ä¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,Version,?,?,?,?,?,¡¾AI¡¿ĞéÄâ»úµÄ°æ±¾¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,VirtualSwitchNames,?,?,?,?,?,¡¾AI¡¿ĞéÄâ»úÁ¬½Óµ½µÄĞéÄâ½»»»»úµÄÃû³ÆÁĞ±í¡£,[ÎŞÃèÊö]
+Msvm_SummaryInformation,VirtualSystemSubType,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³µÄ×ÓÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,Address,?,?,?,?,?,¡¾AI¡¿×ÊÔ´ÔÚÆäËùÊôÉè±¸ÉÏµÄµØÖ·¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,AddressOnParent,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ÔÚÆä¸¸Éè±¸ÉÏµÄµØÖ·¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,AllocationUnits,?,?,?,?,?,¡¾AI¡¿ÓÃÓÚ¶¨ÒåÔ¤Áô¡¢ÏŞÖÆºÍÈ¨ÖØµÄ·ÖÅäµ¥Î»¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,AutomaticAllocation,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾×ÊÔ´ÊÇ·ñ¿ÉÒÔÓÉĞéÄâ»¯Æ½Ì¨×Ô¶¯·ÖÅä¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,AutomaticDeallocation,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾×ÊÔ´ÊÇ·ñ¿ÉÒÔÓÉĞéÄâ»¯Æ½Ì¨×Ô¶¯½â³ı·ÖÅä¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,Caption,?,?,?,?,?,¡¾AI¡¿GPU·ÖÇøÉèÖÃÊı¾İµÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,Connection,?,?,?,?,?,¡¾AI¡¿Á¬½Óµ½´Ë×ÊÔ´µÄÉè±¸¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,ConsumerVisibility,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ»úÖĞµÄ²Ù×÷ÏµÍ³ÊÇ·ñ¿ÉÒÔ¿´µ½´Ë×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,Description,?,?,?,?,?,¡¾AI¡¿GPU·ÖÇøÉèÖÃÊı¾İµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,ElementName,?,?,?,?,?,¡¾AI¡¿´ËGPU·ÖÇøÉèÖÃÊı¾İµÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,HostResource,?,?,?,?,?,¡¾AI¡¿´ËĞéÄâ×ÊÔ´Ëù»ùÓÚµÄÖ÷»ú×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´ËGPU·ÖÇøÉèÖÃÊı¾İÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,Limit,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸ø´ËGPU·ÖÇøµÄ×ÊÔ´ÉÏÏŞ¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,MappingBehavior,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâ×ÊÔ´ÈçºÎÓ³Éäµ½Ö÷»ú×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,MaxPartitionCompute,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î´ó¼ÆËãÒıÇæÁ¿¡£,The maximum amount of compute engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,MaxPartitionDecode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î´ó½âÂëÒıÇæÁ¿¡£,The maximum amount of decode engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,MaxPartitionEncode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î´ó±àÂëÒıÇæÁ¿¡£,The maximum amount of encode engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,MaxPartitionVRAM,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î´óÏÔ´æ (VRAM) Á¿¡£,The maximum amount of VRAM which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,MinPartitionCompute,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×îĞ¡¼ÆËãÒıÇæÁ¿¡£,The minumum amount of compute engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,MinPartitionDecode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×îĞ¡½âÂëÒıÇæÁ¿¡£,The minimum amount of decode engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,MinPartitionEncode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×îĞ¡±àÂëÒıÇæÁ¿¡£,The minumum amount of encode engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,MinPartitionVRAM,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×îĞ¡ÏÔ´æ (VRAM) Á¿¡£,The minimum amount of VRAM which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,NumaAwarePlacement,?,?,?,?,?,Ö¸¶¨Éè±¸ÊÇ·ñÒÔ¸ĞÖª NUMA µÄ·½Ê½ÅäÖÃ¡£,Specifies whether the device is configured in a NUMA-aware manner.
+Msvm_GpuPartitionSettingData,OptimalPartitionCompute,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î¼Ñ¼ÆËãÒıÇæÁ¿¡£,The optimal amount of compute engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,OptimalPartitionDecode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î¼Ñ½âÂëÒıÇæÁ¿¡£,The optimal amount of decode engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,OptimalPartitionEncode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î¼Ñ±àÂëÒıÇæÁ¿¡£,The optimal amount of encode engines which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,OptimalPartitionVRAM,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î¼ÑÏÔ´æ (VRAM) Á¿¡£,The optimal amount of VRAM which will appear in the GPU partition.
+Msvm_GpuPartitionSettingData,OtherResourceType,?,?,?,?,?,¡¾AI¡¿µ±ResourceTypeÎª¡°ÆäËû¡±Ê±£¬Ìá¹©×ÊÔ´ÀàĞÍµÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,Parent,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ÉèÖÃÊı¾İµÄ¸¸×ÊÔ´¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,PoolID,?,?,?,?,?,¡¾AI¡¿´Ë×ÊÔ´ËùÊôµÄ×ÊÔ´³ØµÄID¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,Reservation,?,?,?,?,?,¡¾AI¡¿Îª´ËGPU·ÖÇøÔ¤ÁôµÄ×ÊÔ´Á¿¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,ResourceSubType,?,?,?,?,?,¡¾AI¡¿×ÊÔ´µÄ×ÓÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,ResourceType,?,?,?,?,?,¡¾AI¡¿×ÊÔ´µÄÀàĞÍ¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,VirtualQuantity,?,?,?,?,?,¡¾AI¡¿·ÖÅä¸ø´ËGPU·ÖÇøµÄĞéÄâ×ÊÔ´ÊıÁ¿¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,VirtualQuantityUnits,?,?,?,?,?,¡¾AI¡¿VirtualQuantityÊôĞÔµÄµ¥Î»¡£,[ÎŞÃèÊö]
+Msvm_GpuPartitionSettingData,VirtualSystemIdentifiers,?,?,?,?,?,Ìá¹©¸øĞéÄâ¼ÆËã»úÏµÍ³²Ù×÷ÏµÍ³µÄ´Ë×ÊÔ´µÄ×ÔÓÉ¸ñÊ½×Ö·û´®±êÊ¶·ûÊı×é¡£Ã¿¸öË÷ÒıµÄÖµÊÇ¸ù¾İÃ¿¸ö×ÊÔ´¶¨ÒåµÄ£¨¼´Õë¶ÔÃ¿¸öÃ¶¾ÙµÄ ResourceType Öµ£©¡£´ËÊôĞÔÉèÖÃÎª ¡°GUID¡±¡£ÕâÊÇÒ»¸öÖ»¶ÁÊôĞÔ£¬µ«¿ÉÒÔÊ¹ÓÃ ModifyVirtualSystemResources ·½·¨½øĞĞ¸ü¸Ä¡£,"A free-form string array of identifiers of this resource presented to the virtual computer system's operating system. The indexes and values per index are defined on a per resource basis (that is, for each enumerated ResourceType value). This property is set to ""GUID"". This is a read-only property, but it can be changed using the ModifyVirtualSystemResources method."
+Msvm_GpuPartitionSettingData,Weight,?,?,?,?,?,¡¾AI¡¿ÔÚ×ÊÔ´ÕùÓÃÆÚ¼ä£¬·ÖÅä¸ø´ËGPU·ÖÇøµÄÏà¶ÔÈ¨ÖØ¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,AvailableCompute,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ¿ÉÓÃ¼ÆËãÒıÇæÁ¿¡£,The available amount of compute engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,AvailableDecode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ¿ÉÓÃ½âÂëÒıÇæÁ¿¡£,The available amount of decode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,AvailableEncode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ¿ÉÓÃ±àÂëÒıÇæÁ¿¡£,The available amount of encode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,AvailableRequestedStates,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¿ÉÓÃÓÚ´Ë¿É·ÖÇøGPUµÄÇëÇó×´Ì¬×ª»»µÄ¿ÉÓÃ×´Ì¬Êı×é¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,AvailableVRAM,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ¿ÉÓÃÏÔ´æ (VRAM) Á¿¡£,The available amount of VRAM which will appear in the GPU partition.
+Msvm_PartitionableGpu,Caption,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUµÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,CommunicationStatus,?,?,?,?,?,¡¾AI¡¿±íÊ¾¹ÜÀí»ù´¡ÉèÊ©Óë¿É·ÖÇøGPUÖ®¼äµÄÍ¨ĞÅ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,CreationClassName,?,?,?,?,?,¡¾AI¡¿´´½¨´Ë¿É·ÖÇøGPUÊµÀıËùÓÃµÄÀàµÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,Dedicated,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¿É·ÖÇøGPUÊÇ·ñ×¨ÓÃÓÚÌØ¶¨Ä¿µÄ¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,Description,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,DetailedStatus,?,?,?,?,?,¡¾AI¡¿Ìá¹©ÓĞ¹Ø¿É·ÖÇøGPUµ±Ç°×´Ì¬µÄÏêÏ¸ĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,ElementName,?,?,?,?,?,¡¾AI¡¿´Ë¿É·ÖÇøGPUµÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,EnabledDefault,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUÔÚÊ×´ÎÆôÓÃÊ±µÄÄ¬ÈÏÆôÓÃ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,EnabledState,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUµÄµ±Ç°ÆôÓÃ/½ûÓÃ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,HealthState,?,?,?,?,?,¡¾AI¡¿±íÊ¾¿É·ÖÇøGPUµÄµ±Ç°½¡¿µ×´¿ö¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,IdentifyingDescriptions,?,?,?,?,?,¡¾AI¡¿Ìá¹©ÓĞ¹Ø¿É·ÖÇøGPUµÄÆäËûÊ¶±ğÃèÊöµÄÊı×é¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,InstallDate,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUµÄ°²×°ÈÕÆÚ¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´Ë¿É·ÖÇøGPUÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,MaxPartitionCompute,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î´ó¼ÆËãÒıÇæÁ¿¡£,The maximum amount of compute engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,MaxPartitionDecode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î´ó½âÂëÒıÇæÁ¿¡£,The maximum amount of decode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,MaxPartitionEncode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î´ó±àÂëÒıÇæÁ¿¡£,The maximum amount of encode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,MaxPartitionVRAM,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î´óÏÔ´æ (VRAM) Á¿¡£,The maximum amount of VRAM which will appear in the GPU partition.
+Msvm_PartitionableGpu,MinPartitionCompute,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×îĞ¡¼ÆËãÒıÇæÁ¿¡£,The minumum amount of compute engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,MinPartitionDecode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×îĞ¡½âÂëÒıÇæÁ¿¡£,The minimum amount of decode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,MinPartitionEncode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×îĞ¡±àÂëÒıÇæÁ¿¡£,The minumum amount of encode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,MinPartitionVRAM,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×îĞ¡ÏÔ´æ (VRAM) Á¿¡£,The minimum amount of VRAM which will appear in the GPU partition.
+Msvm_PartitionableGpu,Name,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUµÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,NameFormat,?,?,?,?,?,¡¾AI¡¿ÃèÊöNameÊôĞÔ¸ñÊ½µÄ×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,OperatingStatus,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUµÄµ±Ç°²Ù×÷×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,OperationalStatus,?,?,?,?,?,¡¾AI¡¿Ò»¸öÊı×é£¬Ìá¹©ÓĞ¹Ø¿É·ÖÇøGPU²Ù×÷×´Ì¬µÄÏêÏ¸ĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,OptimalPartitionCompute,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î¼Ñ¼ÆËãÒıÇæÁ¿¡£,The optimal amount of compute engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,OptimalPartitionDecode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î¼Ñ½âÂëÒıÇæÁ¿¡£,The optimal amount of decode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,OptimalPartitionEncode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î¼Ñ±àÂëÒıÇæÁ¿¡£,The optimal amount of encode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,OptimalPartitionVRAM,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×î¼ÑÏÔ´æ (VRAM) Á¿¡£,The optimal amount of VRAM which will appear in the GPU partition.
+Msvm_PartitionableGpu,OtherDedicatedDescriptions,?,?,?,?,?,¡¾AI¡¿µ±DedicatedÊôĞÔÎª¡°ÆäËû¡±Ê±£¬Ìá¹©×¨ÓÃÄ¿µÄµÄÏêÏ¸ÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,OtherEnabledState,?,?,?,?,?,¡¾AI¡¿µ±EnabledStateÊôĞÔÎª¡°ÆäËû¡±Ê±£¬Ìá¹©ÓĞ¹ØÆôÓÃ×´Ì¬µÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,OtherIdentifyingInfo,?,?,?,?,?,¡¾AI¡¿Ìá¹©ÓĞ¹Ø¿É·ÖÇøGPUµÄÆäËûÊ¶±ğĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,PartitionCount,?,?,?,?,?,ÎïÀí GPU ±»ÇĞ·Ö³ÉµÄ GPU ·ÖÇøÊıÁ¿¡£,The amount of GPU partitions the physical GPU is sliced into.
+Msvm_PartitionableGpu,PowerManagementCapabilities,?,?,?,?,?,¡¾AI¡¿ÃèÊö¿É·ÖÇøGPUµçÔ´¹ÜÀí¹¦ÄÜµÄÊı×é¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,PrimaryOwnerContact,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUÖ÷ÒªËùÓĞÕßµÄÁªÏµĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,PrimaryOwnerName,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUÖ÷ÒªËùÓĞÕßµÄĞÕÃû¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,PrimaryStatus,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUµÄÖ÷Òª×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,RequestedState,?,?,?,?,?,¡¾AI¡¿Îª¿É·ÖÇøGPUÇëÇóµÄÆÚÍû×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,ResetCapability,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¿É·ÖÇøGPUµÄÖØÖÃÄÜÁ¦¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,Roles,?,?,?,?,?,¡¾AI¡¿Ò»¸ö×Ö·û´®Êı×é£¬ÃèÊö´Ë¿É·ÖÇøGPU°çÑİµÄ½ÇÉ«¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,Status,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPUµÄµ±Ç°×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,StatusDescriptions,?,?,?,?,?,¡¾AI¡¿Ò»¸ö×Ö·û´®Êı×é£¬Ìá¹©ÓĞ¹ØOperationalStatusÊôĞÔÖĞÃ¿¸öÖµµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,SupportsIncomingLiveMigration,?,?,?,?,?,Ö¸Ê¾¿É·ÖÇø GPU ÊÇ·ñÖ§³Ö´Ó¼æÈİ GPU Ç¨Èë GPU ·ÖÇøµÄĞéÄâ»úÊµÊ±Ç¨ÒÆ¡£,Indicates if the partitionable GPU supports incoming VM live migration of GPU partition from a compatible GPU.
+Msvm_PartitionableGpu,TimeOfLastStateChange,?,?,?,?,?,¡¾AI¡¿¿É·ÖÇøGPU×îºóÒ»´Î×´Ì¬¸ü¸ÄµÄÊ±¼ä¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,TotalCompute,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×Ü¼ÆËãÒıÇæÁ¿¡£,The total amount of compute engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,TotalDecode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×Ü½âÂëÒıÇæÁ¿¡£,The total amount of decode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,TotalEncode,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×Ü±àÂëÒıÇæÁ¿¡£,The total amount of encode engines which will appear in the GPU partition.
+Msvm_PartitionableGpu,TotalVRAM,?,?,?,?,?,GPU ·ÖÇøÖĞÏÔÊ¾µÄ×ÜÏÔ´æ (VRAM) Á¿¡£,The total amount of VRAM which will appear in the GPU partition.
+Msvm_PartitionableGpu,TransitioningToState,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¿É·ÖÇøGPUµ±Ç°ÕıÔÚ×ª»»µ½µÄ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,ValidPartitionCounts,?,?,?,?,?,ÎïÀí GPU ¿ÉÒÔÇĞ·Ö³ÉµÄÓĞĞ§ GPU ·ÖÇøÑ¡ÏîÊı×é¡£,An array of valid GPU partition options the physical GPU can be sliced into.
+Msvm_PartitionableGpu,RequestStateChange,?,?,?,?,?,¡¾AI¡¿Ò»¸ö·½·¨£¬ÓÃÓÚÇëÇó¸ü¸Ä¿É·ÖÇøGPUµÄ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_PartitionableGpu,SetPowerState,?,?,?,?,?,¡¾AI¡¿Ò»¸ö·½·¨£¬ÓÃÓÚÉèÖÃ¿É·ÖÇøGPUµÄµçÔ´×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,AvailableRequestedStates,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾¿ÉÓÃÓÚ´ËĞéÄâÏµÍ³¹ÜÀí·şÎñµÄÇëÇó×´Ì¬×ª»»µÄ¿ÉÓÃ×´Ì¬Êı×é¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,Caption,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄ¼ò¶ÌÃèÊöĞÔ±êÌâ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,CommunicationStatus,?,?,?,?,?,¡¾AI¡¿±íÊ¾¹ÜÀí»ù´¡ÉèÊ©ÓëĞéÄâÏµÍ³¹ÜÀí·şÎñÖ®¼äµÄÍ¨ĞÅ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,CreationClassName,?,?,?,?,?,¡¾AI¡¿´´½¨´ËĞéÄâÏµÍ³¹ÜÀí·şÎñÊµÀıËùÓÃµÄÀàµÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,Description,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,DetailedStatus,?,?,?,?,?,¡¾AI¡¿Ìá¹©ÓĞ¹ØĞéÄâÏµÍ³¹ÜÀí·şÎñµ±Ç°×´Ì¬µÄÏêÏ¸ĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,ElementName,?,?,?,?,?,¡¾AI¡¿´ËĞéÄâÏµÍ³¹ÜÀí·şÎñµÄÓÃ»§ÓÑºÃÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,EnabledDefault,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñÔÚÊ×´ÎÆôÓÃÊ±µÄÄ¬ÈÏÆôÓÃ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,EnabledState,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄµ±Ç°ÆôÓÃ/½ûÓÃ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,HealthState,?,?,?,?,?,¡¾AI¡¿±íÊ¾ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄµ±Ç°½¡¿µ×´¿ö¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,InstallDate,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄ°²×°ÈÕÆÚ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,InstanceID,?,?,?,?,?,¡¾AI¡¿ÔÚ¹ÜÀíÓòÖĞÎ¨Ò»±êÊ¶´ËĞéÄâÏµÍ³¹ÜÀí·şÎñÊµÀıµÄID¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,Name,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,OperatingStatus,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄµ±Ç°²Ù×÷×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,OperationalStatus,?,?,?,?,?,¡¾AI¡¿Ò»¸öÊı×é£¬Ìá¹©ÓĞ¹ØĞéÄâÏµÍ³¹ÜÀí·şÎñ²Ù×÷×´Ì¬µÄÏêÏ¸ĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,OtherEnabledState,?,?,?,?,?,¡¾AI¡¿µ±EnabledStateÊôĞÔÎª¡°ÆäËû¡±Ê±£¬Ìá¹©ÓĞ¹ØÆôÓÃ×´Ì¬µÄ×ÔÓÉ¸ñÊ½×Ö·û´®¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,PrimaryOwnerContact,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñÖ÷ÒªËùÓĞÕßµÄÁªÏµĞÅÏ¢¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,PrimaryOwnerName,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñÖ÷ÒªËùÓĞÕßµÄĞÕÃû¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,PrimaryStatus,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄÖ÷Òª×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,RequestedState,?,?,?,?,?,¡¾AI¡¿ÎªĞéÄâÏµÍ³¹ÜÀí·şÎñÇëÇóµÄÆÚÍû×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,Started,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâÏµÍ³¹ÜÀí·şÎñÊÇ·ñÒÑÆô¶¯¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,StartMode,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄÆô¶¯Ä£Ê½£¨ÀıÈç£¬×Ô¶¯¡¢ÊÖ¶¯£©¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,Status,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñµÄµ±Ç°×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,StatusDescriptions,?,?,?,?,?,¡¾AI¡¿Ò»¸ö×Ö·û´®Êı×é£¬Ìá¹©ÓĞ¹ØOperationalStatusÊôĞÔÖĞÃ¿¸öÖµµÄÃèÊö¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,SystemCreationClassName,?,?,?,?,?,¡¾AI¡¿´Ë·şÎñËùÊôÏµÍ³µÄCreationClassName¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,SystemName,?,?,?,?,?,¡¾AI¡¿´Ë·şÎñËùÊôÏµÍ³µÄÃû³Æ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,TimeOfLastStateChange,?,?,?,?,?,¡¾AI¡¿ĞéÄâÏµÍ³¹ÜÀí·şÎñ×îºóÒ»´Î×´Ì¬¸ü¸ÄµÄÊ±¼ä¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,TransitioningToState,?,?,?,?,?,¡¾AI¡¿Ö¸Ê¾ĞéÄâÏµÍ³¹ÜÀí·şÎñµ±Ç°ÕıÔÚ×ª»»µ½µÄ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,RequestStateChange,?,?,?,?,?,¡¾AI¡¿Ò»¸ö·½·¨£¬ÓÃÓÚÇëÇó¸ü¸ÄĞéÄâÏµÍ³¹ÜÀí·şÎñµÄ×´Ì¬¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,StartService,?,?,?,?,?,¡¾AI¡¿Ò»¸ö·½·¨£¬ÓÃÓÚÆô¶¯ĞéÄâÏµÍ³¹ÜÀí·şÎñ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,StopService,?,?,?,?,?,¡¾AI¡¿Ò»¸ö·½·¨£¬ÓÃÓÚÍ£Ö¹ĞéÄâÏµÍ³¹ÜÀí·şÎñ¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,AddResourceSettings,?,?,?,?,?,ÏòĞéÄâÏµÍ³ÅäÖÃÌí¼Ó×ÊÔ´¡£µ±Ó¦ÓÃÓÚ¡°×´Ì¬¡±ĞéÄâÏµÍ³ÅäÖÃÊ±£¬×÷Îª¸±×÷ÓÃ£¬×ÊÔ´½«Ìí¼Óµ½»î¶¯ĞéÄâÏµÍ³¡£,"Adds resources to a virtual system configuration .When applied to a ""state"" virtual system configuration, as a side effect resources are added to the active virtual system."
+Msvm_VirtualSystemManagementService,DefineSystem,?,?,?,?,?,¶¨ÒåĞéÄâÏµÍ³¡£Î´ÍêÈ«Ö¸¶¨µÄÊäÈë¿ÉÒÔÓÃÄ¬ÈÏÖµÌî³ä¡£,Defines a virtual system. Input that is not completely specified may be filled out with default values.
+Msvm_VirtualSystemManagementService,DestroySystem,?,?,?,?,?,Ïú»ÙĞéÄâÏµÍ³¡£ÒıÓÃµÄĞéÄâÏµÍ³¼°Æä·¶Î§ÄÚµÄÈÎºÎÔªËØ¶¼½«±»Ïú»Ù¡£ĞéÄâ×ÊÔ´½«·µ»Øµ½Æä×ÊÔ´³Ø£¬Õâ¿ÉÄÜÒâÎ¶×ÅÏú»ÙÕâĞ©×ÊÔ´£¨È¡¾öÓÚÊµÏÖ£©¡£Èç¹ûµ÷ÓÃ²Ù×÷Ê±ĞéÄâÏµÍ³´¦ÓÚ»î¶¯×´Ì¬£¬ÔòÊ×ÏÈ½«ÆäÍ£ÓÃ£¬È»ºóÏú»Ù¡£Èç¹ûÊÇ´ÓĞéÄâÏµÍ³´´½¨µÄ¿ìÕÕ£¬ÕâĞ©¿ìÕÕÒ²½«±»Ïú»Ù¡£,"Destroys a virtual system. The referenced virtual system is destroyed, including any elements scoped by it. Virtual resources are returned to their resource pools, which may imply the destruction of those resources (implementation dependent). If the virtual system is active when the operation is invoked, it is first deactivated and then destroyed. If snapshots were created from the virtual system, these are destroyed as well."
+Msvm_VirtualSystemManagementService,ModifyResourceSettings,?,?,?,?,?,ĞŞ¸ÄĞéÄâ×ÊÔ´ÉèÖÃ¡£µ±Ó¦ÓÃÓÚ¡°µ±Ç°¡±ĞéÄâÏµÍ³ÅäÖÃµÄ²¿·ÖÊ±£¬×÷Îª¸±×÷ÓÃ£¬¿ÉÄÜ»áĞŞ¸Ä»î¶¯ĞéÄâÏµÍ³µÄ×ÊÔ´¡£,"Modifies virtual resource settings. When applied to parts of a ""current"" virtual system configuration, as a side effect resources of the active virtual system may be modified."
+Msvm_VirtualSystemManagementService,ModifySystemSettings,?,?,?,?,?,ĞŞ¸ÄĞéÄâÏµÍ³ÉèÖÃ¡£µ±Ó¦ÓÃÓÚ¡°µ±Ç°¡±ĞéÄâÏµÍ³ÅäÖÃµÄÏµÍ³ÉèÖÃÊ±£¬×÷Îª¸±×÷ÓÃ£¬¿ÉÄÜ»áĞŞ¸ÄĞéÄâÏµÍ³ÊµÀı¡£,"Modifies virtual system settings. When applied to the system settings of a ""current"" virtual system configuration, as a side effect the virtual system instance may be modified."
+Msvm_VirtualSystemManagementService,RemoveResourceSettings,?,?,?,?,?,´ÓĞéÄâÏµÍ³ÅäÖÃÖĞÒÆ³ıĞéÄâ×ÊÔ´ÉèÖÃ¡£µ±Ó¦ÓÃÓÚ¡°µ±Ç°¡±ĞéÄâÏµÍ³ÅäÖÃµÄ²¿·ÖÊ±£¬×÷Îª¸±×÷ÓÃ£¬¿ÉÄÜ»áÒÆ³ı»î¶¯ĞéÄâÏµÍ³µÄ×ÊÔ´¡£,"Removes virtual resource settings from a virtual system configuration. When applied to parts of a ""current"" virtual system configuration, as a side effect resources of the active virtual system may be removed."
+Msvm_VirtualSystemManagementService,DefinePlannedSystem,?,?,?,?,?,¶¨Òå¼Æ»®µÄĞéÄâÏµÍ³¡£Î´ÍêÈ«Ö¸¶¨µÄÊäÈë¿ÉÒÔÓÃÄ¬ÈÏÖµÌî³ä¡£,Defines a planned virtual system. Input that is not completely specified may be filled out with default values.
+Msvm_VirtualSystemManagementService,ValidatePlannedSystem,?,?,?,?,?,¡¾AI¡¿ÑéÖ¤¼Æ»®ÖĞµÄĞéÄâÏµÍ³µÄÅäÖÃÊÇ·ñÓĞĞ§¡£,[ÎŞÃèÊö]
+Msvm_VirtualSystemManagementService,UpgradeSystemVersion,?,?,?,?,?,Éı¼¶ĞéÄâÏµÍ³¡£µ±Ó¦ÓÃÓÚ¡°µ±Ç°¡±ĞéÄâÏµÍ³ÅäÖÃµÄÏµÍ³ÉèÖÃÊ±¡£,"Upgrades the virtual system. When applied to the system settings of a ""current"" virtual system configuration"
+Msvm_VirtualSystemManagementService,ImportSystemDefinition,?,?,?,?,?,»ùÓÚÖ¸¶¨µÄĞéÄâÏµÍ³¶¨Òå´´½¨ĞÂµÄ¼Æ»®¼ÆËã»úÏµÍ³¡£Ö¸¶¨µÄ¶¨ÒåÎÄ¼ş²»µÃÒÑ±»ËŞÖ÷ÏµÍ³»òĞéÄâ»¯Æ½Ì¨Ê¹ÓÃ¡£½«ÔÚ SnapshotFolder ÎÄ¼ş¼ĞÖĞËÑË÷ÒÔ¶¨Î»ĞéÄâÏµÍ³¶¨ÒåÒıÓÃµÄÈÎºÎ¿ìÕÕ¡£±ØĞëÔÚÊµÏÖ¼Æ»®¼ÆËã»úÏµÍ³Ö®Ç°£¬Ê¹ÓÃ RemoveVirtualSystemSnapshot ·½·¨É¾³ı´ËÎ»ÖÃÎ´ÕÒµ½µÄÈÎºÎÒıÓÃ¿ìÕÕ£¬»òÊ¹ÓÃ ImportSnapshotDefinitions ·½·¨µ¼ÈëÕâĞ©¿ìÕÕ¡£,"Creates a new planned computer system based on the specified virtual system definition.  The specified definition files must not already be in use by the host system or the virtualization platform.  The SnapshotFolder folder will be searched in order to locate any snapshots referenced by the virtual system definition.  Any referenced snapshots not found in this location must be deleted using the RemoveVirtualSystemSnapshot method, or imported using the ImportSnapshotDefinitions method prior to realizing the planned computer system."
+Msvm_VirtualSystemManagementService,ImportSnapshotDefinitions,?,?,?,?,?,ÔÚ SnapshotFolder ÎÄ¼ş¼ĞÖĞËÑË÷ÓëÖ¸¶¨¼Æ»®¼ÆËã»úÏµÍ³¹ØÁªµÄÈÎºÎ¿ìÕÕ¶¨ÒåÎÄ¼ş¡£½«Îª´ËÎ»ÖÃµÄÃ¿¸ö¹ØÁª¶¨ÒåÎÄ¼şÔÚ¼Æ»®¼ÆËã»úÏµÍ³ÉÏ´´½¨Ò»¸öĞÂ¿ìÕÕ¡£,Searches the SnapshotFolder folder for any snapshot definition files associated with the specified planned computer system.  A new snapshot is created on the planned computer system for every associated definition file in this location.
+Msvm_VirtualSystemManagementService,RealizePlannedSystem,?,?,?,?,?,ÑéÖ¤¼Æ»®ĞéÄâÏµÍ³µÄÅäÖÃ²¢½«Æä×ª»»ÎªÒÑÊµÏÖµÄĞéÄâÏµÍ³¡£Èç¹ûÊÊÓÃ£¬ÓëĞéÄâÏµÍ³¹ØÁªµÄÈÎºÎÔËĞĞÊ±»ò±£´æ×´Ì¬ÎÄ¼ş½«´Óµ¼ÈëÄ¿Â¼¸´ÖÆµ½ĞéÄâÏµÍ³µÄÊı¾İ¸ùÄ¿Â¼¡£,"Validates the configuration of a planned virtual system and converts it to a realized virtual system.  Any runtime or saved state files associated with the virtual system will be copied from the import directory to the virtual system's data root, if applicable."
+Msvm_VirtualSystemManagementService,ExportSystemDefinition,?,?,?,?,?,½«´¦ÓÚ¡°¹Ø»ú¡±»ò¡°ÒÑ±£´æ¡±×´Ì¬µÄĞéÄâ¼ÆËã»úÏµÍ³£¨»òĞéÄâ¼ÆËã»úÏµÍ³µÄ¿ìÕÕ£©µ¼³öµ½ÎÄ¼ş¡£ĞéÄâ¼ÆËã»úÏµÍ³¡¢Æä¹ØÁªµÄÅäÖÃÉèÖÃ¼°Æä¹ØÁªµÄ×ÊÔ´ÉèÖÃ½«±£ÁôÔÚ½á¹ûÎÄ¼şÖĞ¡£·µ»ØÖµ£ºÈç¹û´Ë·½·¨Í¬²½Ö´ĞĞ£¬Ôò³É¹¦·µ»Ø 0¡£Èç¹û´Ë·½·¨Òì²½Ö´ĞĞ£¬Ôò·µ»Ø 4096£¬¿ÉÒÔÊ¹ÓÃ Job Êä³ö²ÎÊı¸ú×ÙÒì²½²Ù×÷µÄ½ø¶È¡£ÈÎºÎÆäËû·µ»ØÖµ±íÊ¾´íÎó¡£,"Exports a virtual computer system, or a snapshot of a virtual computer system, in the ""powered off"" or ""saved"" state to a file. The virtual computer system, its associated configuration settings, and its associated resource settings will be preserved in the resulting file. Return value: If this method is executed synchronously, it returns 0 if it succeeds. If this method is executed asynchronously, it returns 4096 and the Job output parameter can be used to track the progress of the asynchronous operation. Any other return value indicates an error."
+Msvm_VirtualSystemManagementService,AddFeatureSettings,?,?,?,?,?,ÏòĞéÄâ»úÒÔÌ«ÍøÁ¬½ÓµÄÅäÖÃÌí¼ÓÒÔÌ«Íø¹¦ÄÜÉèÖÃ¡£,Adds Ethernet feature settings to the configuration of avirtual machine Ethernet connection.
+Msvm_VirtualSystemManagementService,ModifyFeatureSettings,?,?,?,?,?,ĞŞ¸ÄĞéÄâ»úÒÔÌ«ÍøÁ¬½ÓµÄµ±Ç°¹¦ÄÜÉèÖÃ¡£,Modifies the current feature settings of a virtual machine Ethernet connection.
+Msvm_VirtualSystemManagementService,RemoveFeatureSettings,?,?,?,?,?,´ÓĞéÄâ»úÒÔÌ«ÍøÁ¬½ÓÖĞÒÆ³ı¹¦ÄÜÉèÖÃ¡£,Removes feature settings from a virtual machine Ethernet connection.
+Msvm_VirtualSystemManagementService,AddBootSourceSettings,?,?,?,?,?,µ±Ó¦ÓÃÓÚ¡°×´Ì¬¡±ĞéÄâÏµÍ³ÅäÖÃÊ±£¬ÏòĞéÄâÏµÍ³ÅäÖÃÌí¼ÓÒıµ¼Ô´¡£,"Adds boot sources to a virtual system configuration when applied to a ""state"" virtual system configuration."
+Msvm_VirtualSystemManagementService,AddGuestServiceSettings,?,?,?,?,?,ÏòĞéÄâÏµÍ³ÅäÖÃÌí¼Ó¿ÍÌå·şÎñÉèÖÃ¡£µ±Ó¦ÓÃÓÚ¡°µ±Ç°¡±ĞéÄâÏµÍ³ÅäÖÃµÄ²¿·ÖÊ±£¬×÷Îª¸±×÷ÓÃ£¬¿ÉÄÜ»áĞŞ¸Ä»î¶¯ĞéÄâÏµÍ³µÄ¿ÍÌå·şÎñ¡£,"Adds guest service settings to a virtual system configuration. When applied to parts of a ""current"" virtual system configuration, as a side effect guest services of the active virtual system may be modified."
+Msvm_VirtualSystemManagementService,ModifyGuestServiceSettings,?,?,?,?,?,ĞŞ¸Ä¿ÍÌå·şÎñÉèÖÃ¡£µ±Ó¦ÓÃÓÚ¡°µ±Ç°¡±ĞéÄâÏµÍ³ÅäÖÃµÄ²¿·ÖÊ±£¬×÷Îª¸±×÷ÓÃ£¬¿ÉÄÜ»áĞŞ¸Ä»î¶¯ĞéÄâÏµÍ³µÄ¿ÍÌå·şÎñ¡£,"Modifies guest service settings. When applied to parts of a ""current"" virtual system configuration, as a side effect guest services of the active virtual system may be modified."
+Msvm_VirtualSystemManagementService,RemoveBootSourceSettings,?,?,?,?,?,´ÓĞéÄâÏµÍ³ÅäÖÃÖĞÒÆ³ıÒıµ¼Ô´ÉèÖÃ¡£µ±Ó¦ÓÃÓÚ¡°µ±Ç°¡±ĞéÄâÏµÍ³ÅäÖÃµÄ²¿·ÖÊ±£¬×÷Îª¸±×÷ÓÃ£¬¿ÉÄÜ»áÒÆ³ı»î¶¯ĞéÄâÏµÍ³µÄ×ÊÔ´¡£,"Removes virtual resource settings from a virtual system configuration. When applied to parts of a ""current"" virtual system configuration, as a side effect resources of the active virtual system may be removed."
+Msvm_VirtualSystemManagementService,RemoveGuestServiceSettings,?,?,?,?,?,´ÓĞéÄâÏµÍ³ÅäÖÃÖĞÒÆ³ı¿ÍÌå·şÎñÉèÖÃ¡£µ±Ó¦ÓÃÓÚ¡°µ±Ç°¡±ĞéÄâÏµÍ³ÅäÖÃµÄ²¿·ÖÊ±£¬×÷Îª¸±×÷ÓÃ£¬¿ÉÄÜ»áĞŞ¸Ä»î¶¯ĞéÄâÏµÍ³µÄ¿ÍÌå·şÎñ¡£,"Removes guest service settings from a virtual system configuration. When applied to parts of a ""current"" virtual system configuration, as a side effect guest services of the active virtual system may be modified."
+Msvm_VirtualSystemManagementService,GetVirtualSystemThumbnailImage,?,?,?,?,?,¼ìË÷ÏÖÓĞĞéÄâÏµÍ³µÄËõÂÔÍ¼Í¼Ïñ¡£·µ»ØÖµ£º´Ë·½·¨·µ»ØÔ­Ê¼ RGB 565 ¸ñÊ½µÄÖµ¡£,Retrieves the thumbnail image of an existing virtual system. Return value: This method returns values in raw RGB 565 format.
+Msvm_VirtualSystemManagementService,ModifyServiceSettings,?,?,?,?,?,ĞŞ¸Ä·şÎñµÄÉèÖÃÊı¾İ¡£,Modifies the setting data for the service.
+Msvm_VirtualSystemManagementService,GetSummaryInformation,?,?,?,?,?,·µ»ØĞéÄâÏµÍ³ÕªÒªĞÅÏ¢¡£,Returns virtual system summary information.
+Msvm_VirtualSystemManagementService,GetDefinitionFileSummaryInformation,?,?,?,?,?,·µ»ØÖ¸¶¨ĞéÄâ»ú¶¨ÒåÎÄ¼şµÄĞéÄâÏµÍ³ÕªÒªĞÅÏ¢¡£,Returns virtual system summary information for the specified virtual machine definition files.
+Msvm_VirtualSystemManagementService,AddKvpItems,?,?,?,?,?,ÏòĞéÄâÏµÍ³Ìí¼Ó¼üÖµ¶Ô¡£,Adds key-value pairs to a virtual system.
+Msvm_VirtualSystemManagementService,ModifyKvpItems,?,?,?,?,?,ĞŞ¸ÄĞéÄâÏµÍ³ÉÏµÄÏÖÓĞ¼üÖµ¶Ô¡£,Modifies existing key-value pairs on a virtual system.
+Msvm_VirtualSystemManagementService,RemoveKvpItems,?,?,?,?,?,´ÓĞéÄâÏµÍ³ÖĞÒÆ³ıÏÖÓĞ¼üÖµ¶Ô¡£,Removes existing key-value pairs from a virtual system.
+Msvm_VirtualSystemManagementService,FormatError,?,?,?,?,?,·µ»ØÖ¸¶¨Ç¶ÈëÊ½ Msvm_Error ÊµÀıÊı×éµÄ¸ñÊ½»¯´íÎóÏûÏ¢×Ö·û´®¡£,Returns the formatted error message string for the specified array of embedded Msvm_Error instances.
+Msvm_VirtualSystemManagementService,ModifyDiskMergeSettings,?,?,?,?,?,ĞŞ¸Ä´ÅÅÌºÏ²¢ÉèÖÃÊı¾İ¡£,Modifies the disk merge setting data.
+Msvm_VirtualSystemManagementService,GenerateWwpn,?,?,?,?,?,´Ë API ÔÚÓÉ Msvm_VirtualSystemManagementSettingData ÀàµÄ MinimumWwpnAddress ºÍ MaximumWwpnAddress ÊôĞÔ¶¨ÒåµÄÔ¤ÅäÖÃ·¶Î§ÄÚÉú³ÉÇëÇóÊıÁ¿µÄ WorldWidePortNames¡£Ã¿´Îµ÷ÓÃÇëÇóµÄ NumberOfWwpns ²»µÃĞ¡ÓÚ 1 »ò´óÓÚ 1024¡£Èç¹û¿ÉÒÔÉú³ÉµÄÓĞĞ§ WWPN ÊıÁ¿Ğ¡ÓÚÇëÇóµÄÊıÁ¿£¬Ôò GeneratedWwpn Êı×éÖĞµÄÊ£ÓàÌõÄ¿½«¾ßÓĞÎŞĞ§ÌõÄ¿¡°0000000000000000¡±£¬²¢ÇÒ·µ»ØÖµ½«Ö¸Ê¾³É¹¦ (0)¡£,"This API generates a requested number of WorldWidePortNames from within a preconfigured range defined by MinimumWwpnAddress and MaximumWwpnAddress properties of class Msvm_VirtualSystemManagementSettingData. The NumberOfWwpns requested per call must not be less than 1 or more than 1024. If the valid number of WWPNs that can be generated is less than the requested number, then the remaining entries in the GeneratedWwpn array will have the invalid entry of ""0000000000000000"" and the return value will indicate success (0)."
+Msvm_VirtualSystemManagementService,AddFibreChannelChap,?,?,?,?,?,´Ë API Ïò VM ÖĞµÄºÏ³É¹âÏËÍ¨µÀ¶Ë¿ÚÌí¼Ó DH-CHAP ²ÎÊı¡£Èç¹û VM ÕıÔÚÔËĞĞ£¬´Ë²Ù×÷½«Ê§°Ü¡£,This API adds DH-CHAP parameters to a synthetic fibre channel port in a VM. This will fail if the VM is running.
+Msvm_VirtualSystemManagementService,RemoveFibreChannelChap,?,?,?,?,?,´Ë API ´Ó VM ÖĞµÄºÏ³É¹âÏËÍ¨µÀ¶Ë¿ÚÒÆ³ı DH-CHAP ²ÎÊı¡£Èç¹û VM ÕıÔÚÔËĞĞ£¬´Ë²Ù×÷½«Ê§°Ü¡£,This API removes DH-CHAP parameters to a synthetic fibre channel port in a VM. This will fail if the VM is running.
+Msvm_VirtualSystemManagementService,SetGuestNetworkAdapterConfiguration,?,?,?,?,?,ÅäÖÃ¿ÍÌå²Ù×÷ÏµÍ³ÄÚµÄÍøÂçÊÊÅäÆ÷¡£ÕâĞ©ÅäÖÃ²ÎÊıÔÚÓë¿ÍÌå²Ù×÷ÏµÍ³ÄÚÔËĞĞµÄ KVP ½»»»¼¯³É×é¼ş½¨Á¢Í¨ĞÅºóÁ¢¼´Ó¦ÓÃ¡£,Configures the network adapters within the guest operating system. These configuration parameters are applied immediately upon establishing communication with the KVP Exchange integration component running within the guest operating system.
+Msvm_VirtualSystemManagementService,GetSizeOfSystemFiles,?,?,?,?,?,¼ìË÷ÏµÍ³ÎÄ¼şµÄ×Ü´óĞ¡¡£ÕâĞ©ÎÄ¼ş°üÀ¨ÅäÖÃºÍ±£´æµÄ×´Ì¬ÎÄ¼ş¡£,Retrieves the total size of the system files. These include the configuration and saved state files.
+Msvm_VirtualSystemManagementService,GetCurrentWwpnFromGenerator,?,?,?,?,?,´Ë API Ìá¹©²é¿´ÓÉ Msvm_VirtualSystemManagementSettingData ÀàµÄ MinimumWwpnAddress ºÍ MaximumWwpnAddress ÊôĞÔ¶¨ÒåµÄÔ¤ÅäÖÃ·¶Î§ÄÚµÄµ±Ç° WorldWidePortName µÄ¹¦ÄÜ¡£Èç¹ûÕâĞ©ÊôĞÔ¶¨ÒåµÄ·¶Î§ÒÑºÄ¾¡£¬Ôò CurrentWwpn Êä³ö²ÎÊı½«¾ßÓĞÎŞĞ§ÌõÄ¿¡°0000000000000000¡±£¬²¢ÇÒ·µ»ØÖµ½«Ö¸Ê¾³É¹¦ (0)¡£,"This API provides the ability to see the current WorldWidePortName from within a preconfigured range defined by MinimumWwpnAddress and MaximumWwpnAddress properties of class Msvm_VirtualSystemManagementSettingData. If the range as defined by these properties is exhausted, then the CurrentWwpn out parameter will have the invalid entry of ""0000000000000000"" and the return value will indicate success (0)."
+Msvm_VirtualSystemManagementService,TestNetworkConnection,?,?,?,?,?,²âÊÔ Windows ÍøÂçĞéÄâ»¯»·¾³ÖĞ VM µÄÍøÂçÁ¬½ÓĞÔ¡£,Tests the network connectivity of a VM in a Windows Network Virtualization Environment.
+Msvm_VirtualSystemManagementService,DiagnoseNetworkConnection,?,?,?,?,?,Õï¶Ï Windows ÍøÂçĞéÄâ»¯»·¾³ÖĞ VM µÄÍøÂçÁ¬½ÓĞÔ¡£,Diagnoses the network connectivity of a VM in a Windows Network Virtualization Environment.
+Msvm_VirtualSystemManagementService,SetInitialMachineConfigurationData,?,?,?,?,?,ÉèÖÃ VM µÄ³õÊ¼¼ÆËã»úÅäÖÃÊı¾İ¡£,Sets a VM's initial machine configuration data.
+Msvm_VirtualSystemManagementService,AddSystemComponentSettings,?,?,?,?,?,ÏòĞéÄâÏµÍ³ÅäÖÃÌí¼ÓÍ¨ÓÃÉèÖÃ¡£,Adds generic settings to a virtual system configuration.
+Msvm_VirtualSystemManagementService,ModifySystemComponentSettings,?,?,?,?,?,ĞŞ¸ÄÍ¨ÓÃÏµÍ³×é¼şÉèÖÃ¡£,Modifies generic system component settings.
+Msvm_VirtualSystemManagementService,RemoveSystemComponentSettings,?,?,?,?,?,´ÓĞéÄâÏµÍ³ÅäÖÃÖĞÒÆ³ıÍ¨ÓÃ×é¼şÉèÖÃ¡£,Removes generic component settings from a virtual system configuration.
