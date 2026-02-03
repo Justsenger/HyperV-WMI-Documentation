@@ -75,20 +75,18 @@ def analyze_wmi_diff():
     # 7. 合并最终结果
     result = metadata.merge(pivot, on=['Class', 'Member'], how='left')
 
-    # 8. 整理列顺序 (扔掉 Category 和 Access)
+    # 8. 整理列顺序 (移除 Category 和 Access)
     base_cols = ['Class', 'Member', 'Type']
     final_cols = base_cols + sorted_versions + ['Desc', 'Desc_EN']
-    # 过滤掉不存在的列并应用新顺序
     result = result[[c for c in final_cols if c in result.columns]]
 
     # 9. 导出 Master XLSX
-    print(f"导出 Excel 报告: {output_xlsx}")
     try:
         with pd.ExcelWriter(output_xlsx, engine='openpyxl') as writer:
             result.to_excel(writer, index=False, sheet_name='WMI对比差异')
             ws = writer.sheets['WMI对比差异']
             ws.auto_filter.ref = ws.dimensions
-            ws.freeze_panes = "C2" # 冻结 Class 和 Member
+            ws.freeze_panes = "C2"
             for i, col in enumerate(result.columns):
                 col_letter = ws.cell(row=1, column=i+1).column_letter
                 ws.column_dimensions[col_letter].width = 100 if 'Desc' in col else 20
@@ -96,14 +94,14 @@ def analyze_wmi_diff():
         print(f"Excel 导出失败: {e}")
 
     # 10. 导出 Master CSV
-    print(f"导出 CSV 报告: {output_csv}")
     result.to_csv(output_csv, index=False, encoding='utf-8-sig')
 
-    # 11. 拆分生成详细文档
+    # 11. 拆分生成详细文档 (Markdown)
     print(f"生成类详细文档 (docs/)...")
     if not os.path.exists(docs_dir):
         os.makedirs(docs_dir)
 
+    # 清理旧文档
     for f in glob.glob(os.path.join(docs_dir, "*.md")):
         os.remove(f)
 
@@ -121,52 +119,41 @@ def analyze_wmi_diff():
 
         with open(md_path, 'w', encoding='utf-8') as f:
             f.write(f"# {class_name}\n\n")
-            f.write(f"[⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../{output_csv})\n\n")
+            f.write(f"[⬅️ 返回索引](../README.md)\n\n")
             f.write(sub_group.to_markdown(index=False))
 
-    # 12. 最终生成 README.md
-    print("更新主页索引 README.md...")
+    # 12. 最终生成 README.md (纯干货版)
+    print("生成 README.md...")
     index_links_str = "\n".join(sorted(index_list))
     
-    readme_content = f"""# Windows WMI 版本对照报告 (WMI Version Comparison Report)
+    # 虚拟机配置版本映射表
+    ver_map = {
+        "26100": "8.0, 8.1, 8.2, 8.3, 9.0, 9.1, 9.2, 9.3, 10.0, 11.0, 12.0",
+        "22621": "8.0, 8.1, 8.2, 8.3, 9.0, 9.1, 9.2, 9.3, 10.0, 11.0",
+        "20348": "8.0, 8.1, 8.2, 8.3, 9.0, 9.1, 9.2, 9.3, 10.0",
+        "19045": "8.0, 8.1, 8.2, 8.3, 9.0, 9.1, 9.2",
+        "17763": "5.0, 6.2, 7.0, 7.1, 8.0, 8.1, 8.2, 8.3, 9.0",
+        "14393": "5.0, 6.2, 7.0, 7.1, 8.0"
+    }
+
+    readme_content = f"""# Windows WMI 版本对照报告
 
 本仓库包含一份详细的 WMI (Windows Management Instrumentation) 类、属性及方法的版本兼容性对照表。主要涵盖了从 Windows 10 早期版本到最新的 Windows 11 及 Server 2025 的变化情况。
 
-## 📊 完整数据表
-*   👉 **[下载 Excel 版 (推荐搜索与筛选)]({output_xlsx})**
-*   👉 **[查看 Master CSV 原文件]({output_csv})**
-
----
-
 ## 📅 报告涵盖的 Windows 版本说明
 
-| 版本号 (Build) | 对应 Windows 发行版本 |
-| :--- | :--- |
-| **14393** | Windows 10 v1607 (Anniversary Update) / Server 2016 |
-| **17763** | Windows Server 2019 / Windows 10 LTSC 2019 |
-| **19045** | Windows 10 v22H2 / Enterprise LTSC 2021 |
-| **20348** | Windows Server 2022 |
-| **22621** | Windows 11 v22H2 / 23H2 |
-| **26100** | Windows 11 v24H2 / Server 2025 |
-
----
-
-## 💻 Hyper-V 主机与虚拟机配置版本兼容性
-
-| Hyper-V 主机 Windows 版本 | 12.0 | 11.0 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Windows Server 2025** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Windows 11, 24H2** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Windows 11, 22H2 / 23H2** | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Windows Server 2022** | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Windows 10 LTSC 2021** | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Windows Server 2019 / Win 10 LTSC 2019** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Windows Server 2016 / Win 10 LTSB 2016** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 版本号 (Build) | 对应 Windows 发行版本 | 支持的虚拟机配置版本 |
+| :--- | :--- | :--- |
+| **26100** | Windows 11 v24H2 / Server 2025 | {ver_map.get('26100')} |
+| **22621** | Windows 11 v22H2 / 23H2 | {ver_map.get('22621')} |
+| **20348** | Windows Server 2022 | {ver_map.get('20348')} |
+| **19045** | Windows 10 v22H2 / Enterprise LTSC 2021 | {ver_map.get('19045')} |
+| **17763** | Windows Server 2019 / Windows 10 LTSC 2019 | {ver_map.get('17763')} |
+| **14393** | Windows 10 v1607 (Anniversary Update) / Server 2016 | {ver_map.get('14393')} |
 
 ---
 
 ## 📂 WMI 类索引 ({total_classes} 个)
-直接点击下方类名查看详细成员属性与版本支持情况：
 
 {index_links_str}
 
