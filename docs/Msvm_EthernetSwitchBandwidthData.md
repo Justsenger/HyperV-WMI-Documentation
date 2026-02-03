@@ -1,0 +1,24 @@
+# WMI Class: Msvm_EthernetSwitchBandwidthData
+
+[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+
+## 成员列表与兼容性报告
+
+| Member                           | Type   | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                        | Desc_EN                                                                     |
+|:---------------------------------|:-------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:----------------------------------------------------------------------------|:----------------------------------------------------------------------------|
+| Capacity                         | UInt64 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The maximum bandwidth available on the switch                               | The maximum bandwidth available on the switch                               |
+| Caption                          | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                       | [无描述]                                                                       |
+| CreationClassName                | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                       | [无描述]                                                                       |
+| DefaultFlowReservation           | UInt64 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The current absolute bandwidth reserved on the switch for default flow      | The current absolute bandwidth reserved on the switch for default flow      |
+| DefaultFlowReservationPercentage | UInt32 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The current percentage of bandwidth reserved on the switch for default flow | The current percentage of bandwidth reserved on the switch for default flow |
+| DefaultFlowWeight                | UInt64 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The current weight for the default flow on the switch                       | The current weight for the default flow on the switch                       |
+| Description                      | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                       | [无描述]                                                                       |
+| ElementName                      | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                       | [无描述]                                                                       |
+| InstanceID                       | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                       | [无描述]                                                                       |
+| Name                             | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                       | [无描述]                                                                       |
+| Reservation                      | UInt64 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The current bandwidth reserved on the switch                                | The current bandwidth reserved on the switch                                |
+| SystemCreationClassName          | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                       | [无描述]                                                                       |
+| SystemName                       | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                       | [无描述]                                                                       |
+
+---
+*数据自动生成于: 2026-02-03*

@@ -1,0 +1,48 @@
+# WMI Class: Msvm_VLANEndpoint
+
+[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+
+## 成员列表与兼容性报告
+
+| Member                            | Type     | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                      | Desc_EN                                   |
+|:----------------------------------|:---------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:------------------------------------------|:------------------------------------------|
+| AvailableRequestedStates          | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| Caption                           | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| CommunicationStatus               | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| CreationClassName                 | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| Description                       | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| DesiredEndpointMode               | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| DesiredVLANTrunkEncapsulation     | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| DetailedStatus                    | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| ElementName                       | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| EnabledDefault                    | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| EnabledState                      | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| GVRPStatus                        | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| HealthState                       | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| InstallDate                       | DateTime | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| InstanceID                        | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| Name                              | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| NameFormat                        | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| OperatingStatus                   | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| OperationalEndpointMode           | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| OperationalStatus                 | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| OperationalVLANTrunkEncapsulation | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| OtherEnabledState                 | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| OtherEndpointMode                 | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| OtherTrunkEncapsulation           | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| OtherTypeDescription              | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| PrimaryStatus                     | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| ProtocolIFType                    | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| ProtocolType                      | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| RequestedState                    | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| Status                            | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| StatusDescriptions                | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| SupportedEndpointModes            | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The endpoint mode supported by this port. | The endpoint mode supported by this port. |
+| SystemCreationClassName           | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| SystemName                        | String   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| TimeOfLastStateChange             | DateTime | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| TransitioningToState              | UInt16   | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+| RequestStateChange                | Method   | Method     | Method   | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                     | [无描述]                                     |
+
+---
+*数据自动生成于: 2026-02-03*

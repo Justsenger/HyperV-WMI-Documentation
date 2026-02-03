@@ -1,0 +1,13 @@
+# WMI Class: Msvm_ComputerSystemSummaryInformation
+
+[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+
+## 成员列表与兼容性报告
+
+| Member     | Type      | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                                                                                                     | Desc_EN                                                                                                                                                                                                                  |
+|:-----------|:----------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Antecedent | Reference | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Antecedent shall be a reference to a CIM_ManagedElement that is an instance in the normalized representation of the managed resource.                                                                                    | Antecedent shall be a reference to a CIM_ManagedElement that is an instance in the normalized representation of the managed resource.                                                                                    |
+| Dependent  | Reference | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Dependent shall be a reference to an instance of CIM_View that represents a de-normalized or aggregate view of the managed resource that is represented by the CIM_ManagedElement referenced by the Antecedent property. | Dependent shall be a reference to an instance of CIM_View that represents a de-normalized or aggregate view of the managed resource that is represented by the CIM_ManagedElement referenced by the Antecedent property. |
+
+---
+*数据自动生成于: 2026-02-03*

@@ -1,0 +1,19 @@
+# WMI Class: Msvm_VirtualSystemMigrationNetworkSettingData
+
+[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+
+## 成员列表与兼容性报告
+
+| Member       | Type   | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                              | Desc_EN                                                                                                           |
+|:-------------|:-------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| Caption      | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                                             | [无描述]                                                                                                             |
+| Description  | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                                             | [无描述]                                                                                                             |
+| ElementName  | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                                             | [无描述]                                                                                                             |
+| InstanceID   | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                                             | [无描述]                                                                                                             |
+| Metric       | UInt32 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The priority metric of this network for migration. Lower is the value higher is the priority.                     | The priority metric of this network for migration. Lower is the value higher is the priority.                     |
+| PrefixLength | UInt8  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The migration network subnet prefix length.                                                                       | The migration network subnet prefix length.                                                                       |
+| SubnetNumber | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The migration network subnet number.                                                                              | The migration network subnet number.                                                                              |
+| Tags         | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The array of tags to represent which management system has set this network for virtual system migration service. | The array of tags to represent which management system has set this network for virtual system migration service. |
+
+---
+*数据自动生成于: 2026-02-03*

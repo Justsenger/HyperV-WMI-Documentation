@@ -1,0 +1,21 @@
+# WMI Class: Msvm_EthernetSwitchOperationalData
+
+[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+
+## 成员列表与兼容性报告
+
+| Member                  | Type   | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                | Desc_EN                                                                                             |
+|:------------------------|:-------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:----------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| Caption                 | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                               | [无描述]                                                                                               |
+| CreationClassName       | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                               | [无描述]                                                                                               |
+| CurrentSwitchingMode    | UInt32 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The current switching mode on the switch [枚举值: 0 - Unknown; 1 - 802.1Q; 2 - 802.1Qbg; 3 - 802.1Qbh] | The current switching mode on the switch [枚举值: 0 - Unknown; 1 - 802.1Q; 2 - 802.1Qbg; 3 - 802.1Qbh] |
+| Description             | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                               | [无描述]                                                                                               |
+| ElementName             | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                               | [无描述]                                                                                               |
+| InstanceID              | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                               | [无描述]                                                                                               |
+| Name                    | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                               | [无描述]                                                                                               |
+| SupportedSwitchingModes | UInt32 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The switching modes supported by the switch                                                         | The switching modes supported by the switch                                                         |
+| SystemCreationClassName | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                               | [无描述]                                                                                               |
+| SystemName              | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                               | [无描述]                                                                                               |
+
+---
+*数据自动生成于: 2026-02-03*

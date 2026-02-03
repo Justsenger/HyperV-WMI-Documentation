@@ -1,0 +1,21 @@
+# WMI Class: Msvm_EthernetPortData
+
+[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+
+## 成员列表与兼容性报告
+
+| Member                  | Type   | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                             | Desc_EN                                                                                          |
+|:------------------------|:-------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:-------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| Caption                 | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                            | [无描述]                                                                                            |
+| CreationClassName       | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The name of the subclass used in the creationof this port data instance.                         | The name of the subclass used in the creationof this port data instance.                         |
+| Description             | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                            | [无描述]                                                                                            |
+| DeviceCreationClassName | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The CreationClassName of the port, which isMsvm_EthernetSwitchPort.                              | The CreationClassName of the port, which isMsvm_EthernetSwitchPort.                              |
+| DeviceID                | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The Device ID of the port that scopes thisport data instance.                                    | The Device ID of the port that scopes thisport data instance.                                    |
+| ElementName             | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                            | [无描述]                                                                                            |
+| InstanceID              | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                                                            | [无描述]                                                                                            |
+| Name                    | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | A string that uniquely identifies this portdata instance within the scope of theswitch and port. | A string that uniquely identifies this portdata instance within the scope of theswitch and port. |
+| SystemCreationClassName | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | This is the System Creation Class Name, whichis Msvm_VirtualEthernetSwitch                       | This is the System Creation Class Name, whichis Msvm_VirtualEthernetSwitch                       |
+| SystemName              | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The name of the virtual switch that scopesthis port data instance.                               | The name of the virtual switch that scopesthis port data instance.                               |
+
+---
+*数据自动生成于: 2026-02-03*

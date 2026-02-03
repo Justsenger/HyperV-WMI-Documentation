@@ -1,0 +1,14 @@
+# WMI Class: Msvm_BindsToLANEndpoint
+
+[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+
+## 成员列表与兼容性报告
+
+| Member     | Type      | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                           | Desc_EN                                                        |
+|:-----------|:----------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:---------------------------------------------------------------|:---------------------------------------------------------------|
+| Antecedent | Reference | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | A reference to a switch port                                   | A reference to a switch port                                   |
+| Dependent  | Reference | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | A reference to the VLAN endpoint associated to the switch port | A reference to the VLAN endpoint associated to the switch port |
+| FrameType  | UInt16    | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]                                                          | [无描述]                                                          |
+
+---
+*数据自动生成于: 2026-02-03*

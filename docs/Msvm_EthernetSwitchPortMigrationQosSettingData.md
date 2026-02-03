@@ -1,0 +1,25 @@
+# WMI Class: Msvm_EthernetSwitchPortMigrationQosSettingData
+
+[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+
+## 成员列表与兼容性报告
+
+| Member                            | Type    | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                             | Desc_EN                                                                          |
+|:----------------------------------|:--------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:---------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| Caption                           | String  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | [无描述]                                                                            | [无描述]                                                                            |
+| Description                       | String  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | [无描述]                                                                            | [无描述]                                                                            |
+| ElementName                       | String  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | [无描述]                                                                            | [无描述]                                                                            |
+| InboundMaximumMbps                | UInt64  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | The Bandwidth cap value for Inbound traffic.                                     | The Bandwidth cap value for Inbound traffic.                                     |
+| InstanceID                        | String  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | [无描述]                                                                            | [无描述]                                                                            |
+| OutboundMaximumMbps               | UInt64  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | The Bandwidth cap value for Outbound traffic.                                    | The Bandwidth cap value for Outbound traffic.                                    |
+| OutboundReservedValue             | UInt64  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | The Bandwidth reservation value.                                                 | The Bandwidth reservation value.                                                 |
+| QueueId                           | String  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | This is the Id of the Qos Queue.                                                 | This is the Id of the Qos Queue.                                                 |
+| Switch_DefaultReservation         | UInt64  | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | The default value for reservation to be used.                                    | The default value for reservation to be used.                                    |
+| Switch_EnableHardwareLimits       | Boolean | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | Indicates whether hardware offloads for limits are attempted if available.       | Indicates whether hardware offloads for limits are attempted if available.       |
+| Switch_EnableHardwareReservations | Boolean | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | Indicates whether hardware offloads for reservations are attempted if available. | Indicates whether hardware offloads for reservations are attempted if available. |
+| Switch_EnableSoftwareReservations | Boolean | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | Indicates Whether software based reservation is available.                       | Indicates Whether software based reservation is available.                       |
+| Switch_LinkSpeedPercentage        | UInt8   | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | The Link speed percentage to be used for reservation.                            | The Link speed percentage to be used for reservation.                            |
+| Switch_ReservationMode            | UInt8   | Property   | Property | ❌       | ❌       | ❌       | ❌       | ❌       | ✅       | The QOS reservation mode on the switch. [枚举值: 0 - Absolute; 1 - Weight]          | The QOS reservation mode on the switch. [枚举值: 0 - Absolute; 1 - Weight]          |
+
+---
+*数据自动生成于: 2026-02-03*
