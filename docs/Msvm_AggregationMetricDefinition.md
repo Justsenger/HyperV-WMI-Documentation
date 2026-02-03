@@ -1,27 +1,22 @@
-# WMI Class: Msvm_AggregationMetricDefinition
+# Msvm_AggregationMetricDefinition
 
 [⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性对照
-
-| Member              | Type    | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc   | Desc_EN   |
-|:--------------------|:--------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:-------|:----------|
-| BreakdownDimensions | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| Calculable          | UInt16  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| Caption             | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| ChangeType          | UInt16  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| DataType            | UInt16  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| Description         | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| ElementName         | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| GatheringType       | UInt16  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| Id                  | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| InstanceID          | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| IsContinuous        | Boolean | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| Name                | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| ProgrammaticUnits   | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| SimpleFunction      | UInt16  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| TimeScope           | UInt16  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-| Units               | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
-
----
-*更新日期: 2026-02-03*
+| Member              | Type    | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc   | Desc_EN   |
+|:--------------------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:-------|:----------|
+| BreakdownDimensions | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| Calculable          | UInt16  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| Caption             | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| ChangeType          | UInt16  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| DataType            | UInt16  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| Description         | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| ElementName         | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| GatheringType       | UInt16  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| Id                  | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| InstanceID          | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| IsContinuous        | Boolean | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| Name                | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| ProgrammaticUnits   | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| SimpleFunction      | UInt16  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| TimeScope           | UInt16  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |
+| Units               | String  | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | [无描述]  | [无描述]     |

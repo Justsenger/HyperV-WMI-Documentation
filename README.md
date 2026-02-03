@@ -3,29 +3,25 @@
 本仓库包含一份详细的 WMI (Windows Management Instrumentation) 类、属性及方法的版本兼容性对照表。主要涵盖了从 Windows 10 早期版本到最新的 Windows 11 及 Server 2025 的变化情况。
 
 ## 📊 完整数据表
-GitHub 对超大文件渲染有限制，建议通过以下方式获取完整数据：
-
-*   👉 **[点击此处下载 Excel 版 (推荐搜索与筛选)](WMI_Version_Comparison_Report.xlsx)**
+*   👉 **[下载 Excel 版 (推荐搜索与筛选)](WMI_Version_Comparison_Report.xlsx)**
 *   👉 **[查看 Master CSV 原文件](WMI_Version_Comparison_Report.csv)**
 
 ---
 
 ## 📅 报告涵盖的 Windows 版本说明
-本报告对比了以下内核版本中的 WMI 接口差异：
 
 | 版本号 (Build) | 对应 Windows 发行版本 |
 | :--- | :--- |
 | **14393** | Windows 10 v1607 (Anniversary Update) / Server 2016 |
 | **17763** | Windows Server 2019 / Windows 10 LTSC 2019 |
 | **19045** | Windows 10 v22H2 / Enterprise LTSC 2021 |
-| **20348** | **Windows Server 2022** |
+| **20348** | Windows Server 2022 |
 | **22621** | Windows 11 v22H2 / 23H2 |
-| **26100** | Windows 11 v24H2 / **Server 2025** |
+| **26100** | Windows 11 v24H2 / Server 2025 |
 
 ---
 
 ## 💻 Hyper-V 主机与虚拟机配置版本兼容性
-下表列出了不同版本的 Windows 主机支持的虚拟机配置版本（Configuration Version）。在进行跨版本迁移或 WMI 自动化管理时，请参考此表。
 
 | Hyper-V 主机 Windows 版本 | 12.0 | 11.0 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -39,26 +35,9 @@ GitHub 对超大文件渲染有限制，建议通过以下方式获取完整数�
 
 ---
 
-## 🔍 WMI 类内容概述
-该报告整理了以下核心 WMI 命名空间下的类：
+## 📂 WMI 类索引 (436 个)
+直接点击下方类名查看详细成员属性与版本支持情况：
 
-*   **Win32_VideoController**: 视频控制器（显卡）属性。
-*   **Msvm_ComputerSystem**: 虚拟机实例及其状态管理。
-*   **Msvm_VirtualSystemSettingData**: 虚拟机全局设置（如安全引导、引导顺序）。
-*   **Msvm_ProcessorSettingData / MemorySettingData**: 虚拟 CPU (含分层虚拟化) 与 内存 (含 SGX) 配置。
-*   **Msvm_GpuPartitionSettingData**: GPU 分区与 GPU-P 核心属性（22621+ 版本显著增加）。
-*   **Msvm_VirtualSystemManagementService**: 虚拟机生命周期管理方法接口。
-
----
-
-## 🛠 如何使用
-1.  **类索引查询**：在下方“类快速索引”中使用 `Ctrl+F` 搜类名，点击进入查看各版本 ✅/❌ 支持情况。
-2.  **兼容性排查**：如果脚本在 Server 2025 正常但在 2022 报错，请检查对应成员在 `20348` 列是否为 ❌。
-3.  **开发参考**：在调用 `ModifySystemSettings` 等方法前，确认目标系统的内核版本是否支持相关的属性（如 `EnableHierarchicalVirtualization`）。
-
----
-
-## 📂 WMI 类快速索引 (436 个)
 - [CIM_ActiveConnection](./docs/CIM_ActiveConnection.md)
 - [CIM_AffectedJobElement](./docs/CIM_AffectedJobElement.md)
 - [CIM_AggregationMetricDefinition](./docs/CIM_AggregationMetricDefinition.md)
@@ -497,4 +476,4 @@ GitHub 对超大文件渲染有限制，建议通过以下方式获取完整数�
 - [Win32_VideoController](./docs/Win32_VideoController.md)
 
 ---
-*旨在辅助 Hyper-V 与 Windows 系统管理开发。*
+*更新日期: 2026-02-03*

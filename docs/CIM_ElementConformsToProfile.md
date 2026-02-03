@@ -1,13 +1,8 @@
-# WMI Class: CIM_ElementConformsToProfile
+# CIM_ElementConformsToProfile
 
 [⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性对照
-
-| Member             | Type      | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                        | Desc_EN                                                     |
-|:-------------------|:----------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:------------------------------------------------------------|:------------------------------------------------------------|
-| ConformantStandard | Reference | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The RegisteredProfile to which the ManagedElement conforms. | The RegisteredProfile to which the ManagedElement conforms. |
-| ManagedElement     | Reference | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The ManagedElement that conforms to the RegisteredProfile.  | The ManagedElement that conforms to the RegisteredProfile.  |
-
----
-*更新日期: 2026-02-03*
+| Member             | Type      | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                        | Desc_EN                                                     |
+|:-------------------|:----------|:--------|:--------|:--------|:--------|:--------|:--------|:------------------------------------------------------------|:------------------------------------------------------------|
+| ConformantStandard | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The RegisteredProfile to which the ManagedElement conforms. | The RegisteredProfile to which the ManagedElement conforms. |
+| ManagedElement     | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The ManagedElement that conforms to the RegisteredProfile.  | The ManagedElement that conforms to the RegisteredProfile.  |

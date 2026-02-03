@@ -1,13 +1,8 @@
-# WMI Class: Msvm_SystemBIOS
+# Msvm_SystemBIOS
 
 [⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性对照
-
-| Member         | Type      | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                   | Desc_EN                                                |
-|:---------------|:----------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:-------------------------------------------------------|:-------------------------------------------------------|
-| GroupComponent | Reference | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The virtual computer system that starts from the BIOS. | The virtual computer system that starts from the BIOS. |
-| PartComponent  | Reference | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The BIOS associated with the virtual system.           | The BIOS associated with the virtual system.           |
-
----
-*更新日期: 2026-02-03*
+| Member         | Type      | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                   | Desc_EN                                                |
+|:---------------|:----------|:--------|:--------|:--------|:--------|:--------|:--------|:-------------------------------------------------------|:-------------------------------------------------------|
+| GroupComponent | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The virtual computer system that starts from the BIOS. | The virtual computer system that starts from the BIOS. |
+| PartComponent  | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The BIOS associated with the virtual system.           | The BIOS associated with the virtual system.           |
