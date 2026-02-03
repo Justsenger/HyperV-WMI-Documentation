@@ -1,8 +1,8 @@
 # WMI Class: Msvm_SecuritySettingData
 
-[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+[⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性报告
+## 成员列表与兼容性对照
 
 | Member                            | Type    | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                                                                                                                                                          | Desc_EN                                                                                                                                                                                                                                                                       |
 |:----------------------------------|:--------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -20,4 +20,4 @@
 | VirtualizationBasedSecurityOptOut | Boolean | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | A setting that indicates whether virtualization based security should be offered to a VM. This property is set to TRUE when a VM should not be offered virtualization based security. A newly created VM has an initial virtualization based security opt out state of FALSE. | A setting that indicates whether virtualization based security should be offered to a VM. This property is set to TRUE when a VM should not be offered virtualization based security. A newly created VM has an initial virtualization based security opt out state of FALSE. |
 
 ---
-*数据自动生成于: 2026-02-03*
+*更新日期: 2026-02-03*

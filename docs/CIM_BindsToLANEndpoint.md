@@ -1,8 +1,8 @@
 # WMI Class: CIM_BindsToLANEndpoint
 
-[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+[⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性报告
+## 成员列表与兼容性对照
 
 | Member     | Type      | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                                                                                                                         | Desc_EN                                                                                                                                                                                                                                      |
 |:-----------|:----------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -11,4 +11,4 @@
 | FrameType  | UInt16    | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | This describes the framing method for the upper layer SAP or Endpoint that is bound to the LANEndpoint. Note: "Raw802.3" is only known to be used with the IPX protocol. [枚举值: 0 - Unknown; 1 - Ethernet; 2 - 802.2; 3 - SNAP; 4 - Raw802.3] | This describes the framing method for the upper layer SAP or Endpoint that is bound to the LANEndpoint. Note: "Raw802.3" is only known to be used with the IPX protocol. [枚举值: 0 - Unknown; 1 - Ethernet; 2 - 802.2; 3 - SNAP; 4 - Raw802.3] |
 
 ---
-*数据自动生成于: 2026-02-03*
+*更新日期: 2026-02-03*

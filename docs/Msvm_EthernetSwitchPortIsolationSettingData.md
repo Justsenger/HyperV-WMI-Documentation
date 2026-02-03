@@ -1,8 +1,8 @@
 # WMI Class: Msvm_EthernetSwitchPortIsolationSettingData
 
-[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+[⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性报告
+## 成员列表与兼容性对照
 
 | Member                 | Type    | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                                                                                                     | Desc_EN                                                                                                                                                                                                                  |
 |:-----------------------|:--------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -16,4 +16,4 @@
 | IsolationMode          | UInt32  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Whether the port is using VLAN or VirtualSubnetId for isolation. NativeVirtualSubnetId is used for WNV VirtualSubnetId based networks. [枚举值: 0 - None; 1 - NativeVirtualSubnetId; 2 - ExternalVirtualSubnetId; 3 - VLAN] | Whether the port is using VLAN or VirtualSubnetId for isolation. NativeVirtualSubnetId is used for WNV VirtualSubnetId based networks. [枚举值: 0 - None; 1 - NativeVirtualSubnetId; 2 - ExternalVirtualSubnetId; 3 - VLAN] |
 
 ---
-*数据自动生成于: 2026-02-03*
+*更新日期: 2026-02-03*

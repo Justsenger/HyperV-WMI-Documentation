@@ -1,8 +1,8 @@
 # WMI Class: Msvm_EthernetSwitchPortRdmaSettingData
 
-[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+[⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性报告
+## 成员列表与兼容性对照
 
 | Member            | Type   | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                                                                                          | Desc_EN                                                                                                                                                                                                       |
 |:------------------|:-------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -13,4 +13,4 @@
 | RdmaOffloadWeight | UInt32 | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The weight assigned to this port for Guest RDMA. The weight isthe relative importance when assigning RDMA resources. Setting the RdmaOffloadWeight property to 0 disables RDMA on the port. The default is 0. | The weight assigned to this port for Guest RDMA. The weight isthe relative importance when assigning RDMA resources. Setting the RdmaOffloadWeight property to 0 disables RDMA on the port. The default is 0. |
 
 ---
-*数据自动生成于: 2026-02-03*
+*更新日期: 2026-02-03*

@@ -1,8 +1,8 @@
 # WMI Class: Msvm_SyntheticMouse
 
-[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+[⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性报告
+## 成员列表与兼容性对照
 
 | Member                      | Type     | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                                                                                                                                                     | Desc_EN                                                                                                                                                                                                                                                                  |
 |:----------------------------|:---------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -68,4 +68,4 @@
 | SetScrollPosition           | Method   | Method     | Method   | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Adjusts the z-coordinate of the wheel control of the pointing device. Values written to this property are always relative coordinate offsets. Return value: A return value of zero indicates success. A non-zero value indicates a failure to alter the scroll position. | Adjusts the z-coordinate of the wheel control of the pointing device. Values written to this property are always relative coordinate offsets. Return value: A return value of zero indicates success. A non-zero value indicates a failure to alter the scroll position. |
 
 ---
-*数据自动生成于: 2026-02-03*
+*更新日期: 2026-02-03*

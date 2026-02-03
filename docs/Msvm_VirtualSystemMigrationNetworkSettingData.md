@@ -1,8 +1,8 @@
 # WMI Class: Msvm_VirtualSystemMigrationNetworkSettingData
 
-[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+[⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性报告
+## 成员列表与兼容性对照
 
 | Member       | Type   | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                              | Desc_EN                                                                                                           |
 |:-------------|:-------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
@@ -16,4 +16,4 @@
 | Tags         | String | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The array of tags to represent which management system has set this network for virtual system migration service. | The array of tags to represent which management system has set this network for virtual system migration service. |
 
 ---
-*数据自动生成于: 2026-02-03*
+*更新日期: 2026-02-03*

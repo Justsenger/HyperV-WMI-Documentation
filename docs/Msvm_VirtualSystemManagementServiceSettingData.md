@@ -1,8 +1,8 @@
 # WMI Class: Msvm_VirtualSystemManagementServiceSettingData
 
-[⬅️ 返回类索引](../README_INDEX.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
+[⬅️ 返回索引](../README.md) | [📊 下载全量表 CSV](../WMI_Version_Comparison_Report.csv)
 
-## 成员列表与兼容性报告
+## 成员列表与兼容性对照
 
 | Member                            | Type    | Category   | Access   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                                                                                                                                                                                                                                                         | Desc_EN                                                                                                                                                                                                                                                                                                                                                                      |
 |:----------------------------------|:--------|:-----------|:---------|:--------|:--------|:--------|:--------|:--------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -29,4 +29,4 @@
 | PrimaryOwnerName                  | String  | Property   | Property | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Describes how the primary system owner can be reached (for example, phone number or e-mail address). By default, empty. This name may not exceed 256 characters in length. This is a read-only property, but it can be changed using the ModifyServiceSettings method of the Msvm_VirtualSystemManagementService class.                                                      | Describes how the primary system owner can be reached (for example, phone number or e-mail address). By default, empty. This name may not exceed 256 characters in length. This is a read-only property, but it can be changed using the ModifyServiceSettings method of the Msvm_VirtualSystemManagementService class.                                                      |
 
 ---
-*数据自动生成于: 2026-02-03*
+*更新日期: 2026-02-03*
