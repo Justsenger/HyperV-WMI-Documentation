@@ -15,7 +15,7 @@
 
 ---
 
-## 📂 WMI 类索引 (436 个)
+## 📂 WMI 类索引 (438 个)
 
 - [CIM_ActiveConnection](./docs/CIM_ActiveConnection.md)
 - [CIM_AffectedJobElement](./docs/CIM_AffectedJobElement.md)
@@ -304,6 +304,7 @@
 - [Msvm_MetricServiceCapabilities](./docs/Msvm_MetricServiceCapabilities.md)
 - [Msvm_MetricServiceSettingData](./docs/Msvm_MetricServiceSettingData.md)
 - [Msvm_MetricService](./docs/Msvm_MetricService.md)
+- [Msvm_MigrationBlackoutExitAlertIndication](./docs/Msvm_MigrationBlackoutExitAlertIndication.md)
 - [Msvm_MigrationJob](./docs/Msvm_MigrationJob.md)
 - [Msvm_MostCurrentSnapshotInBranch](./docs/Msvm_MostCurrentSnapshotInBranch.md)
 - [Msvm_MountedStorageImage](./docs/Msvm_MountedStorageImage.md)
@@ -436,6 +437,7 @@
 - [Msvm_VirtualSystemMigrationServiceSettingData](./docs/Msvm_VirtualSystemMigrationServiceSettingData.md)
 - [Msvm_VirtualSystemMigrationService](./docs/Msvm_VirtualSystemMigrationService.md)
 - [Msvm_VirtualSystemMigrationSettingData](./docs/Msvm_VirtualSystemMigrationSettingData.md)
+- [Msvm_VirtualSystemPciExpressSettingData](./docs/Msvm_VirtualSystemPciExpressSettingData.md)
 - [Msvm_VirtualSystemReferencePointExportJob](./docs/Msvm_VirtualSystemReferencePointExportJob.md)
 - [Msvm_VirtualSystemReferencePointExportSettingData](./docs/Msvm_VirtualSystemReferencePointExportSettingData.md)
 - [Msvm_VirtualSystemReferencePointService](./docs/Msvm_VirtualSystemReferencePointService.md)
@@ -455,4 +457,4 @@
 - [Win32_VideoController](./docs/Win32_VideoController.md)
 
 ---
-*更新日期: 2026-02-03*
+*更新日期: 2026-02-18*

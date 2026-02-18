@@ -1,0 +1,12 @@
+# Msvm_VirtualSystemPciExpressSettingData
+
+[⬅️ 返回索引](../README.md)
+
+| Member        | Type   | 28000   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                | Desc_EN                                                                                             |
+|:--------------|:-------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:----------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| Caption       | String | ✅      | ❌      | ❌      | ❌      | ❌      | ❌      | ❌      | [无描述]                                                                                            | [无描述]                                                                                            |
+| Description   | String | ✅      | ❌      | ❌      | ❌      | ❌      | ❌      | ❌      | [无描述]                                                                                            | [无描述]                                                                                            |
+| ElementName   | String | ✅      | ❌      | ❌      | ❌      | ❌      | ❌      | ❌      | [无描述]                                                                                            | [无描述]                                                                                            |
+| EmulationMode | UInt16 | ✅      | ❌      | ❌      | ❌      | ❌      | ❌      | ❌      | Whether or not to enable emulated PCIe for this virtual system. [枚举值: 0 - Disabled; 1 - Enabled] | Whether or not to enable emulated PCIe for this virtual system. [枚举值: 0 - Disabled; 1 - Enabled] |
+| InstanceID    | String | ✅      | ❌      | ❌      | ❌      | ❌      | ❌      | ❌      | [无描述]                                                                                            | [无描述]                                                                                            |
+| Topology      | UInt16 | ✅      | ❌      | ❌      | ❌      | ❌      | ❌      | ❌      | The PCI Express topology. [枚举值: 0 - Default; 1 - HostMirroring]                                  | The PCI Express topology. [枚举值: 0 - Default; 1 - HostMirroring]                                  |
