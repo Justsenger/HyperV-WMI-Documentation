@@ -2,14 +2,14 @@
 
 [⬅️ 返回索引](../README.md)
 
-| Member      | Type   | 28000   | 26200   | 26100   | 22621   | 20348   | 19045   | 17763   | 14393   | Desc                                                     | Desc_EN                                                  |
-|:------------|:-------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:---------------------------------------------------------|:---------------------------------------------------------|
-| Caption     | String | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | [无描述]                                                 | [无描述]                                                 |
-| Description | String | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | [无描述]                                                 | [无描述]                                                 |
-| ElementName | String | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | [无描述]                                                 | [无描述]                                                 |
-| InstanceID  | String | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | [无描述]                                                 | [无描述]                                                 |
-| Limit       | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The bandwidth limit allowed for the port.                | The bandwidth limit allowed for the port.                |
-| Reservation | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The minimum absolute bandwidth guaranteed for the port.  | The minimum absolute bandwidth guaranteed for the port.  |
-| Weight      | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The minimum bandwidth in weight guaranteed for the port. | The minimum bandwidth in weight guaranteed for the port. |
-| BurstLimit  | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The peak bandwidth allowed from the port during bursts.  | The peak bandwidth allowed from the port during bursts.  |
-| BurstSize   | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The maximum burst size allowed.                          | The maximum burst size allowed.                          |
+| Member      | Type   | 28000   | 26200   | 26100   | 22621   | 22000   | 20348   | 19045   | 17763   | 14393   | Desc                                                     | Desc_EN                                                  |
+|:------------|:-------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:---------------------------------------------------------|:---------------------------------------------------------|
+| Weight      | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The minimum bandwidth in weight guaranteed for the port. | The minimum bandwidth in weight guaranteed for the port. |
+| Reservation | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The minimum absolute bandwidth guaranteed for the port.  | The minimum absolute bandwidth guaranteed for the port.  |
+| Limit       | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The bandwidth limit allowed for the port.                | The bandwidth limit allowed for the port.                |
+| InstanceID  | String | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | [无描述]                                                 | [无描述]                                                 |
+| ElementName | String | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | [无描述]                                                 | [无描述]                                                 |
+| Description | String | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | [无描述]                                                 | [无描述]                                                 |
+| Caption     | String | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | [无描述]                                                 | [无描述]                                                 |
+| BurstSize   | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The maximum burst size allowed.                          | The maximum burst size allowed.                          |
+| BurstLimit  | UInt64 | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The peak bandwidth allowed from the port during bursts.  | The peak bandwidth allowed from the port during bursts.  |
