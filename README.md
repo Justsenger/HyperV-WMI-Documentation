@@ -1,6 +1,6 @@
 # Windows WMI 版本对照报告
 
-本仓库包含一份详细的 WMI (Windows Management Instrumentation) 类、属性及方法的版本兼容性对照表。主要涵盖了从 Windows 10 早期版本到最新的 Windows 11 及 Server 2025 的变化情况。
+本仓库包含一份详细的 WMI (Windows Management Instrumentation) 类、属性及方法的版本兼容性对照表。主要涵盖了主流版本的变化情况。
 
 ## 📅 报告涵盖的 Windows 版本说明
 
