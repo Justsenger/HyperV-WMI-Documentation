@@ -2,7 +2,7 @@
 
 [⬅️ 返回索引](../README.md)
 
-| Member     | Type      | 28000   | 26200   | 26100   | 22621   | 22000   | 20348   | 19045   | 17763   | 14393   | Desc                                     | Desc_EN                                  |
-|:-----------|:----------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:-----------------------------------------|:-----------------------------------------|
-| Member     | Reference | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The aggregated member of the Collection. | The aggregated member of the Collection. |
-| Collection | Reference | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | ✅      | The Collection that aggregates members.  | The Collection that aggregates members.  |
+| Member     | Type      | 29560   | 28000   | 26200   | 26100   | 22621   | 22000   | 20348   | 19045   | 17763   | 14393   | Desc                                     | Desc_EN                                  |
+|:-----------|:----------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:-----------------------------------------|:-----------------------------------------|
+| Collection | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The Collection that aggregates members.  | The Collection that aggregates members.  |
+| Member     | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | The aggregated member of the Collection. | The aggregated member of the Collection. |
