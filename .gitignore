@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# 临时 / 编辑器
+*.tmp
+*.bak
+~$*            # Office 临时锁文件 (xlsx/docx)
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

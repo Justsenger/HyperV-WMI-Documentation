@@ -1,0 +1,8 @@
+# CIM_SnapshotOfVirtualSystem
+
+[⬅️ 返回索引](../../README.md)
+
+| Member     | Type      | 29560   | 28000   | 26200   | 26100   | 22621   | 22000   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                   | Desc_EN                                                                                                                                |
+|:-----------|:----------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
+| Antecedent | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Reference to the instance of the CIM_ComputerSystem class representing a virtual system.                                               | Reference to the instance of the CIM_ComputerSystem class representing a virtual system.                                               |
+| Dependent  | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Reference to the instance of the CIM_VirtualSystemSettingData class representing a snapshot that was captured from the virtual system. | Reference to the instance of the CIM_VirtualSystemSettingData class representing a snapshot that was captured from the virtual system. |

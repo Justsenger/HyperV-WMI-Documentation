@@ -1,8 +1,0 @@
-# Msvm_ReplicaSystemDependency
-
-[⬅️ 返回索引](../README.md)
-
-| Member     | Type      | 29560   | 28000   | 26200   | 26100   | 22621   | 22000   | 20348   | 19045   | 17763   | 14393   | Desc                                                                                                                                      | Desc_EN                                                                                                                                   |
-|:-----------|:----------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:--------|:------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
-| Antecedent | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Reference to the instance of the CIM_ComputerSystem class representing the replica virtual machine.                                       | Reference to the instance of the CIM_ComputerSystem class representing the replica virtual machine.                                       |
-| Dependent  | Reference | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | ✅       | Reference to the instance of the CIM_ComputerSystem class representing the  test replica virtual system created by TestReplicaSystem API. | Reference to the instance of the CIM_ComputerSystem class representing the  test replica virtual system created by TestReplicaSystem API. |
