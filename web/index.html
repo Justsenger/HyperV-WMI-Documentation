@@ -184,6 +184,57 @@ const T = {
     homeT:"Start by task", homeIntro:"Don't know which class? Find the area for what you want to do; each lists the ★ entry classes to read first.",
     entryL:"Entry", relL:"Related", modelT:"Core model (get this and you get Hyper-V WMI)",
     model:"① A **VM** = <code>Msvm_ComputerSystem</code>; its whole **config** = <code>Msvm_VirtualSystemSettingData</code>; each **resource** (CPU/memory/disk/NIC) = a <code>*SettingData</code> subclass.<br>② All **create/modify/delete** go through **service classes** (named …Service), not by editing objects directly — e.g. create a VM via <code>Msvm_VirtualSystemManagementService.DefineSystem</code>.<br>③ Long operations return <code>4096</code> (Job Started) + a <code>Msvm_ConcreteJob</code> ref **asynchronously**; poll its <code>JobState</code> to know when it's done." },
+  ja: {name:"日本語", sub:(c,b)=>`${c} クラス · ${b} ビルド`, searchPh:"クラス / プロパティ / メソッドを検索…",
+    tabC:"クラス", tabL:"変更履歴", buildAll:"すべてのビルド", depHide:"非推奨を隠す",
+    props:"プロパティ", methods:"メソッド", colProp:"プロパティ", colType:"型", colAccess:"アクセス",
+    colParam:"パラメーター", colDir:"方向", colEnum:"列挙", colDesc:"説明",
+    ret:"戻り値: ", assoc:"関連", removedAfter:b=>`${b} 以降で削除`, inherit:"継承元",
+    provider:"プロバイダー", noDesc:"[説明なし]", untr:"[未翻訳]",
+    clTitle:"変更履歴", clHint:b=>`各ビルドの<b>前のビルド</b>との差分（新しい順）。最下部の <b>${b}</b> が基準。`,
+    baseline:n=>`基準 · ${n} クラス`, baseNote:n=>`最も古いビルド。その ${n} クラスが起点。`,
+    addC:"✚ 追加されたクラス: ", rmC:"✖ 削除されたクラス: ", addM:"✚ 追加されたメンバー: ", rmM:"✖ 削除されたメンバー: ",
+    clsN:"クラス", memN:"メンバー", noMatch:"一致なし", inBuild:b=>`${b} のみ`,
+    inherited:"継承されたメンバー", from:"継承元",
+    examplesT:"コード例", exPass:"検証済み", exUnsup:"環境依存",
+    examplesNote:"root\\virtualization\\v2 名前空間の PowerShell 例。書き込み操作は使用前にテスト用の仮想マシンで確認してください。",
+    relationships:"関連", relHint:"このクラスを他のクラスに接続する関連（基底クラスから継承した関連を含む）。", relVia:"経由（関連クラス）", relTo:"接続先", relRole:"ロール",
+    homeT:"タスクから始める", homeIntro:"どのクラスか分からない場合は、目的の分野を選んでください。各分野に最初に読むべき ★ エントリクラスを示します。",
+    entryL:"エントリ", relL:"関連", modelT:"コアモデル（これが分かれば Hyper-V WMI が分かる）",
+    model:"① **仮想マシン** = <code>Msvm_ComputerSystem</code>。その**構成全体** = <code>Msvm_VirtualSystemSettingData</code>。各**リソース**（CPU / メモリ / ディスク / NIC）= <code>*SettingData</code> サブクラス。<br>② **作成 / 変更 / 削除**はすべて、オブジェクトを直接編集するのではなく、**サービスクラス**（…Service という名前）を介して行う。例: <code>Msvm_VirtualSystemManagementService.DefineSystem</code> で仮想マシンを作成。<br>③ 長時間の操作は <code>4096</code>（Job Started）と <code>Msvm_ConcreteJob</code> 参照を**非同期**で返す。完了は <code>JobState</code> をポーリングして確認する。" },
+  ru: {name:"Русский", sub:(c,b)=>`${c} классов · ${b} сборок`, searchPh:"Поиск класса / свойства / метода…",
+    tabC:"Классы", tabL:"История изменений", buildAll:"Все сборки", depHide:"Скрыть устаревшие",
+    props:"Свойства", methods:"Методы", colProp:"Свойство", colType:"Тип", colAccess:"Доступ",
+    colParam:"Параметр", colDir:"Напр.", colEnum:"Перечисление", colDesc:"Описание",
+    ret:"Коды возврата: ", assoc:"Ассоциация", removedAfter:b=>`удалено после ${b}`, inherit:"наследует",
+    provider:"Провайдер", noDesc:"[нет описания]", untr:"[не переведено]",
+    clTitle:"История изменений", clHint:b=>`Добавлено/удалено в каждой сборке относительно <b>предыдущей сборки</b> (новые сверху). <b>${b}</b> внизу — базовая.`,
+    baseline:n=>`базовая · ${n} классов`, baseNote:n=>`Самая ранняя сборка; её ${n} классов — отправная точка.`,
+    addC:"✚ Добавленные классы: ", rmC:"✖ Удалённые классы: ", addM:"✚ Добавленные члены: ", rmM:"✖ Удалённые члены: ",
+    clsN:"кл.", memN:"чл.", noMatch:"Нет совпадений", inBuild:b=>`только ${b}`,
+    inherited:"Унаследованные члены", from:"из",
+    examplesT:"Примеры кода", exPass:"Проверено", exUnsup:"Зависит от окружения",
+    examplesNote:"Примеры PowerShell для пространства имён root\\virtualization\\v2. Проверяйте операции записи на тестовой виртуальной машине перед использованием.",
+    relationships:"Связи", relHint:"Ассоциации, соединяющие этот класс с другими (включая ассоциации, унаследованные от базовых классов).", relVia:"Через (класс ассоциации)", relTo:"Соединяется с", relRole:"Роль",
+    homeT:"Начать с задачи", homeIntro:"Не знаете, какой класс нужен? Выберите область для вашей задачи; в каждой указаны ★ начальные классы для изучения.",
+    entryL:"Вход", relL:"Связанные", modelT:"Основная модель (поймёте это — поймёте Hyper-V WMI)",
+    model:"① **Виртуальная машина** = <code>Msvm_ComputerSystem</code>; её **конфигурация целиком** = <code>Msvm_VirtualSystemSettingData</code>; каждый **ресурс** (ЦП / память / диск / сетевой адаптер) = подкласс <code>*SettingData</code>.<br>② Все операции **создания / изменения / удаления** выполняются через **классы служб** (с именами …Service), а не прямым редактированием объектов — например, создание ВМ через <code>Msvm_VirtualSystemManagementService.DefineSystem</code>.<br>③ Длительные операции **асинхронно** возвращают <code>4096</code> (Job Started) и ссылку <code>Msvm_ConcreteJob</code>; опрашивайте её <code>JobState</code>, чтобы узнать о завершении." },
+  de: {name:"Deutsch", sub:(c,b)=>`${c} Klassen · ${b} Builds`, searchPh:"Klasse / Eigenschaft / Methode suchen…",
+    tabC:"Klassen", tabL:"Änderungsverlauf", buildAll:"Alle Builds", depHide:"Veraltete ausblenden",
+    props:"Eigenschaften", methods:"Methoden", colProp:"Eigenschaft", colType:"Typ", colAccess:"Zugriff",
+    colParam:"Parameter", colDir:"Richt.", colEnum:"Enum", colDesc:"Beschreibung",
+    ret:"Rückgabecodes: ", assoc:"Zuordnung", removedAfter:b=>`entfernt nach ${b}`, inherit:"erbt von",
+    provider:"Anbieter", noDesc:"[keine Beschreibung]", untr:"[nicht übersetzt]",
+    clTitle:"Änderungsverlauf", clHint:b=>`Pro Build hinzugefügt/entfernt gegenüber dem <b>vorherigen Build</b> (neueste zuerst). <b>${b}</b> unten ist die Basis.`,
+    baseline:n=>`Basis · ${n} Klassen`, baseNote:n=>`Niedrigster Build; seine ${n} Klassen sind der Ausgangspunkt.`,
+    addC:"✚ Hinzugefügte Klassen: ", rmC:"✖ Entfernte Klassen: ", addM:"✚ Hinzugefügte Member: ", rmM:"✖ Entfernte Member: ",
+    clsN:"Kl.", memN:"Member", noMatch:"Keine Treffer", inBuild:b=>`nur ${b}`,
+    inherited:"Geerbte Member", from:"von",
+    examplesT:"Codebeispiele", exPass:"Verifiziert", exUnsup:"Umgebungsabhängig",
+    examplesNote:"PowerShell-Beispiele für den Namespace root\\virtualization\\v2. Schreibvorgänge vor der Verwendung an einer Test-VM überprüfen.",
+    relationships:"Beziehungen", relHint:"Zuordnungen, die diese Klasse mit anderen verbinden (einschließlich von Basisklassen geerbter Zuordnungen).", relVia:"Über (Zuordnungsklasse)", relTo:"Verbindet mit", relRole:"Rolle",
+    homeT:"Nach Aufgabe starten", homeIntro:"Wissen Sie nicht, welche Klasse? Wählen Sie den Bereich für Ihre Aufgabe; in jedem sind die ★ Einstiegsklassen zum Einlesen angegeben.",
+    entryL:"Einstieg", relL:"Verwandt", modelT:"Kernmodell (verstehen Sie das, verstehen Sie Hyper-V WMI)",
+    model:"① Eine **virtuelle Maschine** = <code>Msvm_ComputerSystem</code>; ihre **gesamte Konfiguration** = <code>Msvm_VirtualSystemSettingData</code>; jede **Ressource** (CPU / Arbeitsspeicher / Datenträger / Netzwerkadapter) = eine <code>*SettingData</code>-Unterklasse.<br>② Alle **Erstell-/Änderungs-/Löschvorgänge** laufen über **Dienstklassen** (mit Namen …Service), nicht durch direktes Bearbeiten von Objekten — z. B. Erstellen einer VM über <code>Msvm_VirtualSystemManagementService.DefineSystem</code>.<br>③ Lang laufende Vorgänge geben **asynchron** <code>4096</code> (Job Started) und eine <code>Msvm_ConcreteJob</code>-Referenz zurück; fragen Sie deren <code>JobState</code> ab, um den Abschluss zu erkennen." },
 };
 // 可加更多语言: 在 T 里加一项 + 提供 TRANS[code]=fetch(`translations_${code}.json`)
 
@@ -215,8 +266,11 @@ Promise.all([
   fetch('../data/db/canonical.json').then(r=>r.json()),
   fetch('../data/db/translations_zh.json').then(r=>r.ok?r.json():{}).catch(()=>({})),
   fetch('../data/db/examples.json').then(r=>r.ok?r.json():null).catch(()=>null),
-]).then(([db,zh,ex])=>{
-  DB=db; BUILDS=db.meta.builds; DORDER=[...BUILDS].reverse(); TRANS.zh=zh||{};
+  fetch('../data/db/translations_ja.json').then(r=>r.ok?r.json():{}).catch(()=>({})),
+  fetch('../data/db/translations_ru.json').then(r=>r.ok?r.json():{}).catch(()=>({})),
+  fetch('../data/db/translations_de.json').then(r=>r.ok?r.json():{}).catch(()=>({})),
+]).then(([db,zh,ex,ja,ru,de])=>{
+  DB=db; BUILDS=db.meta.builds; DORDER=[...BUILDS].reverse(); TRANS.zh=zh||{}; TRANS.ja=ja||{}; TRANS.ru=ru||{}; TRANS.de=de||{};
   if(ex&&ex.by_class)EXAMPLES=ex;
   // 语言下拉
   $('#lang').innerHTML=Object.keys(T).map(k=>`<option value="${k}">${T[k].name}</option>`).join('');
@@ -385,7 +439,7 @@ function renderExamples(c){
   if(!ids.length)return '';
   let h=`<div class="sec">${t('examplesT')} (${ids.length})</div>`;
   h+=`<div class="muted" style="margin:-4px 0 10px">${t('examplesNote')}</div>`;
-  const en=LANG==='en';
+  const en=LANG!=='zh';   // 代码示例仅中/英两版；非中文（含日语）回退到英文
   for(const id of ids){
     const r=EXAMPLES.recipes[id]; if(!r)continue;
     const ok=r.status==='PASS';
@@ -438,13 +492,13 @@ function drawerClose(){ if(window.innerWidth<=760) drawerToggle(false); }
 $('#menu')&&($('#menu').onclick=()=>drawerToggle());
 $('#backdrop')&&($('#backdrop').onclick=()=>drawerToggle(false));
 window.goCL=()=>{ TAB='changelog'; $('#home').classList.remove('on'); document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x.dataset.tab==='changelog')); if(!CURBUILD)CURBUILD=lastBuild(); renderList(); renderBuildMain(CURBUILD); };
-function crumb(trail){ const home=`<span class="ln" onclick="goHome()">🏠 ${LANG==='zh'?'首页':'Home'}</span>`; return `<div class="crumb">${[home,...trail].join(' › ')}</div>`; }
+function crumb(trail){ const hm={zh:'首页',en:'Home',ja:'ホーム'}[LANG]||'Home'; const home=`<span class="ln" onclick="goHome()">🏠 ${hm}</span>`; return `<div class="crumb">${[home,...trail].join(' › ')}</div>`; }
 
 function selectClass(c){
   drawerClose();
   CUR=c; TAB='classes'; renderList();
   const removed=c.last_seen!==lastBuild();
-  let h=crumb([`<span class="ln" onclick="goHome()">${LANG==='zh'?'类':'Classes'}</span>`,`<b>${esc(c.name)}</b>`]);
+  let h=crumb([`<span class="ln" onclick="goHome()">${t('tabC')}</span>`,`<b>${esc(c.name)}</b>`]);
   h+=`<h2 class="cls">${esc(c.name)}`+
      (c.is_association?`<span class="pill assoc">${t('assoc')}</span>`:'')+
      (removed?`<span class="pill rm">${t('removedAfter')(c.last_seen)}</span>`:'')+

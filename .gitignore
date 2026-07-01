@@ -44,3 +44,6 @@ data/translations_zh.json
 
 # 本地 README 预览页（不公开）
 readme_preview.html
+
+# 本地预览/工具配置
+.claude/
