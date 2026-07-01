@@ -44,6 +44,8 @@ jobs:
           echo "Published files:"; find public -type f | sort
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true          # 若仓库尚未启用 Pages，由工作流自动启用
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

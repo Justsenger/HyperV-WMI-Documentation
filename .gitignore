@@ -37,5 +37,10 @@ data/db/i18n_units.json
 data/db/qa_flags.json
 data/reports/
 
+# 旧系统残留（已被 web/ + data/db 取代，不再公开）
+docs/
+data/raw/
+data/translations_zh.json
+
 # 本地 README 预览页（不公开）
 readme_preview.html
