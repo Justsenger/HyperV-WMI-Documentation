@@ -42,4 +42,4 @@ python -m http.server 8777
 
 非官方的第三方参考，与 Microsoft 无关；Windows、Hyper-V、Microsoft 等为 Microsoft 的商标。
 
-发现问题欢迎提 issue。
+数据来自 Windows 的 WMI 架构文件；内容可能有疏漏或错误，请核对后再用。发现问题欢迎提 issue。
