@@ -1,31 +1,31 @@
-# Hyper-V WMI Reference
+# Hyper-V WMI 参考
 
-**English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [Русский](README.ru.md) · [Deutsch](README.de.md)
+[English](README.md) · **简体中文** · [日本語](README.ja.md) · [Русский](README.ru.md) · [Deutsch](README.de.md)
 
-A cross-version reference for the WMI classes, properties, and methods under `root\virtualization\v2` across Windows builds.
+`root\virtualization\v2` 下的 WMI 类、属性、方法在各 Windows 版本间的对照。
 
-## Browse
+## 浏览
 
-Online: <https://justsenger.github.io/HyperV-WMI-Documentation/>
+在线: <https://justsenger.github.io/HyperV-WMI-Documentation/>
 
-Run locally:
+本地服务器启动：
 
 ```bash
 python -m http.server 8777
 ```
 
-## Data
+## 数据
 
-In `data/db/`:
+在 `data/db/`：
 
-- `canonical.json` — main data.
-- `translations_*.json` — translations (zh, ja, ru, de).
-- `examples.json` — verified code examples.
-- `glossary.json` — glossary.
+- `canonical.json` — 主数据。
+- `translations_*.json` — 各语言译文（zh, ja, ru, de）。
+- `examples.json` — 已验证的代码示例。
+- `glossary.json` — 术语表。
 
-## Versions
+## 版本
 
-| Build | Windows release | 255.0 | 254.0 | 12.4 | 12.3 | 12.2 | 12.1 | 12.0 | 11.2 | 11.1 | 11.0 | 10.5 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
+| 版本号 (Build) | 对应 Windows 发行版本 | 255.0 | 254.0 | 12.4 | 12.3 | 12.2 | 12.1 | 12.0 | 11.2 | 11.1 | 11.0 | 10.5 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
 | **29617** | Win 11 27H2 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | **28000** | Win 11 26H1 | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
@@ -38,8 +38,8 @@ In `data/db/`:
 | **17763** | Win Server 2019 / LTSC 2019 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **14393** | Win 10 1607 / Server 2016 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-## Disclaimer
+## 免责
 
-Unofficial, third-party reference, not affiliated with Microsoft; Windows, Hyper-V, and Microsoft are trademarks of Microsoft.
+非官方的第三方参考，与 Microsoft 无关；Windows、Hyper-V、Microsoft 等为 Microsoft 的商标。
 
-Data is derived from Windows WMI schema files; content may contain omissions or errors — verify before use. Feedback via issues is welcome.
+数据来自 Windows 的 WMI 架构文件；内容可能有疏漏或错误，请核对后再用。发现问题欢迎提 issue。

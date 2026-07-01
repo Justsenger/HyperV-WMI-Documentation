@@ -1,31 +1,31 @@
-# Hyper-V WMI Reference
+# Справочник Hyper-V WMI
 
-**English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [Русский](README.ru.md) · [Deutsch](README.de.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · **Русский** · [Deutsch](README.de.md)
 
-A cross-version reference for the WMI classes, properties, and methods under `root\virtualization\v2` across Windows builds.
+Кросс-версионный справочник по классам, свойствам и методам WMI в `root\virtualization\v2` для разных сборок Windows.
 
-## Browse
+## Просмотр
 
-Online: <https://justsenger.github.io/HyperV-WMI-Documentation/>
+Онлайн: <https://justsenger.github.io/HyperV-WMI-Documentation/>
 
-Run locally:
+Запуск локально:
 
 ```bash
 python -m http.server 8777
 ```
 
-## Data
+## Данные
 
-In `data/db/`:
+В `data/db/`:
 
-- `canonical.json` — main data.
-- `translations_*.json` — translations (zh, ja, ru, de).
-- `examples.json` — verified code examples.
-- `glossary.json` — glossary.
+- `canonical.json` — основные данные.
+- `translations_*.json` — переводы (zh, ja, ru, de).
+- `examples.json` — проверенные примеры кода.
+- `glossary.json` — глоссарий.
 
-## Versions
+## Версии
 
-| Build | Windows release | 255.0 | 254.0 | 12.4 | 12.3 | 12.2 | 12.1 | 12.0 | 11.2 | 11.1 | 11.0 | 10.5 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
+| Сборка | Выпуск Windows | 255.0 | 254.0 | 12.4 | 12.3 | 12.2 | 12.1 | 12.0 | 11.2 | 11.1 | 11.0 | 10.5 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
 | **29617** | Win 11 27H2 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | **28000** | Win 11 26H1 | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
@@ -38,8 +38,8 @@ In `data/db/`:
 | **17763** | Win Server 2019 / LTSC 2019 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **14393** | Win 10 1607 / Server 2016 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-## Disclaimer
+## Отказ от ответственности
 
-Unofficial, third-party reference, not affiliated with Microsoft; Windows, Hyper-V, and Microsoft are trademarks of Microsoft.
+Неофициальный сторонний справочник, не связанный с Microsoft; Windows, Hyper-V и Microsoft — товарные знаки Microsoft.
 
-Data is derived from Windows WMI schema files; content may contain omissions or errors — verify before use. Feedback via issues is welcome.
+Данные получены из файлов схемы WMI Windows; содержимое может содержать пропуски или ошибки — проверяйте перед использованием. Отзывы приветствуются через issues.

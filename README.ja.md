@@ -1,31 +1,31 @@
-# Hyper-V WMI Reference
+# Hyper-V WMI リファレンス
 
-**English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [Русский](README.ru.md) · [Deutsch](README.de.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · **日本語** · [Русский](README.ru.md) · [Deutsch](README.de.md)
 
-A cross-version reference for the WMI classes, properties, and methods under `root\virtualization\v2` across Windows builds.
+各 Windows ビルドにおける `root\virtualization\v2` の WMI クラス・プロパティ・メソッドの対照。
 
-## Browse
+## 閲覧
 
-Online: <https://justsenger.github.io/HyperV-WMI-Documentation/>
+オンライン: <https://justsenger.github.io/HyperV-WMI-Documentation/>
 
-Run locally:
+ローカルで実行：
 
 ```bash
 python -m http.server 8777
 ```
 
-## Data
+## データ
 
-In `data/db/`:
+`data/db/` 内：
 
-- `canonical.json` — main data.
-- `translations_*.json` — translations (zh, ja, ru, de).
-- `examples.json` — verified code examples.
-- `glossary.json` — glossary.
+- `canonical.json` — メインデータ。
+- `translations_*.json` — 各言語の翻訳（zh, ja, ru, de）。
+- `examples.json` — 検証済みのコード例。
+- `glossary.json` — 用語集。
 
-## Versions
+## バージョン
 
-| Build | Windows release | 255.0 | 254.0 | 12.4 | 12.3 | 12.2 | 12.1 | 12.0 | 11.2 | 11.1 | 11.0 | 10.5 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
+| ビルド | Windows リリース | 255.0 | 254.0 | 12.4 | 12.3 | 12.2 | 12.1 | 12.0 | 11.2 | 11.1 | 11.0 | 10.5 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
 | **29617** | Win 11 27H2 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | **28000** | Win 11 26H1 | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
@@ -38,8 +38,8 @@ In `data/db/`:
 | **17763** | Win Server 2019 / LTSC 2019 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **14393** | Win 10 1607 / Server 2016 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-## Disclaimer
+## 免責事項
 
-Unofficial, third-party reference, not affiliated with Microsoft; Windows, Hyper-V, and Microsoft are trademarks of Microsoft.
+非公式のサードパーティ製リファレンスであり、Microsoft とは無関係です。Windows、Hyper-V、Microsoft 等は Microsoft の商標です。
 
-Data is derived from Windows WMI schema files; content may contain omissions or errors — verify before use. Feedback via issues is welcome.
+データは Windows の WMI スキーマファイルから取得しています。内容に漏れや誤りが含まれる場合があるため、使用前に確認してください。問題は issue でお知らせください。

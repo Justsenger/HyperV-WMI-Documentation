@@ -1,31 +1,31 @@
-# Hyper-V WMI Reference
+# Hyper-V WMI-Referenz
 
-**English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [Русский](README.ru.md) · [Deutsch](README.de.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [Русский](README.ru.md) · **Deutsch**
 
-A cross-version reference for the WMI classes, properties, and methods under `root\virtualization\v2` across Windows builds.
+Eine versionsübergreifende Referenz für die WMI-Klassen, -Eigenschaften und -Methoden unter `root\virtualization\v2` über Windows-Builds hinweg.
 
-## Browse
+## Durchsuchen
 
 Online: <https://justsenger.github.io/HyperV-WMI-Documentation/>
 
-Run locally:
+Lokal ausführen:
 
 ```bash
 python -m http.server 8777
 ```
 
-## Data
+## Daten
 
 In `data/db/`:
 
-- `canonical.json` — main data.
-- `translations_*.json` — translations (zh, ja, ru, de).
-- `examples.json` — verified code examples.
-- `glossary.json` — glossary.
+- `canonical.json` — Hauptdaten.
+- `translations_*.json` — Übersetzungen (zh, ja, ru, de).
+- `examples.json` — verifizierte Codebeispiele.
+- `glossary.json` — Glossar.
 
-## Versions
+## Versionen
 
-| Build | Windows release | 255.0 | 254.0 | 12.4 | 12.3 | 12.2 | 12.1 | 12.0 | 11.2 | 11.1 | 11.0 | 10.5 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
+| Build | Windows-Version | 255.0 | 254.0 | 12.4 | 12.3 | 12.2 | 12.1 | 12.0 | 11.2 | 11.1 | 11.0 | 10.5 | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
 | **29617** | Win 11 27H2 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | **28000** | Win 11 26H1 | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
@@ -38,8 +38,8 @@ In `data/db/`:
 | **17763** | Win Server 2019 / LTSC 2019 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **14393** | Win 10 1607 / Server 2016 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-## Disclaimer
+## Haftungsausschluss
 
-Unofficial, third-party reference, not affiliated with Microsoft; Windows, Hyper-V, and Microsoft are trademarks of Microsoft.
+Inoffizielle Referenz von Dritten, nicht mit Microsoft verbunden; Windows, Hyper-V und Microsoft sind Marken von Microsoft.
 
-Data is derived from Windows WMI schema files; content may contain omissions or errors — verify before use. Feedback via issues is welcome.
+Die Daten stammen aus den WMI-Schemadateien von Windows; Inhalte können Auslassungen oder Fehler enthalten — vor der Verwendung überprüfen. Feedback über Issues ist willkommen.
