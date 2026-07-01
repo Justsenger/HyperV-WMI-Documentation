@@ -68,19 +68,21 @@
   .badge{font-size:10px;padding:0 5px;border-radius:8px}
   .b-new{background:#23863633;color:var(--green)}
   .b-rm{background:#da363333;color:var(--red)}
-  #main{flex:1;overflow:auto;padding:22px 28px}
+  #main{flex:1;overflow:auto;padding:0 28px 22px}
   #menu,#backdrop{display:none}
   @media (max-width:760px){
-    #menu{display:flex;position:fixed;top:8px;left:8px;z-index:60;align-items:center;justify-content:center;
-      width:38px;height:34px;background:var(--panel);border:1px solid var(--border);border-radius:6px;color:var(--fg);font-size:18px;line-height:1;cursor:pointer}
+    #menu{display:flex;position:fixed;top:0;left:0;width:100%;height:44px;z-index:60;align-items:center;
+      padding:0 12px;background:var(--panel);border-bottom:1px solid var(--border);color:var(--fg);font-size:20px;line-height:1;cursor:pointer}
     #side{position:fixed;left:0;top:0;height:100%;width:86%;max-width:340px;min-width:0;z-index:57;
       transform:translateX(-100%);transition:transform .22s ease;box-shadow:2px 0 14px rgba(0,0,0,.55)}
     #side.open{transform:translateX(0)}
     #resizer{display:none}
-    #main{padding:54px 15px 24px}
+    #main{padding:0 15px 24px}
+    .crumb{margin-top:52px}
+    table.mtx thead th{top:44px}
     #backdrop.open{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:56}
   }
-  .crumb{color:var(--muted);font-size:12px}
+  .crumb{color:var(--muted);font-size:12px;margin-top:18px}
   h2.cls{font-size:23px;margin:4px 0 6px}
   .meta{color:var(--muted);font-size:13px;margin-bottom:10px}
   .meta a,.ln{color:var(--accent);text-decoration:none;cursor:pointer}
@@ -90,8 +92,10 @@
   table{border-collapse:collapse;font-size:13px;margin:6px 0}
   th,td{border:1px solid var(--border);padding:5px 8px;text-align:left;vertical-align:top}
   th{background:var(--panel);color:var(--muted);font-weight:600}
-  /* 仅版本矩阵表头吸顶；box-shadow 代替边框，避免 border-collapse 下 sticky 边框脱开 */
-  .mtx thead th{position:sticky;top:0;z-index:2;box-shadow:inset 0 1px 0 var(--border),inset 0 -1px 0 var(--border)}
+  /* 版本矩阵：改用 separate 边框，让 sticky 表头正确吸顶（collapse+sticky 在 Chrome 有渲染 bug）*/
+  .mtx{border-collapse:separate;border-spacing:0;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+  .mtx th,.mtx td{border-width:0 1px 1px 0}
+  .mtx thead th{position:sticky;top:0;z-index:3;border-top:1px solid var(--border)}
   td code,.mono{font-family:"Cascadia Code",Consolas,monospace;font-size:12px}
   .t-type{color:#79c0ff}.t-name{color:#7ee787;font-weight:600}
   .pdesc{color:var(--muted);font-size:12px;margin-top:3px;max-width:560px}
