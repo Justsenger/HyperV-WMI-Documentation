@@ -1,0 +1,23 @@
+{
+  "id": "synth3d_enable",
+  "title": "在主机侧启用 RemoteFX GPU 虚拟化",
+  "title_en": "Enable RemoteFX GPU Virtualization on the Host Side",
+  "status": "UNSUPPORTED",
+  "code": "$ns='root\\virtualization\\v2'\n# 1) 枚举支持 RemoteFX 的物理 GPU\n$phys=@(Get-WmiObject -Namespace $ns -Class Msvm_Physical3dGraphicsProcessor)\n# 2) 定位主机 Synthetic3D 服务(单例)\n$svc=Get-WmiObject -Namespace $ns -Class Msvm_Synthetic3DService\n# 3) 在某物理 GPU 上启用 RemoteFX 虚拟化(PhysicalGPU 为 REF; 传 __PATH)\nif($phys.Count -gt 0){\n  $target=$phys[0]\n  $r=$svc.EnableGPUForVirtualization($target.__PATH)   # ret 0=成功, 1=不支持, 4096=异步作业\n  if($r.ReturnValue -eq 4096){ $j=[wmi]$r.Job; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -m 200; $j=[wmi]$r.Job} }\n  # 回读\n  ([wmi]$target.__PATH).EnabledForVirtualization\n}\n# 停用操作对称: $svc.DisableGPUForVirtualization($target.__PATH)",
+  "code_en": "$ns='root\\virtualization\\v2'\n# 1) Enumerate physical GPUs that support RemoteFX\n$phys=@(Get-WmiObject -Namespace $ns -Class Msvm_Physical3dGraphicsProcessor)\n# 2) Locate the host Synthetic3D service (singleton)\n$svc=Get-WmiObject -Namespace $ns -Class Msvm_Synthetic3DService\n# 3) Enable RemoteFX virtualization on a physical GPU (PhysicalGPU is a REF; pass __PATH)\nif($phys.Count -gt 0){\n  $target=$phys[0]\n  $r=$svc.EnableGPUForVirtualization($target.__PATH)   # ret 0=success, 1=not supported, 4096=asynchronous job\n  if($r.ReturnValue -eq 4096){ $j=[wmi]$r.Job; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -m 200; $j=[wmi]$r.Job} }\n  # Read back\n  ([wmi]$target.__PATH).EnabledForVirtualization\n}\n# The disable operation is symmetric: $svc.DisableGPUForVirtualization($target.__PATH)",
+  "output": "Physical3dGraphicsProcessor count: 0\nMsvm_Synthetic3DService present: \\\\WIN-OMK556K17QL\\root\\virtualization\\v2:Msvm_Synthetic3DService.CreationClassName=\"Msvm_Synthetic3DService\",Name=\"synth3d\",SystemCreationClassName=\"Msvm_ComputerSystem\",SystemName=\"WIN-OMK556K17QL\"\nNo physical 3D GPU available for RemoteFX virtualization -> UNSUPPORTED path\nTest VM created: WMITEST_synth3d_enable\nTest VM destroyed.\nASSERT UNSUPPORTED: Msvm_Synthetic3DService exists but host has NO RemoteFX-capable Msvm_Physical3dGraphicsProcessor (RemoteFX vGPU deprecated since Windows 10 1809 / removed in later builds). EnableGPUForVirtualization not callable.",
+  "notes": [
+    "该操作需要支持 RemoteFX 的物理 3D GPU。Msvm_Synthetic3DService 类以单例形式存在(Name=synth3d)，但当 Msvm_Physical3dGraphicsProcessor 枚举数为 0 时，主机上没有可虚拟化的物理 3D GPU，EnableGPUForVirtualization 无可作用的目标。",
+    "RemoteFX vGPU 自 Windows 10 / Server 1809 起弃用，其后的版本已从平台移除。现代 GPU 虚拟化应使用 GPU-P (Msvm_GpuPartitionSettingData) 或 DDA(离散设备分配)。",
+    "方法签名：Msvm_Synthetic3DService.EnableGPUForVirtualization([IN,REF]Msvm_Physical3dGraphicsProcessor PhysicalGPU, [OUT,REF]CIM_ConcreteJob Job) -> uint32。返回码 0=Completed with No Error，1=Not supported；返回 4096 时需轮询作业。DisableGPUForVirtualization 的参数与返回码对称。该方法自 build 9200 起提供。",
+    "PhysicalGPU 为 REF 参数，传入 GPU 实例的 __PATH。GPU 是否已启用虚拟化可读取 Msvm_Physical3dGraphicsProcessor.EnabledForVirtualization(只读 Boolean)。",
+    "该操作为主机侧操作，与具体虚拟机无关。"
+  ],
+  "notes_en": [
+    "This operation requires a physical 3D GPU that supports RemoteFX. The Msvm_Synthetic3DService class exists as a singleton (Name=synth3d), but when the Msvm_Physical3dGraphicsProcessor enumeration count is 0, the host has no virtualizable physical 3D GPU and EnableGPUForVirtualization has no target to act on.",
+    "RemoteFX vGPU has been deprecated since Windows 10 / Server 1809 and was removed from the platform in later versions. Modern GPU virtualization should use GPU-P (Msvm_GpuPartitionSettingData) or DDA (Discrete Device Assignment).",
+    "Method signature: Msvm_Synthetic3DService.EnableGPUForVirtualization([IN,REF]Msvm_Physical3dGraphicsProcessor PhysicalGPU, [OUT,REF]CIM_ConcreteJob Job) -> uint32. Return codes 0=Completed with No Error, 1=Not supported; when 4096 is returned, the job must be polled. The parameters and return codes of DisableGPUForVirtualization are symmetric. This method has been available since build 9200.",
+    "PhysicalGPU is a REF parameter that takes the __PATH of the GPU instance. Whether a GPU has virtualization enabled can be read from Msvm_Physical3dGraphicsProcessor.EnabledForVirtualization (a read-only Boolean).",
+    "This is a host-side operation and is unrelated to any specific virtual machine."
+  ]
+}

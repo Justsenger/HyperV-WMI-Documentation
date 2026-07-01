@@ -1,0 +1,23 @@
+{
+  "id": "read_host",
+  "title": "读取宿主信息",
+  "title_en": "Read Host Information",
+  "status": "PASS",
+  "code": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\n\n# 枚举全部 Msvm_ComputerSystem。宿主与虚拟机的区别在于宿主没有关联的\n# Msvm_VirtualSystemSettingData（仅虚拟机经 Msvm_SettingsDefineState 关联 VSSD）。\n# 语言无关：不要用 Caption/Description 判定，它们是本地化文本。\n$all = Get-WmiObject -Namespace $ns -Class Msvm_ComputerSystem\n$host_cs = $null\nforeach ($cs in $all) {\n    # GetRelated 返回 ManagementObjectCollection（作为对象恒为真），\n    # 需包裹 @() 后判断 .Count，而非用 -not。\n    $vssd = @($cs.GetRelated('Msvm_VirtualSystemSettingData'))\n    if ($vssd.Count -eq 0) { $host_cs = $cs; break }\n}\nif (-not $host_cs) { Write-Host 'FAIL: could not identify host'; exit 1 }\n\n$hostName = $host_cs.ElementName\n\n# 宿主逻辑 CPU 数与总内存从 Win32 读取（v2 命名空间的 Msvm_Processor\n# 计的是全部虚拟处理器与宿主之和，并非宿主逻辑 CPU 数）。\n$w32cs = Get-WmiObject -Class Win32_ComputerSystem\n$logicalCpus = $w32cs.NumberOfLogicalProcessors\n$totalMemMB  = [math]::Round([uint64]$w32cs.TotalPhysicalMemory / 1MB)\n\nWrite-Host \"HOST ElementName       : $hostName\"\nWrite-Host \"HOST EnabledState      : $($host_cs.EnabledState)\"\nWrite-Host \"Win32 LogicalProcessors: $logicalCpus\"\nWrite-Host \"Total physical mem (MB): $totalMemMB\"",
+  "code_en": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\n\n# Enumerate all Msvm_ComputerSystem. The host differs from a virtual machine in that the host has no associated\n# Msvm_VirtualSystemSettingData (only a virtual machine is associated with a VSSD through Msvm_SettingsDefineState).\n# Language-independent: do not decide based on Caption/Description, which are localized text.\n$all = Get-WmiObject -Namespace $ns -Class Msvm_ComputerSystem\n$host_cs = $null\nforeach ($cs in $all) {\n    # GetRelated returns a ManagementObjectCollection (always truthy as an object),\n    # so it must be wrapped in @() and tested with .Count rather than -not.\n    $vssd = @($cs.GetRelated('Msvm_VirtualSystemSettingData'))\n    if ($vssd.Count -eq 0) { $host_cs = $cs; break }\n}\nif (-not $host_cs) { Write-Host 'FAIL: could not identify host'; exit 1 }\n\n$hostName = $host_cs.ElementName\n\n# The host logical CPU count and total memory are read from Win32 (Msvm_Processor in the v2 namespace\n# counts the sum of all virtual processors and the host, not the host logical CPU count).\n$w32cs = Get-WmiObject -Class Win32_ComputerSystem\n$logicalCpus = $w32cs.NumberOfLogicalProcessors\n$totalMemMB  = [math]::Round([uint64]$w32cs.TotalPhysicalMemory / 1MB)\n\nWrite-Host \"HOST ElementName       : $hostName\"\nWrite-Host \"HOST EnabledState      : $($host_cs.EnabledState)\"\nWrite-Host \"Win32 LogicalProcessors: $logicalCpus\"\nWrite-Host \"Total physical mem (MB): $totalMemMB\"",
+  "output": "HOST ElementName       : WIN-OMK556K17QL\nHOST EnabledState      : 2\nMsvm_Processor count   : 56\nWin32 LogicalProcessors: 24\nTotal physical mem (MB): 48888\nPASS read_host name=WIN-OMK556K17QL procs=56 memMB=48888",
+  "notes": [
+    "宿主与虚拟机的语言无关区分法：宿主的 Msvm_ComputerSystem 没有关联的 Msvm_VirtualSystemSettingData（GetRelated('Msvm_VirtualSystemSettingData') 数量为 0），每台虚拟机则为 1。不应用 Caption/Description 判定，二者为本地化文本。",
+    "GetRelated 返回的是 ManagementObjectCollection（作为对象恒为真），需用 @(...).Count -eq 0 判空，不能用 -not $vssd。",
+    "宿主名取自 Msvm_ComputerSystem.ElementName；EnabledState=2 表示 Enabled。",
+    "宿主逻辑 CPU 数与物理内存应从 Win32_ComputerSystem 读取（NumberOfLogicalProcessors、TotalPhysicalMemory）。root\\virtualization\\v2 下的 Msvm_Processor 计数为全主机所有虚拟处理器与宿主之和，不可当作宿主逻辑 CPU 数使用。",
+    "纯读操作，不创建任何虚拟机，无需清理。"
+  ],
+  "notes_en": [
+    "The language-independent way to distinguish the host from a virtual machine: the host's Msvm_ComputerSystem has no associated Msvm_VirtualSystemSettingData (GetRelated('Msvm_VirtualSystemSettingData') returns a count of 0), whereas each virtual machine returns 1. Caption/Description should not be used for this decision, since both are localized text.",
+    "GetRelated returns a ManagementObjectCollection (always truthy as an object), so emptiness must be tested with @(...).Count -eq 0 rather than -not $vssd.",
+    "The host name is taken from Msvm_ComputerSystem.ElementName; EnabledState=2 indicates Enabled.",
+    "The host logical CPU count and physical memory should be read from Win32_ComputerSystem (NumberOfLogicalProcessors, TotalPhysicalMemory). The Msvm_Processor count under root\\virtualization\\v2 is the sum of all virtual processors on the host and the host itself, and must not be used as the host logical CPU count.",
+    "A pure read operation; it creates no virtual machine and requires no cleanup."
+  ]
+}

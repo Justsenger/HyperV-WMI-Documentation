@@ -1,0 +1,25 @@
+{
+  "id": "gen1_bios",
+  "title": "配置第一代虚拟机的 BIOS 与启动顺序",
+  "status": "PASS",
+  "code": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\n$testName = 'WMITEST_gen1_bios'\n\nfunction Wait-Job2($p){\n  if(-not $p){ return 7 }\n  $j = [wmi]$p\n  while($j.JobState -eq 3 -or $j.JobState -eq 4){ Start-Sleep -Milliseconds 200; $j = [wmi]$p }\n  return $j.JobState\n}\n\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n\n# 创建第一代虚拟机 (SubType:1)\n$vssd = ([wmiclass]\"\\\\.\\$ns`:Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName = $testName\n$vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:1'\n$r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\nif($r.ReturnValue -eq 4096){ Wait-Job2 $r.Job | Out-Null }\n$vm = [wmi]$r.ResultingSystem\n\n# 取虚拟机自身的 VSSD\n$vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$vssd2 = [wmi]$vssd2.__PATH\n\n# 第一代 BootOrder 枚举 (uint16[]): 0=Floppy 1=CD/DVD 2=HardDrive(IDE) 3=Network/PXE\n$vssd2.BootOrder    = [uint16[]]@(3,0,2,1)\n$vssd2.BIOSNumLock  = $true\n$r2 = $vsms.ModifySystemSettings($vssd2.GetText(1))\nif($r2.ReturnValue -eq 4096){ Wait-Job2 $r2.Job | Out-Null }\n\n# 读回\n$vssd3 = [wmi]$vssd2.__PATH\n\"BootOrder=\"    + ($vssd3.BootOrder -join ',')\n\"BIOSNumLock=\" + $vssd3.BIOSNumLock\n\n# 清理\n$r3 = $vsms.DestroySystem($vm.__PATH)\nif($r3.ReturnValue -eq 4096){ Wait-Job2 $r3.Job | Out-Null }",
+  "output": "Created VM Name=8FC53FD3-F3AA-4626-884F-84950A996F50\nOrigBootOrder=1,2,3,0\nOrigBIOSNumLock=False\nModifySystemSettings rv=0\nReadBackBootOrder=3,0,2,1\nReadBackBIOSNumLock=True\nBootOrderChanged=True\nBIOSNumLockChanged=True\nCleanup OK: no residual\nRESULT: PASS",
+  "notes": [
+    "BootOrder 为 Msvm_VirtualSystemSettingData 的 uint16[] 属性，仅对第一代虚拟机 (SubType:1) 有意义。ValueMap: 0=Floppy(软盘), 1=CD/DVD, 2=HardDrive(IDE 硬盘), 3=Network/PXE。数组顺序即启动搜索顺序。",
+    "第一代虚拟机新建后的默认 BootOrder 为 1,2,3,0 (CD -> HDD -> Net -> Floppy)。",
+    "BIOSNumLock 为 boolean，控制 BIOS 内 NumLock 初始状态，新建默认 False。",
+    "修改流程：取虚拟机自身的 VSSD (通过 $vm.GetRelated('Msvm_VirtualSystemSettingData') 后 [wmi]__PATH 重取可写副本)，赋值后 GetText(1) 序列化交由 ModifySystemSettings。BootOrder 需强制转换为 [uint16[]]。",
+    "ModifySystemSettings 返回 0 表示同步完成，返回 4096 表示转入异步 Job，需轮询 JobState 至 7 (Completed)。",
+    "第二代虚拟机 (SubType:2) 不使用 BootOrder 整数枚举，改用 BootSourceOrder 设备引用数组。"
+  ],
+  "title_en": "Configure the BIOS and Boot Order of a Generation 1 Virtual Machine",
+  "notes_en": [
+    "BootOrder is a uint16[] property of Msvm_VirtualSystemSettingData and is meaningful only for generation 1 virtual machines (SubType:1). ValueMap: 0=Floppy, 1=CD/DVD, 2=HardDrive (IDE hard disk), 3=Network/PXE. The array order is the boot search order.",
+    "The default BootOrder of a newly created generation 1 virtual machine is 1,2,3,0 (CD -> HDD -> Net -> Floppy).",
+    "BIOSNumLock is a boolean that controls the initial NumLock state within the BIOS; the default for a new machine is False.",
+    "Modification procedure: obtain the virtual machine's own VSSD (via $vm.GetRelated('Msvm_VirtualSystemSettingData'), then re-fetch a writable copy with [wmi]__PATH), assign values, and serialize with GetText(1) for submission to ModifySystemSettings. BootOrder must be cast to [uint16[]].",
+    "ModifySystemSettings returns 0 for synchronous completion, or 4096 for transition to an asynchronous job that must be polled until JobState reaches 7 (Completed).",
+    "Generation 2 virtual machines (SubType:2) do not use the BootOrder integer enumeration; they use the BootSourceOrder device reference array instead."
+  ],
+  "code_en": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\n$testName = 'WMITEST_gen1_bios'\n\nfunction Wait-Job2($p){\n  if(-not $p){ return 7 }\n  $j = [wmi]$p\n  while($j.JobState -eq 3 -or $j.JobState -eq 4){ Start-Sleep -Milliseconds 200; $j = [wmi]$p }\n  return $j.JobState\n}\n\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n\n# Create a generation 1 virtual machine (SubType:1)\n$vssd = ([wmiclass]\"\\\\.\\$ns`:Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName = $testName\n$vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:1'\n$r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\nif($r.ReturnValue -eq 4096){ Wait-Job2 $r.Job | Out-Null }\n$vm = [wmi]$r.ResultingSystem\n\n# Obtain the virtual machine's own VSSD\n$vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$vssd2 = [wmi]$vssd2.__PATH\n\n# Generation 1 BootOrder enumeration (uint16[]): 0=Floppy 1=CD/DVD 2=HardDrive(IDE) 3=Network/PXE\n$vssd2.BootOrder    = [uint16[]]@(3,0,2,1)\n$vssd2.BIOSNumLock  = $true\n$r2 = $vsms.ModifySystemSettings($vssd2.GetText(1))\nif($r2.ReturnValue -eq 4096){ Wait-Job2 $r2.Job | Out-Null }\n\n# Read back\n$vssd3 = [wmi]$vssd2.__PATH\n\"BootOrder=\"    + ($vssd3.BootOrder -join ',')\n\"BIOSNumLock=\" + $vssd3.BIOSNumLock\n\n# Cleanup\n$r3 = $vsms.DestroySystem($vm.__PATH)\nif($r3.ReturnValue -eq 4096){ Wait-Job2 $r3.Job | Out-Null }"
+}

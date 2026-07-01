@@ -1,0 +1,21 @@
+{
+  "id": "mem_static",
+  "title": "设置静态内存",
+  "status": "PASS",
+  "code": "function Wait-Job2($p){ if(-not $p){return 7}; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -Milliseconds 200; $j=[wmi]$p}; return $j.JobState }\n$ns = 'root\\virtualization\\v2'\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n# 取目标虚拟机的 Msvm_MemorySettingData\n$vssd = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$mem  = ([wmi]$vssd.__PATH).GetRelated('Msvm_MemorySettingData') | Select-Object -First 1\n# 设置静态内存：先关闭动态内存，再设 VirtualQuantity (单位 MB)\n$mem.DynamicMemoryEnabled = $false\n$mem.VirtualQuantity = [uint64]3072\n$r = $vsms.ModifyResourceSettings($mem.GetText(1))\nif ($r.ReturnValue -eq 4096) { Wait-Job2 $r.Job }\n# 读回验证\n$vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$mem2  = ([wmi]$vssd2.__PATH).GetRelated('Msvm_MemorySettingData') | Select-Object -First 1\n[uint64]$mem2.VirtualQuantity  # => 3072",
+  "output": "VM created: WMITEST_mem_static\nBefore: VirtualQuantity=1024 MB DynamicMemoryEnabled=False\nAfter: VirtualQuantity=3072 MB DynamicMemoryEnabled=False\nASSERT PASS: static memory set to 3072 MB (dynamic disabled)\nCleanup: DestroySystem rv=4096",
+  "notes": [
+    "Msvm_MemorySettingData.VirtualQuantity 的单位为 MB(非字节、非块)。新建第二代虚拟机默认值为 1024 MB。",
+    "VirtualQuantity 必须为 [uint64] 类型；DynamicMemoryEnabled=false 即为静态内存。设置静态内存仅需修改该资源，调用 ModifyResourceSettings(GetText(1))。",
+    "VirtualQuantity 类型继承自 CIM_ResourceAllocationSettingData，内存类采用 MB 语义；因属于资源设置，故使用 ModifyResourceSettings 而非 ModifySystemSettings。",
+    "ModifyResourceSettings 同步返回 0；DestroySystem 返回 4096(异步 Job)，需用 Wait-Job2 轮询等待。"
+  ],
+  "title_en": "Set static memory",
+  "notes_en": [
+    "The unit of Msvm_MemorySettingData.VirtualQuantity is MB (not bytes, not blocks). The default value for a newly defined Generation 2 virtual machine is 1024 MB.",
+    "VirtualQuantity must be of type [uint64]; DynamicMemoryEnabled=false means static memory. Setting static memory requires only modifying this resource by calling ModifyResourceSettings(GetText(1)).",
+    "The type of VirtualQuantity is inherited from CIM_ResourceAllocationSettingData, and the memory class uses MB semantics; because it is a resource setting, ModifyResourceSettings is used rather than ModifySystemSettings.",
+    "ModifyResourceSettings returns 0 synchronously; DestroySystem returns 4096 (asynchronous Job), which must be waited on by polling with Wait-Job2."
+  ],
+  "code_en": "function Wait-Job2($p){ if(-not $p){return 7}; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -Milliseconds 200; $j=[wmi]$p}; return $j.JobState }\n$ns = 'root\\virtualization\\v2'\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n# Get the Msvm_MemorySettingData of the target virtual machine\n$vssd = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$mem  = ([wmi]$vssd.__PATH).GetRelated('Msvm_MemorySettingData') | Select-Object -First 1\n# Set static memory: first disable dynamic memory, then set VirtualQuantity (unit MB)\n$mem.DynamicMemoryEnabled = $false\n$mem.VirtualQuantity = [uint64]3072\n$r = $vsms.ModifyResourceSettings($mem.GetText(1))\nif ($r.ReturnValue -eq 4096) { Wait-Job2 $r.Job }\n# Read back and verify\n$vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$mem2  = ([wmi]$vssd2.__PATH).GetRelated('Msvm_MemorySettingData') | Select-Object -First 1\n[uint64]$mem2.VirtualQuantity  # => 3072"
+}

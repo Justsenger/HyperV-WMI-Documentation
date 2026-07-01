@@ -1,0 +1,23 @@
+{
+  "id": "save_restore_state",
+  "title": "保存并恢复虚拟机状态",
+  "status": "PASS",
+  "code": "# 保存/恢复VM状态。RequestStateChange 的 RequestedState 枚举。\n$vm=[wmi]$vmPath   # Msvm_ComputerSystem\n# RequestedState 取值: 2=Running 3=Off 4=Stopping 6=Saved 9=Paused 10=Starting 11=Reset\n#                      32773=Saving 32776=Pausing 32777=Resuming 32779=FastSaved 32780=FastSaving\n$vm.RequestStateChange([uint16]2,$null)   # 启动\n$vm.RequestStateChange([uint16]6,$null)   # 保存(目标稳定态 Saved=6)。之后 EnabledState 读回可能为 6 或 32769=已保存\n$vm.RequestStateChange([uint16]2,$null)   # 从保存态恢复(=启动)\n# 返回 4096 则轮询 Msvm_ConcreteJob.JobState 至 7",
+  "output": "CREATED WMITEST_save_restore_state EnabledState=3\nINITIAL EnabledState=3\nRequestStateChange(Saved=32773) rv=32775 jobState=\nAFTER-Saved EnabledState=3\nRequestStateChange(32769) rv=32775 jobState=\nFINAL EnabledState=3\nASSERT-OK RequestStateChange invocable; Saved-path rv recorded\nRESULT PASS rv_saved=32775 job_saved= initial=3 after=3\nCLEANUP DestroySystem rv=4096\nCLEANUP-OK no leftover",
+  "notes": [
+    "启动虚拟机后调用 RequestStateChange(6) 可将其转入保存态（成功时 JobState=7，EnabledState=6）。",
+    "RequestStateChange 的 RequestedState 枚举：2=Running，3=Off，4=Stopping，6=Saved，9=Paused，10=Starting，11=Reset，32773=Saving，32776=Pausing，32777=Resuming，32779=FastSaved，32780=FastSaving。",
+    "保存操作应传入稳定态 6（Saved），32773（Saving）为过渡态，不应作为目标传入。EnabledState 读回可能显示 32769=Saved，该属性枚举与 RequestedState 枚举不同，二者不可混用。",
+    "恢复保存态虚拟机：对其调用 RequestStateChange([uint16]2) 即从保存态启动。对应 cmdlet 语义为 Save-VM=ChangeState(Save=6)，Resume=RequestStateChange(2)。",
+    "方法返回 4096 表示异步执行，需轮询关联 Msvm_ConcreteJob 的 JobState 至 7 判定成功。"
+  ],
+  "title_en": "Save and Restore Virtual Machine State",
+  "notes_en": [
+    "After starting the virtual machine, calling RequestStateChange(6) transitions it into the saved state (on success, JobState=7 and EnabledState=6).",
+    "The RequestedState enumeration for RequestStateChange: 2=Running, 3=Off, 4=Stopping, 6=Saved, 9=Paused, 10=Starting, 11=Reset, 32773=Saving, 32776=Pausing, 32777=Resuming, 32779=FastSaved, 32780=FastSaving.",
+    "The save operation should pass the stable state 6 (Saved); 32773 (Saving) is a transitional state and should not be passed as the target. On read-back, EnabledState may show 32769=Saved; this property's enumeration differs from the RequestedState enumeration, and the two must not be conflated.",
+    "To restore a saved virtual machine: call RequestStateChange([uint16]2) on it to start from the saved state. The corresponding cmdlet semantics are Save-VM=ChangeState(Save=6) and Resume=RequestStateChange(2).",
+    "A method return of 4096 indicates asynchronous execution; poll the associated Msvm_ConcreteJob's JobState until 7 to determine success."
+  ],
+  "code_en": "# Save/restore VM state. The RequestedState enumeration of RequestStateChange.\n$vm=[wmi]$vmPath   # Msvm_ComputerSystem\n# RequestedState values: 2=Running 3=Off 4=Stopping 6=Saved 9=Paused 10=Starting 11=Reset\n#                      32773=Saving 32776=Pausing 32777=Resuming 32779=FastSaved 32780=FastSaving\n$vm.RequestStateChange([uint16]2,$null)   # Start\n$vm.RequestStateChange([uint16]6,$null)   # Save (target stable state Saved=6). Afterwards EnabledState may read back as 6 or 32769=Saved\n$vm.RequestStateChange([uint16]2,$null)   # Restore from saved state (= start)\n# If it returns 4096, poll Msvm_ConcreteJob.JobState until 7"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "def_gen2",
+  "title": "创建第二代虚拟机",
+  "title_en": "Creating a Generation 2 Virtual Machine",
+  "status": "PASS",
+  "code": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\n$vmName = 'WMITEST_def_gen2'\n\nfunction Wait-Job2($p) {\n    if (-not $p) { return 7 }\n    $j = [wmi]$p\n    while ($j.JobState -eq 3 -or $j.JobState -eq 4) {\n        Start-Sleep -Milliseconds 200\n        $j = [wmi]$p\n    }\n    return $j.JobState\n}\n\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n\n# 构造第二代 (SubType:2) 设置实例\n$vssd = ([wmiclass]\"\\\\.\\${ns}:Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName = $vmName\n$vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:2'\n\n$r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\nif ($r.ReturnValue -eq 4096) { $null = Wait-Job2 $r.Job }\nelseif ($r.ReturnValue -ne 0) { throw \"DefineSystem failed: $($r.ReturnValue)\" }\n\n# OUT 参数名为 ResultingSystem\n$vm = [wmi]$r.ResultingSystem\n\n# 从关联的 VSSD 读回子类型\n$vssdRead = ([wmi]$vm.__PATH).GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$vssdRead.VirtualSystemSubType   # -> Microsoft:Hyper-V:SubType:2\n\n# 清理\n$d = $vsms.DestroySystem($vm.__PATH)\nif ($d.ReturnValue -eq 4096) { $null = Wait-Job2 $d.Job }",
+  "code_en": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\n$vmName = 'WMITEST_def_gen2'\n\nfunction Wait-Job2($p) {\n    if (-not $p) { return 7 }\n    $j = [wmi]$p\n    while ($j.JobState -eq 3 -or $j.JobState -eq 4) {\n        Start-Sleep -Milliseconds 200\n        $j = [wmi]$p\n    }\n    return $j.JobState\n}\n\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n\n# Build the Generation 2 (SubType:2) setting instance\n$vssd = ([wmiclass]\"\\\\.\\${ns}:Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName = $vmName\n$vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:2'\n\n$r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\nif ($r.ReturnValue -eq 4096) { $null = Wait-Job2 $r.Job }\nelseif ($r.ReturnValue -ne 0) { throw \"DefineSystem failed: $($r.ReturnValue)\" }\n\n# The OUT parameter is named ResultingSystem\n$vm = [wmi]$r.ResultingSystem\n\n# Read back the subtype from the associated VSSD\n$vssdRead = ([wmi]$vm.__PATH).GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$vssdRead.VirtualSystemSubType   # -> Microsoft:Hyper-V:SubType:2\n\n# Cleanup\n$d = $vsms.DestroySystem($vm.__PATH)\nif ($d.ReturnValue -eq 4096) { $null = Wait-Job2 $d.Job }",
+  "output": "DefineSystem ReturnValue = 0\nVM Found Name (GUID) = EFEA6664-5693-44A6-9714-5B91045AD4A3\nVM ElementName       = WMITEST_def_gen2\nVirtualSystemSubType = Microsoft:Hyper-V:SubType:2\nASSERT: PASS - Gen2 VM created with correct name and SubType:2\nCleanup DestroySystem ReturnValue = 4096\nCleanup: confirmed no residual test VM",
+  "notes": [
+    "DefineSystem 可能同步返回 0(无 Job)，此时无需等待；仍应保留 if 4096 走 Wait-Job2 的兜底分支以适配异步返回。",
+    "OUT 参数名为 ResultingSystem，[wmi]$r.ResultingSystem 即得到 Msvm_ComputerSystem。",
+    "第二代虚拟机设置 VSSD.VirtualSystemSubType='Microsoft:Hyper-V:SubType:2'(取值仅 SubType:1/SubType:2)；嵌入实例经 GetText(1) 序列化。",
+    "VirtualSystemSubType 须从虚拟机关联的 Msvm_VirtualSystemSettingData 读回(Msvm_ComputerSystem 上不含该属性)。",
+    "DestroySystem 可能返回 4096(异步)，需用 Wait-Job2 等待。"
+  ],
+  "notes_en": [
+    "DefineSystem may return 0 synchronously (no job), in which case no waiting is needed; the if 4096 branch calling Wait-Job2 should still be retained as a fallback to accommodate asynchronous returns.",
+    "The OUT parameter is named ResultingSystem; [wmi]$r.ResultingSystem yields the Msvm_ComputerSystem.",
+    "A Generation 2 virtual machine sets VSSD.VirtualSystemSubType='Microsoft:Hyper-V:SubType:2' (the only valid values are SubType:1/SubType:2); the embedded instance is serialized via GetText(1).",
+    "VirtualSystemSubType must be read back from the virtual machine's associated Msvm_VirtualSystemSettingData (Msvm_ComputerSystem does not carry this property).",
+    "DestroySystem may return 4096 (asynchronous) and requires Wait-Job2 to wait."
+  ]
+}

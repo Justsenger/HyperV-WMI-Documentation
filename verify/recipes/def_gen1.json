@@ -1,0 +1,23 @@
+{
+  "id": "def_gen1",
+  "title": "创建第一代虚拟机",
+  "title_en": "Creating a Generation 1 Virtual Machine",
+  "status": "PASS",
+  "code": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\n$testName = 'WMITEST_def_gen1'\n\nfunction Wait-Job2($p){\n  if(-not $p){ return 7 }\n  $j = [wmi]$p\n  while($j.JobState -eq 3 -or $j.JobState -eq 4){ Start-Sleep -Milliseconds 200; $j = [wmi]$p }\n  return $j.JobState\n}\n\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n\n$vm = $null\ntry {\n  # 第一代 = SubType:1 (第二代为 SubType:2)\n  $vssd = ([wmiclass]\"\\\\.\\${ns}:Msvm_VirtualSystemSettingData\").CreateInstance()\n  $vssd.ElementName = $testName\n  $vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:1'\n\n  $r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\n  if($r.ReturnValue -eq 4096){ Wait-Job2 $r.Job | Out-Null }\n  elseif($r.ReturnValue -ne 0){ throw \"DefineSystem failed RV=$($r.ReturnValue)\" }\n\n  $vm = [wmi]$r.ResultingSystem\n  $vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n  Write-Host \"Created: $($vssd2.ElementName) SubType=$($vssd2.VirtualSystemSubType)\"\n}\nfinally {\n  if($vm -and $vm.__PATH){\n    $rd = $vsms.DestroySystem($vm.__PATH)\n    if($rd.ReturnValue -eq 4096){ Wait-Job2 $rd.Job | Out-Null }\n  }\n}",
+  "code_en": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\n$testName = 'WMITEST_def_gen1'\n\nfunction Wait-Job2($p){\n  if(-not $p){ return 7 }\n  $j = [wmi]$p\n  while($j.JobState -eq 3 -or $j.JobState -eq 4){ Start-Sleep -Milliseconds 200; $j = [wmi]$p }\n  return $j.JobState\n}\n\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n\n$vm = $null\ntry {\n  # Generation 1 = SubType:1 (Generation 2 is SubType:2)\n  $vssd = ([wmiclass]\"\\\\.\\${ns}:Msvm_VirtualSystemSettingData\").CreateInstance()\n  $vssd.ElementName = $testName\n  $vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:1'\n\n  $r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\n  if($r.ReturnValue -eq 4096){ Wait-Job2 $r.Job | Out-Null }\n  elseif($r.ReturnValue -ne 0){ throw \"DefineSystem failed RV=$($r.ReturnValue)\" }\n\n  $vm = [wmi]$r.ResultingSystem\n  $vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n  Write-Host \"Created: $($vssd2.ElementName) SubType=$($vssd2.VirtualSystemSubType)\"\n}\nfinally {\n  if($vm -and $vm.__PATH){\n    $rd = $vsms.DestroySystem($vm.__PATH)\n    if($rd.ReturnValue -eq 4096){ Wait-Job2 $rd.Job | Out-Null }\n  }\n}",
+  "output": "DefineSystem ReturnValue=0 JobState=\nReadBack ElementName=WMITEST_def_gen1 SubType=Microsoft:Hyper-V:SubType:1\nExistsAfterCreate=True CleanedUp=True\nRESULT=PASS",
+  "notes": [
+    "第一代虚拟机设置 VirtualSystemSubType='Microsoft:Hyper-V:SubType:1'(第二代为 SubType:2)。",
+    "DefineSystem 可能同步返回 ReturnValue=0(无 Job)，此时无需轮询；仍应保留 4096 走 Wait-Job2 的兜底分支以适配异步返回。",
+    "DefineSystem 的 OUT 参数名为 ResultingSystem，$r.ResultingSystem 即新建虚拟机的 __PATH。",
+    "嵌入实例须经 GetText(1) 序列化后传入。",
+    "清理使用 DestroySystem $vm.__PATH；脚本以 try/finally 保证清理。"
+  ],
+  "notes_en": [
+    "A Generation 1 virtual machine sets VirtualSystemSubType='Microsoft:Hyper-V:SubType:1' (Generation 2 is SubType:2).",
+    "DefineSystem may return synchronously with ReturnValue=0 (no job), in which case no polling is needed; the 4096 branch calling Wait-Job2 should still be retained as a fallback to accommodate asynchronous returns.",
+    "The OUT parameter of DefineSystem is named ResultingSystem; $r.ResultingSystem is the __PATH of the newly created virtual machine.",
+    "The embedded instance must be serialized via GetText(1) before being passed in.",
+    "Cleanup uses DestroySystem $vm.__PATH; the script guarantees cleanup with try/finally."
+  ]
+}

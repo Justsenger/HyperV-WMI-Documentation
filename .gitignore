@@ -13,3 +13,29 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
+
+# 内部验证记录 / 构建工作清单（含内部流程口吻，不公开）
+verify/audit/
+verify/AUDIT.md
+verify/work/
+verify/catalog.json
+
+# 中间 / 冗余产物（可由 scripts/ 重新生成，无需公开）
+data/raw_mof/
+data/parsed/
+docs_v2/
+docs_bilingual/
+data/db/*.preaudit.json
+data/db/*.preglos.json
+
+# 构建工具与测试脚手架（非文档产品；extract_mof.py 含本地镜像库路径，不公开）
+scripts/
+verify/*.ps1
+
+# QA 中间产物（站点不加载、文档不引用）
+data/db/i18n_units.json
+data/db/qa_flags.json
+data/reports/
+
+# 本地 README 预览页（不公开）
+readme_preview.html

@@ -1,0 +1,19 @@
+{
+  "id": "read_vm_list",
+  "title": "列出所有虚拟机",
+  "status": "PASS",
+  "code": "$ns = 'root\\virtualization\\v2'\n# 虚拟机的 Name 为 GUID;宿主的 Name 等于主机名(非 GUID),据此区分\n$guidRe = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'\nGet-WmiObject -Namespace $ns -Class Msvm_ComputerSystem |\n  Where-Object { $_.Name -match $guidRe } |\n  ForEach-Object {\n    [pscustomobject]@{\n      ElementName  = $_.ElementName   # 显示名\n      EnabledState = $_.EnabledState  # 2=Enabled(运行) 3=Disabled(关机) 等\n      GUID         = $_.Name          # 虚拟机 GUID\n    }\n  }",
+  "title_en": "List All Virtual Machines",
+  "notes_en": [
+    "A reliable way to distinguish the host from virtual machines: in Msvm_ComputerSystem instances, the Name property of a virtual machine is a GUID, whereas the Name of the host equals the host name (not a GUID). Caption should not be used for this distinction, because Caption is localized (e.g., the Chinese terms for 'hosting system / virtual machine'), so string matching is not portable.",
+    "ElementName is the display name; Name is the GUID; common EnabledState values are 2=Enabled (running) and 3=Disabled (stopped). EnabledState can be read directly without polling.",
+    "This operation is a read-only enumeration; it does not call any WMI method and does not modify any virtual machine."
+  ],
+  "code_en": "$ns = 'root\\virtualization\\v2'\n# A VM's Name is a GUID; the host's Name equals the host name (not a GUID); distinguish them by this\n$guidRe = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'\nGet-WmiObject -Namespace $ns -Class Msvm_ComputerSystem |\n  Where-Object { $_.Name -match $guidRe } |\n  ForEach-Object {\n    [pscustomobject]@{\n      ElementName  = $_.ElementName   # Display name\n      EnabledState = $_.EnabledState  # 2=Enabled (running) 3=Disabled (stopped) etc.\n      GUID         = $_.Name          # VM GUID\n    }\n  }",
+  "output": "VM count before (excluding host): 5\n  [Ubuntu22.04] EnabledState=3 GUID=507247C9-0B1E-4E94-8E0C-6E03E748D65E\n  [<cn-name>] EnabledState=2 GUID=67EE509C-0C05-43D9-9328-D705987488FE\n  [test] EnabledState=3 GUID=88ACE44C-946B-46E5-8F01-F8D3CE5EB9D3\n  [User1] EnabledState=2 GUID=92201C9D-9158-49D7-BF1F-0A11BFE08715\n  [Server] EnabledState=2 GUID=9C52C637-359A-47E0-BC1C-F6F96747B755\nHost (non-GUID Name) count: 1\n  HOST: WIN-OMK556K17QL Name=WIN-OMK556K17QL\nCreated test VM: WMITEST_read_vm_list GUID=89E9CF5D-EE29-4C03-B1AF-F2A9BF57C0BE\nVM count after create: 6\nASSERT count+1   : True\nASSERT found     : True\nASSERT name      : True\nASSERT guid fmt  : True\nASSERT state read: True (EnabledState=3)\nASSERT host excl : True\nRESULT: PASS\nCleanup DestroySystem ReturnValue=4096\nLeftover test VM count: 0",
+  "notes": [
+    "区分宿主与虚拟机的可靠方法: 在 Msvm_ComputerSystem 实例中,虚拟机的 Name 属性为 GUID,宿主的 Name 等于主机名(非 GUID)。不应使用 Caption 区分,因为 Caption 已本地化(如中文'承载系统/虚拟机'),按字符串匹配不可移植。",
+    "ElementName 为显示名;Name 为 GUID;EnabledState 常见值 2=Enabled(运行)、3=Disabled(关机)。EnabledState 可直接读取,无需轮询。",
+    "该操作为只读枚举,不调用任何 WMI 方法,不修改任何虚拟机。"
+  ]
+}

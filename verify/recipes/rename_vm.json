@@ -1,0 +1,21 @@
+{
+  "id": "rename_vm",
+  "title": "重命名虚拟机",
+  "status": "PASS",
+  "code": "function Wait-Job2($p){ if(-not $p){return 7}; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -Milliseconds 200; $j=[wmi]$p}; return $j.JobState }\n$ns='root\\virtualization\\v2'\n$vsms=Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n# $vm 为目标虚拟机(例如来自 DefineSystem 或 Msvm_ComputerSystem)\n# 获取该虚拟机当前的 VirtualSystemSettingData\n$vssd=$vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n# 修改 ElementName 并经 ModifySystemSettings 提交(SystemSettings IN string, Job OUT)\n$vssd.ElementName='NewVmName'\n$r=$vsms.ModifySystemSettings($vssd.GetText(1))\nif($r.ReturnValue -eq 4096){ Wait-Job2 $r.Job | Out-Null }\n# 返回码 0 表示成功。读回校验:\n$vm2=[wmi]$vm.__PATH\n$check=$vm2.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\nWrite-Output $check.ElementName   # -> NewVmName ; $vm2.ElementName 同步更新",
+  "title_en": "Rename a Virtual Machine",
+  "notes_en": [
+    "Renaming is performed through the whole-system settings: modify Msvm_VirtualSystemSettingData.ElementName and then commit it with Msvm_VirtualSystemManagementService.ModifySystemSettings($vssd.GetText(1)), rather than modifying Msvm_ComputerSystem directly.",
+    "ModifySystemSettings signature: SystemSettings (IN string, must be the GetText(1) serialization result and contain a valid InstanceID), Job (OUT ref CIM_ConcreteJob). This method usually returns rv=0 synchronously and does not enter the 4096 Job flow.",
+    "After renaming, Msvm_ComputerSystem.ElementName and VSSD.ElementName are updated together; the latest object must be re-fetched with [wmi]$vm.__PATH before reading it back.",
+    "Return codes: 0=Success, 1=Not Supported, 2=Failed, 4=Invalid Parameter, 5=Invalid State, 6=Incompatible Parameters, 4096=Job Started (requires polling with Wait-Job2)."
+  ],
+  "code_en": "function Wait-Job2($p){ if(-not $p){return 7}; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -Milliseconds 200; $j=[wmi]$p}; return $j.JobState }\n$ns='root\\virtualization\\v2'\n$vsms=Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n# $vm is the target virtual machine (e.g., from DefineSystem or Msvm_ComputerSystem)\n# Get the virtual machine's current VirtualSystemSettingData\n$vssd=$vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n# Modify ElementName and commit via ModifySystemSettings (SystemSettings IN string, Job OUT)\n$vssd.ElementName='NewVmName'\n$r=$vsms.ModifySystemSettings($vssd.GetText(1))\nif($r.ReturnValue -eq 4096){ Wait-Job2 $r.Job | Out-Null }\n# Return code 0 indicates success. Read-back verification:\n$vm2=[wmi]$vm.__PATH\n$check=$vm2.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\nWrite-Output $check.ElementName   # -> NewVmName ; $vm2.ElementName is updated in sync",
+  "output": "Created VM: WMITEST_rename_vm\nInitial VSSD.ElementName: WMITEST_rename_vm\nModifySystemSettings rv=0\nAfter rename VSSD.ElementName: WMITEST_rename_vm2\nAfter rename ComputerSystem.ElementName: WMITEST_rename_vm2\nPASS rename: VSSD.ElementName changed 'WMITEST_rename_vm' -> 'WMITEST_rename_vm2'; ComputerSystem.ElementName='WMITEST_rename_vm2'\nCleanup OK: no residual test VM",
+  "notes": [
+    "重命名通过整机设置完成: 修改 Msvm_VirtualSystemSettingData.ElementName 后,以 Msvm_VirtualSystemManagementService.ModifySystemSettings($vssd.GetText(1)) 提交,而非直接修改 Msvm_ComputerSystem。",
+    "ModifySystemSettings 签名: SystemSettings(IN string,须为 GetText(1) 序列化结果且含有效 InstanceID), Job(OUT ref CIM_ConcreteJob)。该方法通常同步返回 rv=0,不进入 4096 Job 流程。",
+    "改名后 Msvm_ComputerSystem.ElementName 与 VSSD.ElementName 同步更新;需重新以 [wmi]$vm.__PATH 获取最新对象再读回。",
+    "返回码: 0=成功, 1=不支持, 2=失败, 4=参数无效, 5=状态无效, 6=参数不兼容, 4096=Job 已启动(需 Wait-Job2 轮询)。"
+  ]
+}

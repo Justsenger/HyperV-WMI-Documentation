@@ -1,0 +1,23 @@
+{
+  "id": "smt_threads",
+  "title": "设置每核硬件线程数 (HwThreadsPerCore)",
+  "status": "PASS",
+  "code": "$ErrorActionPreference = 'Stop'\nfunction Wait-Job2($p){ if(-not $p){return 7}; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -Milliseconds 200; $j=[wmi]$p}; return $j.JobState }\n\n$ns = 'root\\virtualization\\v2'\n$vmname = 'WMITEST_smt_threads'\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n\n# 创建第二代虚拟机\n$vssd = ([wmiclass]\"\\\\.\\$($ns):Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName = $vmname\n$vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:2'\n$r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\nif ($r.ReturnValue -eq 4096) { Wait-Job2 $r.Job | Out-Null }\n$vm = [wmi]$r.ResultingSystem\n\n# 定位到 ProcessorSettingData\n$vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$proc = ([wmi]$vssd2.__PATH).GetRelated('Msvm_ProcessorSettingData') | Select-Object -First 1\n\n# 设置 HwThreadsPerCore：0=继承主机，1=禁用SMT，2=每核两线程\n$proc.HwThreadsPerCore = [uint64]2\n$rm = $vsms.ModifyResourceSettings($proc.GetText(1))\nif ($rm.ReturnValue -eq 4096) { Wait-Job2 $rm.Job | Out-Null }\n\n# 读回\n$p3 = ([wmi]$vssd2.__PATH).GetRelated('Msvm_ProcessorSettingData') | Select-Object -First 1\nWrite-Output (\"HwThreadsPerCore = {0}  Realized = {1}\" -f $p3.HwThreadsPerCore, $p3.HwThreadsPerCoreRealized)\n\n# 清理\n$vsms.DestroySystem($vm.__PATH) | Out-Null",
+  "output": "INITIAL HwThreadsPerCore = 0\nSET=2 READBACK=2 Realized= OK\nSET=1 READBACK=1 Realized= OK\nSET=0 READBACK=0 Realized= OK\nASSERT: PASS\nCLEANUP: destroyed test VM\nCLEANUP: no residual",
+  "notes": [
+    "HwThreadsPerCore 位于 Msvm_ProcessorSettingData，类型为 uint64。0=继承主机（默认），1=禁用 SMT，2=每核 2 线程。",
+    "修改该值使用 ModifyResourceSettings(GetText(1))，可能同步返回 rv=0（未触发 4096 Job）。0/1/2 三种取值均可写入并读回。",
+    "该属性在 MOF schema 中标为 Read 限定符，但实际可经 ModifyResourceSettings 写入，Read 限定符仅为信息性标注。",
+    "HwThreadsPerCoreRealized（uint32，只读）表示来宾实际看到的每核线程数，仅在虚拟机运行时填充；关机状态下读回为空，因此不对其做断言。",
+    "该属性自 build 10586 起提供，长期稳定可用。"
+  ],
+  "title_en": "Setting Hardware Threads per Core (HwThreadsPerCore)",
+  "notes_en": [
+    "HwThreadsPerCore resides on Msvm_ProcessorSettingData and is of type uint64. 0=inherit from host (default), 1=disable SMT, 2=2 threads per core.",
+    "This value is modified using ModifyResourceSettings(GetText(1)) and may return rv=0 synchronously (without raising a 4096 job). All three values 0/1/2 can be written and read back.",
+    "This property is marked with the Read qualifier in the MOF schema but can in fact be written through ModifyResourceSettings; the Read qualifier is merely an informational annotation.",
+    "HwThreadsPerCoreRealized (uint32, read-only) represents the number of threads per core actually seen by the guest and is populated only while the virtual machine is running; it reads back empty in the powered-off state, so no assertion is made on it.",
+    "This property has been available since build 10586 and has remained stable over the long term."
+  ],
+  "code_en": "$ErrorActionPreference = 'Stop'\nfunction Wait-Job2($p){ if(-not $p){return 7}; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -Milliseconds 200; $j=[wmi]$p}; return $j.JobState }\n\n$ns = 'root\\virtualization\\v2'\n$vmname = 'WMITEST_smt_threads'\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n\n# Create a generation 2 virtual machine\n$vssd = ([wmiclass]\"\\\\.\\$($ns):Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName = $vmname\n$vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:2'\n$r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\nif ($r.ReturnValue -eq 4096) { Wait-Job2 $r.Job | Out-Null }\n$vm = [wmi]$r.ResultingSystem\n\n# Locate the ProcessorSettingData\n$vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$proc = ([wmi]$vssd2.__PATH).GetRelated('Msvm_ProcessorSettingData') | Select-Object -First 1\n\n# Set HwThreadsPerCore: 0=inherit from host, 1=disable SMT, 2=two threads per core\n$proc.HwThreadsPerCore = [uint64]2\n$rm = $vsms.ModifyResourceSettings($proc.GetText(1))\nif ($rm.ReturnValue -eq 4096) { Wait-Job2 $rm.Job | Out-Null }\n\n# Read back\n$p3 = ([wmi]$vssd2.__PATH).GetRelated('Msvm_ProcessorSettingData') | Select-Object -First 1\nWrite-Output (\"HwThreadsPerCore = {0}  Realized = {1}\" -f $p3.HwThreadsPerCore, $p3.HwThreadsPerCoreRealized)\n\n# Clean up\n$vsms.DestroySystem($vm.__PATH) | Out-Null"
+}

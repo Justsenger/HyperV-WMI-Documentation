@@ -1,0 +1,1936 @@
+{
+ "languages": [
+  "en",
+  "zh"
+ ],
+ "seed": {
+  "虚拟化核心": [
+   [
+    "virtual machine",
+    "虚拟机",
+    ""
+   ],
+   [
+    "virtual system",
+    "虚拟系统",
+    ""
+   ],
+   [
+    "hypervisor",
+    "虚拟机监控程序",
+    ""
+   ],
+   [
+    "host",
+    "主机",
+    ""
+   ],
+   [
+    "guest",
+    "来宾",
+    ""
+   ],
+   [
+    "partition",
+    "分区",
+    ""
+   ],
+   [
+    "nested virtualization",
+    "嵌套虚拟化",
+    ""
+   ],
+   [
+    "hierarchical",
+    "分层",
+    "与 layered 区分"
+   ],
+   [
+    "layered",
+    "层叠",
+    "与 hierarchical 区分"
+   ],
+   [
+    "generation",
+    "代",
+    "第一代/第二代"
+   ],
+   [
+    "virtualization extension",
+    "虚拟化扩展",
+    ""
+   ]
+  ],
+  "快照/复制/迁移": [
+   [
+    "snapshot",
+    "快照",
+    ""
+   ],
+   [
+    "checkpoint",
+    "检查点",
+    ""
+   ],
+   [
+    "reference point",
+    "参考点",
+    ""
+   ],
+   [
+    "replication",
+    "复制",
+    "过程"
+   ],
+   [
+    "replica",
+    "副本",
+    "名词,被复制出的对象"
+   ],
+   [
+    "failover",
+    "故障转移",
+    ""
+   ],
+   [
+    "failback",
+    "故障回切",
+    ""
+   ],
+   [
+    "migration",
+    "迁移",
+    ""
+   ],
+   [
+    "live migration",
+    "实时迁移",
+    ""
+   ],
+   [
+    "storage migration",
+    "存储迁移",
+    ""
+   ],
+   [
+    "recovery",
+    "恢复",
+    ""
+   ],
+   [
+    "collection",
+    "集合",
+    ""
+   ],
+   [
+    "primordial",
+    "原始",
+    ""
+   ],
+   [
+    "consumer",
+    "使用者",
+    "CIM 语境"
+   ]
+  ],
+  "计算资源": [
+   [
+    "processor",
+    "处理器",
+    ""
+   ],
+   [
+    "virtual processor",
+    "虚拟处理器",
+    ""
+   ],
+   [
+    "memory",
+    "内存",
+    ""
+   ],
+   [
+    "resource pool",
+    "资源池",
+    ""
+   ],
+   [
+    "setting data",
+    "设置数据",
+    ""
+   ],
+   [
+    "allocation",
+    "分配",
+    ""
+   ],
+   [
+    "weight",
+    "权重",
+    ""
+   ],
+   [
+    "reservation",
+    "预留",
+    ""
+   ],
+   [
+    "limit",
+    "限制",
+    ""
+   ],
+   [
+    "quota",
+    "配额",
+    ""
+   ],
+   [
+    "socket",
+    "插槽",
+    ""
+   ],
+   [
+    "core",
+    "核心",
+    ""
+   ],
+   [
+    "thread",
+    "线程",
+    ""
+   ]
+  ],
+  "存储": [
+   [
+    "virtual hard disk",
+    "虚拟硬盘",
+    ""
+   ],
+   [
+    "extent",
+    "盘区",
+    "CIM StorageExtent"
+   ],
+   [
+    "storage",
+    "存储",
+    ""
+   ],
+   [
+    "disk",
+    "磁盘",
+    ""
+   ],
+   [
+    "drive",
+    "驱动器",
+    ""
+   ],
+   [
+    "volume",
+    "卷",
+    ""
+   ],
+   [
+    "logical disk",
+    "逻辑磁盘",
+    ""
+   ],
+   [
+    "storage pool",
+    "存储池",
+    ""
+   ],
+   [
+    "persistent memory",
+    "持久内存",
+    ""
+   ]
+  ],
+  "网络": [
+   [
+    "ethernet switch",
+    "以太网交换机",
+    ""
+   ],
+   [
+    "virtual switch",
+    "虚拟交换机",
+    ""
+   ],
+   [
+    "switch port",
+    "交换机端口",
+    ""
+   ],
+   [
+    "endpoint",
+    "终结点",
+    "微软标准译法;数学区间端点除外"
+   ],
+   [
+    "network adapter",
+    "网络适配器",
+    ""
+   ],
+   [
+    "ethernet port",
+    "以太网端口",
+    ""
+   ],
+   [
+    "teaming",
+    "组合",
+    ""
+   ],
+   [
+    "offload",
+    "卸载",
+    ""
+   ],
+   [
+    "bandwidth",
+    "带宽",
+    ""
+   ],
+   [
+    "isolation",
+    "隔离",
+    ""
+   ],
+   [
+    "forwarding",
+    "转发",
+    ""
+   ],
+   [
+    "bridging",
+    "桥接",
+    ""
+   ]
+  ],
+  "安全": [
+   [
+    "shielded",
+    "受防护",
+    ""
+   ],
+   [
+    "key protector",
+    "密钥保护程序",
+    ""
+   ],
+   [
+    "security",
+    "安全",
+    ""
+   ],
+   [
+    "encryption",
+    "加密",
+    ""
+   ],
+   [
+    "attestation",
+    "证明",
+    ""
+   ],
+   [
+    "secure boot",
+    "安全启动",
+    ""
+   ],
+   [
+    "speculative execution",
+    "推测执行",
+    ""
+   ]
+  ],
+  "CIM/WMI 结构": [
+   [
+    "class",
+    "类",
+    ""
+   ],
+   [
+    "property",
+    "属性",
+    ""
+   ],
+   [
+    "method",
+    "方法",
+    ""
+   ],
+   [
+    "parameter",
+    "参数",
+    ""
+   ],
+   [
+    "association",
+    "关联",
+    ""
+   ],
+   [
+    "instance",
+    "实例",
+    ""
+   ],
+   [
+    "qualifier",
+    "限定符",
+    ""
+   ],
+   [
+    "enumeration",
+    "枚举",
+    ""
+   ],
+   [
+    "reference",
+    "引用",
+    ""
+   ],
+   [
+    "capabilities",
+    "功能",
+    ""
+   ],
+   [
+    "service",
+    "服务",
+    ""
+   ],
+   [
+    "job",
+    "作业",
+    ""
+   ],
+   [
+    "provider",
+    "提供程序",
+    ""
+   ],
+   [
+    "element",
+    "元素",
+    ""
+   ],
+   [
+    "setting",
+    "设置",
+    ""
+   ],
+   [
+    "component",
+    "组件",
+    ""
+   ],
+   [
+    "collection",
+    "集合",
+    ""
+   ]
+  ],
+  "状态/状况": [
+   [
+    "enabled",
+    "已启用",
+    ""
+   ],
+   [
+    "disabled",
+    "已禁用",
+    ""
+   ],
+   [
+    "state",
+    "状态",
+    ""
+   ],
+   [
+    "status",
+    "状态",
+    ""
+   ],
+   [
+    "operational status",
+    "运行状态",
+    ""
+   ],
+   [
+    "health state",
+    "运行状况状态",
+    ""
+   ],
+   [
+    "requested state",
+    "请求的状态",
+    ""
+   ],
+   [
+    "enabled state",
+    "启用状态",
+    ""
+   ],
+   [
+    "transition",
+    "转换",
+    ""
+   ]
+  ],
+  "通用动作": [
+   [
+    "indicate",
+    "指示",
+    ""
+   ],
+   [
+    "represent",
+    "表示",
+    ""
+   ],
+   [
+    "specify",
+    "指定",
+    ""
+   ],
+   [
+    "configure",
+    "配置",
+    ""
+   ],
+   [
+    "request",
+    "请求",
+    ""
+   ],
+   [
+    "support",
+    "支持",
+    ""
+   ],
+   [
+    "retrieve",
+    "检索",
+    ""
+   ],
+   [
+    "define",
+    "定义",
+    ""
+   ],
+   [
+    "modify",
+    "修改",
+    ""
+   ],
+   [
+    "create",
+    "创建",
+    ""
+   ],
+   [
+    "destroy",
+    "销毁",
+    ""
+   ],
+   [
+    "export",
+    "导出",
+    ""
+   ],
+   [
+    "import",
+    "导入",
+    ""
+   ],
+   [
+    "deprecated",
+    "弃用",
+    ""
+   ]
+  ],
+  "度量与补充": [
+   [
+    "metric",
+    "度量",
+    "区别 metric value"
+   ],
+   [
+    "metric value",
+    "度量值",
+    ""
+   ],
+   [
+    "metric definition",
+    "度量定义",
+    ""
+   ],
+   [
+    "managed element",
+    "受管元素",
+    ""
+   ],
+   [
+    "boot source",
+    "启动源",
+    ""
+   ],
+   [
+    "pointing device",
+    "指针设备",
+    ""
+   ],
+   [
+    "access point",
+    "访问点",
+    ""
+   ],
+   [
+    "saved state",
+    "已保存状态",
+    ""
+   ],
+   [
+    "controller",
+    "控制器",
+    ""
+   ],
+   [
+    "namespace",
+    "命名空间",
+    ""
+   ],
+   [
+    "firmware",
+    "固件",
+    ""
+   ],
+   [
+    "cluster",
+    "群集",
+    ""
+   ],
+   [
+    "fibre channel",
+    "光纤通道",
+    ""
+   ],
+   [
+    "subnet",
+    "子网",
+    ""
+   ],
+   [
+    "container image",
+    "容器映像",
+    ""
+   ],
+   [
+    "gpu partition",
+    "GPU 分区",
+    ""
+   ],
+   [
+    "friendly name",
+    "友好名称",
+    ""
+   ],
+   [
+    "trunk",
+    "中继",
+    ""
+   ]
+  ]
+ },
+ "extra": [
+  {
+   "en": "block size",
+   "zh": "块大小",
+   "freq": 10,
+   "alts": []
+  },
+  {
+   "en": "numa node",
+   "zh": "NUMA 节点",
+   "freq": 8,
+   "alts": []
+  },
+  {
+   "en": "recovery server",
+   "zh": "恢复服务器",
+   "freq": 8,
+   "alts": []
+  },
+  {
+   "en": "container",
+   "zh": "容器",
+   "freq": 7,
+   "alts": []
+  },
+  {
+   "en": "media",
+   "zh": "介质",
+   "freq": 7,
+   "alts": []
+  },
+  {
+   "en": "vram",
+   "zh": "VRAM",
+   "freq": 7,
+   "alts": []
+  },
+  {
+   "en": "trunking mode",
+   "zh": "中继模式",
+   "freq": 6,
+   "alts": []
+  },
+  {
+   "en": "test replica",
+   "zh": "测试副本",
+   "freq": 6,
+   "alts": []
+  },
+  {
+   "en": "compute engine",
+   "zh": "计算引擎",
+   "freq": 6,
+   "alts": []
+  },
+  {
+   "en": "decode engine",
+   "zh": "解码引擎",
+   "freq": 6,
+   "alts": []
+  },
+  {
+   "en": "encode engine",
+   "zh": "编码引擎",
+   "freq": 6,
+   "alts": []
+  },
+  {
+   "en": "forwarding database",
+   "zh": "转发数据库",
+   "freq": 5,
+   "alts": []
+  },
+  {
+   "en": "indication",
+   "zh": "指示",
+   "freq": 5,
+   "alts": []
+  },
+  {
+   "en": "superclass",
+   "zh": "超类",
+   "freq": 5,
+   "alts": []
+  },
+  {
+   "en": "cardinality",
+   "zh": "基数",
+   "freq": 5,
+   "alts": []
+  },
+  {
+   "en": "replication relationship",
+   "zh": "复制关系",
+   "freq": 5,
+   "alts": []
+  },
+  {
+   "en": "node",
+   "zh": "节点",
+   "freq": 5,
+   "alts": []
+  },
+  {
+   "en": "guest service interface",
+   "zh": "来宾服务接口",
+   "freq": 5,
+   "alts": []
+  },
+  {
+   "en": "octet",
+   "zh": "八位字节",
+   "freq": 5,
+   "alts": []
+  },
+  {
+   "en": "subclass",
+   "zh": "子类",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "logical device",
+   "zh": "逻辑设备",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "service access point",
+   "zh": "服务访问点",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "switch extension",
+   "zh": "交换机扩展",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "transparent bridging",
+   "zh": "透明桥接",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "serial controller",
+   "zh": "串行控制器",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "timestamp",
+   "zh": "时间戳",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "display controller",
+   "zh": "显示控制器",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "network port",
+   "zh": "网络端口",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "interactive session",
+   "zh": "交互式会话",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "guest cluster",
+   "zh": "来宾群集",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "hba",
+   "zh": "HBA",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "virtual system configuration",
+   "zh": "虚拟系统配置",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "vrss",
+   "zh": "VRSS",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "transport type",
+   "zh": "传输类型",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "queue",
+   "zh": "队列",
+   "freq": 4,
+   "alts": []
+  },
+  {
+   "en": "serial port",
+   "zh": "串行端口",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "floppy controller",
+   "zh": "软盘控制器",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "video controller",
+   "zh": "视频控制器",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "computer system",
+   "zh": "计算机系统",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "primary server",
+   "zh": "主服务器",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "resource type",
+   "zh": "资源类型",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "aggregation",
+   "zh": "聚合",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "assignable device",
+   "zh": "可分配设备",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "protocol controller",
+   "zh": "协议控制器",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "connection point",
+   "zh": "连接点",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "synthetic",
+   "zh": "合成",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "offline",
+   "zh": "脱机",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "port",
+   "zh": "端口",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "disk merge",
+   "zh": "磁盘合并",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "flex io device",
+   "zh": "Flex IO 设备",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "heartbeat",
+   "zh": "检测信号",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "port profile",
+   "zh": "端口配置文件",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "profile",
+   "zh": "配置文件",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "sap",
+   "zh": "SAP",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "logical unit",
+   "zh": "逻辑单元",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "crash consistent",
+   "zh": "崩溃一致",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "interface",
+   "zh": "接口",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "recovery snapshot",
+   "zh": "恢复快照",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "initial replication",
+   "zh": "初始复制",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "planned computer system",
+   "zh": "计划计算机系统",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "parent pool",
+   "zh": "父池",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "application consistent",
+   "zh": "应用程序一致",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "descriptor",
+   "zh": "描述符",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "pool",
+   "zh": "池",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "feature setting",
+   "zh": "功能设置",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "video memory",
+   "zh": "视频内存",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "resolution",
+   "zh": "分辨率",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "removable media",
+   "zh": "可移动介质",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "authentication",
+   "zh": "身份验证",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "refresh rate",
+   "zh": "刷新率",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "address space",
+   "zh": "地址空间",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "virtual function",
+   "zh": "虚拟函数",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "default queue",
+   "zh": "默认队列",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "synthetic hba",
+   "zh": "合成 HBA",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "serial number",
+   "zh": "序列号",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "vf",
+   "zh": "VF",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "queue pair",
+   "zh": "队列对",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "trunk mode",
+   "zh": "中继模式",
+   "freq": 3,
+   "alts": []
+  },
+  {
+   "en": "frame",
+   "zh": "帧",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "alert",
+   "zh": "警报",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "admission control",
+   "zh": "准入控制",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "base class",
+   "zh": "基类",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "media access device",
+   "zh": "介质访问设备",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "alert indication",
+   "zh": "警报指示",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "trunking",
+   "zh": "中继",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "video head",
+   "zh": "视频头",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "terminal connection",
+   "zh": "终端连接",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "abstract class",
+   "zh": "抽象类",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "schema",
+   "zh": "schema",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "dedicated",
+   "zh": "独占",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "shared",
+   "zh": "共享",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "weak association",
+   "zh": "弱关联",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "baud rate",
+   "zh": "波特率",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "aggregation function",
+   "zh": "聚合函数",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "servicing operation",
+   "zh": "维护操作",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "remote session",
+   "zh": "远程会话",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "network stack",
+   "zh": "网络栈",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "bus",
+   "zh": "总线",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "storage image",
+   "zh": "存储映像",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "image",
+   "zh": "映像",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "network connectivity",
+   "zh": "网络连接",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "pass-through device",
+   "zh": "直通设备",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "fibre channel switch",
+   "zh": "光纤通道交换机",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "synthetic ethernet adapter",
+   "zh": "合成以太网适配器",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "emulated ethernet adapter",
+   "zh": "模拟以太网适配器",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "ide controller",
+   "zh": "IDE 控制器",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "virtual battery",
+   "zh": "虚拟电池",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "virtual computer system",
+   "zh": "虚拟计算机系统",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "extension component",
+   "zh": "扩展组件",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "volume shadow copy service",
+   "zh": "卷影复制服务",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "routing domain",
+   "zh": "路由域",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "parent partition",
+   "zh": "父分区",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "metric service",
+   "zh": "度量服务",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "native vlan",
+   "zh": "本机 VLAN",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "protocol endpoint",
+   "zh": "协议终结点",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "forwarding entry",
+   "zh": "转发条目",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "compatibility vector",
+   "zh": "兼容性向量",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "member",
+   "zh": "成员",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "chassis manager",
+   "zh": "机箱管理器",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "compaction",
+   "zh": "压缩",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "consistency checker",
+   "zh": "一致性检查器",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "integrity",
+   "zh": "完整性",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "performance",
+   "zh": "性能",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "gateway",
+   "zh": "网关",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "multicast",
+   "zh": "多播",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "power cycle",
+   "zh": "电源循环",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "rct",
+   "zh": "RCT",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "delta",
+   "zh": "增量",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "save state",
+   "zh": "保存状态",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "snapshot collection",
+   "zh": "快照集合",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "storage device enclosure",
+   "zh": "存储设备机箱",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "tape drive",
+   "zh": "磁带驱动器",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "unicast",
+   "zh": "单播",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "vmbus",
+   "zh": "VMBus",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "video processor",
+   "zh": "视频处理器",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "key-value pair",
+   "zh": "键值对",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "virtual disk image",
+   "zh": "虚拟磁盘映像",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "integration component",
+   "zh": "集成组件",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "planned virtual system",
+   "zh": "计划虚拟系统",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "container image repository",
+   "zh": "容器映像存储库",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "vhd snapshot",
+   "zh": "VHD 快照",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "trustee",
+   "zh": "受信者",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "disk image",
+   "zh": "磁盘映像",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "hibernate",
+   "zh": "休眠",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "sample interval",
+   "zh": "采样间隔",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "backing store",
+   "zh": "后备存储",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "return code",
+   "zh": "返回码",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "thumbnail",
+   "zh": "缩略图",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "child pool",
+   "zh": "子池",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "power state",
+   "zh": "电源状态",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "credential",
+   "zh": "凭据",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "online",
+   "zh": "联机",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "quiesce",
+   "zh": "停顿",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "data root",
+   "zh": "数据根目录",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "embedded instance",
+   "zh": "内嵌实例",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "timeout period",
+   "zh": "超时期限",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "guest service",
+   "zh": "来宾服务",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "migration policy",
+   "zh": "迁移策略",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "data protection",
+   "zh": "数据保护",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "resource sub-type",
+   "zh": "资源子类型",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "scan mode",
+   "zh": "扫描模式",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "recovery action",
+   "zh": "恢复操作",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "vlan encapsulation",
+   "zh": "VLAN 封装",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "video architecture",
+   "zh": "视频体系结构",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "link technology",
+   "zh": "链路技术",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "power management",
+   "zh": "电源管理",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "topology",
+   "zh": "拓扑",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "worker process",
+   "zh": "工作进程",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "read-only",
+   "zh": "只读",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "thumbprint",
+   "zh": "指纹",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "load balancing",
+   "zh": "负载均衡",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "breakdown dimension",
+   "zh": "分解维度",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "virtual subnet",
+   "zh": "虚拟子网",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "broadcast",
+   "zh": "广播",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "encryption method",
+   "zh": "加密方法",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "read-only property",
+   "zh": "只读属性",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "runtime state",
+   "zh": "运行时状态",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "replication type",
+   "zh": "复制类型",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "disk drive",
+   "zh": "磁盘驱动器",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "static mac address",
+   "zh": "静态 MAC 地址",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "dynamic memory",
+   "zh": "动态内存",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "guest state",
+   "zh": "来宾状态",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "virtual numa node",
+   "zh": "虚拟 NUMA 节点",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "vendor",
+   "zh": "供应商",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "differencing disk",
+   "zh": "差异磁盘",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "resilient change tracking",
+   "zh": "弹性更改跟踪",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "extended acl",
+   "zh": "扩展 ACL",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "replication cycle",
+   "zh": "复制周期",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "memory block",
+   "zh": "内存块",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "unicast address",
+   "zh": "单播地址",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "resource allocation setting data",
+   "zh": "资源分配设置数据",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "alignment",
+   "zh": "对齐方式",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "key",
+   "zh": "键",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "prefix length",
+   "zh": "前缀长度",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "launch control",
+   "zh": "启动控制",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "maximum transmission unit",
+   "zh": "最大传输单元",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "memory-mapped io gap",
+   "zh": "内存映射 IO 间隙",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "environment variable",
+   "zh": "环境变量",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "chassis",
+   "zh": "机箱",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "switching mode",
+   "zh": "交换模式",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "latency",
+   "zh": "延迟",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "sector size",
+   "zh": "扇区大小",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "private mode",
+   "zh": "专用模式",
+   "freq": 2,
+   "alts": []
+  },
+  {
+   "en": "synthetic debugging",
+   "zh": "合成调试",
+   "freq": 2,
+   "alts": []
+  }
+ ],
+ "keep_english": [
+  "NUMA",
+  "vNUMA",
+  "VHD",
+  "VHDX",
+  "VHD Set",
+  "SR-IOV",
+  "IOV",
+  "VMQ",
+  "VMMQ",
+  "RSS",
+  "vRSS",
+  "RDMA",
+  "RoCE",
+  "GUID",
+  "TPM",
+  "UEFI",
+  "BIOS",
+  "VLAN",
+  "PVLAN",
+  "QoS",
+  "IPsec",
+  "SMB",
+  "SMB3",
+  "KVP",
+  "VSS",
+  "RDP",
+  "FC",
+  "FCoE",
+  "SCSI",
+  "IDE",
+  "GPU",
+  "vGPU",
+  "PCI Express",
+  "PCIe",
+  "MMIO",
+  "SGX",
+  "TDX",
+  "CXL",
+  "DMA",
+  "IOMMU",
+  "PMU",
+  "SMT",
+  "NIC",
+  "MAC",
+  "DHCP",
+  "IP",
+  "IPv4",
+  "IPv6",
+  "ACL",
+  "WMI",
+  "CIM",
+  "DMTF",
+  "ACPI",
+  "NVMe",
+  "ARM64",
+  "x64",
+  "VTL",
+  "RemoteFX",
+  "DDA"
+ ],
+ "conflicts": []
+}

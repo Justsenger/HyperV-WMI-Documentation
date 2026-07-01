@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyper-V WMI Schema — 中英对照文档</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--border:#30363d;--fg:#e6edf3;--muted:#8b949e;
+        --accent:#58a6ff;--green:#3fb950;--red:#f85149;--zh:#e6edf3;--en:#9db1c7;}
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.6 -apple-system,Segoe UI,Roboto,"Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg)}
+  header{position:sticky;top:0;background:var(--panel);border-bottom:1px solid var(--border);
+         padding:10px 20px;display:flex;gap:14px;align-items:center;z-index:10;flex-wrap:wrap}
+  header h1{font-size:16px;margin:0}
+  header small{color:var(--muted)}
+  #q{flex:1;min-width:200px;max-width:480px;padding:7px 11px;background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--fg)}
+  #wrap{max-width:1180px;margin:0 auto;padding:18px 20px 120px}
+  details.cls{border:1px solid var(--border);border-radius:8px;margin:10px 0;background:var(--panel)}
+  details.cls>summary{cursor:pointer;padding:11px 14px;font-size:15px;list-style:none;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+  details.cls>summary::-webkit-details-marker{display:none}
+  summary .cn{color:var(--accent);font-weight:700}
+  summary .zh{color:var(--muted);font-size:13px;font-weight:400}
+  summary .bd{color:var(--muted);font-size:12px;margin-left:auto}
+  .body{padding:6px 16px 16px;border-top:1px solid var(--border)}
+  .meta{color:var(--muted);font-size:12px;margin:8px 0}
+  .meta a{color:var(--accent);text-decoration:none}
+  .d-en{color:var(--en);font-size:13px}
+  .d-zh{color:var(--zh);margin-top:2px}
+  .desc{background:var(--bg);border-left:3px solid var(--accent);padding:8px 12px;border-radius:0 6px 6px 0;margin:8px 0}
+  .sec{font-size:14px;color:var(--muted);margin:16px 0 6px;border-bottom:1px solid var(--border);padding-bottom:3px}
+  table{border-collapse:collapse;width:100%;font-size:13px;margin:6px 0}
+  th,td{border:1px solid var(--border);padding:6px 9px;text-align:left;vertical-align:top}
+  th{background:var(--bg);color:var(--muted);position:sticky;top:52px}
+  code{font-family:"Cascadia Code",Consolas,monospace;font-size:12px}
+  .t-name{color:#7ee787;font-weight:600}.t-type{color:#79c0ff}
+  .en{color:var(--en);font-size:12.5px}.zh{color:var(--zh);margin-top:3px}
+  .enum{font-size:11px;color:var(--muted);margin-top:3px}
+  .enum b{color:#d2a8ff}
+  .method{border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin:8px 0;background:var(--bg)}
+  .method h4{margin:0 0 4px;font-size:14px}
+  .pill{font-size:11px;padding:1px 7px;border-radius:10px;margin-left:4px}
+  .pill.rm{background:#da363333;color:var(--red)}
+  .pill.dep{background:#bb800933;color:#d29922}
+  .muted{color:var(--muted)} .ret{font-size:12px;color:var(--muted);margin-top:6px}
+  #count{color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Hyper-V WMI Schema</h1><small id="sub"></small>
+  <input id="q" placeholder="筛选类 / 属性 / 方法…（回车展开全部匹配）">
+  <span id="count"></span>
+</header>
+<div id="wrap"><p class="muted">加载中…</p></div>
+
+<script>
+let DB=null,ZH={},BUILDS=[];
+const $=s=>document.querySelector(s),wrap=$('#wrap');
+const esc=s=>(s==null?'':String(s)).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const z=en=>en?(ZH[en]||ZH[en.trim()]||null):null;
+
+Promise.all([
+  fetch('../data/db/canonical.json').then(r=>r.json()),
+  fetch('../data/db/translations_zh.json').then(r=>r.ok?r.json():{}).catch(()=>({})),
+]).then(([db,zh])=>{
+  DB=db;ZH=zh;BUILDS=db.meta.builds;
+  $('#sub').textContent=`中英对照 · ${db.classes.length} 类 · ${BUILDS.length} build`;
+  render();
+}).catch(e=>wrap.innerHTML=`<p style="color:#f85149">加载失败：${e}</p>`);
+
+$('#q').addEventListener('input',render);
+$('#q').addEventListener('keydown',e=>{ if(e.key==='Enter') document.querySelectorAll('details.cls:not([hidden])').forEach(d=>d.open=true); });
+
+function span(c){ const r=c.last_seen!==BUILDS[BUILDS.length-1];
+  return (c.first_seen===BUILDS[0]?'':'自'+c.first_seen+' ')+(r?'至'+c.last_seen+'止':''); }
+
+function render(){
+  const ql=$('#q').value.trim().toLowerCase();
+  let html='',shown=0;
+  for(const c of DB.classes){
+    let hit=!ql||c.name.toLowerCase().includes(ql);
+    if(!hit&&ql) hit=c.properties.some(p=>p.name.toLowerCase().includes(ql))||c.methods.some(m=>m.name.toLowerCase().includes(ql));
+    if(!hit)continue; shown++;
+    const zd=z(c.description);
+    html+=`<details class="cls" data-n="${c.name}"><summary>`+
+      `<span class="cn">${esc(c.name)}</span>`+
+      `<span class="zh">${zd?esc(zd.slice(0,46)):''}</span>`+
+      `<span class="bd">${span(c)} · ${c.properties.length}属性 ${c.methods.length}方法</span>`+
+      `</summary><div class="body" data-lazy="1"></div></details>`;
+  }
+  wrap.innerHTML=html||'<p class="muted">无匹配</p>';
+  $('#count').textContent=`显示 ${shown}/${DB.classes.length} 类`;
+  wrap.querySelectorAll('details.cls').forEach(d=>{
+    d.addEventListener('toggle',()=>{ if(d.open){const b=d.querySelector('.body'); if(b.dataset.lazy){b.innerHTML=body(DB.classes.find(c=>c.name===d.dataset.n));b.dataset.lazy='';}} });
+  });
+}
+
+function enumH(en){ if(!en||!en.length)return'';
+  return `<div class="enum">`+en.map(e=>`<b>${esc(e.value)}</b>${e.label?'='+esc(e.label)+(z(e.label)?' / '+esc(z(e.label)):''):''}`).join('　')+`</div>`; }
+
+function body(c){
+  let h='';
+  const meta=[`命名空间 <code>${c.namespace}</code>`,span(c)||'全 build'];
+  if(c.superclass)meta.push(`继承自 <code>${esc(c.superclass)}</code>`);
+  if(c.is_association)meta.push('关联类');
+  h+=`<div class="meta">${meta.join(' · ')}</div>`;
+  const ze=z(c.description);
+  h+=`<div class="desc"><div class="d-en">${esc(c.description||'[no description]')}</div>`+
+     (ze?`<div class="d-zh">${esc(ze)}</div>`:'')+`</div>`;
+
+  if(c.properties.length){
+    h+=`<div class="sec">属性 Properties (${c.properties.length})</div>`;
+    h+=`<table><tr><th style="width:200px">属性</th><th style="width:110px">类型</th><th>描述（EN / 中）</th></tr>`;
+    for(const p of c.properties){
+      const typ=`${esc(p.type)}${p.array?'[]':''}${p.ref?' REF':''}`;
+      const acc=p.access.join(',')||'-';
+      const ze=z(p.description);
+      h+=`<tr><td><code class="t-name">${esc(p.name)}</code>${p.deprecated?'<span class="pill dep">废弃</span>':''}`+
+         `<div class="muted" style="font-size:11px">${acc} · 自${p.first_seen}${p.last_seen!==BUILDS[BUILDS.length-1]?'→'+p.last_seen+'✖':''}</div></td>`+
+         `<td><span class="t-type">${typ}</span>${p.default!=null?`<div class="muted" style="font-size:11px">默认 ${esc(p.default)}</div>`:''}</td>`+
+         `<td>${p.description?`<div class="en">${esc(p.description)}</div>`:''}${ze?`<div class="zh">${esc(ze)}</div>`:''}${enumH(p.enum)}</td></tr>`;
+    }
+    h+=`</table>`;
+  }
+  if(c.methods.length){
+    h+=`<div class="sec">方法 Methods (${c.methods.length})</div>`;
+    for(const m of c.methods){
+      const ze=z(m.description);
+      h+=`<div class="method"><h4><code class="t-name">${esc(m.name)}</code>() → <span class="t-type">${esc(m.return_type)}</span>${m.deprecated?'<span class="pill dep">废弃</span>':''}</h4>`;
+      if(m.description)h+=`<div class="en">${esc(m.description)}</div>`;
+      if(ze)h+=`<div class="zh">${esc(ze)}</div>`;
+      if(m.parameters.length){
+        h+=`<table><tr><th style="width:160px">参数</th><th style="width:140px">类型/方向</th><th>描述（EN / 中）</th></tr>`;
+        for(const pa of m.parameters){
+          const typ=`${esc(pa.type||'')}${pa.array?'[]':''}${pa.ref?' REF':''}`+(pa.embedded?` «${esc(pa.embedded)}»`:'');
+          const ze=z(pa.description);
+          h+=`<tr><td><code>${esc(pa.name)}</code></td><td><span class="t-type">${typ}</span> <span class="muted">${esc(pa.direction||'')}</span></td>`+
+             `<td>${pa.description?`<div class="en">${esc(pa.description)}</div>`:''}${ze?`<div class="zh">${esc(ze)}</div>`:''}${enumH(pa.enum)}</td></tr>`;
+        }
+        h+=`</table>`;
+      }
+      if(m.return_codes&&m.return_codes.length)
+        h+=`<div class="ret">返回码：`+m.return_codes.map(e=>`<code>${esc(e.value)}</code>${e.label?'='+esc(e.label)+(z(e.label)?'/'+esc(z(e.label)):''):''}`).join('　')+`</div>`;
+      h+=`</div>`;
+    }
+  }
+  return h;
+}
+</script>
+</body>
+</html>

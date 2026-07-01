@@ -1,0 +1,25 @@
+{
+  "id": "mmio_gap",
+  "title": "配置虚拟机 MMIO 地址空间（GPU-P/DDA 大 BAR）",
+  "title_en": "Configure Virtual Machine MMIO Address Space (GPU-P/DDA Large BAR)",
+  "status": "PASS",
+  "code": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\nfunction Wait-Job2($p){ if(-not $p){ return 7 }; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){ Start-Sleep -Milliseconds 200; $j=[wmi]$p }; return $j.JobState }\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n$vmName = 'WMITEST_mmio_gap'\n$vm = $null\ntry {\n  # 创建第二代测试虚拟机\n  $vssd = ([wmiclass]\"\\\\.\\${ns}:Msvm_VirtualSystemSettingData\").CreateInstance()\n  $vssd.ElementName = $vmName\n  $vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:2'\n  $r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\n  if($r.ReturnValue -eq 4096){ $null = Wait-Job2 $r.Job }\n  $vm = [wmi]$r.ResultingSystem\n  # 获取虚拟机的活动设置实例\n  $vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n  $vssd2 = [wmi]$vssd2.__PATH\n  # MMIO 间隙属性(MB)位于 Msvm_VirtualSystemSettingData，而非 Msvm_MemorySettingData\n  $vssd2.LowMmioGapSize  = [uint64]512\n  $vssd2.HighMmioGapSize = [uint64]32768\n  $r2 = $vsms.ModifySystemSettings($vssd2.GetText(1))\n  if($r2.ReturnValue -eq 4096){ $null = Wait-Job2 $r2.Job }\n  # 读回验证\n  $vssd3 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n  $vssd3 = [wmi]$vssd3.__PATH\n  Write-Output (\"LowMmioGapSize=\" + $vssd3.LowMmioGapSize + \" HighMmioGapSize=\" + $vssd3.HighMmioGapSize + \" HighMmioGapBase=\" + $vssd3.HighMmioGapBase)\n}\nfinally {\n  if($vm){ $d = $vsms.DestroySystem($vm.__PATH); if($d.ReturnValue -eq 4096){ $null = Wait-Job2 $d.Job } }\n}",
+  "code_en": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\nfunction Wait-Job2($p){ if(-not $p){ return 7 }; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){ Start-Sleep -Milliseconds 200; $j=[wmi]$p }; return $j.JobState }\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n$vmName = 'WMITEST_mmio_gap'\n$vm = $null\ntry {\n  # Create a Generation 2 test virtual machine\n  $vssd = ([wmiclass]\"\\\\.\\${ns}:Msvm_VirtualSystemSettingData\").CreateInstance()\n  $vssd.ElementName = $vmName\n  $vssd.VirtualSystemSubType = 'Microsoft:Hyper-V:SubType:2'\n  $r = $vsms.DefineSystem($vssd.GetText(1), $null, $null)\n  if($r.ReturnValue -eq 4096){ $null = Wait-Job2 $r.Job }\n  $vm = [wmi]$r.ResultingSystem\n  # Obtain the active setting data instance of the VM\n  $vssd2 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n  $vssd2 = [wmi]$vssd2.__PATH\n  # The MMIO gap properties (in MB) reside on Msvm_VirtualSystemSettingData, not on Msvm_MemorySettingData\n  $vssd2.LowMmioGapSize  = [uint64]512\n  $vssd2.HighMmioGapSize = [uint64]32768\n  $r2 = $vsms.ModifySystemSettings($vssd2.GetText(1))\n  if($r2.ReturnValue -eq 4096){ $null = Wait-Job2 $r2.Job }\n  # Read back to verify\n  $vssd3 = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n  $vssd3 = [wmi]$vssd3.__PATH\n  Write-Output (\"LowMmioGapSize=\" + $vssd3.LowMmioGapSize + \" HighMmioGapSize=\" + $vssd3.HighMmioGapSize + \" HighMmioGapBase=\" + $vssd3.HighMmioGapBase)\n}\nfinally {\n  if($vm){ $d = $vsms.DestroySystem($vm.__PATH); if($d.ReturnValue -eq 4096){ $null = Wait-Job2 $d.Job } }\n}",
+  "output": "BEFORE LowMmioGapSize=128 HighMmioGapSize=512 HighMmioGapBase=65024\nAFTER  LowMmioGapSize=512 HighMmioGapSize=32768 HighMmioGapBase=65024\nASSERT PASS: LowMmioGapSize=512 (want 512), HighMmioGapSize=32768 (want 32768)\nRESULT: PASS\nCLEANUP DestroySystem rv=4096",
+  "notes": [
+    "LowMmioGapSize / HighMmioGapSize / HighMmioGapBase 三个属性位于 Msvm_VirtualSystemSettingData(VSSD)，而非 Msvm_MemorySettingData；后者不含这些字段。",
+    "因此应通过 ModifySystemSettings(vssd.GetText(1)) 下发，而非 ModifyResourceSettings。",
+    "单位为 MB。第二代虚拟机默认值：LowMmioGapSize=128、HighMmioGapSize=512、HighMmioGapBase=65024(只读)。",
+    "DDA/GPU-P 映射大 BAR 设备时通常需要增大 HighMmioGapSize。",
+    "HighMmioGapBase 为只读属性(access 仅 Read)，由系统计算得出，不可写入。",
+    "虚拟机处于离线(未运行)状态即可修改这些属性，无需启动。ModifySystemSettings 返回 4096(异步 Job)，须用 Wait-Job2 等待完成。"
+  ],
+  "notes_en": [
+    "The three properties LowMmioGapSize / HighMmioGapSize / HighMmioGapBase reside on Msvm_VirtualSystemSettingData (VSSD), not on Msvm_MemorySettingData; the latter does not contain these fields.",
+    "They must therefore be applied through ModifySystemSettings(vssd.GetText(1)), not ModifyResourceSettings.",
+    "The unit is MB. Generation 2 VM defaults: LowMmioGapSize=128, HighMmioGapSize=512, HighMmioGapBase=65024 (read-only).",
+    "Mapping large-BAR devices via DDA/GPU-P typically requires increasing HighMmioGapSize.",
+    "HighMmioGapBase is a read-only property (access is Read only), computed by the system and not writable.",
+    "These properties can be modified while the VM is offline (not running); it does not need to be started. ModifySystemSettings returns 4096 (asynchronous job), which must be awaited with Wait-Job2 until completion."
+  ]
+}

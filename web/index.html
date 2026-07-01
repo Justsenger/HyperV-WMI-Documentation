@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyper-V WMI Schema</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--border:#30363d;--fg:#e6edf3;--muted:#8b949e;
+    --accent:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922;--chip:#21262d;--grid:#1c2128;--has:#196c2e;}
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,Segoe UI,Roboto,"Microsoft YaHei",sans-serif;background:var(--bg);color:var(--fg);display:flex;height:100vh;overflow:hidden}
+  #side{width:330px;min-width:330px;border-right:1px solid var(--border);display:flex;flex-direction:column;background:var(--panel)}
+  #side h1{font-size:15px;margin:0;padding:11px 14px 6px;display:flex;align-items:center;gap:8px}
+  #side h1 small{color:var(--muted);font-weight:400;font-size:12px}
+  #home{background:var(--chip);border:1px solid var(--border);color:var(--fg);border-radius:6px;
+        cursor:pointer;font-size:15px;padding:2px 8px;line-height:1}
+  #home:hover,#home.on{background:var(--accent);color:#000;border-color:var(--accent)}
+  #resizer{width:5px;cursor:col-resize;background:transparent;flex:0 0 5px}
+  #resizer:hover,#resizer.drag{background:var(--accent)}
+  /* home 页 */
+  .htop{font-size:13px;color:var(--muted);margin:0 0 14px;line-height:1.7}
+  .tcard{border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin:10px 0;background:var(--panel)}
+  .tcard h3{margin:0 0 4px;font-size:15px;color:var(--accent)}
+  .tcard .td{color:#c9d1d9;font-size:13px;margin-bottom:7px}
+  .tcard .te{font-size:12px;color:var(--muted);margin-top:5px}
+  .tcard .te b{color:var(--fg);font-weight:600}
+  .tlink{display:inline-block;background:var(--grid);border:1px solid var(--border);border-radius:6px;
+         padding:1px 8px;margin:2px 4px 2px 0;font-size:12px;cursor:pointer;color:#7ee787;font-family:Consolas,monospace}
+  .tlink:hover{border-color:var(--accent)}
+  .tlink.star::before{content:"★ ";color:var(--yellow)}
+  .model{border-left:3px solid var(--accent);background:var(--panel);padding:10px 14px;border-radius:0 6px 6px 0;margin:14px 0;font-size:13px;line-height:1.8}
+  .welcome{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:13px 16px;margin:8px 0 18px;font-size:13.5px;line-height:2;color:#c9d1d9}
+  .welcome code{background:var(--grid);padding:1px 5px;border-radius:4px;color:#7ee787}
+  .hm{background:var(--chip);border:1px solid var(--border);color:var(--fg);border-radius:6px;cursor:pointer;font-size:13px;padding:5px 14px}
+  .hm.on{background:var(--accent);color:#000;border-color:var(--accent)}
+  /* 结构树 */
+  .tree{font-size:13px}
+  .tree details>summary, .tree .tleaf{padding:2px 0;cursor:pointer;list-style:none}
+  .tree details>summary::-webkit-details-marker{display:none}
+  .tree details>summary::before{content:"▸ ";color:var(--muted)}
+  .tree details[open]>summary::before{content:"▾ ";color:var(--muted)}
+  .tree .tleaf{padding-left:14px}
+  .tch{padding-left:14px;border-left:1px solid var(--border);margin-left:5px}
+  .tn{color:#7ee787;font-family:Consolas,monospace;cursor:pointer}
+  .tn:hover{text-decoration:underline}
+  .tnd{color:var(--muted);font-size:12px;margin-left:6px}
+  .tnc{color:#6e7681;font-size:11px;margin-left:4px}
+  /* 功能类目录 */
+  .gcls{padding:8px 0 8px 4px;border-bottom:1px solid var(--border)}
+  .gd{color:#c9d1d9;font-size:13px;margin-top:2px}
+  .gp{color:var(--muted);font-size:11.5px;margin-top:3px;font-family:Consolas,"Microsoft YaHei",monospace;line-height:1.7}
+  .gp b{color:#8b949e;font-family:inherit}
+  details>summary.sec{list-style:revert}
+  #ctrls{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:0 10px 8px}
+  select{background:var(--bg);border:1px solid var(--border);color:var(--fg);border-radius:6px;padding:4px 6px;font-size:12px;cursor:pointer}
+  select:hover{border-color:var(--accent)}
+  #ctrls label{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:4px;cursor:pointer}
+  #search{margin:0 10px 8px;padding:8px 10px;background:var(--bg);border:1px solid var(--border);border-radius:6px;color:var(--fg);font-size:13px}
+  #tabs{display:flex;gap:4px;padding:0 10px 8px}
+  #tabs button{flex:1;padding:6px;background:var(--chip);border:1px solid var(--border);color:var(--fg);border-radius:6px;cursor:pointer;font-size:12px}
+  #tabs button.on{background:var(--accent);color:#000;border-color:var(--accent)}
+  #list{overflow-y:auto;flex:1;padding:4px 6px}
+  .grp{color:var(--muted);font-size:11px;text-transform:uppercase;padding:8px 8px 2px;letter-spacing:.5px}
+  .item{padding:4px 8px;border-radius:5px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:6px;white-space:nowrap;overflow:hidden}
+  .item:hover{background:var(--chip)}
+  .item.on{background:#1f6feb33}
+  .item .nm{overflow:hidden;text-overflow:ellipsis}
+  .badge{font-size:10px;padding:0 5px;border-radius:8px}
+  .b-new{background:#23863633;color:var(--green)}
+  .b-rm{background:#da363333;color:var(--red)}
+  #main{flex:1;overflow:auto;padding:22px 28px}
+  .crumb{color:var(--muted);font-size:12px}
+  h2.cls{font-size:23px;margin:4px 0 6px}
+  .meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+  .meta a,.ln{color:var(--accent);text-decoration:none;cursor:pointer}
+  .desc{background:var(--panel);border-left:3px solid var(--accent);padding:9px 13px;border-radius:0 6px 6px 0;margin:10px 0;color:#c9d1d9}
+  .sec{font-size:16px;margin:22px 0 6px;border-bottom:1px solid var(--border);padding-bottom:4px}
+  .hint{color:var(--muted);font-size:12px;margin:2px 0 8px}
+  table{border-collapse:collapse;font-size:13px;margin:6px 0}
+  th,td{border:1px solid var(--border);padding:5px 8px;text-align:left;vertical-align:top}
+  th{background:var(--panel);color:var(--muted);font-weight:600;position:sticky;top:0;z-index:2}
+  td code,.mono{font-family:"Cascadia Code",Consolas,monospace;font-size:12px}
+  .t-type{color:#79c0ff}.t-name{color:#7ee787;font-weight:600}
+  .pdesc{color:var(--muted);font-size:12px;margin-top:3px;max-width:560px}
+  .pextra{font-size:11px;margin-top:3px}
+  .enumv b{color:#d2a8ff}
+  .def{color:var(--yellow)}
+  .untr{color:#6e7681;font-style:italic;font-size:11px;margin-left:4px}
+  .mtx th.bcol{padding:5px 6px;min-width:50px;text-align:center;font-size:11px;color:var(--muted);font-weight:600;white-space:nowrap}
+  .mtx td.bcell{min-width:50px;text-align:center;padding:0;background:var(--grid)}
+  .mtx td.bcell.y{background:var(--has)}
+  .mtx td.bcell.y::after{content:"✓";color:#7ee787;font-size:12px}
+  .mtx td.first{min-width:300px}
+  .pill{font-size:11px;padding:1px 7px;border-radius:10px;margin-left:6px}
+  .pill.dep{background:#bb800933;color:var(--yellow)}
+  .pill.assoc{background:#8957e533;color:#d2a8ff}
+  .pill.rm{background:#da363333;color:var(--red)}
+  .chips{display:flex;flex-wrap:wrap;gap:3px;margin:6px 0}
+  .bchip{font-size:11px;padding:1px 7px;border-radius:8px;background:var(--grid);color:#6e7681}
+  .bchip.has{background:var(--has);color:#7ee787}
+  .method{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin:10px 0}
+  .method h4{margin:0 0 4px;font-size:15px}
+  .ret{font-size:12px;color:var(--muted);margin-top:8px}
+  .cl-build{margin:10px 0;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  .cl-build .hd{background:var(--panel);padding:8px 12px;font-weight:600;font-size:15px;cursor:pointer}
+  .cl-build .bd{padding:8px 14px;font-size:13px;display:none}
+  .cl-build.open .bd{display:block}
+  .add{color:var(--green)}.rm{color:var(--red)}
+  .dir-IN{color:#79c0ff}.dir-OUT{color:#ff9b72}.dir-INOUT{color:#d2a8ff}
+  .muted{color:var(--muted)}
+</style>
+</head>
+<body>
+<div id="side">
+  <h1><button id="home" title="Home">🏠</button>Hyper-V WMI</h1>
+  <div id="ctrls">
+    <select id="lang"></select>
+    <select id="build"></select>
+    <label><input type="checkbox" id="dep"> <span id="depL"></span></label>
+  </div>
+  <input id="search">
+  <div id="tabs">
+    <button data-tab="classes" class="on" id="tabC"></button>
+    <button data-tab="changelog" id="tabL"></button>
+  </div>
+  <div id="list"></div>
+</div>
+<div id="resizer"></div>
+<div id="main"><p class="muted">…</p></div>
+
+<script>
+// ---- 界面文案多语言（内容译文用 translations_<lang>.json）----
+const T = {
+  zh: {name:"中文", sub:(c,b)=>`${c} 类 · ${b} build`, searchPh:"搜索类 / 属性 / 方法…",
+    tabC:"类", tabL:"变更日志", buildAll:"全部 build", depHide:"隐藏废弃",
+    props:"属性", methods:"方法", colProp:"属性", colType:"类型", colAccess:"访问",
+    colParam:"参数", colDir:"方向", colEnum:"枚举", colDesc:"描述",
+    ret:"返回码：", assoc:"关联类", removedAfter:b=>`${b} 后移除`, inherit:"继承自",
+    provider:"Provider", noDesc:"[无官方描述]", untr:"[待译]",
+    clTitle:"变更日志", clHint:b=>`每个 build 相对<b>上一个 build</b> 的增删（新版在上）。最底部 <b>${b}</b> 为基线。`,
+    baseline:n=>`基线 · ${n} 个类`, baseNote:n=>`最低支持 build，其上 ${n} 个类作为起点。`,
+    addC:"✚ 新增类：", rmC:"✖ 移除类：", addM:"✚ 新增成员：", rmM:"✖ 移除成员：",
+    clsN:"类", memN:"成员", noMatch:"无匹配", inBuild:b=>`仅 ${b}`,
+    inherited:"继承的成员", from:"来自",
+    examplesT:"代码示例", exPass:"已验证", exUnsup:"需特定环境",
+    examplesNote:"命名空间 root\\virtualization\\v2 的 PowerShell 调用示例。执行写入类操作前，请在测试虚拟机上确认。",
+    relationships:"关联关系", relHint:"本类通过下列关联类连接到其他类（含继承自基类的关联）。", relVia:"经由（关联类）", relTo:"连接到", relRole:"角色",
+    homeT:"按功能上手", homeIntro:"不知道找哪个类？先按你要做的事找功能分区，每区给出最该先看的“★入口类”。",
+    entryL:"入口", relL:"相关", modelT:"核心关系模型（看懂这个就懂 Hyper-V WMI）",
+    model:"① 一台**虚拟机** = <code>Msvm_ComputerSystem</code>；它的整份**配置** = <code>Msvm_VirtualSystemSettingData</code>；里面每种**资源**（CPU/内存/磁盘/网卡）= 一个 <code>*SettingData</code> 子类。<br>② 所有**增删改**都通过 **服务类**（名字带 Service），不是直接改对象——如建虚拟机用 <code>Msvm_VirtualSystemManagementService.DefineSystem</code>。<br>③ 耗时操作**异步**返回 <code>4096</code>(Job Started) + 一个 <code>Msvm_ConcreteJob</code> 引用，要轮询它的 <code>JobState</code> 才知道完没完。" },
+  en: {name:"English", sub:(c,b)=>`${c} classes · ${b} builds`, searchPh:"Search class / property / method…",
+    tabC:"Classes", tabL:"Changelog", buildAll:"All builds", depHide:"Hide deprecated",
+    props:"Properties", methods:"Methods", colProp:"Property", colType:"Type", colAccess:"Access",
+    colParam:"Param", colDir:"Dir", colEnum:"Enum", colDesc:"Description",
+    ret:"Return codes: ", assoc:"Association", removedAfter:b=>`removed after ${b}`, inherit:"inherits",
+    provider:"Provider", noDesc:"[no description]", untr:"[untranslated]",
+    clTitle:"Changelog", clHint:b=>`Added/removed per build vs the <b>previous build</b> (newest first). <b>${b}</b> at bottom is the baseline.`,
+    baseline:n=>`baseline · ${n} classes`, baseNote:n=>`Lowest build; its ${n} classes are the starting point.`,
+    addC:"✚ Added classes: ", rmC:"✖ Removed classes: ", addM:"✚ Added members: ", rmM:"✖ Removed members: ",
+    clsN:"cls", memN:"mem", noMatch:"No match", inBuild:b=>`only ${b}`,
+    inherited:"Inherited members", from:"from",
+    examplesT:"Code examples", exPass:"Verified", exUnsup:"Environment-dependent",
+    examplesNote:"PowerShell examples for the root\\virtualization\\v2 namespace. Validate write operations on a test VM before use.",
+    relationships:"Relationships", relHint:"Associations that connect this class to others (including associations inherited from base classes).", relVia:"Via (association)", relTo:"Connects to", relRole:"Role",
+    homeT:"Start by task", homeIntro:"Don't know which class? Find the area for what you want to do; each lists the ★ entry classes to read first.",
+    entryL:"Entry", relL:"Related", modelT:"Core model (get this and you get Hyper-V WMI)",
+    model:"① A **VM** = <code>Msvm_ComputerSystem</code>; its whole **config** = <code>Msvm_VirtualSystemSettingData</code>; each **resource** (CPU/memory/disk/NIC) = a <code>*SettingData</code> subclass.<br>② All **create/modify/delete** go through **service classes** (named …Service), not by editing objects directly — e.g. create a VM via <code>Msvm_VirtualSystemManagementService.DefineSystem</code>.<br>③ Long operations return <code>4096</code> (Job Started) + a <code>Msvm_ConcreteJob</code> ref **asynchronously**; poll its <code>JobState</code> to know when it's done." },
+};
+// 可加更多语言: 在 T 里加一项 + 提供 TRANS[code]=fetch(`translations_${code}.json`)
+
+// build -> Windows 版本（仅变更日志用）。EKB 版本共用 base 的 schema。
+const BUILDVER={
+ "9200":"9200 · Windows 8 / Server 2012","9600":"9600 · Windows 8.1 / Server 2012 R2",
+ "10240":"10240 · Windows 10 1507","10586":"10586 · Windows 10 1511",
+ "14393":"14393 · Windows 10 1607 / Server 2016","15063":"15063 · Windows 10 1703",
+ "16299":"16299 · Windows 10 1709","17134":"17134 · Windows 10 1803",
+ "17763":"17763 · Windows 10 1809 / Server 2019",
+ "18362":"18362 / 18363 · Windows 10 1903 / 1909",
+ "19041":"19041–19045 · Windows 10 2004 / 20H2 / 21H1 / 21H2 / 22H2",
+ "20348":"20348 · Windows Server 2022","22000":"22000 · Windows 11 21H2",
+ "22621":"22621 / 22631 · Windows 11 22H2 / 23H2",
+ "26100":"26100 / 26200 · Windows 11 24H2 / 25H2 · Server 2025",
+ "28000":"28000 · Windows 11 26H1（Canary→Experimental）",
+ "29617":"29617 · Windows 11 26H2 / 27H2（Future Platforms 预览）"};
+
+let DB=null, BUILDS=[], DORDER=[], CUR=null, TAB='classes', CURBUILD=null;
+let LANG='zh', FILTER='', DEP=false;
+const TRANS = {};            // lang -> {英文原文: 译文}
+const $=s=>document.querySelector(s), main=$('#main'), list=$('#list');
+const t=k=>T[LANG][k];
+const esc=s=>(s==null?'':String(s)).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const lastBuild=()=>BUILDS[BUILDS.length-1];
+
+var EXAMPLES={recipes:{},by_class:{}};
+Promise.all([
+  fetch('../data/db/canonical.json').then(r=>r.json()),
+  fetch('../data/db/translations_zh.json').then(r=>r.ok?r.json():{}).catch(()=>({})),
+  fetch('../data/db/examples.json').then(r=>r.ok?r.json():null).catch(()=>null),
+]).then(([db,zh,ex])=>{
+  DB=db; BUILDS=db.meta.builds; DORDER=[...BUILDS].reverse(); TRANS.zh=zh||{};
+  if(ex&&ex.by_class)EXAMPLES=ex;
+  // 语言下拉
+  $('#lang').innerHTML=Object.keys(T).map(k=>`<option value="${k}">${T[k].name}</option>`).join('');
+  $('#lang').value=LANG;
+  // build 下拉
+  $('#build').innerHTML=`<option value="">${t('buildAll')}</option>`+DORDER.map(b=>`<option value="${b}">${b}</option>`).join('');
+  applyUI();
+  CUR=db.classes.find(c=>c.name==='Msvm_ProcessorSettingData')||db.classes[0];
+  renderList();
+  TAB='home'; document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('on')); $('#home').classList.add('on');
+  renderHome();
+}).catch(e=>main.innerHTML=`<p class="rm">load failed: ${e}</p>`);
+
+$('#lang').onchange=e=>{ LANG=e.target.value; document.documentElement.lang=LANG; applyUI(); rerender(); };
+$('#build').onchange=e=>{ FILTER=e.target.value; renderList(); ensureVisible(); };
+$('#dep').onchange=e=>{ DEP=e.target.checked; if(TAB==='classes'&&CUR)selectClass(CUR); };
+$('#search').addEventListener('input',renderList);
+$('#home').onclick=()=>{ TAB='home'; document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('on')); $('#home').classList.add('on'); renderHome(); };
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
+  TAB=b.dataset.tab; $('#home').classList.remove('on'); document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  rerender();
+});
+// 可拖动侧栏宽度
+(function(){ const r=$('#resizer'),s=$('#side'); let drag=false;
+  r.addEventListener('mousedown',e=>{drag=true;r.classList.add('drag');document.body.style.userSelect='none';e.preventDefault();});
+  window.addEventListener('mousemove',e=>{ if(!drag)return; const w=Math.min(640,Math.max(220,e.clientX)); s.style.width=w+'px'; s.style.minWidth=w+'px'; });
+  window.addEventListener('mouseup',()=>{drag=false;r.classList.remove('drag');document.body.style.userSelect='';});
+})();
+
+function applyUI(){
+  $('#search').placeholder=t('searchPh');
+  $('#tabC').textContent=t('tabC'); $('#tabL').textContent=t('tabL'); $('#depL').textContent=t('depHide');
+  const opt=$('#build').options[0]; if(opt) opt.textContent=t('buildAll');
+}
+function rerender(){
+  if(TAB==='home'){ renderList(); renderHome(); }
+  else if(TAB==='changelog'){ if(!CURBUILD)CURBUILD=lastBuild(); renderList(); renderBuildMain(CURBUILD); }
+  else { renderList(); if(CUR)selectClass(CUR); }
+}
+// 功能分类规则（顺序：先具体后通用；首个命中即归类）。test=正则(对类名)或函数(对类对象)
+// 匹配顺序：结构类（CIM 基类、关联）优先，避免被后面的功能关键词截胡；显示顺序在 renderHome 里把它们挪到末尾。
+const CATS=[
+ ["CIM 基类","CIM base classes", /^CIM_/],
+ ["关联关系","Associations", c=>c.is_association],
+ ["虚拟机核心","VM core", /^Msvm_(ComputerSystem|PlannedComputerSystem|VirtualSystemSettingData|VirtualSystemGlobalSettingData|VirtualSystemManagementService|VirtualSystemManagementServiceSettingData|SummaryInformation|ComputerSystemSummaryInformation|VirtualSystemExportSettingData|VirtualSystemImportSettingData|VirtualSystemGuestManagementService|InteractiveSession|VirtualSystemCapabilit|VirtualSystemManagementCapabilit|VirtualSystemUpgrade|BIOS|BootSource|Container|Servicing)/],
+ ["处理器 / CPU","Processor / CPU", c=>/Processor|Numa|CpuGroup|CompatibilityVector/i.test(c.name)&&!/Graphics|3d|Gpu/i.test(c.name)],
+ ["内存","Memory", /Memory/],
+ ["存储 / 磁盘 / VHD","Storage / disk / VHD", /Storage|Disk|Vhd|VHD|MountedStorageImage|Volume|Pmem|PersistentMemory|Diskette|Dvd|CdRom|ImageManagement|LogicalUnit/],
+ ["网络","Networking", /Ethernet|Network|Switch|Lan|Vlan|WiFi|Fc[A-Z]|FibreChannel|Bridging|GuestNetwork|Forwarding|Endpoint/],
+ ["快照 / 检查点 / 参考点","Snapshot / checkpoint", /Snapshot|ReferencePoint/],
+ ["复制","Replication", /Replica|Replication|Failover/],
+ ["迁移","Migration", /Migration/],
+ ["安全 / 加密 / TPM","Security", /Security|Tpm|TPM|Shield|KeyProtector/],
+ ["GPU / 显示","GPU / display", /Gpu|GPU|Graphics|3d|3D|Display|VideoHead|Synth3d|FlexIo/],
+ ["设备 / 外设","Devices", /Keyboard|Mouse|Serial|Battery|Pci|PCI|Ide|IDE|Scsi|SCSI|Synthetic|EmulatedEthernet|Controller|AssignableDevice|Dismount/],
+ ["来宾集成服务","Guest integration", /Guest|Kvp|KVP|Shutdown|TimeSync|Heartbeat|Vss|VSS|Rdv|Terminal/],
+ ["资源池 / 分配","Resource pool", /ResourcePool|Pool|Allocation|SettingsDefine|ResourceType|FeatureSettingData/],
+ ["集合 / 管理 / 作业 / 度量","Collection / mgmt / job / metric", /Collection|Service|Job|Metric|Profile|Registered|Error|Component/],
+];
+const OTHER=["其它","Other"];
+function categorize(){
+  const out={}; CATS.forEach(c=>out[c[0]]=[]); out[OTHER[0]]=[];
+  const inF=c=>!FILTER||c.builds.includes(FILTER);
+  for(const c of [...DB.classes].sort((a,b)=>a.name.localeCompare(b.name))){
+    if(!inF(c))continue;
+    let cat=OTHER[0];
+    for(const r of CATS){ const tt=r[2]; const m=typeof tt==='function'?tt(c):new RegExp(tt.source,'i').test(c.name); if(m){ cat=r[0]; break; } }
+    out[cat].push(c);
+  }
+  return out;
+}
+function renderHome(){
+  const cats=categorize();
+  let h=crumb([])+`<h2 class="cls">${LANG==='zh'?'欢迎使用 Hyper-V WMI 手册':'Welcome — Hyper-V WMI reference'}</h2>`;
+  h+=`<div class="welcome">${LANG==='zh'
+    ?'用代码或脚本操作 Hyper-V 的一切——建虚拟机、调 CPU / 内存、挂磁盘、做快照、迁移……——都对应下面这些「类」。<br>👉 <b>不知道找哪个？</b>点开下面的功能分类逐个浏览，每个类都有中文说明。<br>🔎 <b>知道名字？</b>用左上角搜索框直接搜。<br>💡 <b>想上手写代码？</b>记住一句话：虚拟机 = <code>Msvm_ComputerSystem</code>，它的配置 = <code>Msvm_VirtualSystemSettingData</code>，所有增删改都走名字带 <code>Service</code> 的服务类。'
+    :'Everything you can do to Hyper-V via code/script maps to the classes below.<br>👉 <b>Lost?</b> Open a functional area below to browse; each class has a description.<br>🔎 <b>Know the name?</b> Search top-left.<br>💡 <b>Quickstart:</b> a VM = <code>Msvm_ComputerSystem</code>, its config = <code>Msvm_VirtualSystemSettingData</code>, all changes go through a <code>…Service</code> class.'}</div>`;
+  h+=`<div style="margin:14px 0 4px;padding:12px 14px;border:1px solid #30363d;border-left:3px solid #9e6a03;border-radius:6px;background:#161b22;font-size:12.5px;line-height:1.7;color:#8b949e">${LANG==='zh'
+    ?'<b style="color:#c9d1d9">声明与免责</b><br>本站为<b>非官方的第三方社区参考文档</b>，与 Microsoft 无隶属、合作或背书关系。“Windows”“Hyper-V”“Microsoft”等为 Microsoft Corporation 的商标，归其所有。<br>类、属性、方法等结构信息取自 Windows 系统自带的 WMI 架构文件（MOF/MFL），英文描述引用自这些文件；中文为本项目翻译。数据可能存在提取或翻译误差，且随系统版本变化。<br>内容<b>按“现状”提供，不作任何明示或默示担保</b>，使用风险自负。代码示例仅供参考——<b>写入类操作会真实改动虚拟机，请务必先在非生产的测试环境验证</b>。这是持续维护中的文档，欢迎反馈问题。'
+    :'<b style="color:#c9d1d9">Notice &amp; Disclaimer</b><br>This is an <b>unofficial, third-party community reference</b>, not affiliated with, endorsed by, or sponsored by Microsoft. “Windows”, “Hyper-V”, and “Microsoft” are trademarks of Microsoft Corporation and remain the property of their owner.<br>Schema information (classes, properties, methods) is derived from the WMI schema files (MOF/MFL) shipped with Windows; English descriptions are quoted from those files, and Chinese is this project’s translation. Data may contain extraction or translation errors and changes across OS versions.<br>Content is provided <b>“as is”, without warranty of any kind</b>; use at your own risk. Code examples are for reference only — <b>write operations modify real virtual machines; always validate in a non-production test environment first</b>. This is a living document; feedback is welcome.'}</div>`;
+  const struct=['CIM 基类','关联关系'];  // 匹配时优先，但展示时放到最后
+  const order=[...CATS.filter(c=>!struct.includes(c[0])).map(c=>[c[0],c[1]]),...CATS.filter(c=>struct.includes(c[0])).map(c=>[c[0],c[1]]),[OTHER[0],OTHER[1]]];
+  for(const [zh,en] of order){
+    const arr=cats[zh]; if(!arr||!arr.length)continue;
+    h+=`<details><summary class="sec" style="cursor:pointer">${LANG==='zh'?zh:en} <span class="muted" style="font-size:12px;font-weight:400">(${arr.length})</span></summary>`;
+    for(const c of arr){
+      const d=c.description?(tr(c.description)||c.description):'';
+      h+=`<div class="gcls"><span class="tn" onclick="goto('${c.name}')">${c.name}</span>`+
+         (c.is_association?`<span class="pill assoc" style="margin-left:6px">${t('assoc')}</span>`:'')+
+         (c.last_seen!==lastBuild()?`<span class="pill rm" style="margin-left:6px">${t('removedAfter')(c.last_seen)}</span>`:'')+
+         `<div class="gd">${d?esc(d.replace(/\s+/g,' ')):'<span class="muted">—</span>'}</div></div>`;
+    }
+    h+=`</details>`;
+  }
+  main.innerHTML=h; main.scrollTop=0;
+}
+function ensureVisible(){
+  if(CUR && (!FILTER||CUR.builds.includes(FILTER))) selectClass(CUR);
+  else { const c=DB.classes.find(c=>!FILTER||c.builds.includes(FILTER)); if(c)selectClass(c); }
+}
+
+// 内容译文：LANG=en 用英文原文；否则查 TRANS[LANG]
+function tr(en){ if(!en||LANG==='en')return null; const m=TRANS[LANG]||{}; return m[en]||m[en.trim()]||null; }
+function D(en){ if(!en)return''; const x=tr(en); return x?esc(x):esc(en)+(LANG==='en'?'':`<span class="untr">${t('untr')}</span>`); }
+function Lb(en){ if(!en)return''; const x=tr(en); return x?esc(x):esc(en); }
+
+// 过滤：build + 废弃
+const okBuild=o=>!FILTER||o.builds.includes(FILTER);
+const okDep=o=>!DEP||!o.deprecated;
+const visP=c=>c.properties.filter(p=>okBuild(p)&&okDep(p));
+const visM=c=>c.methods.filter(m=>okBuild(m)&&okDep(m));
+// 继承链 + 继承来的成员（按命名空间内 superclass 链解析）
+function ancestors(c){ const out=[],seen=new Set(); let s=c.superclass;
+  while(s&&!seen.has(s)){ seen.add(s); const a=DB.classes.find(x=>x.name===s); if(!a)break; out.push(a); s=a.superclass; } return out; }
+function inherited(c){
+  const haveP=new Set(c.properties.map(p=>p.name)), haveM=new Set(c.methods.map(m=>m.name)), P=[],M=[];
+  for(const a of ancestors(c)){
+    for(const p of a.properties) if(!haveP.has(p.name)){ haveP.add(p.name); P.push({...p,from:a.name}); }
+    for(const m of a.methods) if(!haveM.has(m.name)){ haveM.add(m.name); M.push({...m,from:a.name}); }
+  }
+  return {P:P.filter(p=>okBuild(p)&&okDep(p)), M:M.filter(m=>okBuild(m)&&okDep(m))};
+}
+
+// ---- 关联关系导航：预计算每个类作为端点参与了哪些关联 ----
+let REL=null;
+function buildRel(){
+  REL={};
+  for(const a of DB.classes){
+    if(!a.is_association)continue;
+    const eps=a.properties.filter(p=>p.ref).map(p=>({role:p.name,cls:p.type}));  // 端点类名在 type 字段（ref 是布尔标志）
+    if(eps.length<2)continue;
+    for(let i=0;i<eps.length;i++)for(let j=0;j<eps.length;j++){
+      if(i===j)continue;
+      (REL[eps[i].cls]=REL[eps[i].cls]||[]).push({assoc:a.name,other:eps[j].cls,myRole:eps[i].role,otherRole:eps[j].role,builds:a.builds,last_seen:a.last_seen});
+    }
+  }
+}
+function relationsFor(c){
+  if(!REL)buildRel();
+  const names=new Set([c.name,...ancestors(c).map(a=>a.name)]);
+  const seen=new Set(),out=[];
+  for(const n of names)for(const r of (REL[n]||[])){
+    if(FILTER&&!r.builds.includes(FILTER))continue;
+    const k=r.assoc+'|'+r.other+'|'+r.otherRole; if(seen.has(k))continue; seen.add(k);
+    out.push(r);
+  }
+  const rank=n=>n.startsWith('Msvm_')?0:1;  // Hyper-V 专有关联优先，CIM 通用关联靠后
+  out.sort((a,b)=>rank(a.assoc)-rank(b.assoc)||a.other.localeCompare(b.other)||a.assoc.localeCompare(b.assoc));
+  return out;
+}
+function renderRelationships(c){
+  const rels=relationsFor(c);
+  if(!rels.length)return '';
+  let h=`<details style="margin-top:18px"><summary class="sec" style="cursor:pointer;list-style:revert">${t('relationships')} (${rels.length})</summary>`;
+  h+=`<div class="muted" style="margin:4px 0 8px">${t('relHint')}</div>`;
+  h+=`<table><tr><th>${t('relVia')}</th><th>${t('relTo')}</th><th>${t('relRole')}</th></tr>`;
+  for(const r of rels){
+    const rm=r.last_seen!==lastBuild()?` <span class="pill rm">${t('removedAfter')(r.last_seen)}</span>`:'';
+    h+=`<tr><td>${clink(r.assoc)}${rm}</td><td>${clink(r.other)}</td><td class="mono muted" style="font-size:12px">${esc(r.myRole)} → ${esc(r.otherRole)}</td></tr>`;
+  }
+  h+=`</table></details>`;
+  return h;
+}
+function renderExamples(c){
+  const ids=(EXAMPLES.by_class&&EXAMPLES.by_class[c.name])||[];
+  if(!ids.length)return '';
+  let h=`<div class="sec">${t('examplesT')} (${ids.length})</div>`;
+  h+=`<div class="muted" style="margin:-4px 0 10px">${t('examplesNote')}</div>`;
+  const en=LANG==='en';
+  for(const id of ids){
+    const r=EXAMPLES.recipes[id]; if(!r)continue;
+    const ok=r.status==='PASS';
+    const title=(en&&r.title_en)?r.title_en:r.title;
+    const notes=(en&&r.notes_en)?r.notes_en:r.notes;
+    const code=(en&&r.code_en)?r.code_en:r.code;
+    const badge=`<span class="pill" style="background:${ok?'#238636':'#9e6a03'};color:#fff">${ok?t('exPass'):t('exUnsup')}</span>`;
+    h+=`<details class="method" style="margin-top:8px"><summary style="cursor:pointer;list-style:revert">${badge} <b>${esc(title||id)}</b> <code class="mono muted" style="font-size:.85em">${id}</code></summary>`;
+    if(notes&&notes.length)h+=`<ul style="margin:8px 0 6px;padding-left:20px">`+notes.map(n=>`<li class="muted" style="margin:2px 0">${esc(n)}</li>`).join('')+`</ul>`;
+    if(code)h+=`<pre style="background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:10px 12px;overflow:auto;font-size:.85em;line-height:1.5"><code>${esc(code)}</code></pre>`;
+    h+=`</details>`;
+  }
+  return h;
+}
+function renderList(){
+  if(TAB==='changelog'){ renderBuildList(); return; }
+  const q=$('#search').value.trim().toLowerCase();
+  const groups={};
+  for(const c of DB.classes){
+    if(FILTER && !c.builds.includes(FILTER))continue;
+    let hit=!q||c.name.toLowerCase().includes(q);
+    if(!hit&&q) hit=c.properties.some(p=>p.name.toLowerCase().includes(q))||c.methods.some(m=>m.name.toLowerCase().includes(q));
+    if(!hit)continue;
+    const pre=c.name.split('_')[0];(groups[pre]=groups[pre]||[]).push(c);
+  }
+  let h='';
+  for(const pre of Object.keys(groups).sort()){
+    h+=`<div class="grp">${pre} (${groups[pre].length})</div>`;
+    for(const c of groups[pre].sort((a,b)=>a.name.localeCompare(b.name))){
+      let bd='';
+      if(c.last_seen!==lastBuild())bd=`<span class="badge b-rm">→${c.last_seen}</span>`;
+      else if(c.first_seen!==BUILDS[0])bd=`<span class="badge b-new">${c.first_seen}+</span>`;
+      h+=`<div class="item ${CUR&&CUR.name===c.name?'on':''}" data-n="${c.name}"><span class="nm">${esc(c.name)}</span>${bd}</div>`;
+    }
+  }
+  list.innerHTML=h||`<p class="muted" style="padding:10px">${t('noMatch')}</p>`;
+  list.querySelectorAll('.item').forEach(el=>el.onclick=()=>selectClass(DB.classes.find(c=>c.name===el.dataset.n)));
+}
+
+function mtxHead(cols){ return `<tr>${cols.map(c=>`<th>${c}</th>`).join('')}`+DORDER.map(b=>`<th class="bcol">${b}</th>`).join('')+`</tr>`; }
+function mtxCells(present){ const s=new Set(present); return DORDER.map(b=>`<td class="bcell ${s.has(b)?'y':''}" title="${b}"></td>`).join(''); }
+function enumHtml(en){ if(!en||!en.length)return''; return `<span class="enumv">`+en.map(e=>`<b>${esc(e.value)}</b>${e.label?'='+Lb(e.label):''}`).join(' · ')+`</span>`; }
+function clink(n){return `<span class="ln" onclick="goto('${n}')">${esc(n)}</span>`}
+function memLink(s){const cls=s.split('.')[0];return `<span class="ln" onclick="goto('${cls}')">${esc(s)}</span>`}
+window.goto=n=>{const c=DB.classes.find(x=>x.name===n);if(c){TAB='classes';$('#home').classList.remove('on');document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x.dataset.tab==='classes'));selectClass(c)}};
+window.goHome=()=>{ TAB='home'; document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('on')); $('#home').classList.add('on'); renderList(); renderHome(); };
+window.goCL=()=>{ TAB='changelog'; $('#home').classList.remove('on'); document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x.dataset.tab==='changelog')); if(!CURBUILD)CURBUILD=lastBuild(); renderList(); renderBuildMain(CURBUILD); };
+function crumb(trail){ const home=`<span class="ln" onclick="goHome()">🏠 ${LANG==='zh'?'首页':'Home'}</span>`; return `<div class="crumb">${[home,...trail].join(' › ')}</div>`; }
+
+function selectClass(c){
+  CUR=c; TAB='classes'; renderList();
+  const removed=c.last_seen!==lastBuild();
+  let h=crumb([`<span class="ln" onclick="goHome()">${LANG==='zh'?'类':'Classes'}</span>`,`<b>${esc(c.name)}</b>`]);
+  h+=`<h2 class="cls">${esc(c.name)}`+
+     (c.is_association?`<span class="pill assoc">${t('assoc')}</span>`:'')+
+     (removed?`<span class="pill rm">${t('removedAfter')(c.last_seen)}</span>`:'')+
+     (FILTER?`<span class="pill" style="background:#1f6feb33;color:#58a6ff">${t('inBuild')(FILTER)}</span>`:'')+`</h2>`;
+  let meta=[];
+  if(c.superclass)meta.push(t('inherit')+' '+clink(c.superclass));
+  const prov=c.qualifiers&&c.qualifiers.Provider; if(prov)meta.push(t('provider')+' <code>'+esc(prov)+'</code>');
+  h+=`<div class="meta">${meta.join(' · ')}</div>`;
+  h+=`<div class="desc">${c.description?D(c.description):`<span class="muted">${t('noDesc')}</span>`}</div>`;
+
+  const props=visP(c);
+  h+=`<div class="sec">${t('props')} (${props.length})</div>`;
+  if(props.length){
+    h+=`<table class="mtx"><thead>${mtxHead([t('colProp'),t('colType'),t('colAccess')])}</thead><tbody>`;
+    for(const p of props){
+      let typ=`<span class="t-type">${esc(p.type)}${p.array?'[]':''}${p.ref?' REF':''}</span>`;
+      let det=p.description?`<div class="pdesc">${D(p.description)}</div>`:'';
+      let ex=[];
+      if(p.enum&&p.enum.length)ex.push(enumHtml(p.enum));
+      if(p.default!=null)ex.push(`<span class="def">${esc(p.default)}</span>`);
+      if(ex.length)det+=`<div class="pextra">${ex.join('　')}</div>`;
+      h+=`<tr><td class="first"><code class="t-name">${esc(p.name)}</code>${p.deprecated?'<span class="pill dep">⚠</span>':''}${det}</td>`+
+         `<td>${typ}</td><td class="mono">${p.access.join(',')||'-'}</td>${mtxCells(p.builds)}</tr>`;
+    }
+    h+=`</tbody></table>`;
+  }
+
+  const meths=visM(c);
+  if(meths.length){
+    h+=`<div class="sec">${t('methods')} (${meths.length})</div>`;
+    for(const m of meths){
+      h+=`<div class="method"><h4><code class="t-name">${esc(m.name)}</code>() → <span class="t-type">${esc(m.return_type)}</span>`+
+         (m.deprecated?'<span class="pill dep">⚠</span>':'')+`</h4>`;
+      if(m.description)h+=`<div class="muted">${D(m.description)}</div>`;
+      h+=`<div class="chips" style="margin-top:6px">`+DORDER.map(b=>`<span class="bchip ${m.builds.includes(b)?'has':''}">${b}</span>`).join('')+`</div>`;
+      if(m.parameters.length){
+        h+=`<table><tr><th>${t('colParam')}</th><th>${t('colType')}</th><th>${t('colDir')}</th><th>${t('colEnum')}</th><th>${t('colDesc')}</th></tr>`;
+        for(const pa of m.parameters){
+          let typ=`<span class="t-type">${esc(pa.type||'')}${pa.array?'[]':''}${pa.ref?' REF':''}</span>`;
+          if(pa.embedded)typ+=` <span class="muted">«${esc(pa.embedded)}»</span>`;
+          const d=(pa.direction||'').replace('/','');
+          h+=`<tr><td><code>${esc(pa.name)}</code></td><td>${typ}</td><td class="dir-${d}">${esc(pa.direction||'')}</td><td>${enumHtml(pa.enum)}</td><td>${D(pa.description||'')}</td></tr>`;
+        }
+        h+=`</table>`;
+      }
+      if(m.return_codes&&m.return_codes.length)
+        h+=`<div class="ret">${t('ret')}`+m.return_codes.map(e=>`<code>${esc(e.value)}</code>${e.label?'='+Lb(e.label):''}`).join(' · ')+`</div>`;
+      h+=`</div>`;
+    }
+  }
+
+  // 代码示例
+  h+=renderExamples(c);
+
+  // 关联关系导航
+  h+=renderRelationships(c);
+
+  // 继承来的成员（可折叠）
+  const inh=inherited(c);
+  if(inh.P.length||inh.M.length){
+    h+=`<details style="margin-top:18px"><summary class="sec" style="cursor:pointer;list-style:revert">${t('inherited')} (${inh.P.length+inh.M.length})</summary>`;
+    if(inh.P.length){
+      h+=`<table><tr><th>${t('colProp')}</th><th>${t('colType')}</th><th>${t('from')}</th><th>${t('colDesc')}</th></tr>`;
+      for(const p of inh.P){
+        let typ=`<span class="t-type">${esc(p.type)}${p.array?'[]':''}${p.ref?' REF':''}</span>`;
+        let ex=p.enum&&p.enum.length?`<div class="pextra">${enumHtml(p.enum)}</div>`:'';
+        h+=`<tr><td><code class="t-name">${esc(p.name)}</code>${p.deprecated?'<span class="pill dep">⚠</span>':''} <span class="mono muted">${p.access.join(',')}</span></td><td>${typ}</td><td>${clink(p.from)}</td><td>${D(p.description||'')}${ex}</td></tr>`;
+      }
+      h+=`</table>`;
+    }
+    if(inh.M.length){
+      h+=`<table><tr><th>${t('methods')}</th><th>→</th><th>${t('from')}</th><th>${t('colDesc')}</th></tr>`;
+      for(const m of inh.M)
+        h+=`<tr><td><code class="t-name">${esc(m.name)}</code>()</td><td><span class="t-type">${esc(m.return_type)}</span></td><td>${clink(m.from)}</td><td>${D(m.description||'')}</td></tr>`;
+      h+=`</table>`;
+    }
+    h+=`</details>`;
+  }
+  main.innerHTML=h; main.scrollTop=0;
+}
+
+function bChanges(i){
+  const b=BUILDS[i];
+  const addC=DB.classes.filter(c=>c.first_seen===b).map(c=>c.name);
+  const rmC=i>0?DB.classes.filter(c=>c.last_seen===BUILDS[i-1]).map(c=>c.name):[];
+  let addM=[],rmM=[];
+  for(const c of DB.classes){
+    for(const p of c.properties){
+      if(p.first_seen===b&&c.first_seen!==b)addM.push(c.name+'.'+p.name);
+      if(i>0&&p.last_seen===BUILDS[i-1]&&c.last_seen!==BUILDS[i-1])rmM.push(c.name+'.'+p.name);
+    }
+    for(const m of c.methods)if(m.first_seen===b&&c.first_seen!==b)addM.push(c.name+'.'+m.name+'()');
+  }
+  return {b,i,addC,rmC,addM,rmM};
+}
+function renderBuildList(){   // 变更日志：左侧列 build，点击在右侧显示
+  let h='';
+  for(let i=BUILDS.length-1;i>=0;i--){
+    const b=BUILDS[i];
+    if(i===0){ h+=`<div class="item ${CURBUILD===b?'on':''}" data-b="${b}"><span class="nm">${b}</span><span class="badge" style="color:var(--muted)">${LANG==='zh'?'基线':'base'}</span></div>`; continue; }
+    const ch=bChanges(i); const ac=ch.addC.length+ch.addM.length, rc=ch.rmC.length+ch.rmM.length;
+    if(!ac&&!rc)continue;
+    h+=`<div class="item ${CURBUILD===b?'on':''}" data-b="${b}"><span class="nm">${b}</span><span style="font-size:11px">${ac?'<span class="add">+'+ac+'</span> ':''}${rc?'<span class="rm">-'+rc+'</span>':''}</span></div>`;
+  }
+  list.innerHTML=h;
+  list.querySelectorAll('.item').forEach(el=>el.onclick=()=>{ CURBUILD=el.dataset.b; renderBuildList(); renderBuildMain(CURBUILD); });
+}
+function renderBuildMain(b){
+  const i=BUILDS.indexOf(b);
+  let h=crumb([`<span class="ln" onclick="goCL()">${t('clTitle')}</span>`,`<b>${esc(b)}</b>`])+`<h2 class="cls" style="font-size:19px">${BUILDVER[b]||b}</h2>`;
+  if(i<=0){ const base=DB.classes.filter(c=>c.first_seen===BUILDS[0]).length;
+    h+=`<p class="hint">${t('baseline')(base)} — ${t('baseNote')(base)}</p>`; main.innerHTML=h; main.scrollTop=0; return; }
+  const ch=bChanges(i);
+  h+=`<p class="hint">${LANG==='zh'?'相对上一版':'vs previous'} ${BUILDS[i-1]}</p>`;
+  if(ch.addC.length)h+=`<div class="sec add">${t('addC')}${ch.addC.length}</div><p>${ch.addC.sort().map(clink).join('、')}</p>`;
+  if(ch.rmC.length)h+=`<div class="sec rm">${t('rmC')}${ch.rmC.length}</div><p>${ch.rmC.sort().map(clink).join('、')}</p>`;
+  if(ch.addM.length)h+=`<div class="sec add">${t('addM')}${ch.addM.length}</div><p class="mono" style="font-size:12px;line-height:1.9">${ch.addM.sort().map(memLink).join('、')}</p>`;
+  if(ch.rmM.length)h+=`<div class="sec rm">${t('rmM')}${ch.rmM.length}</div><p class="mono" style="font-size:12px;line-height:1.9">${ch.rmM.sort().map(memLink).join('、')}</p>`;
+  if(!ch.addC.length&&!ch.rmC.length&&!ch.addM.length&&!ch.rmM.length)h+=`<p class="muted">${LANG==='zh'?'无变化':'no change'}</p>`;
+  main.innerHTML=h; main.scrollTop=0;
+}
+</script>
+</body>
+</html>

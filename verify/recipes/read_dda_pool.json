@@ -1,0 +1,25 @@
+{
+  "id": "read_dda_pool",
+  "title": "读取可直通设备 (DDA 可分配 PCI Express 设备)",
+  "title_en": "Read Pass-Through Devices (DDA Assignable PCI Express Devices)",
+  "status": "PASS",
+  "code": "$ns = 'root\\virtualization\\v2'\n# 1) 枚举主机上可直通的 PCI Express 设备(DDA 候选)\n$pcie = @(Get-WmiObject -Namespace $ns -Class Msvm_PciExpress)\n# 2) primordial PCI Express 资源池——可分配设备所属的池\n$pool = Get-WmiObject -Namespace $ns -Class Msvm_ResourcePool |\n    Where-Object { $_.ResourceSubType -eq 'Microsoft:Hyper-V:Virtual Pci Express Port' -and $_.Primordial -eq $true } |\n    Select-Object -First 1\n# 3) 按 DeviceInstancePath 去重计设备数(每个物理设备可能有多个 Msvm_PciExpress 实例)\n$paths = @($pcie | Select-Object -ExpandProperty DeviceInstancePath | Sort-Object -Unique)\nWrite-Output ('PCIE_INSTANCE_COUNT=' + $pcie.Count)\nWrite-Output ('DISTINCT_DEVICE_PATH_COUNT=' + $paths.Count)\nforeach ($d in $pcie) {\n    Write-Output ('DEV InstancePath=' + $d.DeviceInstancePath + ' | Location=' + $d.LocationPath)\n}\nif ($pool) { Write-Output ('POOL ResourceType=' + $pool.ResourceType + ' SubType=' + $pool.ResourceSubType + ' Primordial=' + $pool.Primordial) }",
+  "code_en": "$ns = 'root\\virtualization\\v2'\n# 1) Enumerate the PCI Express devices on the host eligible for pass-through (DDA candidates)\n$pcie = @(Get-WmiObject -Namespace $ns -Class Msvm_PciExpress)\n# 2) The primordial PCI Express resource pool -- the pool to which assignable devices belong\n$pool = Get-WmiObject -Namespace $ns -Class Msvm_ResourcePool |\n    Where-Object { $_.ResourceSubType -eq 'Microsoft:Hyper-V:Virtual Pci Express Port' -and $_.Primordial -eq $true } |\n    Select-Object -First 1\n# 3) Count devices deduplicated by DeviceInstancePath (each physical device may have multiple Msvm_PciExpress instances)\n$paths = @($pcie | Select-Object -ExpandProperty DeviceInstancePath | Sort-Object -Unique)\nWrite-Output ('PCIE_INSTANCE_COUNT=' + $pcie.Count)\nWrite-Output ('DISTINCT_DEVICE_PATH_COUNT=' + $paths.Count)\nforeach ($d in $pcie) {\n    Write-Output ('DEV InstancePath=' + $d.DeviceInstancePath + ' | Location=' + $d.LocationPath)\n}\nif ($pool) { Write-Output ('POOL ResourceType=' + $pool.ResourceType + ' SubType=' + $pool.ResourceSubType + ' Primordial=' + $pool.Primordial) }",
+  "output": "PCIE_INSTANCE_COUNT=2\nDISTINCT_DEVICE_PATH_COUNT=1\nDEV InstancePath=PCIP\\VEN_1106&DEV_3483&SUBSYS_34831106&REV_01\\4&1FF8E16C&0&00E0 | Location=PCIROOT(80)#PCI(1C00)#PCI(0000)\nDEV InstancePath=PCIP\\VEN_1106&DEV_3483&SUBSYS_34831106&REV_01\\4&1FF8E16C&0&00E0 | Location=PCIROOT(80)#PCI(1C00)#PCI(0000)\nPOOL ResourceType=32769 SubType=Microsoft:Hyper-V:Virtual Pci Express Port Primordial=True\nPASS host exposes 1 assignable PCI Express device(s); primordial pool present",
+  "notes": [
+    "纯读操作，无需创建虚拟机，不涉及任何写入或破坏性操作。",
+    "主机可直通设备经 Msvm_PciExpress 暴露，关键只读属性为 DeviceID、DeviceInstancePath(PCIP\\VEN_xxx&DEV_xxx...)、LocationPath(PCIROOT(..)#PCI(..)) 及 FunctionNumber。",
+    "可分配池为 Msvm_ResourcePool 中 ResourceSubType='Microsoft:Hyper-V:Virtual Pci Express Port' 且 Primordial=True 的实例，ResourceType=32769。",
+    "同一物理设备可能返回多个 Msvm_PciExpress 实例但 DeviceInstancePath 相同（如经 PCIe-to-PCI 桥），应按 DeviceInstancePath 去重以得到真实设备数。",
+    "DDA 实际分配流程（不在本读取操作范围）：DismountAssignableDevice (Msvm_AssignableDeviceService) 将设备从主机卸载，再经 AddResourceSettings 将 Msvm_PciExpressSettingData 添加到目标虚拟机。列出的设备未必满足 DDA 直通预检（需 ACS、可重置、隔离等条件），本示例仅验证枚举读取。",
+    "Msvm_PciExpress 自 build 10586 起提供。"
+  ],
+  "notes_en": [
+    "A pure read operation; it requires no virtual machine creation and involves no writes or destructive operations.",
+    "Host pass-through devices are exposed through Msvm_PciExpress, whose key read-only properties are DeviceID, DeviceInstancePath (PCIP\\VEN_xxx&DEV_xxx...), LocationPath (PCIROOT(..)#PCI(..)), and FunctionNumber.",
+    "The assignable pool is the Msvm_ResourcePool instance with ResourceSubType='Microsoft:Hyper-V:Virtual Pci Express Port' and Primordial=True, whose ResourceType=32769.",
+    "The same physical device may return multiple Msvm_PciExpress instances sharing the same DeviceInstancePath (for example, through a PCIe-to-PCI bridge), so devices should be deduplicated by DeviceInstancePath to obtain the true device count.",
+    "The actual DDA assignment flow (out of scope for this read operation): DismountAssignableDevice (Msvm_AssignableDeviceService) dismounts the device from the host, and then AddResourceSettings adds Msvm_PciExpressSettingData to the target virtual machine. The listed devices do not necessarily pass the DDA pass-through prechecks (which require conditions such as ACS, resettability, and isolation); this example only validates enumeration reads.",
+    "Msvm_PciExpress is available since build 10586."
+  ]
+}

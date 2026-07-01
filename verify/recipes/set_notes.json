@@ -1,0 +1,21 @@
+{
+  "id": "set_notes",
+  "title": "设置虚拟机备注 (VSSD.Notes)",
+  "status": "PASS",
+  "code": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\nfunction Wait-Job2($p){ if(-not $p){ return 7 }; $j = [wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){ Start-Sleep -Milliseconds 200; $j = [wmi]$p }; return $j.JobState }\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n# 获取目标虚拟机的设置数据（$vm 为该虚拟机的 Msvm_ComputerSystem）\n$vssd = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$vssd = [wmi]$vssd.__PATH\n# Notes 在 v2 中为数组类型，但 Hyper-V 仅保留首个元素，故使用单元素数组\n$vssd.Notes = @('My note text (multi-word / multi-line is fine in one element)')\n$rm = $vsms.ModifySystemSettings($vssd.GetText(1))\nif($rm.ReturnValue -eq 4096){ Wait-Job2 $rm.Job | Out-Null }\nelseif($rm.ReturnValue -ne 0){ throw \"ModifySystemSettings rv=$($rm.ReturnValue)\" }\n# 读回\n$readNotes = @( ([wmi]$vm.__PATH).GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1 ).Notes\nWrite-Host ($readNotes -join ' | ')",
+  "output": "READBACK Notes count = 1\nREADBACK[0] = WMITEST note set via WMI\nASSERT PASS set_notes Notes=[WMITEST note set via WMI]\nCLEANUP DestroySystem rv=4096\nLEFTOVER count = 0",
+  "notes": [
+    "修改备注属于整机设置：获取虚拟机的 Msvm_VirtualSystemSettingData，设置其 .Notes，再调用 $vsms.ModifySystemSettings($vssd.GetText(1))；不应使用 ModifyResourceSettings。",
+    "VSSD.Notes 在 v2 命名空间 schema 中为 string[]（array=true），但 Hyper-V 实现仅保留数组的第一个元素：传入 @('a','b') 读回仅剩 'a'。可靠写法是使用单元素数组 @('整段备注')，多行或多词内容放在同一字符串中即可。",
+    "ModifySystemSettings 可能同步返回 rv=0（未触发 4096 job），仍应保留 Wait-Job2 作为兜底。",
+    "创建实例时不能使用 [wmiclass]\"\\\\.\\$ns:Class\" 强制转换（会报无效参数），应改用 (Get-WmiObject -Namespace $ns -Class <Class> -List).CreateInstance()。另注意 PowerShell 会将 \"$ns:\" 解析为作用域变量，需写作 \"${ns}:\"。"
+  ],
+  "title_en": "Setting the Virtual Machine Notes (VSSD.Notes)",
+  "notes_en": [
+    "Modifying the notes is a whole-system setting: obtain the virtual machine's Msvm_VirtualSystemSettingData, set its .Notes, then call $vsms.ModifySystemSettings($vssd.GetText(1)); ModifyResourceSettings should not be used.",
+    "VSSD.Notes is declared as string[] (array=true) in the v2 namespace schema, but the Hyper-V implementation retains only the first element of the array: passing @('a','b') reads back as only 'a'. The reliable approach is to use a single-element array @('the entire note'), placing multi-line or multi-word content within that one string.",
+    "ModifySystemSettings may return rv=0 synchronously (without raising a 4096 job); Wait-Job2 should still be kept as a fallback.",
+    "When creating an instance, the [wmiclass]\"\\\\.\\$ns:Class\" cast cannot be used (it reports an invalid parameter); use (Get-WmiObject -Namespace $ns -Class <Class> -List).CreateInstance() instead. Note also that PowerShell parses \"$ns:\" as a scoped variable, so it must be written as \"${ns}:\"."
+  ],
+  "code_en": "$ErrorActionPreference = 'Stop'\n$ns = 'root\\virtualization\\v2'\nfunction Wait-Job2($p){ if(-not $p){ return 7 }; $j = [wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){ Start-Sleep -Milliseconds 200; $j = [wmi]$p }; return $j.JobState }\n$vsms = Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n# Get the setting data of the target virtual machine ($vm is the Msvm_ComputerSystem of that virtual machine)\n$vssd = $vm.GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1\n$vssd = [wmi]$vssd.__PATH\n# Notes is an array type in v2, but Hyper-V keeps only the first element, so use a single-element array\n$vssd.Notes = @('My note text (multi-word / multi-line is fine in one element)')\n$rm = $vsms.ModifySystemSettings($vssd.GetText(1))\nif($rm.ReturnValue -eq 4096){ Wait-Job2 $rm.Job | Out-Null }\nelseif($rm.ReturnValue -ne 0){ throw \"ModifySystemSettings rv=$($rm.ReturnValue)\" }\n# Read back\n$readNotes = @( ([wmi]$vm.__PATH).GetRelated('Msvm_VirtualSystemSettingData') | Select-Object -First 1 ).Notes\nWrite-Host ($readNotes -join ' | ')"
+}

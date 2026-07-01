@@ -1,0 +1,25 @@
+{
+  "id": "read_gpu",
+  "title": "读取可分区 GPU",
+  "title_en": "Read Partitionable GPUs",
+  "status": "PASS",
+  "code": "$ns = 'root\\virtualization\\v2'\n\n# 可分区 GPU（GPU-P 池）\n$pgpu = @(Get-WmiObject -Namespace $ns -Class Msvm_PartitionableGpu)\n\"PartitionableGpuCount=$($pgpu.Count)\"\nforeach ($g in $pgpu) {\n    \"Name=$($g.Name)\"\n    \"ValidPartitionCounts=$($g.ValidPartitionCounts -join ',')\"\n    \"TotalVRAM=$($g.TotalVRAM) AvailableVRAM=$($g.AvailableVRAM) OptimalPartitionVRAM=$($g.OptimalPartitionVRAM)\"\n    \"TotalCompute=$($g.TotalCompute) AvailableCompute=$($g.AvailableCompute)\"\n}\n\n# 物理 3D GPU（RemoteFX 时代；已弃用，通常为空）\n$p3d = @(Get-WmiObject -Namespace $ns -Class Msvm_Physical3dGraphicsProcessor)\n\"Physical3dGpuCount=$($p3d.Count)\"\nforeach ($g in $p3d) {\n    \"GPUID=$($g.GPUID) EnabledForVirtualization=$($g.EnabledForVirtualization) CompatibleForVirtualization=$($g.CompatibleForVirtualization)\"\n    \"DriverProvider=$($g.DriverProvider) DriverVersion=$($g.DriverVersion) DedicatedVideoMemory=$($g.DedicatedVideoMemory)\"\n}",
+  "code_en": "$ns = 'root\\virtualization\\v2'\n\n# Partitionable GPUs (GPU-P pool)\n$pgpu = @(Get-WmiObject -Namespace $ns -Class Msvm_PartitionableGpu)\n\"PartitionableGpuCount=$($pgpu.Count)\"\nforeach ($g in $pgpu) {\n    \"Name=$($g.Name)\"\n    \"ValidPartitionCounts=$($g.ValidPartitionCounts -join ',')\"\n    \"TotalVRAM=$($g.TotalVRAM) AvailableVRAM=$($g.AvailableVRAM) OptimalPartitionVRAM=$($g.OptimalPartitionVRAM)\"\n    \"TotalCompute=$($g.TotalCompute) AvailableCompute=$($g.AvailableCompute)\"\n}\n\n# Physical 3D GPUs (RemoteFX era; deprecated, usually empty)\n$p3d = @(Get-WmiObject -Namespace $ns -Class Msvm_Physical3dGraphicsProcessor)\n\"Physical3dGpuCount=$($p3d.Count)\"\nforeach ($g in $p3d) {\n    \"GPUID=$($g.GPUID) EnabledForVirtualization=$($g.EnabledForVirtualization) CompatibleForVirtualization=$($g.CompatibleForVirtualization)\"\n    \"DriverProvider=$($g.DriverProvider) DriverVersion=$($g.DriverVersion) DedicatedVideoMemory=$($g.DedicatedVideoMemory)\"\n}",
+  "output": "PartitionableGpuCount=3\n  [P0] Name=\\\\?\\PCI#VEN_10DE&DEV_2702&SUBSYS_10DE1771&REV_A1#4&22525bed&0&0030#{064092b3-625e-43bf-9eb5-dc845897dd59}\\GPUPARAV\n  [P0] ValidPartitionCounts=32\n  [P0] TotalVRAM=1000000000 AvailableVRAM=1000000000\n  [P0] OptimalPartitionVRAM=1000000000\n  [P0] TotalCompute=1000000000 AvailableCompute=1000000000\n  [P1] Name=\\\\?\\PCI#VEN_10DE&DEV_2803&SUBSYS_16CF1771&REV_A1#4&32761ba1&0&00D8#{...}\\GPUPARAV\n  [P1] ValidPartitionCounts=32\n  [P2] Name=\\\\?\\PCI#VEN_8086&DEV_AD1D&SUBSYS_08906688&REV_01#3&11583659&0&58#{...}\\GPUPARAV\n  [P2] ValidPartitionCounts=32\nPhysical3dGpuCount=0\nASSERT class-enumeration-succeeded: PASS (partitionable=3, physical3d=0)\nRESULT: PASS",
+  "notes": [
+    "纯读操作，无需创建虚拟机，无写入或清理。",
+    "Msvm_PartitionableGpu 枚举 GPU-P 可分区 GPU 池；Msvm_Physical3dGraphicsProcessor 对应 RemoteFX 时代的物理 3D GPU（已弃用，现代系统通常为 0 个）。",
+    "每个可分区 GPU 的 ValidPartitionCounts 列出其支持的分区数量取值集合。",
+    "Name 为 GPU 的设备接口路径(PCI#VEN_xxxx...{GUID}\\GPUPARAV)，进行 GPU-P 分区时以此引用该 GPU。",
+    "VRAM/Compute 相关字段返回的是驱动上报的归一化抽象额度（分区时按比例分配），并非真实字节数，不应按物理显存字节解读。",
+    "Msvm_PartitionableGpu 主要属性包括 ValidPartitionCounts、PartitionCount，以及 Total/Available/Min/Max/OptimalPartition 前缀的 VRAM、Encode、Decode、Compute 字段与 SupportsIncomingLiveMigration。"
+  ],
+  "notes_en": [
+    "A pure read operation; it requires no virtual machine creation and performs no writes or cleanup.",
+    "Msvm_PartitionableGpu enumerates the pool of GPU-P partitionable GPUs; Msvm_Physical3dGraphicsProcessor corresponds to the physical 3D GPUs of the RemoteFX era (deprecated, typically 0 on modern systems).",
+    "The ValidPartitionCounts property of each partitionable GPU lists the set of supported partition-count values.",
+    "Name is the device interface path of the GPU (PCI#VEN_xxxx...{GUID}\\GPUPARAV), which is used to reference the GPU when performing GPU-P partitioning.",
+    "The VRAM/Compute fields return normalized abstract quotas reported by the driver (allocated proportionally at partition time) rather than actual byte counts, and should not be interpreted as physical VRAM bytes.",
+    "The main properties of Msvm_PartitionableGpu include ValidPartitionCounts, PartitionCount, the VRAM, Encode, Decode, and Compute fields prefixed with Total/Available/Min/Max/OptimalPartition, and SupportsIncomingLiveMigration."
+  ]
+}

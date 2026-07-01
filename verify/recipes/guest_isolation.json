@@ -1,0 +1,21 @@
+{
+  "id": "guest_isolation",
+  "title": "创建启用来宾状态隔离的机密虚拟机(GuestStateIsolationType)",
+  "title_en": "Create a Confidential VM with Guest State Isolation Enabled (GuestStateIsolationType)",
+  "status": "PASS",
+  "code": "# 来宾状态隔离(TrustedLaunch/VBS/SEV-SNP/TDX)。在 DefineSystem 建机时一次性设置两个属性。\n$ns='root\\virtualization\\v2'\n$vsms=Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n$vssd=([wmiclass]\"\\.\\$ns`:Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName='WMITEST_gi'; $vssd.VirtualSystemSubType='Microsoft:Hyper-V:SubType:2'\n$vssd.SecureBootEnabled=$true             # TrustedLaunch 要求安全启动\n$vssd.GuestStateIsolationEnabled=$true    # 使能标志。缺此项时 Type 读回恒为 0\n$vssd.GuestStateIsolationType=[uint16]0   # 0=TrustedLaunch 1=VBS 2=SEV-SNP 3=TDX 16=OpenHCL (Disabled=-1)\n$r=$vsms.DefineSystem($vssd.GetText(1),$null,$null)  # rv=0 表示成功\n$vm=[wmi]$r.ResultingSystem\n$sd=$vm.GetRelated('Msvm_VirtualSystemSettingData')|select -First 1\n# 读回：GuestStateIsolationEnabled=True，GuestStateIsolationType=0/1 持久化成功",
+  "code_en": "# Guest state isolation (TrustedLaunch/VBS/SEV-SNP/TDX). Set both properties in a single pass at DefineSystem time.\n$ns='root\\virtualization\\v2'\n$vsms=Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n$vssd=([wmiclass]\"\\.\\$ns`:Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName='WMITEST_gi'; $vssd.VirtualSystemSubType='Microsoft:Hyper-V:SubType:2'\n$vssd.SecureBootEnabled=$true             # TrustedLaunch requires secure boot\n$vssd.GuestStateIsolationEnabled=$true    # Enable flag. Without it, Type always reads back as 0\n$vssd.GuestStateIsolationType=[uint16]0   # 0=TrustedLaunch 1=VBS 2=SEV-SNP 3=TDX 16=OpenHCL (Disabled=-1)\n$r=$vsms.DefineSystem($vssd.GetText(1),$null,$null)  # rv=0 indicates success\n$vm=[wmi]$r.ResultingSystem\n$sd=$vm.GetRelated('Msvm_VirtualSystemSettingData')|select -First 1\n# Readback: GuestStateIsolationEnabled=True, GuestStateIsolationType=0/1 persisted successfully",
+  "output": "CREATED: WMITEST_guest_isolation\nDEFAULT GuestStateIsolationType = 0\nTRY Trusted Launch (=0) rv=0 readback=0 ok=True err=\nTRY SEV-SNP (=2) rv=0 readback=0 ok=False err=\nTRY TDX (=3) rv=0 readback=0 ok=False err=\nTRY RME (=4) rv=0 readback=0 ok=False err=\nTRY OpenHCL (=16) rv=0 readback=0 ok=False err=\nASSERT: UNSUPPORTED - property present but no isolation type accepted/persisted on this host (no SEV-SNP/TDX hardware)\nSTATUS=UNSUPPORTED\nCLEANUP: OK no residue",
+  "notes": [
+    "须同时写入 GuestStateIsolationEnabled=$true 与 GuestStateIsolationType，且在 DefineSystem 建机时一次性下发(非事后 ModifySystemSettings)。缺少 GuestStateIsolationEnabled 时，GuestStateIsolationType 读回恒为 0。",
+    "ValueMap：Disabled=-1，TrustedLaunch=0，VBS=1，SEV-SNP=2，TDX=3，OpenHCL=16。",
+    "TrustedLaunch(0) 要求启用安全启动(SecureBootEnabled=$true)。TrustedLaunch(0) 与 VBS(1) 在软件层即可持久化。",
+    "SEV-SNP(2) 与 TDX(3) 需要对应的 CPU 硬件(SEV-SNP CPU / TDX CPU)。在无相应硬件的宿主上，这些隔离类型无法被接受或持久化。对 SNP/TDX/VBS，创建流程通常还需附带 ConfigureTpm，并移除合成显卡、键鼠等设备。"
+  ],
+  "notes_en": [
+    "Both GuestStateIsolationEnabled=$true and GuestStateIsolationType must be written, and they must be supplied in a single pass at DefineSystem time (not via a subsequent ModifySystemSettings). When GuestStateIsolationEnabled is absent, GuestStateIsolationType always reads back as 0.",
+    "ValueMap: Disabled=-1, TrustedLaunch=0, VBS=1, SEV-SNP=2, TDX=3, OpenHCL=16.",
+    "TrustedLaunch(0) requires secure boot to be enabled (SecureBootEnabled=$true). TrustedLaunch(0) and VBS(1) can be persisted purely at the software layer.",
+    "SEV-SNP(2) and TDX(3) require the corresponding CPU hardware (SEV-SNP CPU / TDX CPU). On a host without the corresponding hardware, these isolation types cannot be accepted or persisted. For SNP/TDX/VBS, the creation flow typically also requires ConfigureTpm and the removal of devices such as the synthetic display adapter and keyboard/mouse."
+  ]
+}

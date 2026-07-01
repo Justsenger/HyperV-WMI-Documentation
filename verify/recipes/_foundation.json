@@ -1,0 +1,23 @@
+{
+  "id": "_foundation",
+  "status": "PASS",
+  "title": "虚拟机生命周期基础:创建、修改资源、删除与 Job 轮询",
+  "title_en": "Virtual Machine Lifecycle Fundamentals: Creation, Resource Modification, Deletion, and Job Polling",
+  "verified_on": "Windows Server 2025, root\\virtualization\\v2, vmms running",
+  "code": "function Wait-Job2($p){ if(-not $p){return 7}; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -Milliseconds 200; $j=[wmi]$p}; return $j.JobState }\n$ns='root\\virtualization\\v2'\n$vsms=Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n# DefineSystem 创建第二代虚拟机 (OUT 参数为 ResultingSystem):\n$vssd=([wmiclass]\"\\\\.\\$ns:Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName='WMITEST_x'; $vssd.VirtualSystemSubType='Microsoft:Hyper-V:SubType:2'\n$r=$vsms.DefineSystem($vssd.GetText(1),$null,$null); if($r.ReturnValue -eq 4096){Wait-Job2 $r.Job|Out-Null}\n$vm=[wmi]$r.ResultingSystem\n# 遍历 VM -> VSSD -> ProcessorSettingData:\n$vssd2=$vm.GetRelated('Msvm_VirtualSystemSettingData')|select -First 1\n$proc=([wmi]$vssd2.__PATH).GetRelated('Msvm_ProcessorSettingData')|select -First 1\n# 修改单个资源:\n$proc.VirtualQuantity=[uint64]2; $r2=$vsms.ModifyResourceSettings($proc.GetText(1))\n# 修改整机设置: $vsms.ModifySystemSettings($vssd2.GetText(1))\n# 添加资源:     $vsms.AddResourceSettings($vssd2.__PATH,@($rasd.GetText(1)))\n# 删除虚拟机:\n$rc=$vsms.DestroySystem($vm.__PATH); if($rc.ReturnValue -eq 4096){Wait-Job2 $rc.Job|Out-Null}",
+  "code_en": "function Wait-Job2($p){ if(-not $p){return 7}; $j=[wmi]$p; while($j.JobState -eq 3 -or $j.JobState -eq 4){Start-Sleep -Milliseconds 200; $j=[wmi]$p}; return $j.JobState }\n$ns='root\\virtualization\\v2'\n$vsms=Get-WmiObject -Namespace $ns -Class Msvm_VirtualSystemManagementService\n# DefineSystem creates a generation 2 VM (the OUT parameter is ResultingSystem):\n$vssd=([wmiclass]\"\\\\.\\$ns:Msvm_VirtualSystemSettingData\").CreateInstance()\n$vssd.ElementName='WMITEST_x'; $vssd.VirtualSystemSubType='Microsoft:Hyper-V:SubType:2'\n$r=$vsms.DefineSystem($vssd.GetText(1),$null,$null); if($r.ReturnValue -eq 4096){Wait-Job2 $r.Job|Out-Null}\n$vm=[wmi]$r.ResultingSystem\n# Traverse VM -> VSSD -> ProcessorSettingData:\n$vssd2=$vm.GetRelated('Msvm_VirtualSystemSettingData')|select -First 1\n$proc=([wmi]$vssd2.__PATH).GetRelated('Msvm_ProcessorSettingData')|select -First 1\n# Modify a single resource:\n$proc.VirtualQuantity=[uint64]2; $r2=$vsms.ModifyResourceSettings($proc.GetText(1))\n# Modify the whole-system settings: $vsms.ModifySystemSettings($vssd2.GetText(1))\n# Add a resource:                   $vsms.AddResourceSettings($vssd2.__PATH,@($rasd.GetText(1)))\n# Delete the VM:\n$rc=$vsms.DestroySystem($vm.__PATH); if($rc.ReturnValue -eq 4096){Wait-Job2 $rc.Job|Out-Null}",
+  "notes": [
+    "嵌入实例统一使用 GetText(1) 序列化为文本后作为参数传入。",
+    "DefineSystem 的 OUT 参数名为 ResultingSystem，而非 DefinedSystem。",
+    "ModifyResourceSettings 修改单个资源；ModifySystemSettings 修改整机设置；AddResourceSettings 添加资源。",
+    "返回值 4096 表示 Job 已启动，需轮询 Msvm_ConcreteJob.JobState（7=完成，8/9/10=失败）。",
+    "安全相关设置由 Msvm_SecurityService 提供，不在虚拟系统管理服务中处理。"
+  ],
+  "notes_en": [
+    "An embedded instance is uniformly serialized to text with GetText(1) before being passed as an argument.",
+    "The OUT parameter of DefineSystem is named ResultingSystem, not DefinedSystem.",
+    "ModifyResourceSettings modifies a single resource; ModifySystemSettings modifies the whole-system settings; AddResourceSettings adds a resource.",
+    "A return value of 4096 indicates that an asynchronous job has been started, which requires polling Msvm_ConcreteJob.JobState (7=completed, 8/9/10=failed).",
+    "Security-related settings are provided by Msvm_SecurityService and are not handled by the virtual system management service."
+  ]
+}
